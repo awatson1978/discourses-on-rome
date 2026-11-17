@@ -127,42 +127,61 @@ that model can be recovered by:
   Ionian Revolt) is underpowered and honestly inconclusive.
   (`reports/persepolis_phase8.md`)
 
-### Phase VIII, visualized — why Persepolis?
+## Cross-referencing the Discorsi with archaeological evidence from Persepolis
 
-Because Machiavelli went there first, in the only way he could. His Persia
-was entirely literary: Xenophon's Cyrus is one of the Discorsi's favorite
-exempla — the fraud-filled Armenian campaign (II.13), the conquests won by
-humanity rather than force (III.20), the soldiers told that war is only
-robbery (III.39) — and our 142-chapter extraction surfaces **nine
-Persian/Cyropaedic episodes** in all, from Croesus and Tomyris to
-Themistocles at the Persian court. Most strikingly, the great conspiracies
-chapter (III.6) retells **Darius I's own coup** — Otanes exposing the Magus,
-the seven conspirators, Darius taking the kingdom. Machiavelli knew Darius
-as an *exemplum*. What he could not know is that Darius's state wrote
-everything down: the Persepolis Fortification Archive is the day-ledger of
-that same king's warehouse administration.
+Persia is all over the *Discorsi* — but only as literature. Machiavelli's
+Persian knowledge came through Xenophon and the Greek historians, and our
+142-chapter extraction surfaces **nine Persian episodes** in the text:
+Xenophon's Cyrus three times (the fraud-filled Armenian campaign, II.13;
+conquest by humanity, III.20; war preached as robbery, III.39), Croesus
+counselling the attack on Tomyris (II.12), Themistocles selling Darius an
+invasion of Greece (II.31), and — the hinge of this whole section — the
+great conspiracies chapter (III.6) retelling **Darius I's own coup**:
+Otanes exposing the Magus, the seven conspirators, Darius taking the
+kingdom.
 
-And the chronology closes the loop with almost suspicious neatness. The
-tablets span Darius's regnal years 13–28 — **509 to 494 BCE** — precisely
-the founding years of the Roman republic in Livy's second book: the archive
-opens the year Rome expelled the Tarquins and closes two years before the
-Coriolanus grain crisis (492–491) that anchors this project's first case
-study. The same two decades produced both of our information regimes: at
-Rome, grain politics surviving only as Livy's moralized narrative five
-centuries after the fact; at Persepolis, the actual receipts. That is the
-whole point of Phase VIII — Machiavelli's model, recovered from the
-narrative regime, is tested for whether its variables exist in the
-documentary one. (They do, field-for-field; see the Persepolis closure
-bullet above.)
+What Machiavelli could not know is that the same Darius ran a state that
+wrote everything down — and that part of its filing system survives. The
+**Persepolis Fortification Archive** is the day-ledger of Darius's warehouse
+administration: tens of thousands of clay tablets recording grain, flour,
+and wine moving between storehouses, officials, work gangs, and travelers.
+We pulled all **2,087 tablets of Hallock's published edition from the
+Cuneiform Digital Library Initiative**; the transliterated subset parses
+field-for-field into the schema Machiavelli's largesse-and-provisioning
+mechanisms presuppose — commodity, quantity, year, allocating official,
+receiving official, destination: *"30 bar of grain to Anshan, 17th year;
+Makuš received it, Umanna is to apportion it."*
 
-Every parsed transfer from the CDLI-transliterated tablets, by Darius I regnal
-year (log quantity; the dashed line is the Ionian Revolt's outbreak):
+The chronology makes the cross-reference uncanny rather than arbitrary.
+The tablets span Darius's regnal years 13–28 — **509 to 494 BCE** — opening
+the year Rome expelled the Tarquins and closing two years before the
+Coriolanus grain crisis (492–491 BCE) that anchors this project's first
+case study. The founding decades of the Roman republic and the surviving
+window of the Persian archive are *the same twenty years*, documented under
+two opposite information regimes: at Rome, grain politics survives as
+Livy's moralized narrative, composed five centuries later; at Persepolis,
+it survives as the actual receipts. Machiavelli's model was recovered from
+the narrative regime; here we test whether its variables exist in the
+documentary one. They do — the recipient-roll dataset his
+largesse→partisans mechanism requires, which the early Republic could not
+have produced, sits physically in Persepolis.
+
+Every parsed commodity transfer, by Darius's regnal year (log quantity; the
+dashed line marks the outbreak of the Ionian Revolt):
 
 ![Persepolis transfers by regnal year](dashboard/img/pf_transfers.png)
 
 | The coverage limit | The dispersion check |
 |---|---|
 | ![Coverage: 68 of 2,087 tablets transliterated](dashboard/img/pf_coverage.png) | ![Dispersion check, inconclusive](dashboard/img/pf_dispersion.png) |
+
+The honesty panels, left to right: CDLI has transliterated only **68 of the
+2,087 tablets** — a non-random subset that caps every claim in this section;
+and the one quantitative check we could run (whether grain-quantity
+dispersion shifts around the Ionian Revolt, a finding reported elsewhere
+that we treat as unverified) is **inconclusive at this sample size, by
+design honesty**. The formal hypotheses and acquisition plan for the full
+archive are in `reports/persepolis_phase8.md`.
 
 ## Repository layout
 
