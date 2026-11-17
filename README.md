@@ -102,6 +102,17 @@ that model can be recovered by:
   Ionian Revolt) is underpowered and honestly inconclusive.
   (`reports/persepolis_phase8.md`)
 
+### Phase VIII, visualized
+
+Every parsed transfer from the CDLI-transliterated tablets, by Darius I regnal
+year (log quantity; the dashed line is the Ionian Revolt's outbreak):
+
+![Persepolis transfers by regnal year](dashboard/img/pf_transfers.png)
+
+| The coverage limit | The dispersion check |
+|---|---|
+| ![Coverage: 68 of 2,087 tablets transliterated](dashboard/img/pf_coverage.png) | ![Dispersion check, inconclusive](dashboard/img/pf_dispersion.png) |
+
 ## Repository layout
 
 ```
