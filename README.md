@@ -356,6 +356,21 @@ the linguistic model; fragments are quotations, not compositions; event
 skeletons are hypotheses with witnesses. The dream of the oracle is
 interpolation; the discipline of the project is provenance.
 
+### All 142 books, attested
+
+![Attestation density across all 142 books](dashboard/img/attestation_142.svg)
+
+Teal: the 891 coded events of the 35 surviving books. Gold: **710
+periocha-derived skeleton events across all 105 lost books whose summaries
+survive** — every dot carries a verbatim Latin quote from its periocha,
+machine-validated, evidence class hypothetical. Red diamonds: the two books
+whose actual words survive — Book 91 (the Vatican palimpsest) and **Book 120,
+whose account of Cicero's death now sits verbatim in
+`lost_books/fragments.jsonl`**, recovered from Seneca's *Suasoriae* 6.17/6.22
+with their explicit "T. LIVI" attributions and validated against the acquired
+witness text. The two × marks are Books 136–137: doubly lost — even their
+summaries perished.
+
 ## The linguistic fingerprint — a second opinion from another model
 
 *Added 2026-11-17. The researcher took the lost-books question to ChatGPT,

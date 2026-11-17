@@ -29,8 +29,9 @@ UA = "discourses-on-rome research pipeline (contact: awatson1978@gmail.com)"
 BASE = "https://www.thelatinlibrary.com/"
 
 SOURCES = (
-    [(f"periocha_{n:03d}", f"livy/liv.per{n}.shtml", "periochae") for n in range(11, 21)]
+    [(f"periocha_{n:03d}", f"livy/liv.per{n}.shtml", "periochae") for n in range(11, 46)]
     + [("obsequens", "obsequens.html", "obsequens")]
+    + [("seneca_suasoriae", "seneca.suasoriae.html", "seneca-suasoriae")]
     + [(f"florus_{n}", f"florus{n}.html", "florus") for n in (1, 2)]
     + [(f"orosius_{n}", f"orosius/orosius{n}.shtml", "orosius") for n in range(1, 8)]
     + [(f"eutropius_{n}", f"eutropius/eutropius{n}.shtml", "eutropius") for n in range(1, 11)]

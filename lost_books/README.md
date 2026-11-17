@@ -59,6 +59,41 @@ marked in the skeleton.
 - [ ] Event skeletons extracted from periochae
 - [ ] External review pass for missed witnesses (planned: ChatGPT session)
 
+## Evidence genealogy — agreement is not independence
+
+`genealogy.json` encodes the dependence structure of the witness set, with
+relationship statuses (direct-quotation / direct-transmission /
+probable-dependence / possible-dependence / shared-intermediary-suspected /
+substantially-independent / conjecture) and the **counting rule**: attestation
+count = number of independent *lineages*, not witnesses. The Periochae,
+Oxyrhynchus epitome, Obsequens, Florus, Eutropius, and Orosius are
+(by default) ONE Livy-derivative lineage; Plutarch and Dio are partially
+independent lineages; the palimpsest and the Seneca quotations are direct
+transmission. Divergence *within* a lineage is recorded as data, never
+averaged away. Review passes may downgrade, merge, or reject connections —
+the scaffold must be able to lose confidence, not only gain material.
+
+## Architecture: unified cross-book graph, not per-book silos
+
+Witness corpora, the Obsequens year-map, the parallels files, and the
+genealogy are all **corpus-level, cross-book artifacts**; the per-book
+records in `skeleton.jsonl` and `books/` are *views* into them keyed by book
+number. This means a witness passage re-dated to a different year migrates
+between books without re-extraction, and duplicate-evidence merging happens
+once, globally. (The eventual evidence-dependency graph will live in
+`graphs/` alongside the project's other GraphML artifacts.)
+
+## Simulated-loss experiments (`experiments/`)
+
+The decisive calibration: pretend a *surviving* book is lost, reconstruct its
+event skeleton from the derivative tradition alone (blinded agents, forbidden
+the full text and its codings), then score against the independently coded
+ground truth (891-event series). This measures how much domestic-political
+information the derivative tradition actually preserves — i.e., the expected
+recall ceiling for the genuinely lost books — and where epitome agreement
+manufactures false confidence. First subjects: Book 22 (a dramatic, dense
+year) and Book 39 (the Bacchanalia and Cato's censorship).
+
 ## How to contribute a witness or fragment
 
 Add to the relevant `books/book_NNN.md` checklist AND the structured file:

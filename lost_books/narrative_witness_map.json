@@ -1,0 +1,978 @@
+{
+  "_status": "DRAFT CROSSWALK — scholarly-knowledge based, NOT verified against ingested texts of Plutarch or Dio; every mapping must be re-verified when those texts are acquired. This file is a retrieval aid, never evidence.",
+  "_conventions": {
+    "periocha_anchor": "verbatim 3-8 word Latin phrase from the book's periocha (machine-validated as substring); null for books 136-137 whose periochae are lost",
+    "plutarch": "Life name with chapter range where reasonably confident; Life name alone where not; empty array where no Life covers the ground",
+    "dio": "'frr. book N (Zonaras x.y)' for the fragmentary pre-69 BCE range (Zonaras cited only where his epitome of Dio survives, i.e. down to 146 BCE; for 146-69 BCE only Excerpta fragments exist, conventionally grouped as books 22-35); plain book.chapter numbers for extant Dio 36-56",
+    "confidence": "high only for unmistakable mappings; medium for standard but chapter-level-uncertain mappings; low for era-level or thin coverage"
+  },
+  "by_book": {
+    "11": {
+      "periocha_anchor": "aedis Aesculapio constituta est",
+      "plutarch": [],
+      "dio": "frr. book 8 (Zonaras 8.1)",
+      "confidence": "medium",
+      "note": "Curius Dentatus, Aesculapius, lex Hortensia; no Plutarch Life covers this ground."
+    },
+    "12": {
+      "periocha_anchor": "Pyrrhus, Epirotarum rex, ut auxilium Tarentinis ferret",
+      "plutarch": [
+        "Pyrrhus 13-16"
+      ],
+      "dio": "frr. book 9 (Zonaras 8.2-4)",
+      "confidence": "medium",
+      "note": "Senones, Tarentine incident, Pyrrhus crosses to Italy."
+    },
+    "13": {
+      "periocha_anchor": "parum prospere aduersus Pyrrhum pugnauit",
+      "plutarch": [
+        "Pyrrhus 16-21"
+      ],
+      "dio": "frr. books 9-10 (Zonaras 8.3-5)",
+      "confidence": "high",
+      "note": "Heraclea, Fabricius and Cineas embassies, Appius Claudius speech, Asculum."
+    },
+    "14": {
+      "periocha_anchor": "Pyrrhus in Siciliam traiecit",
+      "plutarch": [
+        "Pyrrhus 22-26",
+        "Pyrrhus 31-34"
+      ],
+      "dio": "frr. book 10 (Zonaras 8.5-6)",
+      "confidence": "medium",
+      "note": "Sicily, Beneventum, expulsion from Italy; periocha also records Pyrrhus' death (Plutarch Pyrrhus 31-34, at Argos)."
+    },
+    "15": {
+      "periocha_anchor": "Victis Tarentinis pax et libertas data est",
+      "plutarch": [],
+      "dio": "frr. book 10 (Zonaras 8.6-7)",
+      "confidence": "medium",
+      "note": "Fall of Tarentum, punishment of the Campanian legion at Regium."
+    },
+    "16": {
+      "periocha_anchor": "Origo Carthaginiensium et primordia urbis eorum",
+      "plutarch": [],
+      "dio": "frr. book 11 (Zonaras 8.8-9)",
+      "confidence": "medium",
+      "note": "Outbreak of First Punic War, Mamertines, Hiero; no relevant Plutarch Life."
+    },
+    "17": {
+      "periocha_anchor": "C. Duillius consul aduersus classem Poenorum prospere pugnauit",
+      "plutarch": [],
+      "dio": "frr. book 11 (Zonaras 8.10-12)",
+      "confidence": "medium",
+      "note": "Mylae, Sardinia-Corsica operations, Regulus crosses to Africa."
+    },
+    "18": {
+      "periocha_anchor": "Atilius Regulus in Africa serpentem portentosae magnitudinis",
+      "plutarch": [],
+      "dio": "frr. book 11 (Zonaras 8.12-15)",
+      "confidence": "medium",
+      "note": "Regulus in Africa, Xanthippus, captivity and embassy; no Plutarch Life of Regulus."
+    },
+    "19": {
+      "periocha_anchor": "uicta ad Aegates insulas classe Poenorum",
+      "plutarch": [],
+      "dio": "frr. book 12 (Zonaras 8.15-17)",
+      "confidence": "medium",
+      "note": "Drepana, Aegates Islands, peace of 241."
+    },
+    "20": {
+      "periocha_anchor": "opima spolia rettulit",
+      "plutarch": [
+        "Marcellus 6-8"
+      ],
+      "dio": "frr. book 12 (Zonaras 8.18-20)",
+      "confidence": "medium",
+      "note": "Interwar years: Gallic invasion, Insubres, Marcellus' spolia opima over Vertomarus/Viridomarus, Illyrian wars."
+    },
+    "46": {
+      "periocha_anchor": "L. Aemilius Paulus, qui Persen vicerat, mortuus",
+      "plutarch": [
+        "Aemilius Paulus 38-39"
+      ],
+      "dio": "frr. book 20",
+      "confidence": "medium",
+      "note": "Post-Pydna diplomacy (Eumenes, Prusias, Ariarathes); death of Aemilius Paulus. Zonaras thins out here; Dio book number conventional."
+    },
+    "47": {
+      "periocha_anchor": "inter Masinissam et Carthaginienses de agro iudicarent",
+      "plutarch": [],
+      "dio": "frr. books 20-21",
+      "confidence": "low",
+      "note": "Diplomatic decade 160-154; Dalmatian war; no Plutarch Life covers it directly."
+    },
+    "48": {
+      "periocha_anchor": "semina tertii Punici belli referuntur",
+      "plutarch": [
+        "Cato Major 26-27"
+      ],
+      "dio": "frr. book 21 (Zonaras 9.26)",
+      "confidence": "medium",
+      "note": "Cato vs Scipio Nasica on war with Carthage; Scipio Aemilianus in Spain."
+    },
+    "49": {
+      "periocha_anchor": "tertii Punici belli initium",
+      "plutarch": [
+        "Cato Major 26-27"
+      ],
+      "dio": "frr. book 21 (Zonaras 9.26-27)",
+      "confidence": "medium",
+      "note": "War declared, siege of Carthage begun; Cato's 'umbras volitare' praise of Scipio is at Cato Major 27; Galba trial; Andriscus."
+    },
+    "50": {
+      "periocha_anchor": "Masinissa Numidiae rex maior nonaginta annis decessit",
+      "plutarch": [],
+      "dio": "frr. book 21 (Zonaras 9.28)",
+      "confidence": "medium",
+      "note": "Death of Masinissa, Scipio's irregular consulship, Pseudophilippus defeated; Plutarch's Scipio Aemilianus is lost."
+    },
+    "51": {
+      "periocha_anchor": "magno labore obsessa et per partes capta est",
+      "plutarch": [],
+      "dio": "frr. books 21-22 (Zonaras 9.29-30)",
+      "confidence": "medium",
+      "note": "Fall and destruction of Carthage, 146 BCE; Plutarch's Scipio Aemilianus is lost."
+    },
+    "52": {
+      "periocha_anchor": "Corinthon ex senatus consulto diruit",
+      "plutarch": [],
+      "dio": "frr. books 21-22 (Zonaras 9.31)",
+      "confidence": "medium",
+      "note": "Achaean war, destruction of Corinth; rise of Viriathus."
+    },
+    "53": {
+      "periocha_anchor": "Appius Claudius consul Salassos, gentem Alpinam, domuit",
+      "plutarch": [],
+      "dio": "frr. book 22",
+      "confidence": "low",
+      "note": "Thin periocha; second Pseudophilippus, Celtiberian operations."
+    },
+    "54": {
+      "periocha_anchor": "Viriathus a proditoribus consilio Servilii Caepionis interfectus est",
+      "plutarch": [],
+      "dio": "frr. book 22",
+      "confidence": "low",
+      "note": "Numantine treaty voided, murder of Viriathus; no Plutarch Life."
+    },
+    "55": {
+      "periocha_anchor": "pacem cum his fecit ignominiosam",
+      "plutarch": [
+        "Tiberius Gracchus 5-7"
+      ],
+      "dio": "frr. books 22-23",
+      "confidence": "medium",
+      "note": "Mancinus disaster at Numantia; Ti. Gracchus as quaestor negotiated the treaty (Plutarch Ti. Gracchus 5-7)."
+    },
+    "56": {
+      "periocha_anchor": "deditus Numantinis non est receptus",
+      "plutarch": [
+        "Tiberius Gracchus 7"
+      ],
+      "dio": "frr. book 23",
+      "confidence": "medium",
+      "note": "Mancinus handed over and refused; first Sicilian slave war begins (Eunus) - no Life for the latter."
+    },
+    "57": {
+      "periocha_anchor": "Scipio Africanus Numantiam obsedit",
+      "plutarch": [
+        "Marius 3"
+      ],
+      "dio": "frr. book 23",
+      "confidence": "low",
+      "note": "Scipio's siege discipline at Numantia; Marius served there as a young officer (Plutarch Marius 3) - thin coverage only."
+    },
+    "58": {
+      "periocha_anchor": "in Capitolio ab optimatibus occisus est",
+      "plutarch": [
+        "Tiberius Gracchus 8-20"
+      ],
+      "dio": "frr. book 24",
+      "confidence": "high",
+      "note": "Tribunate, deposition of Octavius, Attalus' bequest, murder of Ti. Gracchus."
+    },
+    "59": {
+      "periocha_anchor": "captam urbem Scipio Africanus delevit",
+      "plutarch": [
+        "Tiberius Gracchus 21",
+        "Gaius Gracchus 1-2"
+      ],
+      "dio": "frr. books 24-25",
+      "confidence": "medium",
+      "note": "Fall of Numantia, Aristonicus, death of Scipio Aemilianus, triumviral agitation."
+    },
+    "60": {
+      "periocha_anchor": "C. Gracchus, Tiberii frater, tribunus plebis",
+      "plutarch": [
+        "Gaius Gracchus 3-10"
+      ],
+      "dio": "frr. book 25",
+      "confidence": "high",
+      "note": "C. Gracchus' legislation and colonies; Fregellae; Balearics."
+    },
+    "61": {
+      "periocha_anchor": "C. Gracchus seditioso tribunatu acto",
+      "plutarch": [
+        "Gaius Gracchus 11-17"
+      ],
+      "dio": "frr. book 25",
+      "confidence": "high",
+      "note": "Death of C. Gracchus and Fulvius Flaccus; Allobroges and Bituitus campaigns (no Life for the Gallic wars)."
+    },
+    "62": {
+      "periocha_anchor": "Iugurtha Hiempsalem fratrem petit bello",
+      "plutarch": [],
+      "dio": "frr. book 26",
+      "confidence": "low",
+      "note": "Micipsa's death, Jugurtha vs Adherbal; precedes Marius' involvement."
+    },
+    "63": {
+      "periocha_anchor": "Cimbri, gens vaga, populabundi in Illyricum venerunt",
+      "plutarch": [],
+      "dio": "frr. book 26",
+      "confidence": "low",
+      "note": "Vestal scandal, Carbo defeated by Cimbri at Noreia."
+    },
+    "64": {
+      "periocha_anchor": "ob hoc bellum Iugurthae indictum",
+      "plutarch": [],
+      "dio": "frr. book 26",
+      "confidence": "low",
+      "note": "Outbreak of Jugurthine war, Bestia's peace, 'urbem venalem'; Sallust is the main narrative witness, not Plutarch."
+    },
+    "65": {
+      "periocha_anchor": "duobus proeliis Iugurtham fudit",
+      "plutarch": [
+        "Marius 7-8"
+      ],
+      "dio": "frr. book 26",
+      "confidence": "medium",
+      "note": "Metellus' Numidian campaigns with Marius as legate; Cassius killed by Tigurini."
+    },
+    "66": {
+      "periocha_anchor": "vinctus ab eo et Mario traditus est",
+      "plutarch": [
+        "Marius 8-10",
+        "Sulla 3"
+      ],
+      "dio": "frr. books 26-27",
+      "confidence": "high",
+      "note": "Capture of Jugurtha through Bocchus and Sulla."
+    },
+    "67": {
+      "periocha_anchor": "militum milia octoginta occisa",
+      "plutarch": [
+        "Marius 11-12"
+      ],
+      "dio": "frr. book 27",
+      "confidence": "medium",
+      "note": "Arausio, Jugurtha in Marius' triumph and execution, repeated consulships."
+    },
+    "68": {
+      "periocha_anchor": "duobus deinde proeliis circa Aquas Sextias",
+      "plutarch": [
+        "Marius 15-27"
+      ],
+      "dio": "frr. book 27",
+      "confidence": "high",
+      "note": "Aquae Sextiae and Vercellae; destruction of Teutones and Cimbri."
+    },
+    "69": {
+      "periocha_anchor": "tribunus plebis per vim creatus",
+      "plutarch": [
+        "Marius 28-31"
+      ],
+      "dio": "frr. book 28",
+      "confidence": "medium",
+      "note": "Saturninus and Glaucia, exile of Metellus Numidicus."
+    },
+    "70": {
+      "periocha_anchor": "repetundarum damnatus in exilium missus est",
+      "plutarch": [
+        "Sulla 5"
+      ],
+      "dio": "frr. book 28",
+      "confidence": "medium",
+      "note": "The 90s: Rutilius Rufus condemned, Sulla restores Ariobarzanes and meets the Parthian envoy (Plutarch Sulla 5), Drusus' beginnings."
+    },
+    "71": {
+      "periocha_anchor": "spe civitatis Romanae sollicitavit",
+      "plutarch": [
+        "Cato Minor 1-2"
+      ],
+      "dio": "frr. books 28-29",
+      "confidence": "medium",
+      "note": "Drusus' tribunate and murder; the Poppaedius Silo anecdote of Cato's childhood is at Cato Minor 2."
+    },
+    "72": {
+      "periocha_anchor": "Italici populi defecerunt Picentes",
+      "plutarch": [],
+      "dio": "frr. book 29",
+      "confidence": "medium",
+      "note": "Outbreak of the Social War, massacre at Asculum; no single Life carries the Italian narrative."
+    },
+    "73": {
+      "periocha_anchor": "L. Iulius Caesar consul male adversus Samnites pugnavit",
+      "plutarch": [
+        "Marius 33"
+      ],
+      "dio": "frr. book 29",
+      "confidence": "medium",
+      "note": "Campaigns of 90 BCE; Marius against the Marsi."
+    },
+    "74": {
+      "periocha_anchor": "Cn. Pompeius Picentes proelio fudit",
+      "plutarch": [],
+      "dio": "frr. books 29-30",
+      "confidence": "low",
+      "note": "Pompeius Strabo's Picene campaign; Plutarch Pompey 1 touches his father only generally."
+    },
+    "75": {
+      "periocha_anchor": "L. Cornelius Sylla legatus Samnites proelio vicit",
+      "plutarch": [
+        "Sulla 6"
+      ],
+      "dio": "frr. books 29-30",
+      "confidence": "medium",
+      "note": "Sulla's Samnite-Hirpini successes before his consulship."
+    },
+    "76": {
+      "periocha_anchor": "Asculum a Cn. Pompeio captum est",
+      "plutarch": [
+        "Sulla 6"
+      ],
+      "dio": "frr. book 30",
+      "confidence": "low",
+      "note": "Fall of Asculum, death of Poppaedius Silo; Mithridates expels Nicomedes and Ariobarzanes."
+    },
+    "77": {
+      "periocha_anchor": "L. Sylla consul cum exercitu in urbem venit",
+      "plutarch": [
+        "Sulla 7-10",
+        "Marius 34-40"
+      ],
+      "dio": "frr. books 30-35",
+      "confidence": "high",
+      "note": "Sulpicius' laws, Sulla's march on Rome, flight of Marius (Minturnae episode). Dio frr. for 88-70 BCE are conventionally grouped as books 30-35."
+    },
+    "78": {
+      "periocha_anchor": "Mithridates Asiam occupavit",
+      "plutarch": [
+        "Sulla 11",
+        "Lucullus 2-3"
+      ],
+      "dio": "frr. books 30-35",
+      "confidence": "medium",
+      "note": "Asiatic Vespers, Rhodes, Archelaus seizes Athens."
+    },
+    "79": {
+      "periocha_anchor": "arcessito C. Mario ex Africa",
+      "plutarch": [
+        "Marius 41-43",
+        "Sertorius 4-5"
+      ],
+      "dio": "frr. books 30-35",
+      "confidence": "medium",
+      "note": "Cinna expelled, returns in arms with Marius."
+    },
+    "80": {
+      "periocha_anchor": "Cinna et Marius in urbem recepti sunt",
+      "plutarch": [
+        "Marius 43-46"
+      ],
+      "dio": "frr. books 30-35",
+      "confidence": "high",
+      "note": "Marian massacre, seventh consulship and death of Marius."
+    },
+    "81": {
+      "periocha_anchor": "L. Sylla Athenas, quas Archelaus praefectus Mithridatis occupaverat",
+      "plutarch": [
+        "Sulla 12-14"
+      ],
+      "dio": "frr. books 30-35",
+      "confidence": "high",
+      "note": "Siege and capture of Athens."
+    },
+    "82": {
+      "periocha_anchor": "copias regis, quae Macedonia occupata in Thessaliam venerant",
+      "plutarch": [
+        "Sulla 15-21"
+      ],
+      "dio": "frr. books 30-35",
+      "confidence": "high",
+      "note": "Chaeronea and Orchomenus; Flaccus murdered by Fimbria."
+    },
+    "83": {
+      "periocha_anchor": "pacem cum Mithridate fecit",
+      "plutarch": [
+        "Sulla 22-25",
+        "Lucullus 3-4"
+      ],
+      "dio": "frr. books 30-35",
+      "confidence": "medium",
+      "note": "Fimbria in Asia, Peace of Dardanus, death of Cinna, suicide of Fimbria."
+    },
+    "84": {
+      "periocha_anchor": "novis civibus senatus consulto suffragium datum est",
+      "plutarch": [
+        "Sulla 27"
+      ],
+      "dio": "frr. books 30-35",
+      "confidence": "low",
+      "note": "Failed negotiations, Carbo's faction, enfranchisement completed."
+    },
+    "85": {
+      "periocha_anchor": "Sylla in Italiam cum exercitu traiecit",
+      "plutarch": [
+        "Sulla 27-28",
+        "Pompey 6-9"
+      ],
+      "dio": "frr. books 30-35",
+      "confidence": "high",
+      "note": "Landing at Brundisium, Norbanus and Scipio, young Pompey brings three legions."
+    },
+    "86": {
+      "periocha_anchor": "omnem, quae in urbe erat, nobilitatem trucidavit",
+      "plutarch": [
+        "Sulla 28"
+      ],
+      "dio": "frr. books 30-35",
+      "confidence": "low",
+      "note": "Young Marius consul, Damasippus' massacre, death of Scaevola; Murena's second Mithridatic war."
+    },
+    "87": {
+      "periocha_anchor": "in oppido Praeneste obsedit",
+      "plutarch": [
+        "Sulla 28-29"
+      ],
+      "dio": "frr. books 30-35",
+      "confidence": "medium",
+      "note": "Sacriportus, siege of Praeneste, Rome recovered."
+    },
+    "88": {
+      "periocha_anchor": "ante portam Collinam debellavit",
+      "plutarch": [
+        "Sulla 29-31"
+      ],
+      "dio": "frr. books 30-35",
+      "confidence": "high",
+      "note": "Colline Gate, proscriptions, death of the younger Marius."
+    },
+    "89": {
+      "periocha_anchor": "Sylla dictator factus",
+      "plutarch": [
+        "Sulla 31-34",
+        "Pompey 10-14"
+      ],
+      "dio": "frr. books 30-35",
+      "confidence": "high",
+      "note": "Sullan dictatorship and legislation; Pompey in Sicily and Africa, first triumph."
+    },
+    "90": {
+      "periocha_anchor": "Sylla decessit, honosque ei a senatu habitus est",
+      "plutarch": [
+        "Sulla 36-38",
+        "Pompey 15-16",
+        "Sertorius 6-12"
+      ],
+      "dio": "frr. books 30-35",
+      "confidence": "high",
+      "note": "Death of Sulla, Lepidus' rising, Sertorius' war opens in Spain."
+    },
+    "91": {
+      "periocha_anchor": "cum imperio consulari adversus Sertorium missus est",
+      "plutarch": [
+        "Sertorius 12-19",
+        "Pompey 17-18"
+      ],
+      "dio": "frr. books 30-35",
+      "confidence": "medium",
+      "note": "Pompey sent to Spain with proconsular imperium."
+    },
+    "92": {
+      "periocha_anchor": "Cn. Pompeius dubio eventu cum Sertorio pugnavit",
+      "plutarch": [
+        "Sertorius 19-21",
+        "Pompey 18-19"
+      ],
+      "dio": "frr. books 30-35",
+      "confidence": "medium",
+      "note": "Sucro and Saguntum campaigns, siege of Clunia."
+    },
+    "93": {
+      "periocha_anchor": "Nicomedes Bithyniae rex populum Romanum fecit heredem",
+      "plutarch": [
+        "Lucullus 5-8",
+        "Sertorius 23-24"
+      ],
+      "dio": "frr. books 30-35",
+      "confidence": "medium",
+      "note": "Bithynia bequeathed, Third Mithridatic War opens, Cotta beaten at Chalcedon; Sertorius' pact with Mithridates at Sertorius 23-24."
+    },
+    "94": {
+      "periocha_anchor": "adversus Mithridaten equestribus proeliis feliciter pugnavit",
+      "plutarch": [
+        "Lucullus 7-8"
+      ],
+      "dio": "frr. books 30-35",
+      "confidence": "medium",
+      "note": "Lucullus' opening operations; Deiotarus."
+    },
+    "95": {
+      "periocha_anchor": "Crixo et Spartaco ducibus bello excitato",
+      "plutarch": [
+        "Crassus 8-9",
+        "Lucullus 9-13"
+      ],
+      "dio": "frr. books 30-35",
+      "confidence": "high",
+      "note": "Outbreak of Spartacus' revolt; relief of Cyzicus and destruction of Mithridates' army."
+    },
+    "96": {
+      "periocha_anchor": "in convivio interfectus est",
+      "plutarch": [
+        "Sertorius 25-27",
+        "Crassus 9-10",
+        "Pompey 20"
+      ],
+      "dio": "frr. books 30-35",
+      "confidence": "high",
+      "note": "Murder of Sertorius by Perperna; consuls defeated by Spartacus; war given to Crassus."
+    },
+    "97": {
+      "periocha_anchor": "cum Spartaco dein debellavit",
+      "plutarch": [
+        "Crassus 10-12",
+        "Pompey 21-23",
+        "Lucullus 15-19"
+      ],
+      "dio": "frr. books 30-35 (opening of extant book 36 lost)",
+      "confidence": "medium",
+      "note": "End of Spartacus; Lucullus in Pontus; Pompey-Crassus consulship restores tribunician power."
+    },
+    "98": {
+      "periocha_anchor": "L. Lucullus in Armenia Mithridaten et Tigranen",
+      "plutarch": [
+        "Lucullus 24-35"
+      ],
+      "dio": "36.1-19",
+      "confidence": "high",
+      "note": "Tigranocerta-Armenia campaigns, mutiny, Triarius beaten at Zela; Metellus in Crete. Extant Dio begins here."
+    },
+    "99": {
+      "periocha_anchor": "intra quadragesimum diem toto mari eos expulit",
+      "plutarch": [
+        "Pompey 24-29"
+      ],
+      "dio": "36.20-37",
+      "confidence": "high",
+      "note": "Lex Gabinia and the pirate war; Metellus' Cretan war and quarrel with Pompey."
+    },
+    "100": {
+      "periocha_anchor": "ut Pompeio Mithridaticum bellum mandaretur",
+      "plutarch": [
+        "Pompey 30-32",
+        "Lucullus 35-36"
+      ],
+      "dio": "36.42-54",
+      "confidence": "high",
+      "note": "Lex Manilia; Pompey takes over the Mithridatic command."
+    },
+    "101": {
+      "periocha_anchor": "nocturno proelio victum coegit Bosporum profugere",
+      "plutarch": [
+        "Pompey 32-35"
+      ],
+      "dio": "36.45-54; 37.1-7",
+      "confidence": "high",
+      "note": "Nicopolis, surrender of Tigranes, Iberian and Albanian campaigns; first Catilinarian conspiracy noticed."
+    },
+    "102": {
+      "periocha_anchor": "ea coniuratio industria M. Tullii Ciceronis eruta est",
+      "plutarch": [
+        "Pompey 36-43",
+        "Cicero 10-23"
+      ],
+      "dio": "37.1-42",
+      "confidence": "high",
+      "note": "Death of Mithridates, capture of Jerusalem, Catilinarian conspiracy suppressed."
+    },
+    "103": {
+      "periocha_anchor": "conspiratio inter tres civitatis principes facta est",
+      "plutarch": [
+        "Caesar 13-18",
+        "Cicero 28-32",
+        "Pompey 46-48",
+        "Cato Minor 31-33"
+      ],
+      "dio": "37.39-58; 38.1-33",
+      "confidence": "high",
+      "note": "Catiline's defeat, Bona Dea, First Triumvirate, Caesar's consulship, Cicero's exile, Helvetii."
+    },
+    "104": {
+      "periocha_anchor": "prima pars libri situm Germaniae moresque continet",
+      "plutarch": [
+        "Caesar 19-20",
+        "Cicero 33",
+        "Cato Minor 34-40",
+        "Pompey 49"
+      ],
+      "dio": "38.34-50; 39.1-46",
+      "confidence": "high",
+      "note": "Ariovistus, Belgae, Cicero's recall, Cato and Cyprus, Veneti."
+    },
+    "105": {
+      "periocha_anchor": "Oceano in Britanniam primo parum prospere",
+      "plutarch": [
+        "Caesar 21-23",
+        "Crassus 15-16",
+        "Pompey 51-52",
+        "Cato Minor 41-43"
+      ],
+      "dio": "39.33-63",
+      "confidence": "high",
+      "note": "Luca consequences, five-year provincial commands, Gabinius restores Ptolemy, Rhine crossing, Britain."
+    },
+    "106": {
+      "periocha_anchor": "M. Crassus bellum Parthis inlaturus Euphraten flumen transit",
+      "plutarch": [
+        "Crassus 17-33",
+        "Caesar 23-24",
+        "Pompey 53"
+      ],
+      "dio": "40.1-30",
+      "confidence": "high",
+      "note": "Death of Julia, Ambiorix and the Sabinus disaster, Carrhae and the death of Crassus."
+    },
+    "107": {
+      "periocha_anchor": "Vercingetorige Arverno duce defecerunt",
+      "plutarch": [
+        "Caesar 25-27",
+        "Pompey 54-55",
+        "Cicero 35"
+      ],
+      "dio": "40.31-58",
+      "confidence": "high",
+      "note": "Great Gallic revolt (Avaricum, Gergovia); murder of Clodius, Pompey sole consul, Milo condemned."
+    },
+    "108": {
+      "periocha_anchor": "C. Caesar Gallos ad Alesiam vicit",
+      "plutarch": [
+        "Caesar 27-29",
+        "Pompey 56-59"
+      ],
+      "dio": "40.41-66",
+      "confidence": "high",
+      "note": "Alesia and the pacification of Gaul; succession dispute over Caesar's command."
+    },
+    "109": {
+      "periocha_anchor": "causae civilium armorum et initia referuntur",
+      "plutarch": [
+        "Caesar 29-35",
+        "Pompey 59-63",
+        "Antony 5-6",
+        "Cicero 37"
+      ],
+      "dio": "41.1-16",
+      "confidence": "high",
+      "note": "Curio, crossing into Italy, Corfinium, Pompey abandons Italy."
+    },
+    "110": {
+      "periocha_anchor": "C. Caesar Massiliam, quae portas cluserat, obsedit",
+      "plutarch": [
+        "Caesar 36-37"
+      ],
+      "dio": "41.17-46",
+      "confidence": "high",
+      "note": "Massilia, Ilerda, Curio destroyed by Juba in Africa, Caesar crosses to Greece."
+    },
+    "111": {
+      "periocha_anchor": "apud Pharsaliam acie victus est",
+      "plutarch": [
+        "Caesar 39-46",
+        "Pompey 65-73",
+        "Brutus 4-6",
+        "Cicero 38-39"
+      ],
+      "dio": "41.47-63; 42.1-2",
+      "confidence": "high",
+      "note": "Caelius and Milo, Dyrrachium, Pharsalus."
+    },
+    "112": {
+      "periocha_anchor": "occisus est ab Achilla",
+      "plutarch": [
+        "Pompey 74-80",
+        "Caesar 48-49",
+        "Cato Minor 56-58"
+      ],
+      "dio": "42",
+      "confidence": "high",
+      "note": "Murder of Pompey, Alexandrian war, Cleopatra restored, Cato's desert march."
+    },
+    "113": {
+      "periocha_anchor": "sine ulla belli mora victus est",
+      "plutarch": [
+        "Cato Minor 56-60",
+        "Caesar 50-52",
+        "Antony 8-10"
+      ],
+      "dio": "42.26-58; 43.1-8",
+      "confidence": "medium",
+      "note": "African war preparations, Cato at Utica, Zela ('veni vidi vici'), Dolabella's debt agitation."
+    },
+    "114": {
+      "periocha_anchor": "Caesar Scipionem praetorem Iubamque vicit ad Thapsum",
+      "plutarch": [
+        "Caesar 52-54",
+        "Cato Minor 58-72"
+      ],
+      "dio": "43.1-13",
+      "confidence": "high",
+      "note": "Thapsus; suicides of Cato, Juba, Petreius; death of Scipio."
+    },
+    "115": {
+      "periocha_anchor": "ad Mundam urbem consecutus est",
+      "plutarch": [
+        "Caesar 55-56"
+      ],
+      "dio": "43.14-45",
+      "confidence": "high",
+      "note": "Quadruple triumph, census, Munda."
+    },
+    "116": {
+      "periocha_anchor": "in Pompeii curia occisus est viginti tribus vulneribus",
+      "plutarch": [
+        "Caesar 57-69",
+        "Brutus 7-20",
+        "Antony 11-14",
+        "Cicero 42"
+      ],
+      "dio": "44",
+      "confidence": "high",
+      "note": "Honors, Lupercalia, the Ides of March, funeral, Octavius named heir."
+    },
+    "117": {
+      "periocha_anchor": "nomen Caesaris sumpsit",
+      "plutarch": [
+        "Antony 16",
+        "Cicero 43-45",
+        "Brutus 20-23"
+      ],
+      "dio": "45",
+      "confidence": "high",
+      "note": "Octavian arrives and takes the name; Antony's dominance, legions defect, Decimus Brutus holds Mutina."
+    },
+    "118": {
+      "periocha_anchor": "M. Antonius Dec. Brutum Mutinae obsedit",
+      "plutarch": [
+        "Brutus 24-26",
+        "Cicero 45"
+      ],
+      "dio": "45-46 (Brutus in the East: 47.20-25)",
+      "confidence": "medium",
+      "note": "Siege of Mutina begins; Octavian given propraetorian imperium; M. Brutus seizes Macedonia and C. Antonius."
+    },
+    "119": {
+      "periocha_anchor": "victus deinde ab Hirtio et Caesare Antonius",
+      "plutarch": [
+        "Cicero 45-46",
+        "Antony 17-19"
+      ],
+      "dio": "46.29-56",
+      "confidence": "high",
+      "note": "Forum Gallorum and Mutina, deaths of Hirtius and Pansa, Antony joins Lepidus, Octavian consul at nineteen."
+    },
+    "120": {
+      "periocha_anchor": "ut suos quisque inimicos proscriberent",
+      "plutarch": [
+        "Cicero 46-49",
+        "Antony 19-21",
+        "Brutus 27-28"
+      ],
+      "dio": "46.47-56; 47.1-19",
+      "confidence": "high",
+      "note": "Lex Pedia, formation of the triumvirate, proscriptions, death of Cicero."
+    },
+    "121": {
+      "periocha_anchor": "Dolabellam in urbe Laodicia obsessum mori coegit",
+      "plutarch": [
+        "Brutus 28-30"
+      ],
+      "dio": "47.26-31",
+      "confidence": "medium",
+      "note": "Cassius masters Syria; Dolabella dies at Laodicea; C. Antonius executed."
+    },
+    "122": {
+      "periocha_anchor": "coierunt Smyrnae uterque",
+      "plutarch": [
+        "Brutus 28-30"
+      ],
+      "dio": "47.32-36",
+      "confidence": "medium",
+      "note": "Brutus' Thracian operations; Brutus and Cassius confer at Smyrna."
+    },
+    "123": {
+      "periocha_anchor": "Messanam oppidum in Sicilia primum",
+      "plutarch": [
+        "Antony 22"
+      ],
+      "dio": "47.36-37 (Sextus in Sicily: 48.17-19)",
+      "confidence": "medium",
+      "note": "Sextus Pompeius seizes Sicily; triumvirs cross to Greece."
+    },
+    "124": {
+      "periocha_anchor": "apud Philippos vario eventu adversus Brutum et Cassium",
+      "plutarch": [
+        "Brutus 38-53",
+        "Antony 22"
+      ],
+      "dio": "47.37-49",
+      "confidence": "high",
+      "note": "Philippi; deaths of Cassius and Brutus."
+    },
+    "125": {
+      "periocha_anchor": "bellum Caesari intulit",
+      "plutarch": [
+        "Antony 28-30"
+      ],
+      "dio": "48.1-13",
+      "confidence": "medium",
+      "note": "Veteran settlements, Fulvia, outbreak of the Perusine war."
+    },
+    "126": {
+      "periocha_anchor": "obsessum in oppido Perusia L. Antonium",
+      "plutarch": [
+        "Antony 30"
+      ],
+      "dio": "48.14-15",
+      "confidence": "high",
+      "note": "Siege and fall of Perusia."
+    },
+    "127": {
+      "periocha_anchor": "sororem eius Octaviam in matrimonium duxit",
+      "plutarch": [
+        "Antony 30-33"
+      ],
+      "dio": "48.24-41",
+      "confidence": "high",
+      "note": "Labienus and the Parthians overrun Syria; pact of Brundisium and Octavia's marriage; Salvidienus; Ventidius' first victories; pact of Misenum."
+    },
+    "128": {
+      "periocha_anchor": "Parthos in Syria proelio vicit",
+      "plutarch": [
+        "Antony 33-34"
+      ],
+      "dio": "48.45-54; 49.19-23",
+      "confidence": "medium",
+      "note": "War with Sextus renewed; Ventidius kills Pacorus at Gindarus; Judaea subdued (Herod installed)."
+    },
+    "129": {
+      "periocha_anchor": "victus deinde Pompeius in Siciliam profugit",
+      "plutarch": [
+        "Antony 35"
+      ],
+      "dio": "49.1-18",
+      "confidence": "high",
+      "note": "Naulochus, Agrippa's naval crown, deposition of Lepidus."
+    },
+    "130": {
+      "periocha_anchor": "tarde Mediam ingressus bellum",
+      "plutarch": [
+        "Antony 37-51"
+      ],
+      "dio": "49.24-33",
+      "confidence": "high",
+      "note": "Antony's Parthian/Median disaster and winter retreat through Armenia."
+    },
+    "131": {
+      "periocha_anchor": "obpressus a legatis eius occisus est",
+      "plutarch": [
+        "Antony 52-54"
+      ],
+      "dio": "49 (Sextus: 49.17-18; Illyricum: 49.34-38; Armenia: 49.39-41)",
+      "confidence": "medium",
+      "note": "Death of Sextus Pompeius; Octavian's Iapydes-Dalmatian-Pannonian campaigns; Artavasdes seized."
+    },
+    "132": {
+      "periocha_anchor": "Caesar in Epirum cum exercitu traiecit",
+      "plutarch": [
+        "Antony 55-62"
+      ],
+      "dio": "49.38; 50.1-30",
+      "confidence": "high",
+      "note": "Breach with Antony, Donations and divorce of Octavia, declaration of war, crossing to Epirus."
+    },
+    "133": {
+      "periocha_anchor": "M. Antonius ad Actium classe victus Alexandriam profugit",
+      "plutarch": [
+        "Antony 62-86"
+      ],
+      "dio": "50.31-35; 51.1-27",
+      "confidence": "high",
+      "note": "Actium, fall of Alexandria, deaths of Antony and Cleopatra, triple triumph; young Lepidus' plot."
+    },
+    "134": {
+      "periocha_anchor": "Augustus quoque cognominatus est",
+      "plutarch": [],
+      "dio": "53.1-22 (Crassus in Moesia: 51.23-27)",
+      "confidence": "high",
+      "note": "Settlement of 27 BCE and the name Augustus; Gallic census; M. Crassus against Bastarnae and Moesi. No Plutarch Life covers the Augustan books."
+    },
+    "135": {
+      "periocha_anchor": "Salassi, gens Alpina, perdomiti",
+      "plutarch": [],
+      "dio": "51.23-27; 53.25-29",
+      "confidence": "medium",
+      "note": "Crassus' Thracian war, Cantabrian campaign of Augustus, conquest of the Salassi."
+    },
+    "136": {
+      "periocha_anchor": null,
+      "plutarch": [],
+      "dio": "53.26-29; 54.1-11 (era mapping)",
+      "confidence": "low",
+      "note": "Periocha lost; mapped from the era block alone (approx. 24-19 BCE: completion of the Spanish wars, Parthian standards returned 20 BCE, eastern settlement)."
+    },
+    "137": {
+      "periocha_anchor": null,
+      "plutarch": [],
+      "dio": "54.6-24 (era mapping)",
+      "confidence": "low",
+      "note": "Periocha lost; mapped from the era block alone (approx. 18-16 BCE: leges Iuliae, secular games, Lollian disaster, Augustus in Gaul)."
+    },
+    "138": {
+      "periocha_anchor": "Raeti a Tib. Nerone et Druso",
+      "plutarch": [],
+      "dio": "54.22-30",
+      "confidence": "high",
+      "note": "Alpine conquest of 15 BCE; death of Agrippa; Drusus' census of Gaul."
+    },
+    "139": {
+      "periocha_anchor": "civitates Germaniae cis Rhenum et trans Rhenum positae",
+      "plutarch": [],
+      "dio": "54.32-36",
+      "confidence": "medium",
+      "note": "Drusus' first German campaign; altar of the three Gauls at Lugdunum."
+    },
+    "140": {
+      "periocha_anchor": "Thraces domiti a L. Pisone",
+      "plutarch": [],
+      "dio": "54.34-35",
+      "confidence": "medium",
+      "note": "Piso's Thracian war, Drusus beyond the Rhine, death of Octavia."
+    },
+    "141": {
+      "periocha_anchor": "pax cum Parthis facta est",
+      "plutarch": [],
+      "dio": "54.31-36 (standards actually returned 20 BCE: 54.8)",
+      "confidence": "medium",
+      "note": "Drusus trans-Rhenane war, Tiberius in Dalmatia-Pannonia; the periocha's notice of the Parthian standards post-dates the event of 20 BCE."
+    },
+    "142": {
+      "periocha_anchor": "equo super crus eius conlapso",
+      "plutarch": [],
+      "dio": "55.1-2",
+      "confidence": "high",
+      "note": "Drusus' last German campaign, his fatal fall and death, 9 BCE."
+    }
+  }
+}
