@@ -356,6 +356,15 @@ the linguistic model; fragments are quotations, not compositions; event
 skeletons are hypotheses with witnesses. The dream of the oracle is
 interpolation; the discipline of the project is provenance.
 
+**The three volumes of the program** (all generated from the structured data,
+all honesty-labeled):
+
+| Volume | What it holds |
+|---|---|
+| [`reports/lost_fragments.pdf`](reports/lost_fragments.pdf) | **The red diamonds** — every verbatim survival of lost Livy: the Book 120 Cicero passages (Latin + working translation, recovered from Seneca's explicit "T. LIVI" attributions), the Book 91 palimpsest entry |
+| [`reports/lost_books_summary.pdf`](reports/lost_books_summary.pdf) | **The gold dots** — book-by-book through all 107 lost books: the 710 periocha-derived skeleton events, witness lines (Obsequens, Plutarch/Dio crosswalk), fragment markers |
+| [`reports/apocrypha_codex.pdf`](reports/apocrypha_codex.pdf) | **The rendering** — all 107 lost books as modern English compositions in Livy's manner (`apocrypha/`), content firewalled to the attested events with per-sentence citations, NONE OF THIS IS LIVY on the title page, the honest blank pages for 136–137. Enforced by `TestApocrypha`. |
+
 ### All 142 books, attested
 
 ![Attestation density across all 142 books](dashboard/img/attestation_142.svg)
