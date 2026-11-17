@@ -1,0 +1,51 @@
+{
+  "matches": [
+    {"blind_hypothesis": "Bacchanalia conspiracy investigated and suppressed, many punished (186 BCE)", "ground_truth_event_id": "evt:b39-c08-bacchanalia-conspiracy-revealed", "quality": "full"},
+    {"blind_hypothesis": "Bacchanalia conspiracy investigated and suppressed, many punished (186 BCE)", "ground_truth_event_id": "evt:b39-c14-extraordinary-inquisition-decreed", "quality": "partial"},
+    {"blind_hypothesis": "Bacchanalia conspiracy investigated and suppressed, many punished (186 BCE)", "ground_truth_event_id": "evt:b39-c18-bacchanal-executions", "quality": "partial"},
+    {"blind_hypothesis": "Valerius Flaccus and Cato hold the censorship together (184 BCE)", "ground_truth_event_id": "evt:b39-c41-cato-elected-censor", "quality": "partial"},
+    {"blind_hypothesis": "Censors expel L. Quinctius Flamininus from the senate for the banquet killing; Cato's speech extant", "ground_truth_event_id": "evt:b39-c42-cato-senate-expulsions", "quality": "full"},
+    {"blind_hypothesis": "Scipio Africanus dies at Liternum, estranged from the ungrateful city", "ground_truth_event_id": "evt:b39-c52-scipio-africanus-exile-death", "quality": "partial"},
+    {"blind_hypothesis": "Colonies founded at Potentia, Pisaurum, Mutina, and Parma", "ground_truth_event_id": "evt:b39-c44-potentia-pisaurum-founded", "quality": "full"},
+    {"blind_hypothesis": "Colonies founded at Potentia, Pisaurum, Mutina, and Parma", "ground_truth_event_id": "evt:b39-c55-colonies-aquileia-mutina-parma", "quality": "partial"},
+    {"blind_hypothesis": "M. Fulvius Nobilior triumphs over the Aetolians (186 BCE)", "ground_truth_event_id": "evt:b39-c04-fulvius-triumph-veto", "quality": "partial"},
+    {"blind_hypothesis": "Gauls who crossed the Alps expelled from Italy without battle", "ground_truth_event_id": "evt:b39-c54-transalpine-gauls-appeal", "quality": "partial"}
+  ],
+  "blind_only": [
+    {"hypothesis": "M. Aemilius builds road from Placentia to Ariminum joining the Via Flaminia", "diagnosis": "genuinely-attested-but-uncoded", "note": "Confirmed at livy:en:39:2 ('drew a road from Placentia to Ariminum, to meet that made by Flaminius'). Public-works notice outside the political-conflict event frame of the ground-truth coding."},
+    {"hypothesis": "Origins of luxury at Rome traced to the army returning from Asia", "diagnosis": "genuinely-attested-but-uncoded", "note": "Confirmed at livy:en:39:6 ('by this army returning from Asia was the origin of foreign luxury imported into the city') - Manlius Vulso's army, as the blind notes guessed. A moralizing aition, not a codable event; the adjacent coded event (Manlius' trial-avoidance, evt:b39-c06) left no trace in the witnesses."}
+  ],
+  "ground_truth_only": [
+    {"event_id": "evt:b39-c03-cenomani-appeal", "event_type": "external-appeal", "why_lost": "absent-from-all-witnesses"},
+    {"event_id": "evt:b39-c03-latin-allies-census", "event_type": "external-appeal", "why_lost": "absent-from-all-witnesses"},
+    {"event_id": "evt:b39-c06-manlius-trial-avoidance", "event_type": "prominent-trial", "why_lost": "absent-from-all-witnesses"},
+    {"event_id": "evt:b39-c13-hispala-informer-testimony", "event_type": "conspiracy", "why_lost": "absent-from-all-witnesses"},
+    {"event_id": "evt:b39-c17-mass-arrests-flight", "event_type": "prominent-trial", "why_lost": "absent-from-all-witnesses"},
+    {"event_id": "evt:b39-c18-sc-de-bacchanalibus", "event_type": "new-institution", "why_lost": "absent-from-all-witnesses"},
+    {"event_id": "evt:b39-c19-informer-rewards-voted", "event_type": "new-institution", "why_lost": "absent-from-all-witnesses"},
+    {"event_id": "evt:b39-c23-sipontum-buxentum-recolonized", "event_type": "colony-founded", "why_lost": "absent-from-all-witnesses"},
+    {"event_id": "evt:b39-c29-apulian-slave-insurrection", "event_type": "riot-tumult", "why_lost": "absent-from-all-witnesses"},
+    {"event_id": "evt:b39-c32-claudius-consular-canvass", "event_type": "electoral-conflict", "why_lost": "absent-from-all-witnesses"},
+    {"event_id": "evt:b39-c38-spanish-armies-veto-threat", "event_type": "veto-deadlock", "why_lost": "absent-from-all-witnesses"},
+    {"event_id": "evt:b39-c39-flaccus-praetorship-dispute", "event_type": "electoral-conflict", "why_lost": "absent-from-all-witnesses"},
+    {"event_id": "evt:b39-c41-poisoning-inquisitions", "event_type": "prominent-trial", "why_lost": "absent-from-all-witnesses"},
+    {"event_id": "evt:b39-c41-bacchanal-inquiries-tarentum", "event_type": "prominent-trial", "why_lost": "absent-from-all-witnesses"},
+    {"event_id": "evt:b39-c44-scipio-asiaticus-degraded", "event_type": "prominent-trial", "why_lost": "absent-from-all-witnesses"},
+    {"event_id": "evt:b39-c44-catonian-censorship-program", "event_type": "new-institution", "why_lost": "absent-from-all-witnesses"},
+    {"event_id": "evt:b39-c34-maronea-massacre", "event_type": "political-killing", "why_lost": "absent-from-all-witnesses"},
+    {"event_id": "evt:b39-c35-achaean-council-condemns-exiles", "event_type": "prominent-trial", "why_lost": "absent-from-all-witnesses"},
+    {"event_id": "evt:b39-c37-achaean-sentence-reversed", "event_type": "external-appeal", "why_lost": "absent-from-all-witnesses"},
+    {"event_id": "evt:b39-c48-messene-revolt", "event_type": "secession", "why_lost": "absent-from-all-witnesses"},
+    {"event_id": "evt:b39-c50-philopoemen-executed", "event_type": "political-killing", "why_lost": "present-but-reconstructor-missed"},
+    {"event_id": "evt:b39-c51-hannibal-death-roman-pressure", "event_type": "political-killing", "why_lost": "present-but-reconstructor-missed"},
+    {"event_id": "evt:b39-c53-perseus-demetrius-rivalry", "event_type": "conspiracy", "why_lost": "absent-from-all-witnesses"}
+  ],
+  "metrics": {
+    "ground_truth_n": 33,
+    "blind_n": 9,
+    "recall": 0.197,
+    "precision": 0.556,
+    "notes": "recall counts partial as 0.5: 3 full + 7 partial = 6.5/33. Precision at the blind-hypothesis level, partial as 0.5: 3 full (Bacchanalia, Flamininus expulsion, colonies) + 4 partial = 5.0/9. The 2 unmatched blind hypotheses are NOT hallucinations - both verified in the surviving text (livy:en:39:2 road, 39:6 luxury) but fall outside the political-event coding frame; precision against the raw text is 9/9. The Periocha mentions the deaths of Hannibal and Philopoemen in the same synchronism as Scipio's, but the reconstructor folded them into one hypothesis's notes instead of coding them: 2 recoverable events missed (would have raised recall to ~0.26)."
+  },
+  "qualitative": "What survives epitomization is the memorable, not the political: moral exempla (the Flamininus banquet scandal with its double tradition, Scipio dying estranged from an ungrateful Rome, the luxury-from-Asia aition), monuments (the Via Aemilia), and ritual milestones (one triumph, four colony names) - famous men and quotable scandals, stripped of procedure. What dies is the entire machinery of republican conflict that the ground truth exists to code: all 4 veto/electoral contests, all 3 external appeals, the Spanish-army demobilization fight, the Catonian censorship program, the slave insurrection, the poisoning quaestiones, and the whole Greek-Macedonian political theatre (Maronea, the Achaean trials, Messene, Perseus vs Demetrius) - 20 of 33 events leave no trace in any witness. The Bacchanalia is the sharpest measure of this loss: the ground truth resolves it into 8 coded events spanning revelation, informer testimony, an extraordinary Italy-wide inquisition, mass arrests of 7,000 sworn initiates, mass executions, the senatus consultum de Bacchanalibus, informer-reward legislation, and residual Tarentine inquiries, while the witnesses compress all of it into one Periocha sentence ('inuestigatum et multorum poena sublatum') - roughly 25% recovery (1 full + 2 partial of 8 phases) with 100% loss of the institutional layer: no Hispala, no magistrates, no quaestio extra ordinem, no SC, no reward machinery. Most damning, Obsequens's entry for 186 BCE - a year whose prodigy-anxious climate the Bacchanalia affair defined - records portents and the bloodless ejection of Gauls but not one word of the conspiracy, showing that even a witness genre keyed to religious disturbance filtered out the century's largest religious persecution. Epitomization thus preserves that something happened while destroying how the state did it: every new institution coded in Book 39 (the SC, the inquisition apparatus, informer rewards, Cato's fiscal program) was lost from all witnesses."
+}

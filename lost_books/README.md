@@ -52,11 +52,27 @@ marked in the skeleton.
 - [x] Five witness corpora acquired in Latin (≈936k chars)
 - [x] Fragment registry seeded (2 certain items + mining category), texts
       pending acquisition from cited editions
-- [ ] Obsequens entries mapped to books (consular-year keying)
-- [ ] Florus/Orosius/Eutropius parallel passages located per book
-- [ ] Plutarch/Dio section-level mapping (currently era-level, APPROXIMATE)
-- [ ] Grammarian quotation mining
-- [ ] Event skeletons extracted from periochae
+- [x] Obsequens entries mapped to books (82 year-entries by consular pair;
+      `obsequens_map.jsonl`; gaps 174-168, 82-78, 72-64, 41-18 BCE flagged)
+- [ ] Florus/Orosius/Eutropius parallel passages located per book (agents in flight)
+- [x] Plutarch/Dio mapping upgraded to book level with verbatim periocha
+      anchors (`narrative_witness_map.json`, DRAFT non-evidentiary; 81/107
+      books have Plutarch coverage)
+- [~] Quotation mining: Seneca Suasoriae acquired and BOTH Book 120
+      fragments extracted verbatim (`fragments.jsonl`); grammarian corpora
+      (Priscian, Nonius) still to mine
+- [x] Event skeletons extracted from periochae: **710 events across all 105
+      books with surviving periochae, 0 validation rejects**
+      (`periocha_events.jsonl`)
+- [x] Simulated-loss experiments run and scored (`experiments/`):
+      Book 22 recall 46.6% / precision 83.3%; Book 39 recall 19.7% /
+      precision 55.6%, zero hallucinations. Shared law: epitomes preserve
+      the spectacular (dictatorships, scandals, famous deaths) and destroy
+      institutional process (the Bacchanalia's 8 coded phases → 1 sentence).
+      These are the calibration numbers for every gold dot in the
+      attestation chart — and the recall ceiling for the 107 lost books.
+- [x] Fragments dossier: `reports/lost_fragments.pdf` (Latin + working
+      translations, provenance, honesty labels)
 - [ ] External review pass for missed witnesses (planned: ChatGPT session)
 
 ## Evidence genealogy — agreement is not independence
