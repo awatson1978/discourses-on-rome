@@ -272,8 +272,11 @@ python3 scripts/build_apocrypha_codex.py      # + Chrome --print-to-pdf
 python3 scripts/validate.py && python3 -m pytest tests/ -q
 ```
 
-Corpus texts are public domain; transcription layers CC BY-SA (details and
-edition caveats in `SOURCES.md`). Project code and analysis: MIT. The
+Corpus texts are public domain; transcription layers retain their upstream
+licenses (details and edition caveats in `SOURCES.md`). Project code,
+extractions, analyses, and reports: **CC BY 4.0** (see `LICENSE`). The
+apocrypha are a separate, all-rights-reserved literary work:
+*The Apocrypha of Livy*, © 2026 Abigail Watson (`apocrypha/NOTICE`). The
 19th-century editions used are not modern critical texts — chapter numbering
 is stable, wording is not guaranteed.
 

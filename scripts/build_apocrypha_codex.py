@@ -66,12 +66,14 @@ def render(md_text):
 def main():
     files = sorted((ROOT / "apocrypha").glob("book_*.md"))
     parts = [f"""<!DOCTYPE html><html><head><meta charset="utf-8">
-<title>Apocrypha: The Lost Books, Rendered</title><style>{css}</style></head><body>
-<h1>Apocrypha</h1>
-<p class="tsub">The 107 lost books of Ab Urbe Condita, rendered as modern
-English compositions in Livy's manner<br>from the attested skeleton of the
-derivative tradition · the Lost Books Program ·
-github.com/awatson1978/discourses-on-rome · 2026-11-17</p>
+<title>The Apocrypha of Livy</title><style>{css}</style></head><body>
+<h1>The Apocrypha of Livy</h1>
+<p class="tsub">The Lost Books of Ab Urbe Condita<br>
+rendered as modern English compositions in Livy's manner, from the attested
+skeleton of the derivative tradition<br>the Lost Books Program ·
+github.com/awatson1978/discourses-on-rome</p>
+<p class="tsub" style="margin-top:28px">© 2026 Abigail Watson.<br>
+All rights reserved.</p>
 <div class="warn"><b>None of this is Livy.</b> Every page below is a modern,
 AI-composed English imitation whose content is restricted to events attested
 in the ancient summaries (bracketed citations resolve to
