@@ -67,8 +67,8 @@ def main():
         for r in rows(f):
             con.execute("INSERT INTO passages VALUES (?,?,?,?,?,?,?,?,?)",
                         (r["passage_id"], r["work"], r["lang"], r["edition"],
-                         r["book"], r["chapter"], r.get("heading", ""),
-                         r["text"], r["source_file"]))
+                         r.get("book"), r.get("chapter"), r.get("heading", ""),
+                         r["text"], r.get("source_file", r.get("source_url", ""))))
     ext = ROOT / "extractions"
     for r in rows(ext / "observations.jsonl"):
         con.execute("INSERT INTO observations VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",

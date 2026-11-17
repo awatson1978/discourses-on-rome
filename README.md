@@ -321,6 +321,41 @@ sentence a confabulation wearing a toga. That failure mode is precisely what
 this repository's validation gates exist to prevent. The dream of the oracle
 is interpolation; the discipline of the project is provenance.
 
+## The Lost Books Program (`lost_books/`)
+
+*Begun 2026-11-17, the session's final act: the inverse problem, scaffolded.*
+
+The 107 lost books survive only as compressions — the Periochae, Obsequens,
+Florus, Orosius, Eutropius, and the Livian layers in Plutarch and Dio.
+Reconstructing them is the exact inverse of what this repository does to
+Machiavelli: reversing a compression, under provenance discipline. The
+scaffold now exists:
+
+- **107 structured records** (`lost_books/skeleton.jsonl`) and contributor
+  pages (`lost_books/books/book_011.md` … `book_142.md`), one per lost book,
+  each with its **Periocha as the spine** (105 present in Latin; the
+  periochae of Books 136–137 are themselves lost, and marked so).
+- **Five witness corpora acquired** (~936k chars of Latin, verbatim,
+  segmented): the ten missing Periochae (11–20), Julius Obsequens's prodigy
+  excerpts (190–11 BCE), Florus, Orosius 1–7, Eutropius 1–10
+  (`scripts/acquire_witnesses.py`). Plutarch and Dio are mapped at era level
+  (flagged APPROXIMATE) pending ingestion.
+- **A fragments registry** (`lost_books/fragments.jsonl`) seeded with the
+  attested verbatim survivals — the Book 91 Vatican palimpsest and Seneca's
+  quotation of Book 120 on Cicero's death — with `text_la: null` until the
+  words are acquired from cited editions. A test enforces it: fragment text,
+  once present, must verify against an acquired witness; event tables must
+  stay empty until every row cites a witness. **No prose is ever fabricated.**
+- **An open review queue** (`lost_books/witnesses.json`): sources flagged for
+  the planned external (ChatGPT) hunting pass — Valerius Maximus, Frontinus,
+  Granius Licinianus, Zonaras, the Oxyrhynchus epitome, Augustine's Livian
+  citations, and whatever we've missed.
+
+The three rules, from `lost_books/README.md`: the evidence model is senior to
+the linguistic model; fragments are quotations, not compositions; event
+skeletons are hypotheses with witnesses. The dream of the oracle is
+interpolation; the discipline of the project is provenance.
+
 ## The linguistic fingerprint — a second opinion from another model
 
 *Added 2026-11-17. The researcher took the lost-books question to ChatGPT,

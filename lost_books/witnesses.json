@@ -1,0 +1,15 @@
+{
+  "_note": "Registry of derivative-tradition witnesses for the lost books. 'acquired' means plain-text Latin is in corpus/raw/witnesses/ and corpus/segments/witnesses_la.jsonl. The Latin Library texts carry no critical apparatus and no stated license; they are conventional public-domain texts recorded as-is — flag any passage used as evidence for edition verification.",
+  "witnesses": [
+    {"key": "periochae", "work": "Periochae Ab Urbe Condita", "what": "ancient per-book summaries of nearly all 142 books", "coverage": "books 11-20 acquired (Latin Library); 46-142 already in corpus from Perseus; periochae of 136-137 lost", "acquired": true},
+    {"key": "obsequens", "work": "Julius Obsequens, Liber de prodigiis", "what": "prodigy lists excerpted from Livy, keyed by consular year", "coverage": "190-11 BCE (Livy ~37-142)", "acquired": true},
+    {"key": "florus", "work": "Florus, Epitome de Tito Livio", "what": "thematic epitome of Roman wars, largely Livian", "coverage": "regal period to Augustus", "acquired": true},
+    {"key": "orosius", "work": "Orosius, Historiae adversus paganos (7 books)", "what": "Christian world history with heavy Livian layers (esp. books 3-6)", "coverage": "full span", "acquired": true},
+    {"key": "eutropius", "work": "Eutropius, Breviarium (10 books)", "what": "short imperial-era compendium in the Livian tradition", "coverage": "full span to 364 CE", "acquired": true},
+    {"key": "plutarch", "work": "Plutarch, Roman Lives", "what": "biographies using Livy among sources; era-level mapping in skeleton (APPROXIMATE)", "coverage": "per-life", "acquired": false, "todo": "ingest relevant Lives (Greek or public-domain English), verify per-book mapping"},
+    {"key": "cassius-dio", "work": "Cassius Dio, Roman History", "what": "parallel narrative; fragmentary before 69 BCE, extant 36-56 for the late Republic/Augustus", "coverage": "per-book", "acquired": false, "todo": "ingest Dio 36-56 (public-domain translation or Greek), verify mapping"},
+    {"key": "oxyrhynchus-epitome", "work": "P.Oxy. IV 668", "what": "papyrus epitome, independent of the Periochae", "coverage": "lost books 37-40 and 48-55", "acquired": false, "todo": "acquire published transcription"},
+    {"key": "cassiodorus", "work": "Cassiodorus, Chronica", "what": "consular list in the Livian tradition", "coverage": "full span", "acquired": false},
+    {"key": "candidates-for-review", "work": "(external review pass)", "what": "sources possibly missed: Valerius Maximus (exempla, heavily Livian), Frontinus (Strategemata), Festus/De viris illustribus, Granius Licinianus, Zonaras (for Dio's lost books), Augustine (De civitate Dei, Livian citations), Pliny NH citations", "acquired": false, "todo": "ChatGPT source-hunting session planned by the researcher"}
+  ]
+}

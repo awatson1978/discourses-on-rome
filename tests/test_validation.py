@@ -206,6 +206,48 @@ class TestPersepolis(unittest.TestCase):
                 self.assertEqual(r["parse_confidence"], "none", r["designation"])
 
 
+class TestLostBooks(unittest.TestCase):
+    """Lost-books scaffold integrity. Skipped until skeleton exists."""
+
+    def setUp(self):
+        self.path = ROOT / "lost_books/skeleton.jsonl"
+        if not self.path.exists():
+            self.skipTest("lost_books skeleton not yet built")
+        self.recs = [json.loads(l) for l in self.path.open(encoding="utf-8")]
+
+    def test_all_107_lost_books(self):
+        books = {r["book"] for r in self.recs}
+        self.assertEqual(books, set(range(11, 21)) | set(range(46, 143)))
+
+    def test_periochae_spine(self):
+        for r in self.recs:
+            if r["book"] in (136, 137):
+                self.assertEqual(r["periocha"]["status"], "lost", r["book"])
+            else:
+                self.assertEqual(r["periocha"]["status"], "present", r["book"])
+                self.assertGreater(len(r["periocha"]["text"]), 50, r["book"])
+
+    def test_no_fabricated_content(self):
+        # scaffold stage: events empty; fragment registry texts must be null
+        # until acquired from a cited edition
+        for r in self.recs:
+            self.assertEqual(r["events"], [], r["book"])
+        for l in (ROOT / "lost_books/fragments.jsonl").open(encoding="utf-8"):
+            f = json.loads(l)
+            if f["text_la"] is not None:
+                # once a text appears it must be verifiable against an
+                # acquired witness text in the corpus
+                segs = " ".join(
+                    json.loads(x)["text"] for x in
+                    (ROOT / "corpus/segments/witnesses_la.jsonl").open(encoding="utf-8"))
+                self.assertIn(re.sub(r"\s+", " ", f["text_la"]).strip()[:60],
+                              re.sub(r"\s+", " ", segs), f["fragment_id"])
+
+    def test_placeholder_files_exist(self):
+        for r in self.recs:
+            self.assertTrue((ROOT / f"lost_books/books/book_{r['book']:03d}.md").exists())
+
+
 class TestDatabase(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
