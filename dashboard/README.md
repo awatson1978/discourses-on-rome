@@ -25,6 +25,9 @@ python3 scripts/build_dashboard.py
 | Claim Test T1 | `reports/claim_tests.json` | roba-vs-onori: extraordinary-resolution share by conflict domain |
 | Selection Bias T3 + Anchors | `reports/claim_tests.json`, `extractions/chapter_map.jsonl` | cited-vs-uncited violence share; chapter→Livy anchor quality |
 | Causal Model | `extractions/claims.jsonl`, `schema/ontology.json` | Machiavelli's propositions as a directed graph over the recovered ontology; hover any edge for the claim text |
+| Persepolis transfers | `extractions/persepolis_transfers.jsonl` | every parsed PF commodity transfer by Darius I regnal year (log quantity, commodity color, marris ring); Ionian Revolt marked at year 23 ≈ 499 BCE |
+| Persepolis coverage | same + `reports/persepolis_analysis.json` | the honesty panel: 68 of 2,087 tablets transliterated (3.3%), commodity mix of that subset |
+| Persepolis dispersion (H5) | `reports/persepolis_analysis.json` | CV of grain quantities per regnal year; Ionian window in red; explicitly inconclusive |
 
 ## Honesty notes
 

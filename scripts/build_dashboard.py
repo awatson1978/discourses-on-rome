@@ -52,7 +52,34 @@ def build_data():
 
     conf_counts = collections.Counter(c["confidence"] for c in cmap)
 
+    # Persepolis (Phase VIII) — optional, only if parsed data exists
+    pf = None
+    pf_path = ROOT / "extractions/persepolis_transfers.jsonl"
+    pfa_path = ROOT / "reports/persepolis_analysis.json"
+    if pf_path.exists() and pfa_path.exists():
+        pfr = [json.loads(l) for l in pf_path.open(encoding="utf-8")]
+        pfa = json.loads(pfa_path.read_text(encoding="utf-8"))
+        points = []
+        for r in pfr:
+            if r.get("regnal_year") and r.get("quantities"):
+                for q in r["quantities"]:
+                    if q["unit"] in ("BAR", "MARRIS", "MARRIŠ") and q["value"] > 0:
+                        points.append({"y": r["regnal_year"], "v": q["value"],
+                                       "u": "BAR" if q["unit"] == "BAR" else "marris",
+                                       "c": r.get("commodity") or "other",
+                                       "d": r.get("designation", "")})
+        pf = {
+            "total": len(pfr),
+            "translated": sum(1 for r in pfr if r.get("has_translation")),
+            "commodities": pfa["coverage"]["commodity_dist"],
+            "points": points,
+            "cv_by_year": {y: s for y, s in pfa["grain_BAR_by_year"].items()},
+            "window": pfa["ionian_revolt_window"],
+            "places": pfa["top_places"][:8],
+        }
+
     return {
+        "persepolis": pf,
         "stats": {
             "passages": 1349, "chapters": 142, "livy_chapters": 530,
             "events": len(ev), "alignments": len(alns), "claims": len(claims),
@@ -154,6 +181,24 @@ footer{margin-top:28px;color:var(--muted);font-size:12px;font-style:italic}
     <p class="note">Machiavelli's propositions as a graph over the recovered ontology
     (hover edges for the claim). Circular layout; arrow = claimed causal direction;
     red = Machiavelli, blue = Livy's own counterfactual.</p></div>
+  <div class="panel wide" id="pf-section" style="display:none"><h2>Phase VIII — Persepolis Fortification Tablets (Hallock OIP 92 via CDLI)</h2>
+    <div id="pf-scatter"></div>
+    <div class="legend" id="pf-leg"></div>
+    <p class="note">Every parsed commodity transfer with a Darius I regnal year, from the
+    CDLI-transliterated subset of Hallock's 2,087 tablets. y = quantity (log scale);
+    dashed line = year 23 ≈ 499 BCE, outbreak of the Ionian Revolt. This is the
+    recipient-roll data structure the Roman pilot had to classify as hypothetical —
+    existing, at Persepolis. Hover points for tablet designations.</p></div>
+  <div class="panel" id="pf-cov-panel" style="display:none"><h2>Persepolis: The Coverage Limit</h2>
+    <div id="pf-coverage"></div>
+    <p class="note">CDLI has transliterated only a small, non-random subset of OIP 92 —
+    the binding constraint on every Phase VIII claim. Commodity mix below is of the
+    transliterated subset only.</p></div>
+  <div class="panel" id="pf-cv-panel" style="display:none"><h2>Persepolis: Dispersion Check (H5) — inconclusive</h2>
+    <div id="pf-cv"></div>
+    <p class="note">Coefficient of variation of grain quantities (BAR) per regnal year,
+    all text types pooled. The reported finding of increased dispersion around 499 BCE
+    is NOT supported or refuted here: n is tiny and types are mixed. Honesty, not evidence.</p></div>
 </div>
 <footer>Built 2026-11-16. All quotations in the underlying dataset are machine-verified
 verbatim substrings of their cited sources. Caveats: single-coder event series, coded from
@@ -366,6 +411,104 @@ statDefs.forEach(([k,l])=>{
   });
   s.appendChild(txt(16,24,'explanatory (red) · outcome (blue) · intervention (green) · condition (gold)',11,'#8a7a63'));
   document.getElementById('causal').appendChild(s);
+})();
+
+// ---- Persepolis (Phase VIII) ----
+(function(){
+  const P=D.persepolis;
+  if(!P)return;
+  ['pf-section','pf-cov-panel','pf-cv-panel'].forEach(id=>
+    document.getElementById(id).style.display='block');
+  const comColors={grain:'#8b6914',barley:'#8b6914',flour:'#c7903c',wine:'#7a1f3d',
+    beer:'#a0632a',sheep:'#5b8c5a',goat:'#5b8c5a',figs:'#1f4e5f',sesame:'#1f4e5f',
+    other:'#8a7a63'};
+
+  // scatter: regnal year (x) vs log quantity (y)
+  const W=940,H=340,x0=70,x1=W-20,y0=30,y1=H-46;
+  const s=svgEl(W,H);
+  const vals=P.points.map(p=>p.v);
+  const lmin=Math.log10(Math.min(...vals)),lmax=Math.log10(Math.max(...vals));
+  const yr=y=>x0+(y-13)/(28-13)*(x1-x0);
+  const qy=v=>y1-(Math.log10(v)-lmin)/(lmax-lmin)*(y1-y0);
+  for(let y=13;y<=28;y++){
+    s.appendChild(txt(yr(y),H-28,y,11,'#5a4a33','middle'));
+    if(y%3===1)s.appendChild(txt(yr(y),H-13,(523-y)+' BCE',9,'#b0a890','middle'));
+  }
+  [1,10,100,1000].forEach(v=>{
+    if(Math.log10(v)>=lmin-0.3&&Math.log10(v)<=lmax+0.3){
+      s.appendChild(el('line',{x1:x0,y1:qy(v),x2:x1,y2:qy(v),stroke:'#f2efe9','stroke-width':1}));
+      s.appendChild(txt(x0-8,qy(v)+4,v,10,'#b0a890','end'));
+    }
+  });
+  // Ionian Revolt marker at year 23
+  s.appendChild(el('line',{x1:yr(23),y1:y0,x2:yr(23),y2:y1,stroke:'#a03020',
+    'stroke-width':1.5,'stroke-dasharray':'5,4',opacity:.7}));
+  s.appendChild(txt(yr(23)+6,y0+12,'Ionian Revolt (499 BCE)',11,'#a03020'));
+  P.points.forEach(p=>{
+    const c=el('circle',{cx:yr(p.y)+(Math.sin(p.v*7)*7),cy:qy(p.v),r:6,
+      fill:comColors[p.c]||'#8a7a63',opacity:.8,
+      stroke:p.u==='marris'?'#2a2118':'none','stroke-width':1.5});
+    c.addEventListener('mousemove',ev=>showTip(ev,
+      p.d+'\n'+p.v+' '+p.u+' of '+p.c+' — year '+p.y+' ('+(523-p.y)+' BCE)'));
+    c.addEventListener('mouseleave',hideTip);
+    s.appendChild(c);
+  });
+  s.appendChild(txt(x0-50,18,'qty',10,'#b0a890'));
+  document.getElementById('pf-scatter').appendChild(s);
+  const leg=document.getElementById('pf-leg');
+  Object.entries({grain:'#8b6914',flour:'#c7903c',wine:'#7a1f3d',other:'#8a7a63'}).forEach(([k,v])=>{
+    const sp=document.createElement('span');
+    const i=document.createElement('i');i.style.background=v;
+    sp.appendChild(i);sp.appendChild(document.createTextNode(k));leg.appendChild(sp);
+  });
+  const sp2=document.createElement('span');
+  sp2.appendChild(document.createTextNode('(black ring = liquid marris unit)'));
+  leg.appendChild(sp2);
+
+  // coverage panel
+  (function(){
+    const s2=svgEl(430,210);
+    s2.appendChild(txt(4,18,'tablets acquired vs transliterated',11.5,'#5a4a33'));
+    s2.appendChild(el('rect',{x:4,y:26,width:400,height:22,fill:'#f2efe9',rx:3}));
+    const w=400*P.translated/P.total;
+    s2.appendChild(el('rect',{x:4,y:26,width:Math.max(w,4),height:22,fill:'#8b2500',rx:3}));
+    s2.appendChild(txt(4+Math.max(w,4)+8,42,P.translated+' of '+P.total+' ('+(100*P.translated/P.total).toFixed(1)+'%)',12,'#2a2118'));
+    const entries=Object.entries(P.commodities);
+    const max=Math.max(...entries.map(e=>e[1]));
+    entries.forEach(([c2,v],i)=>{
+      const y=66+i*17,w2=v/max*200;
+      s2.appendChild(txt(4,y+10,c2,10.5,'#5a4a33'));
+      s2.appendChild(el('rect',{x:80,y:y,width:w2,height:11,fill:comColors[c2]||'#8a7a63',rx:2}));
+      s2.appendChild(txt(84+w2,y+10,v,10,'#8a7a63'));
+    });
+    document.getElementById('pf-coverage').appendChild(s2);
+  })();
+
+  // CV by year panel
+  (function(){
+    const years=Object.keys(P.cv_by_year).map(Number).sort((a,b)=>a-b);
+    const s3=svgEl(430,200);
+    const cvs=years.map(y=>P.cv_by_year[y].cv).filter(v=>v!=null);
+    const maxCv=Math.max(...cvs,1.5);
+    years.forEach((y,i)=>{
+      const st=P.cv_by_year[y],x=30+i*38;
+      const revolt=(y===22||y===23);
+      if(st.cv!=null){
+        const h=st.cv/maxCv*120;
+        s3.appendChild(el('rect',{x,y:150-h,width:26,height:h,
+          fill:revolt?'#a03020':'#c7903c',rx:2,opacity:st.n>=5?1:.45}));
+        s3.appendChild(txt(x+13,145-h,st.cv.toFixed(2),9.5,'#2a2118','middle'));
+      }else{
+        s3.appendChild(txt(x+13,145,'·',12,'#b0a890','middle'));
+      }
+      s3.appendChild(txt(x+13,166,y,10,'#5a4a33','middle'));
+      s3.appendChild(txt(x+13,178,'n='+st.n,8.5,'#b0a890','middle'));
+    });
+    s3.appendChild(txt(30,16,'CV of grain quantities per regnal year (red = Ionian window; faded = n<5)',10.5,'#8a7a63'));
+    const w=P.window;
+    s3.appendChild(txt(30,196,'window CV '+w.years_22_23.cv+' (n='+w.years_22_23.n+') vs other '+w.other_years.cv+' (n='+w.other_years.n+') — underpowered, no conclusion',10,'#8a7a63'));
+    document.getElementById('pf-cv').appendChild(s3);
+  })();
 })();
 </script>
 </body>
