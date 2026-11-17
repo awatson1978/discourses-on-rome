@@ -8,10 +8,11 @@
 
 ## ⚠️ What this is (read first)
 
-This repository is a **one-day computational-historiography fever dream**,
-built YOLO-style in a single marathon session (2026-11-16) by a human asking
+This repository is a **computational-historiography fever dream**, built
+YOLO-style in one marathon weekend session (2026-11-16/17) by a human asking
 increasingly ambitious questions and an AI research agent (Claude) saying
-"yes, and—". It is provided **AS IS**, with no warranty of scholarly
+"yes, and—". By the end it had talked itself from "align three chapters with
+Livy" all the way to "download the Persepolis Fortification Archive." It is provided **AS IS**, with no warranty of scholarly
 completeness, no peer review, and no pretense that a day of pipeline-building
 substitutes for a career of classical philology.
 
@@ -50,7 +51,7 @@ that model can be recovered by:
    graded **A** (attested in ancient sources), **B** (structure implied,
    values lost), **C** (hypothetical; never fabricated).
 
-## Headline findings so far (pilot + first scale-up, all caveats apply)
+## Headline findings (pilot → full corpus → Persepolis; all caveats apply)
 
 - **The loss gradient.** Across 44 unit-level alignments in three case studies
   (Coriolanus, Spurius Maelius, the agrarian laws): material resources are
@@ -73,6 +74,33 @@ that model can be recovered by:
   16.2% extraordinary-resolution vs 12.5% for chapters he ignores. He samples
   the dramatic; the 74 routine institutional creations in the uncited mass are
   the dark matter of his method.
+- **The diluted decade.** Extracting all 142 chapters (407 propositions, 520
+  historical episodes, every quotation machine-verified, zero rejects) shows
+  the "commentary on Livy's first decade" draws only **51%** of its evidence
+  from the Roman Republic. **23% is contemporary Italy and Europe**, 14% other
+  antiquity — and the most-cited individual is **Hannibal**, whose war lives in
+  Livy's *third* decade, outside the book's own title. Two-thirds of the
+  propositions are empirical in form (causal mechanisms 35%, generalizations
+  33%), supporting the premise that the Discorsi encode a testable model, not
+  just counsel. (`reports/scale_up_report.md`)
+- **It replicates.** Blind re-coding of Livy Books 2 and 6 by independent
+  coders reproduces the analysis variables at κ = 0.87–0.89 (trigger domain)
+  and κ = 0.75–0.78 (resolution channel), with event-detection F1 0.75–0.83 —
+  so the claim-test results rest on codings two coders largely agree on, with
+  quantified error bars. (`reports/reliability.json`)
+- **The Persepolis closure.** The recipient-roll dataset Machiavelli's
+  largesse→partisans mechanism requires — classified **C-hypothetical** for
+  Rome because the early Republic could not have produced it — **actually
+  exists at Persepolis**. We pulled all 2,087 of Hallock's Fortification
+  tablets from CDLI; the transliterated subset (68 texts, the honest coverage
+  limit) parses field-for-field into his implied schema: commodity, quantity,
+  regnal year, allocating official, receiving official, destination
+  (*"30 bar of grain to Anshan, 17th year; Makuš received it, Umanna is to
+  apportion it"*). A state Machiavelli knew only through Xenophon kept exactly
+  the books his model calls for. Five formalized hypotheses await the full
+  archive; the one crude check we could run (ration dispersion around the
+  Ionian Revolt) is underpowered and honestly inconclusive.
+  (`reports/persepolis_phase8.md`)
 
 ## Repository layout
 
@@ -81,13 +109,16 @@ corpus/raw/        source texts (it.wikisource, Gutenberg/PGLAF, Perseus)
 corpus/segments/   stable-ID passages (disc:it:1:7, livy:la:2:34, ...)
 schema/            JSON Schemas + the recovered 25-variable ontology
 extractions/       observations, alignments, claims, dataset hypotheses,
-                   chapter_map (142 chapters), livy_events (383 events)
+                   chapter_map + chapter_observations (all 142 chapters),
+                   livy_events (383 events) + reliability re-codings,
+                   persepolis_transfers (parsed PF tablets)
 data/              SQLite database (regenerable: scripts/build_db.py)
 graphs/            GraphML: causal-claim graph, entity graph
 reports/           case studies, initial report, full-corpus analysis,
-                   selection statistics, claim tests
+                   scale-up report, reliability, claim tests, Persepolis Phase VIII
 scripts/           the whole pipeline, acquisition → analysis
-tests/             17 automated checks (citation fidelity, integrity, schemas)
+tests/             22 automated checks (citation fidelity, integrity, schemas,
+                   chapter observations, Persepolis parse)
 ```
 
 ## Reproducing
@@ -99,9 +130,13 @@ python3 scripts/segment_corpus.py
 python3 scripts/build_db.py
 python3 scripts/build_chapter_map.py
 python3 scripts/merge_livy_events.py
+python3 scripts/merge_chapter_observations.py
+python3 scripts/reliability.py
 python3 scripts/build_graph.py
 python3 scripts/analyze_selection.py
 python3 scripts/test_claims.py
+python3 scripts/acquire_persepolis.py    # CDLI, 2,087 tablets, resumable
+python3 scripts/parse_persepolis.py && python3 scripts/analyze_persepolis.py
 python3 scripts/validate.py && python3 -m pytest tests/ -q
 ```
 
@@ -113,11 +148,18 @@ is stable, wording is not guaranteed.
 ## Honest accounting of method
 
 - Pilot extractions: expert-in-the-loop manual coding with machine-validated
-  quotes. Scale-up event series: 10 parallel LLM coders (one per Livy book),
-  single-coded, no inter-rater reliability yet, coded from an 1857 translation.
-- Phase VIII (Persepolis Fortification Archive) is a **sketch only** — no
-  tablet data acquired, the referenced ration-dispersion finding treated as
-  unverified.
+  quotes. Scale-up series: parallel LLM coders working from 19th-century
+  translations (events) and the Italian original (chapter observations), all
+  under validator-enforced verbatim quotation.
+- Inter-coder reliability now measured (books 2+6, blind re-code): the
+  analysis variables replicate at substantial-to-near-perfect κ; event
+  *detection* diverges ±~20% on granularity, so treat raw event counts
+  accordingly.
+- Phase VIII has real data but a hard coverage limit: CDLI has transliterated
+  only 68 of the 2,087 Hallock tablets (a non-random subset), so the
+  formalized hypotheses are pipeline-tested, not answered. The externally
+  reported ration-dispersion finding remains **unverified**; our own crude
+  check was inconclusive by design honesty, not false modesty.
 - The circularity trap (derive mechanism from Machiavelli → read it into Livy
   → claim validation) is documented and guarded against, not magically solved;
   see `RESEARCH_METHOD.md` rule 4 and the coding-variable flags in
