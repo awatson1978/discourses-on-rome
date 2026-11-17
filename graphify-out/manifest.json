@@ -1,0 +1,862 @@
+{
+  "corpus/raw/discorsi_it/1_1.json": {
+    "mtime": 1794881942.8270295,
+    "ast_hash": "8fc95ac97c0d8848eaf9f60fd324e93f",
+    "semantic_hash": "8fc95ac97c0d8848eaf9f60fd324e93f"
+  },
+  "corpus/raw/discorsi_it/1_10.json": {
+    "mtime": 1794881949.616772,
+    "ast_hash": "4d12712f8d944485331cf8dfbb9b3459",
+    "semantic_hash": "4d12712f8d944485331cf8dfbb9b3459"
+  },
+  "corpus/raw/discorsi_it/1_11.json": {
+    "mtime": 1794881950.250126,
+    "ast_hash": "0957ff99841a6f08e3334600a958a3fa",
+    "semantic_hash": "0957ff99841a6f08e3334600a958a3fa"
+  },
+  "corpus/raw/discorsi_it/1_12.json": {
+    "mtime": 1794881951.1056893,
+    "ast_hash": "a96328addaa59972cdacdcdd7f93d807",
+    "semantic_hash": "a96328addaa59972cdacdcdd7f93d807"
+  },
+  "corpus/raw/discorsi_it/1_13.json": {
+    "mtime": 1794881951.9333577,
+    "ast_hash": "64bf0a90e00cec83f5cb1b920a1fd2d7",
+    "semantic_hash": "64bf0a90e00cec83f5cb1b920a1fd2d7"
+  },
+  "corpus/raw/discorsi_it/1_14.json": {
+    "mtime": 1794881952.634727,
+    "ast_hash": "fc61967fb1f30f4503b0d8f80eeea421",
+    "semantic_hash": "fc61967fb1f30f4503b0d8f80eeea421"
+  },
+  "corpus/raw/discorsi_it/1_15.json": {
+    "mtime": 1794881953.2672122,
+    "ast_hash": "ecefc9b53c3b6c8fe0bd992f58078513",
+    "semantic_hash": "ecefc9b53c3b6c8fe0bd992f58078513"
+  },
+  "corpus/raw/discorsi_it/1_16.json": {
+    "mtime": 1794881954.025999,
+    "ast_hash": "81c1125343ea9cc6a5bcceaca30bbfe8",
+    "semantic_hash": "81c1125343ea9cc6a5bcceaca30bbfe8"
+  },
+  "corpus/raw/discorsi_it/1_17.json": {
+    "mtime": 1794881954.7468495,
+    "ast_hash": "117b61c868c497726b03638f843c4ad8",
+    "semantic_hash": "117b61c868c497726b03638f843c4ad8"
+  },
+  "corpus/raw/discorsi_it/1_18.json": {
+    "mtime": 1794881955.399501,
+    "ast_hash": "8cd048d12adf480fa5686d5c8a2830ac",
+    "semantic_hash": "8cd048d12adf480fa5686d5c8a2830ac"
+  },
+  "corpus/raw/discorsi_it/1_19.json": {
+    "mtime": 1794881956.123405,
+    "ast_hash": "1882171f001a9b15e129b9fdb308028c",
+    "semantic_hash": "1882171f001a9b15e129b9fdb308028c"
+  },
+  "corpus/raw/discorsi_it/1_2.json": {
+    "mtime": 1794881943.6142933,
+    "ast_hash": "56c8f469b2cd0872bfa48ced06d14057",
+    "semantic_hash": "56c8f469b2cd0872bfa48ced06d14057"
+  },
+  "corpus/raw/discorsi_it/1_20.json": {
+    "mtime": 1794881958.0733511,
+    "ast_hash": "1246e4f777004632654e1d4c4d818360",
+    "semantic_hash": "1246e4f777004632654e1d4c4d818360"
+  },
+  "corpus/raw/discorsi_it/1_21.json": {
+    "mtime": 1794881958.815904,
+    "ast_hash": "6aab34e9dc0b5eff4d6ece5e3ea0cedd",
+    "semantic_hash": "6aab34e9dc0b5eff4d6ece5e3ea0cedd"
+  },
+  "corpus/raw/discorsi_it/1_22.json": {
+    "mtime": 1794881959.5720541,
+    "ast_hash": "c59b57dd318463e0360c6ba63ac0918a",
+    "semantic_hash": "c59b57dd318463e0360c6ba63ac0918a"
+  },
+  "corpus/raw/discorsi_it/1_23.json": {
+    "mtime": 1794881960.3163393,
+    "ast_hash": "1efebe838c4b57f57e21efad8a95aaf3",
+    "semantic_hash": "1efebe838c4b57f57e21efad8a95aaf3"
+  },
+  "corpus/raw/discorsi_it/1_24.json": {
+    "mtime": 1794881961.1789925,
+    "ast_hash": "ff1d44a05c658d55e9e03f2e68df706e",
+    "semantic_hash": "ff1d44a05c658d55e9e03f2e68df706e"
+  },
+  "corpus/raw/discorsi_it/1_25.json": {
+    "mtime": 1794881961.8894675,
+    "ast_hash": "364e09717f34d39fb941ccb41900e5e4",
+    "semantic_hash": "364e09717f34d39fb941ccb41900e5e4"
+  },
+  "corpus/raw/discorsi_it/1_26.json": {
+    "mtime": 1794881962.6691406,
+    "ast_hash": "953e9fe4a153aec26ace722dfabb99fb",
+    "semantic_hash": "953e9fe4a153aec26ace722dfabb99fb"
+  },
+  "corpus/raw/discorsi_it/1_27.json": {
+    "mtime": 1794881963.2837393,
+    "ast_hash": "bbf4fcc5447571ef8143e3a69136815f",
+    "semantic_hash": "bbf4fcc5447571ef8143e3a69136815f"
+  },
+  "corpus/raw/discorsi_it/1_28.json": {
+    "mtime": 1794881965.0361233,
+    "ast_hash": "ebc70db627b7d40ce1d36e35923cf80e",
+    "semantic_hash": "ebc70db627b7d40ce1d36e35923cf80e"
+  },
+  "corpus/raw/discorsi_it/1_29.json": {
+    "mtime": 1794881965.8433568,
+    "ast_hash": "4778c05de0776a33622186d5934e7fc7",
+    "semantic_hash": "4778c05de0776a33622186d5934e7fc7"
+  },
+  "corpus/raw/discorsi_it/1_3.json": {
+    "mtime": 1794881944.3251908,
+    "ast_hash": "bef438f56686f09c578535cd4799f0cd",
+    "semantic_hash": "bef438f56686f09c578535cd4799f0cd"
+  },
+  "corpus/raw/discorsi_it/1_30.json": {
+    "mtime": 1794881966.935308,
+    "ast_hash": "a5451ac905d2f4c65d884b3fbbc65bda",
+    "semantic_hash": "a5451ac905d2f4c65d884b3fbbc65bda"
+  },
+  "corpus/raw/discorsi_it/1_31.json": {
+    "mtime": 1794881969.2376802,
+    "ast_hash": "8eab9e2829232817bed0c32915c3a4c0",
+    "semantic_hash": "8eab9e2829232817bed0c32915c3a4c0"
+  },
+  "corpus/raw/discorsi_it/1_32.json": {
+    "mtime": 1794881970.2766821,
+    "ast_hash": "77858ffeddc0b336f7f6849c7b4ec2b8",
+    "semantic_hash": "77858ffeddc0b336f7f6849c7b4ec2b8"
+  },
+  "corpus/raw/discorsi_it/1_33.json": {
+    "mtime": 1794881971.033521,
+    "ast_hash": "7b2d5d8c44eeb705d9adc83cb95c1ae7",
+    "semantic_hash": "7b2d5d8c44eeb705d9adc83cb95c1ae7"
+  },
+  "corpus/raw/discorsi_it/1_34.json": {
+    "mtime": 1794881971.850534,
+    "ast_hash": "046e4488120da8d345ee31227fc4dd1e",
+    "semantic_hash": "046e4488120da8d345ee31227fc4dd1e"
+  },
+  "corpus/raw/discorsi_it/1_35.json": {
+    "mtime": 1794881972.6462913,
+    "ast_hash": "495c0b80b7b4df00d4c844262749e748",
+    "semantic_hash": "495c0b80b7b4df00d4c844262749e748"
+  },
+  "corpus/raw/discorsi_it/1_36.json": {
+    "mtime": 1794881973.2797344,
+    "ast_hash": "303e28530a65a0a124d2a97340b3a928",
+    "semantic_hash": "303e28530a65a0a124d2a97340b3a928"
+  },
+  "corpus/raw/discorsi_it/1_37.json": {
+    "mtime": 1794881974.1455665,
+    "ast_hash": "564517cf7d257638fb2348a63b59a5ab",
+    "semantic_hash": "564517cf7d257638fb2348a63b59a5ab"
+  },
+  "corpus/raw/discorsi_it/1_38.json": {
+    "mtime": 1794881974.8651774,
+    "ast_hash": "fc84d7db005898d357caa68b3700fe36",
+    "semantic_hash": "fc84d7db005898d357caa68b3700fe36"
+  },
+  "corpus/raw/discorsi_it/1_39.json": {
+    "mtime": 1794881975.5210953,
+    "ast_hash": "a9f8effef7bc699196811373f1005a4a",
+    "semantic_hash": "a9f8effef7bc699196811373f1005a4a"
+  },
+  "corpus/raw/discorsi_it/1_4.json": {
+    "mtime": 1794881944.9980671,
+    "ast_hash": "c20b8a82cbfe8771a08e0fcb70356aa9",
+    "semantic_hash": "c20b8a82cbfe8771a08e0fcb70356aa9"
+  },
+  "corpus/raw/discorsi_it/1_40.json": {
+    "mtime": 1794881976.369701,
+    "ast_hash": "011cc7bf4a86ca9638b03b8c5be6f7a1",
+    "semantic_hash": "011cc7bf4a86ca9638b03b8c5be6f7a1"
+  },
+  "corpus/raw/discorsi_it/1_41.json": {
+    "mtime": 1794881977.0962512,
+    "ast_hash": "1399a989f5de282649ef2f3239dd9409",
+    "semantic_hash": "1399a989f5de282649ef2f3239dd9409"
+  },
+  "corpus/raw/discorsi_it/1_42.json": {
+    "mtime": 1794881977.8165464,
+    "ast_hash": "30db800e715e709cc25a7f587336bfa7",
+    "semantic_hash": "30db800e715e709cc25a7f587336bfa7"
+  },
+  "corpus/raw/discorsi_it/1_43.json": {
+    "mtime": 1794881978.6651433,
+    "ast_hash": "fed793942bc44a26cee5cce9b293953b",
+    "semantic_hash": "fed793942bc44a26cee5cce9b293953b"
+  },
+  "corpus/raw/discorsi_it/1_44.json": {
+    "mtime": 1794881979.4435709,
+    "ast_hash": "599f9a69ed2e5f79d17303ae8aa11ca6",
+    "semantic_hash": "599f9a69ed2e5f79d17303ae8aa11ca6"
+  },
+  "corpus/raw/discorsi_it/1_45.json": {
+    "mtime": 1794881980.1139047,
+    "ast_hash": "960f10d08d591b5d3797ea54a5af2865",
+    "semantic_hash": "960f10d08d591b5d3797ea54a5af2865"
+  },
+  "corpus/raw/discorsi_it/1_46.json": {
+    "mtime": 1794881980.9595726,
+    "ast_hash": "e114c9db7ea522547add2f89dda8a241",
+    "semantic_hash": "e114c9db7ea522547add2f89dda8a241"
+  },
+  "corpus/raw/discorsi_it/1_47.json": {
+    "mtime": 1794881981.81349,
+    "ast_hash": "2147ecf708bab28caef98efb9ee7bd9e",
+    "semantic_hash": "2147ecf708bab28caef98efb9ee7bd9e"
+  },
+  "corpus/raw/discorsi_it/1_48.json": {
+    "mtime": 1794881982.5341792,
+    "ast_hash": "9978b30db6b8f910f22c35401590cf86",
+    "semantic_hash": "9978b30db6b8f910f22c35401590cf86"
+  },
+  "corpus/raw/discorsi_it/1_49.json": {
+    "mtime": 1794881983.2863019,
+    "ast_hash": "9289e89f89d402191c3c48ce86816d20",
+    "semantic_hash": "9289e89f89d402191c3c48ce86816d20"
+  },
+  "corpus/raw/discorsi_it/1_5.json": {
+    "mtime": 1794881945.8532054,
+    "ast_hash": "75f1878a5f025263ee486e360b91bfbd",
+    "semantic_hash": "75f1878a5f025263ee486e360b91bfbd"
+  },
+  "corpus/raw/discorsi_it/1_50.json": {
+    "mtime": 1794881984.1065319,
+    "ast_hash": "5e245fe29681b3b28fc58a5b7a00f625",
+    "semantic_hash": "5e245fe29681b3b28fc58a5b7a00f625"
+  },
+  "corpus/raw/discorsi_it/1_51.json": {
+    "mtime": 1794881984.9572551,
+    "ast_hash": "eaeded4686f1e840fc5b055d356db7d3",
+    "semantic_hash": "eaeded4686f1e840fc5b055d356db7d3"
+  },
+  "corpus/raw/discorsi_it/1_52.json": {
+    "mtime": 1794881985.7179067,
+    "ast_hash": "fa6f2694f3d5eb5977d8ff04f9951559",
+    "semantic_hash": "fa6f2694f3d5eb5977d8ff04f9951559"
+  },
+  "corpus/raw/discorsi_it/1_53.json": {
+    "mtime": 1794881986.433118,
+    "ast_hash": "ffbc61bf63ec2de4978cd2cb0a86530f",
+    "semantic_hash": "ffbc61bf63ec2de4978cd2cb0a86530f"
+  },
+  "corpus/raw/discorsi_it/1_54.json": {
+    "mtime": 1794881987.252819,
+    "ast_hash": "410eef26af491c347eab5dad0e284602",
+    "semantic_hash": "410eef26af491c347eab5dad0e284602"
+  },
+  "corpus/raw/discorsi_it/1_55.json": {
+    "mtime": 1794881988.1047158,
+    "ast_hash": "0b3eb5bc7ec8842b1467dac1dbee71c0",
+    "semantic_hash": "0b3eb5bc7ec8842b1467dac1dbee71c0"
+  },
+  "corpus/raw/discorsi_it/1_56.json": {
+    "mtime": 1794881988.8291218,
+    "ast_hash": "358e6361762d19affc87c34cb9d68725",
+    "semantic_hash": "358e6361762d19affc87c34cb9d68725"
+  },
+  "corpus/raw/discorsi_it/1_57.json": {
+    "mtime": 1794881989.5284212,
+    "ast_hash": "bc8a2e1dc7130b65340440a7d9006eed",
+    "semantic_hash": "bc8a2e1dc7130b65340440a7d9006eed"
+  },
+  "corpus/raw/discorsi_it/1_58.json": {
+    "mtime": 1794881990.2455726,
+    "ast_hash": "3d1e30d06b88051c06554bdcf1d7d2d7",
+    "semantic_hash": "3d1e30d06b88051c06554bdcf1d7d2d7"
+  },
+  "corpus/raw/discorsi_it/1_59.json": {
+    "mtime": 1794881991.1323817,
+    "ast_hash": "08f66e6378143f3ae0e90416378a6e54",
+    "semantic_hash": "08f66e6378143f3ae0e90416378a6e54"
+  },
+  "corpus/raw/discorsi_it/1_6.json": {
+    "mtime": 1794881946.509545,
+    "ast_hash": "0a6519b1b8f03726fbc8bce006a9786f",
+    "semantic_hash": "0a6519b1b8f03726fbc8bce006a9786f"
+  },
+  "corpus/raw/discorsi_it/1_60.json": {
+    "mtime": 1794881991.9802217,
+    "ast_hash": "7edf7655a35c48fc8d5c9405bfbc3fea",
+    "semantic_hash": "7edf7655a35c48fc8d5c9405bfbc3fea"
+  },
+  "corpus/raw/discorsi_it/1_7.json": {
+    "mtime": 1794881947.3855245,
+    "ast_hash": "a46f5635ccb90f5335f5ed9f3323f6d6",
+    "semantic_hash": "a46f5635ccb90f5335f5ed9f3323f6d6"
+  },
+  "corpus/raw/discorsi_it/1_8.json": {
+    "mtime": 1794881948.1334026,
+    "ast_hash": "ddf0174ab72e24215eeeb98cdce9d5c7",
+    "semantic_hash": "ddf0174ab72e24215eeeb98cdce9d5c7"
+  },
+  "corpus/raw/discorsi_it/1_9.json": {
+    "mtime": 1794881948.9847925,
+    "ast_hash": "a75368d874355c95a2c231cef39c1428",
+    "semantic_hash": "a75368d874355c95a2c231cef39c1428"
+  },
+  "corpus/raw/discorsi_it/1_proemio.json": {
+    "mtime": 1794882176.4011931,
+    "ast_hash": "c6439ca92e0957c47f315720722e8606",
+    "semantic_hash": "c6439ca92e0957c47f315720722e8606"
+  },
+  "corpus/raw/discorsi_it/2_1.json": {
+    "mtime": 1794881993.5909429,
+    "ast_hash": "7df7e6885984feeda8b782b79873eaf3",
+    "semantic_hash": "7df7e6885984feeda8b782b79873eaf3"
+  },
+  "corpus/raw/discorsi_it/2_10.json": {
+    "mtime": 1794882000.9284263,
+    "ast_hash": "3d90c5b00c87f962e9ff4aec41a54298",
+    "semantic_hash": "3d90c5b00c87f962e9ff4aec41a54298"
+  },
+  "corpus/raw/discorsi_it/2_11.json": {
+    "mtime": 1794882001.7368345,
+    "ast_hash": "dc5ae25ea125cd71da1dd175a3203d74",
+    "semantic_hash": "dc5ae25ea125cd71da1dd175a3203d74"
+  },
+  "corpus/raw/discorsi_it/2_12.json": {
+    "mtime": 1794882002.4997296,
+    "ast_hash": "6c415376eb74d93c705f5468157fdde5",
+    "semantic_hash": "6c415376eb74d93c705f5468157fdde5"
+  },
+  "corpus/raw/discorsi_it/2_13.json": {
+    "mtime": 1794882003.1925864,
+    "ast_hash": "d1e2182ce527ae57c21d02ae14d8f10b",
+    "semantic_hash": "d1e2182ce527ae57c21d02ae14d8f10b"
+  },
+  "corpus/raw/discorsi_it/2_14.json": {
+    "mtime": 1794882003.8332648,
+    "ast_hash": "6346c15bc72f0a06b271a707f6048f09",
+    "semantic_hash": "6346c15bc72f0a06b271a707f6048f09"
+  },
+  "corpus/raw/discorsi_it/2_15.json": {
+    "mtime": 1794882004.6396885,
+    "ast_hash": "41bf835608d03ac83f72606eb550b6e0",
+    "semantic_hash": "41bf835608d03ac83f72606eb550b6e0"
+  },
+  "corpus/raw/discorsi_it/2_16.json": {
+    "mtime": 1794882005.4364922,
+    "ast_hash": "4429545e93cecdd831506f586dd3af80",
+    "semantic_hash": "4429545e93cecdd831506f586dd3af80"
+  },
+  "corpus/raw/discorsi_it/2_17.json": {
+    "mtime": 1794882006.2765737,
+    "ast_hash": "8bdaa4aa0e633067a036d916c56b9ded",
+    "semantic_hash": "8bdaa4aa0e633067a036d916c56b9ded"
+  },
+  "corpus/raw/discorsi_it/2_18.json": {
+    "mtime": 1794882007.0766013,
+    "ast_hash": "bec37fd08ac0559c5426258fb65c3c0e",
+    "semantic_hash": "bec37fd08ac0559c5426258fb65c3c0e"
+  },
+  "corpus/raw/discorsi_it/2_19.json": {
+    "mtime": 1794882008.0280569,
+    "ast_hash": "3bab6beb5b2ab099d7736f39e4303581",
+    "semantic_hash": "3bab6beb5b2ab099d7736f39e4303581"
+  },
+  "corpus/raw/discorsi_it/2_2.json": {
+    "mtime": 1794881994.4847717,
+    "ast_hash": "71df37e8045e36e69e1f1a62c8c8623f",
+    "semantic_hash": "71df37e8045e36e69e1f1a62c8c8623f"
+  },
+  "corpus/raw/discorsi_it/2_20.json": {
+    "mtime": 1794882008.7838888,
+    "ast_hash": "b1d694f5b680a2e51df6b5f0b6b4ee96",
+    "semantic_hash": "b1d694f5b680a2e51df6b5f0b6b4ee96"
+  },
+  "corpus/raw/discorsi_it/2_21.json": {
+    "mtime": 1794882009.666549,
+    "ast_hash": "a037ad76392fe4e8486c9e9c7271716e",
+    "semantic_hash": "a037ad76392fe4e8486c9e9c7271716e"
+  },
+  "corpus/raw/discorsi_it/2_22.json": {
+    "mtime": 1794882010.5188453,
+    "ast_hash": "64bd734ba6689111584fea03358559a4",
+    "semantic_hash": "64bd734ba6689111584fea03358559a4"
+  },
+  "corpus/raw/discorsi_it/2_23.json": {
+    "mtime": 1794882011.2132916,
+    "ast_hash": "4e79fb11d4199a16454276ce0e7799ec",
+    "semantic_hash": "4e79fb11d4199a16454276ce0e7799ec"
+  },
+  "corpus/raw/discorsi_it/2_24.json": {
+    "mtime": 1794882012.1166425,
+    "ast_hash": "15207ba79d0af971f91d0360f5f92e8f",
+    "semantic_hash": "15207ba79d0af971f91d0360f5f92e8f"
+  },
+  "corpus/raw/discorsi_it/2_25.json": {
+    "mtime": 1794882013.8585172,
+    "ast_hash": "98649b4b8a0bfb131e8b5161fdb9d9ff",
+    "semantic_hash": "98649b4b8a0bfb131e8b5161fdb9d9ff"
+  },
+  "corpus/raw/discorsi_it/2_26.json": {
+    "mtime": 1794882014.6650786,
+    "ast_hash": "11432e1239653584234d32c985c9e320",
+    "semantic_hash": "11432e1239653584234d32c985c9e320"
+  },
+  "corpus/raw/discorsi_it/2_27.json": {
+    "mtime": 1794882015.3670037,
+    "ast_hash": "b734447850703f0f0a0b724f6952cbb4",
+    "semantic_hash": "b734447850703f0f0a0b724f6952cbb4"
+  },
+  "corpus/raw/discorsi_it/2_28.json": {
+    "mtime": 1794882016.4163222,
+    "ast_hash": "4c0430fad8ffc744136fa7290e3df780",
+    "semantic_hash": "4c0430fad8ffc744136fa7290e3df780"
+  },
+  "corpus/raw/discorsi_it/2_29.json": {
+    "mtime": 1794882017.2238762,
+    "ast_hash": "a51c3fb7824a62567b4c4b159b428804",
+    "semantic_hash": "a51c3fb7824a62567b4c4b159b428804"
+  },
+  "corpus/raw/discorsi_it/2_3.json": {
+    "mtime": 1794881995.2896357,
+    "ast_hash": "9dd698cde24dbe389c5e29f06e5a6dc9",
+    "semantic_hash": "9dd698cde24dbe389c5e29f06e5a6dc9"
+  },
+  "corpus/raw/discorsi_it/2_30.json": {
+    "mtime": 1794882018.0546103,
+    "ast_hash": "64d1da962b16ba10c643ce4bfbf509da",
+    "semantic_hash": "64d1da962b16ba10c643ce4bfbf509da"
+  },
+  "corpus/raw/discorsi_it/2_31.json": {
+    "mtime": 1794882018.874724,
+    "ast_hash": "6b225f9aaa1542d850c7c4d13ba278b4",
+    "semantic_hash": "6b225f9aaa1542d850c7c4d13ba278b4"
+  },
+  "corpus/raw/discorsi_it/2_32.json": {
+    "mtime": 1794882019.5618246,
+    "ast_hash": "eb4f4c9033161bc5b8306070e85dbad3",
+    "semantic_hash": "eb4f4c9033161bc5b8306070e85dbad3"
+  },
+  "corpus/raw/discorsi_it/2_33.json": {
+    "mtime": 1794882020.3213234,
+    "ast_hash": "393e883ddda733712961c485032e3538",
+    "semantic_hash": "393e883ddda733712961c485032e3538"
+  },
+  "corpus/raw/discorsi_it/2_4.json": {
+    "mtime": 1794881996.0139546,
+    "ast_hash": "5f0685b4a292881f60f1f0535626962f",
+    "semantic_hash": "5f0685b4a292881f60f1f0535626962f"
+  },
+  "corpus/raw/discorsi_it/2_5.json": {
+    "mtime": 1794881997.0549073,
+    "ast_hash": "e55e6d2ae4685fc1ac661844d487f80f",
+    "semantic_hash": "e55e6d2ae4685fc1ac661844d487f80f"
+  },
+  "corpus/raw/discorsi_it/2_6.json": {
+    "mtime": 1794881997.7757607,
+    "ast_hash": "5747a681ec72f7f30503265f863f6d10",
+    "semantic_hash": "5747a681ec72f7f30503265f863f6d10"
+  },
+  "corpus/raw/discorsi_it/2_7.json": {
+    "mtime": 1794881998.5911593,
+    "ast_hash": "cf441ca78a1ea37b387e6907e7032c72",
+    "semantic_hash": "cf441ca78a1ea37b387e6907e7032c72"
+  },
+  "corpus/raw/discorsi_it/2_8.json": {
+    "mtime": 1794881999.3920567,
+    "ast_hash": "28e9c99eb2c62259e9f103a94d0e9e68",
+    "semantic_hash": "28e9c99eb2c62259e9f103a94d0e9e68"
+  },
+  "corpus/raw/discorsi_it/2_9.json": {
+    "mtime": 1794882000.1651561,
+    "ast_hash": "e7625791dc03e80bfe46f5cc451a6d99",
+    "semantic_hash": "e7625791dc03e80bfe46f5cc451a6d99"
+  },
+  "corpus/raw/discorsi_it/2_proemio.json": {
+    "mtime": 1794882176.7801378,
+    "ast_hash": "afb811c354305cd28226e84e3637b548",
+    "semantic_hash": "afb811c354305cd28226e84e3637b548"
+  },
+  "corpus/raw/discorsi_it/3_1.json": {
+    "mtime": 1794882022.0806034,
+    "ast_hash": "7876c8df237d208d7403e0aa08fadbd1",
+    "semantic_hash": "7876c8df237d208d7403e0aa08fadbd1"
+  },
+  "corpus/raw/discorsi_it/3_10.json": {
+    "mtime": 1794882028.9085722,
+    "ast_hash": "463d01dab3f20a6d3829c21e13b61820",
+    "semantic_hash": "463d01dab3f20a6d3829c21e13b61820"
+  },
+  "corpus/raw/discorsi_it/3_11.json": {
+    "mtime": 1794882029.5632913,
+    "ast_hash": "33a1755954f1f4607743dde7ed67a22c",
+    "semantic_hash": "33a1755954f1f4607743dde7ed67a22c"
+  },
+  "corpus/raw/discorsi_it/3_12.json": {
+    "mtime": 1794882030.2933474,
+    "ast_hash": "94689f8e5ff3bb58f1bb9fedf435f1ca",
+    "semantic_hash": "94689f8e5ff3bb58f1bb9fedf435f1ca"
+  },
+  "corpus/raw/discorsi_it/3_13.json": {
+    "mtime": 1794882031.0970073,
+    "ast_hash": "cc45608f4381855107779ed6dbf7f319",
+    "semantic_hash": "cc45608f4381855107779ed6dbf7f319"
+  },
+  "corpus/raw/discorsi_it/3_14.json": {
+    "mtime": 1794882031.8486168,
+    "ast_hash": "ef6820ecaff03efbda4dd2a06961a8a5",
+    "semantic_hash": "ef6820ecaff03efbda4dd2a06961a8a5"
+  },
+  "corpus/raw/discorsi_it/3_15.json": {
+    "mtime": 1794882032.5386279,
+    "ast_hash": "20f7c7156e9fd5b51b9ed77fcb41c530",
+    "semantic_hash": "20f7c7156e9fd5b51b9ed77fcb41c530"
+  },
+  "corpus/raw/discorsi_it/3_16.json": {
+    "mtime": 1794882033.2261233,
+    "ast_hash": "de2a1db1763479cba1df382e580a4ac2",
+    "semantic_hash": "de2a1db1763479cba1df382e580a4ac2"
+  },
+  "corpus/raw/discorsi_it/3_17.json": {
+    "mtime": 1794882034.0562394,
+    "ast_hash": "5e567f6b4e7fe19489d908f80ebcb934",
+    "semantic_hash": "5e567f6b4e7fe19489d908f80ebcb934"
+  },
+  "corpus/raw/discorsi_it/3_18.json": {
+    "mtime": 1794882034.846113,
+    "ast_hash": "0b39a4e10cb95327a76ef6b8c7d1ce45",
+    "semantic_hash": "0b39a4e10cb95327a76ef6b8c7d1ce45"
+  },
+  "corpus/raw/discorsi_it/3_19.json": {
+    "mtime": 1794882035.6403189,
+    "ast_hash": "67cb53eade3591d5e4accc0f4ba7c05a",
+    "semantic_hash": "67cb53eade3591d5e4accc0f4ba7c05a"
+  },
+  "corpus/raw/discorsi_it/3_2.json": {
+    "mtime": 1794882022.781488,
+    "ast_hash": "ad000cba96966c5db66ffefbbcb0d3b0",
+    "semantic_hash": "ad000cba96966c5db66ffefbbcb0d3b0"
+  },
+  "corpus/raw/discorsi_it/3_20.json": {
+    "mtime": 1794882037.8400366,
+    "ast_hash": "9bacf4a9589fe19ae09b3d53a7b98074",
+    "semantic_hash": "9bacf4a9589fe19ae09b3d53a7b98074"
+  },
+  "corpus/raw/discorsi_it/3_21.json": {
+    "mtime": 1794882038.7199345,
+    "ast_hash": "206daaf67c052767c17f859ce751a0f7",
+    "semantic_hash": "206daaf67c052767c17f859ce751a0f7"
+  },
+  "corpus/raw/discorsi_it/3_22.json": {
+    "mtime": 1794882039.7594638,
+    "ast_hash": "5e67cb99e86d93fe930634b64756ca89",
+    "semantic_hash": "5e67cb99e86d93fe930634b64756ca89"
+  },
+  "corpus/raw/discorsi_it/3_23.json": {
+    "mtime": 1794882040.5342388,
+    "ast_hash": "442ca2a2dc7cfdf80cfb0c4c1321d83a",
+    "semantic_hash": "442ca2a2dc7cfdf80cfb0c4c1321d83a"
+  },
+  "corpus/raw/discorsi_it/3_24.json": {
+    "mtime": 1794882041.254469,
+    "ast_hash": "1abe8804eac9a4844d42999c0169f6bc",
+    "semantic_hash": "1abe8804eac9a4844d42999c0169f6bc"
+  },
+  "corpus/raw/discorsi_it/3_25.json": {
+    "mtime": 1794882041.9755507,
+    "ast_hash": "340521e616d8ad2abd8134ca9ea0cbcc",
+    "semantic_hash": "340521e616d8ad2abd8134ca9ea0cbcc"
+  },
+  "corpus/raw/discorsi_it/3_26.json": {
+    "mtime": 1794882042.6884038,
+    "ast_hash": "12fef563ad574dc2f446b2b3d7d1f4bc",
+    "semantic_hash": "12fef563ad574dc2f446b2b3d7d1f4bc"
+  },
+  "corpus/raw/discorsi_it/3_27.json": {
+    "mtime": 1794882043.9465778,
+    "ast_hash": "1a7b1c1dceb5da7ac125c478ab695444",
+    "semantic_hash": "1a7b1c1dceb5da7ac125c478ab695444"
+  },
+  "corpus/raw/discorsi_it/3_28.json": {
+    "mtime": 1794882044.7295802,
+    "ast_hash": "ba464dc456f43a707e181b6dac0392cf",
+    "semantic_hash": "ba464dc456f43a707e181b6dac0392cf"
+  },
+  "corpus/raw/discorsi_it/3_29.json": {
+    "mtime": 1794882045.484414,
+    "ast_hash": "677e76d864b8c7efb30bc4bf0bcd97e5",
+    "semantic_hash": "677e76d864b8c7efb30bc4bf0bcd97e5"
+  },
+  "corpus/raw/discorsi_it/3_3.json": {
+    "mtime": 1794882023.6346912,
+    "ast_hash": "30089e1fdfe5c2e7031549c5b892479c",
+    "semantic_hash": "30089e1fdfe5c2e7031549c5b892479c"
+  },
+  "corpus/raw/discorsi_it/3_30.json": {
+    "mtime": 1794882046.3777401,
+    "ast_hash": "a7988517da621d0e25248586a74e2de6",
+    "semantic_hash": "a7988517da621d0e25248586a74e2de6"
+  },
+  "corpus/raw/discorsi_it/3_31.json": {
+    "mtime": 1794882047.2377858,
+    "ast_hash": "e0360ab753104df042418be3dcc575c8",
+    "semantic_hash": "e0360ab753104df042418be3dcc575c8"
+  },
+  "corpus/raw/discorsi_it/3_32.json": {
+    "mtime": 1794882047.8760774,
+    "ast_hash": "4101054f30a3586927d676b84c29337a",
+    "semantic_hash": "4101054f30a3586927d676b84c29337a"
+  },
+  "corpus/raw/discorsi_it/3_33.json": {
+    "mtime": 1794882048.687415,
+    "ast_hash": "9920337bf0aae4a90eb72da363e3245d",
+    "semantic_hash": "9920337bf0aae4a90eb72da363e3245d"
+  },
+  "corpus/raw/discorsi_it/3_34.json": {
+    "mtime": 1794882049.5179074,
+    "ast_hash": "43b0bf94ed5380e76c29c8280061beeb",
+    "semantic_hash": "43b0bf94ed5380e76c29c8280061beeb"
+  },
+  "corpus/raw/discorsi_it/3_35.json": {
+    "mtime": 1794882050.3228774,
+    "ast_hash": "a415af7cb879d1344a925f965139e9f7",
+    "semantic_hash": "a415af7cb879d1344a925f965139e9f7"
+  },
+  "corpus/raw/discorsi_it/3_36.json": {
+    "mtime": 1794882051.0222058,
+    "ast_hash": "5db8108e4fba7f5c87c8f531b18e5d4e",
+    "semantic_hash": "5db8108e4fba7f5c87c8f531b18e5d4e"
+  },
+  "corpus/raw/discorsi_it/3_37.json": {
+    "mtime": 1794882051.778306,
+    "ast_hash": "add7239e885cdb6f3a3b7a12ffd0c4bf",
+    "semantic_hash": "add7239e885cdb6f3a3b7a12ffd0c4bf"
+  },
+  "corpus/raw/discorsi_it/3_38.json": {
+    "mtime": 1794882052.6036267,
+    "ast_hash": "4aaf912b3f53230c9fd536796eb44aeb",
+    "semantic_hash": "4aaf912b3f53230c9fd536796eb44aeb"
+  },
+  "corpus/raw/discorsi_it/3_39.json": {
+    "mtime": 1794882053.4039998,
+    "ast_hash": "025c634509a97f889489154050ee8959",
+    "semantic_hash": "025c634509a97f889489154050ee8959"
+  },
+  "corpus/raw/discorsi_it/3_4.json": {
+    "mtime": 1794882024.28269,
+    "ast_hash": "87dd7245657f1c7f4d280af6957cf46b",
+    "semantic_hash": "87dd7245657f1c7f4d280af6957cf46b"
+  },
+  "corpus/raw/discorsi_it/3_40.json": {
+    "mtime": 1794882054.1774542,
+    "ast_hash": "1eea1d4ab18f37069620852194c7cc08",
+    "semantic_hash": "1eea1d4ab18f37069620852194c7cc08"
+  },
+  "corpus/raw/discorsi_it/3_41.json": {
+    "mtime": 1794882054.8896253,
+    "ast_hash": "a83aebf111fec80fe45653f75d3d7aac",
+    "semantic_hash": "a83aebf111fec80fe45653f75d3d7aac"
+  },
+  "corpus/raw/discorsi_it/3_42.json": {
+    "mtime": 1794882055.5992508,
+    "ast_hash": "af436113da30b3f7d587d2170d79ca9a",
+    "semantic_hash": "af436113da30b3f7d587d2170d79ca9a"
+  },
+  "corpus/raw/discorsi_it/3_43.json": {
+    "mtime": 1794882056.3218741,
+    "ast_hash": "677e42d6cf622da13ff65182346cc7aa",
+    "semantic_hash": "677e42d6cf622da13ff65182346cc7aa"
+  },
+  "corpus/raw/discorsi_it/3_44.json": {
+    "mtime": 1794882057.1408024,
+    "ast_hash": "b22d4cfa6a5858ea6a9a0e1da4c1a1d4",
+    "semantic_hash": "b22d4cfa6a5858ea6a9a0e1da4c1a1d4"
+  },
+  "corpus/raw/discorsi_it/3_45.json": {
+    "mtime": 1794882057.887532,
+    "ast_hash": "bcb0f473f5da42e6cf061e2faf46df45",
+    "semantic_hash": "bcb0f473f5da42e6cf061e2faf46df45"
+  },
+  "corpus/raw/discorsi_it/3_46.json": {
+    "mtime": 1794882058.6999977,
+    "ast_hash": "f49a480f5da3854f0dcece2114226691",
+    "semantic_hash": "f49a480f5da3854f0dcece2114226691"
+  },
+  "corpus/raw/discorsi_it/3_47.json": {
+    "mtime": 1794882059.302266,
+    "ast_hash": "8d5b685de46877add6030156833fa0cb",
+    "semantic_hash": "8d5b685de46877add6030156833fa0cb"
+  },
+  "corpus/raw/discorsi_it/3_48.json": {
+    "mtime": 1794882060.4586635,
+    "ast_hash": "1dbebf347817e1ed20ac70100a58d527",
+    "semantic_hash": "1dbebf347817e1ed20ac70100a58d527"
+  },
+  "corpus/raw/discorsi_it/3_49.json": {
+    "mtime": 1794882061.2190788,
+    "ast_hash": "cf60fcfcd440aeb17384b4c5fa5b2e99",
+    "semantic_hash": "cf60fcfcd440aeb17384b4c5fa5b2e99"
+  },
+  "corpus/raw/discorsi_it/3_5.json": {
+    "mtime": 1794882025.0005794,
+    "ast_hash": "94a5916c58256950d282348d29d5cb05",
+    "semantic_hash": "94a5916c58256950d282348d29d5cb05"
+  },
+  "corpus/raw/discorsi_it/3_6.json": {
+    "mtime": 1794882025.8598356,
+    "ast_hash": "88892a3f394baefb3f5ad8d21c6039fc",
+    "semantic_hash": "88892a3f394baefb3f5ad8d21c6039fc"
+  },
+  "corpus/raw/discorsi_it/3_7.json": {
+    "mtime": 1794882026.574839,
+    "ast_hash": "ee0a3cfb7832ff77995f1623d1e92ec3",
+    "semantic_hash": "ee0a3cfb7832ff77995f1623d1e92ec3"
+  },
+  "corpus/raw/discorsi_it/3_8.json": {
+    "mtime": 1794882027.425933,
+    "ast_hash": "8eb35670d05c549369e1dec04154f65d",
+    "semantic_hash": "8eb35670d05c549369e1dec04154f65d"
+  },
+  "corpus/raw/discorsi_it/3_9.json": {
+    "mtime": 1794882028.181419,
+    "ast_hash": "850978f45a52ff03a783c3164f44791c",
+    "semantic_hash": "850978f45a52ff03a783c3164f44791c"
+  },
+  "corpus/raw/discorsi_it/dedica.json": {
+    "mtime": 1794881941.0233319,
+    "ast_hash": "3c0e8a922febc13d2467f07f28829ea2",
+    "semantic_hash": "3c0e8a922febc13d2467f07f28829ea2"
+  },
+  "corpus/raw/discorsi_it/manifest.json": {
+    "mtime": 1794882061.6261072,
+    "ast_hash": "2c35b5005eb4a7bffcde7452481485ab",
+    "semantic_hash": "2c35b5005eb4a7bffcde7452481485ab"
+  },
+  "reports/claim_tests.json": {
+    "mtime": 1794883922.7450485,
+    "ast_hash": "9d24d21a7a0371fc10aeee4e2804c3dc",
+    "semantic_hash": "9d24d21a7a0371fc10aeee4e2804c3dc"
+  },
+  "reports/selection_analysis.json": {
+    "mtime": 1794883045.9664369,
+    "ast_hash": "2c3cc120eff2b897dacfbfa119fbd4f5",
+    "semantic_hash": "2c3cc120eff2b897dacfbfa119fbd4f5"
+  },
+  "schema/alignment.schema.json": {
+    "mtime": 1794882221.4054883,
+    "ast_hash": "d40958cf533698f5306325efb07a0264",
+    "semantic_hash": "d40958cf533698f5306325efb07a0264"
+  },
+  "schema/causal_claim.schema.json": {
+    "mtime": 1794882230.9735563,
+    "ast_hash": "9d8c4b29536460084f21709124c1698a",
+    "semantic_hash": "9d8c4b29536460084f21709124c1698a"
+  },
+  "schema/dataset_hypothesis.schema.json": {
+    "mtime": 1794882238.427445,
+    "ast_hash": "1eaaf1046d9f0680d408ce65a219568e",
+    "semantic_hash": "1eaaf1046d9f0680d408ce65a219568e"
+  },
+  "schema/observation.schema.json": {
+    "mtime": 1794882214.2424252,
+    "ast_hash": "44205229be8b9a2eb3971413184e9961",
+    "semantic_hash": "44205229be8b9a2eb3971413184e9961"
+  },
+  "schema/ontology.json": {
+    "mtime": 1794882382.5168724,
+    "ast_hash": "252b2a4141a1583869f6ce1377cd7d2a",
+    "semantic_hash": "252b2a4141a1583869f6ce1377cd7d2a"
+  },
+  "scripts/acquire_discorsi_it.py": {
+    "mtime": 1794882186.5914319,
+    "ast_hash": "030026653f8b32223455e3019f5cfcfa",
+    "semantic_hash": "030026653f8b32223455e3019f5cfcfa"
+  },
+  "scripts/analyze_selection.py": {
+    "mtime": 1794883016.4078658,
+    "ast_hash": "6a7501959942feb043da05c88f4fd60c",
+    "semantic_hash": "6a7501959942feb043da05c88f4fd60c"
+  },
+  "scripts/build_chapter_map.py": {
+    "mtime": 1794883471.546184,
+    "ast_hash": "fe94ad445b685dddd3b01dbd11850d96",
+    "semantic_hash": "fe94ad445b685dddd3b01dbd11850d96"
+  },
+  "scripts/build_db.py": {
+    "mtime": 1794883943.5586238,
+    "ast_hash": "e594508cfe95fe4c0fd81e3a6ed37d38",
+    "semantic_hash": "e594508cfe95fe4c0fd81e3a6ed37d38"
+  },
+  "scripts/build_graph.py": {
+    "mtime": 1794883000.3189137,
+    "ast_hash": "5768294cf2b5443c12c0536edfcae0bb",
+    "semantic_hash": "5768294cf2b5443c12c0536edfcae0bb"
+  },
+  "scripts/merge_livy_events.py": {
+    "mtime": 1794883620.3933818,
+    "ast_hash": "e4f2791c515a93075167ea1d84b782f4",
+    "semantic_hash": "e4f2791c515a93075167ea1d84b782f4"
+  },
+  "scripts/segment_corpus.py": {
+    "mtime": 1794883066.1852038,
+    "ast_hash": "aa7b74f8371f2d298d6eb6f205b50506",
+    "semantic_hash": "aa7b74f8371f2d298d6eb6f205b50506"
+  },
+  "scripts/test_claims.py": {
+    "mtime": 1794883650.205042,
+    "ast_hash": "d1611bb81fc96ad1b33ffd1ebe4a0d2c",
+    "semantic_hash": "d1611bb81fc96ad1b33ffd1ebe4a0d2c"
+  },
+  "scripts/validate.py": {
+    "mtime": 1794882952.919895,
+    "ast_hash": "8f4de5aa4521c7ed9b6edf8523bf7d0f",
+    "semantic_hash": "8f4de5aa4521c7ed9b6edf8523bf7d0f"
+  },
+  "tests/test_validation.py": {
+    "mtime": 1794883659.5715253,
+    "ast_hash": "8e08887ea2856caf7a1e6700f1358aab",
+    "semantic_hash": "8e08887ea2856caf7a1e6700f1358aab"
+  },
+  "README.md": {
+    "mtime": 1794884260.3323965,
+    "ast_hash": "ec5eb150f3da35e3a467bf0e1cc59426",
+    "semantic_hash": "ec5eb150f3da35e3a467bf0e1cc59426"
+  },
+  "RESEARCH_METHOD.md": {
+    "mtime": 1794882050.2930648,
+    "ast_hash": "6497c6c798b62946034b07be9ea54b79",
+    "semantic_hash": "6497c6c798b62946034b07be9ea54b79"
+  },
+  "SOURCES.md": {
+    "mtime": 1794882076.149195,
+    "ast_hash": "af8fcace610481bba9c7a25c96da81cf",
+    "semantic_hash": "af8fcace610481bba9c7a25c96da81cf"
+  },
+  "corpus/raw/discourses_thomson_pg10827.txt": {
+    "mtime": 1794881919.75023,
+    "ast_hash": "ca15b7dce2fdb2fc00abd54c93611e6b",
+    "semantic_hash": "ca15b7dce2fdb2fc00abd54c93611e6b"
+  },
+  "reports/case_A_coriolanus.md": {
+    "mtime": 1794883116.9357245,
+    "ast_hash": "5313024265ee81d54a2c9b03f7a119e3",
+    "semantic_hash": "5313024265ee81d54a2c9b03f7a119e3"
+  },
+  "reports/case_B_maelius.md": {
+    "mtime": 1794883151.778694,
+    "ast_hash": "e599be2dcc628d50a1af59bf34263be8",
+    "semantic_hash": "e599be2dcc628d50a1af59bf34263be8"
+  },
+  "reports/case_C_agrarian.md": {
+    "mtime": 1794883185.0692043,
+    "ast_hash": "36c75f2fd61d5dce7888f976999e5588",
+    "semantic_hash": "36c75f2fd61d5dce7888f976999e5588"
+  },
+  "reports/full_corpus_analysis.md": {
+    "mtime": 1794884003.5899067,
+    "ast_hash": "52c167ffd99f7c5312ff7a83fe50c960",
+    "semantic_hash": "52c167ffd99f7c5312ff7a83fe50c960"
+  },
+  "reports/initial_report.md": {
+    "mtime": 1794883257.7564902,
+    "ast_hash": "2be33524de4c7dec4726d856a0d4d49c",
+    "semantic_hash": "2be33524de4c7dec4726d856a0d4d49c"
+  }
+}

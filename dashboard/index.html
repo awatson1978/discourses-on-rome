@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discourses on Rome — Dashboard</title>
+<style>
+:root{
+  --bg:#f5efe0; --panel:#fffbf0; --ink:#2a2118; --accent:#8b2500;
+  --accent2:#1f4e5f; --muted:#8a7a63; --line:#d8cdb4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);
+  font-family:Georgia,'Iowan Old Style','Palatino Linotype',serif;padding:24px;}
+h1{font-size:30px;font-variant:small-caps;letter-spacing:1px}
+h2{font-size:17px;font-variant:small-caps;letter-spacing:.5px;color:var(--accent);
+  border-bottom:1px solid var(--line);padding-bottom:6px;margin-bottom:12px}
+.sub{color:var(--muted);font-style:italic;margin:6px 0 18px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(430px,1fr))}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;
+  padding:18px;box-shadow:0 1px 4px rgba(90,70,40,.12)}
+.panel.wide{grid-column:1/-1}
+.statrow{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:20px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:6px;
+  padding:12px 20px;text-align:center;flex:1;min-width:110px}
+.stat b{display:block;font-size:26px;color:var(--accent)}
+.stat span{font-size:12px;color:var(--muted)}
+svg text{font-family:Georgia,serif}
+.note{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.5}
+.legend{font-size:12px;color:var(--muted);margin-top:6px}
+.legend span{display:inline-block;margin-right:12px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px}
+#tip{position:fixed;pointer-events:none;background:#2a2118;color:#f5efe0;
+  padding:6px 10px;border-radius:4px;font-size:12px;max-width:340px;display:none;
+  z-index:10;white-space:pre-line}
+a{color:var(--accent2)}
+footer{margin-top:28px;color:var(--muted);font-size:12px;font-style:italic}
+</style>
+</head>
+<body>
+<h1>Discourses on Rome</h1>
+<p class="sub">Reverse-engineering Machiavelli's <i>Discorsi</i> as a historical dataset
+ — one-day YOLO build, provided AS IS ·
+ <a href="https://github.com/awatson1978/discourses-on-rome">github.com/awatson1978/discourses-on-rome</a></p>
+<div id="tip"></div>
+<div class="statrow" id="stats"></div>
+<div class="grid">
+  <div class="panel"><h2>The Loss Gradient</h2>
+    <div id="loss"></div>
+    <p class="note">Share of information units omitted or abstracted when Machiavelli
+    compresses Livy (pilot: 44 aligned units, 3 case studies). He deletes measurement,
+    keeps mechanism.</p></div>
+  <div class="panel"><h2>Transformation Distribution (pilot)</h2>
+    <div id="transforms"></div>
+    <p class="note">Fate of each Livy information unit in the Discorsi.
+    One unit in five is an <b>addition</b> — Florentine experience, inference, counterfactual.</p></div>
+  <div class="panel wide"><h2>Livy I–X Domestic-Political Event Series — 383 events, every chapter coded</h2>
+    <div id="scatter"></div>
+    <div class="legend" id="scatterleg"></div>
+    <p class="note">Every domestic-political event in Livy's first decade, coded independently of
+    Machiavelli's citations. x = chapter position within book, row = book. Color = resolution channel.</p></div>
+  <div class="panel"><h2>Event Types</h2><div id="types"></div></div>
+  <div class="panel"><h2>Trigger Domain × Resolution Channel</h2>
+    <div id="heat"></div>
+    <p class="note">Row = what the conflict was about; segments = how it resolved.
+    The violent row is <b>legal-rights</b>, not property — a domain Machiavelli's
+    roba/onori dichotomy does not name.</p></div>
+  <div class="panel"><h2>Claim Test: roba vs onori (T1)</h2>
+    <div id="t1"></div>
+    <p class="note">Machiavelli (Disc I.37): property conflicts turn violent, honors conflicts don't.
+    Within Livy I–X both run ~8%. His asymmetry lives entirely in the post-Livian (Gracchan) material.</p></div>
+  <div class="panel"><h2>Selection Bias (T3) &amp; Chapter Anchors</h2>
+    <div id="t3"></div>
+    <p class="note">Left: extraordinary-resolution share of events in Livy chapters Machiavelli
+    plausibly cites vs ignores. Right: anchor quality across the 142 Discorsi chapters
+    (quote = verbatim Latin quotation detected).</p></div>
+  <div class="panel wide"><h2>The Recovered Causal Model — every edge a claim, not a fact</h2>
+    <div id="causal"></div>
+    <p class="note">Machiavelli's propositions as a graph over the recovered ontology
+    (hover edges for the claim). Circular layout; arrow = claimed causal direction;
+    red = Machiavelli, blue = Livy's own counterfactual.</p></div>
+</div>
+<footer>Built 2026-11-16. All quotations in the underlying dataset are machine-verified
+verbatim substrings of their cited sources. Caveats: single-coder event series, coded from
+an 1857 translation, of a narrative that is itself a late reconstruction. Tests are against
+<i>Livy's representation</i>, not Roman reality.</footer>
+<script>
+const D = {"stats": {"passages": 1349, "chapters": 142, "livy_chapters": 530, "events": 383, "alignments": 44, "claims": 14, "observations": 26, "datasets": 12}, "transformations": {"preservation": 8, "omission": 14, "abstraction": 8, "reinterpretation": 5, "addition": 9}, "loss_gradient": {"material_resources": 1.0, "actors": 0.75, "administrative_actions": 0.71, "political_outcome": 0.57, "causal_explanation": 0.31, "historical_event": 0.22}, "ev_by_type": {"new-institution": 74, "dictator-appointed": 50, "electoral-conflict": 47, "prominent-trial": 41, "colony-founded": 23, "agrarian-agitation": 19, "levy-obstruction": 19, "conspiracy": 18, "political-killing": 15, "riot-tumult": 15, "veto-deadlock": 13, "debt-crisis": 12, "regime-change": 10, "military-mutiny": 9, "famine-scarcity": 8, "external-appeal": 4, "secession": 3, "grain-dispute": 3}, "trig_chan": {"dynastic": {"extraordinary": 9, "mixed": 2, "ordinary": 3}, "legal-rights": {"na": 2, "extraordinary": 11, "ordinary": 35, "mixed": 4, "unresolved": 4}, "other": {"na": 6, "extraordinary": 4, "ordinary": 11, "unresolved": 2}, "honors-office": {"na": 4, "ordinary": 69, "extraordinary": 2, "mixed": 7, "unresolved": 5}, "land": {"na": 1, "ordinary": 37, "unresolved": 10, "mixed": 2}, "external": {"extraordinary": 6, "ordinary": 15, "na": 1, "mixed": 1}, "military": {"na": 10, "extraordinary": 4, "ordinary": 48, "unresolved": 4, "mixed": 4}, "religious": {"na": 5, "ordinary": 14}, "food": {"ordinary": 7, "na": 3, "mixed": 2}, "debt": {"unresolved": 12, "ordinary": 11, "extraordinary": 2, "mixed": 3, "na": 1}}, "t1": {"property_domain": {"n": 58, "dist": {"ordinary": 28, "unresolved": 22, "extraordinary": 2, "mixed": 5, "na": 1}, "extraordinary_share": 7.8}, "honors_office_domain": {"n": 60, "dist": {"ordinary": 48, "extraordinary": 2, "mixed": 5, "unresolved": 5}, "extraordinary_share": 7.5}, "legal_rights_domain": {"n": 34, "dist": {"extraordinary": 10, "ordinary": 16, "mixed": 4, "unresolved": 4}, "extraordinary_share": 35.3}, "machiavelli_prediction": "property conflicts resolve extraordinarily more often than honors conflicts (claim:d1c37-roba-vs-onori)"}, "t3": {"livy_chapters_with_candidate_citation": 114, "events_in_cited_chapters": 74, "events_in_uncited_chapters": 309, "type_dist_cited": {"new-institution": 11, "prominent-trial": 10, "electoral-conflict": 10, "dictator-appointed": 10, "political-killing": 5, "agrarian-agitation": 5, "conspiracy": 5, "colony-founded": 5, "regime-change": 4, "riot-tumult": 4, "levy-obstruction": 2, "military-mutiny": 2, "external-appeal": 1}, "type_dist_uncited": {"new-institution": 63, "dictator-appointed": 40, "electoral-conflict": 37, "prominent-trial": 31, "colony-founded": 18, "levy-obstruction": 17, "agrarian-agitation": 14, "conspiracy": 13, "veto-deadlock": 13, "debt-crisis": 12, "riot-tumult": 11, "political-killing": 10, "famine-scarcity": 8, "military-mutiny": 7, "regime-change": 6, "secession": 3, "grain-dispute": 3, "external-appeal": 3}, "extraordinary_share_cited": 16.2, "extraordinary_share_uncited": 12.5, "caveat": "'cited' = chapter appears as a retrieval candidate in chapter_map (name/quote heuristics), NOT verified citation. Direction of any difference is still informative about selection."}, "graph": {"nodes": [{"id": "ont:umori", "label": "Humors", "domain": "political-conflict", "role": "explanatory"}, {"id": "ont:ordini", "label": "Orders", "domain": "political-institutions", "role": "explanatory"}, {"id": "ont:accusation-channels", "label": "Legal accusation channels", "domain": "political-institutions", "role": "intervention"}, {"id": "ont:ordinary-vs-extraordinary", "label": "Ordinary vs extraordinary modes of political action", "domain": "political-conflict", "role": "explanatory"}, {"id": "ont:reputation-public", "label": "Reputation acquired through public ways", "domain": "population-social", "role": "explanatory"}, {"id": "ont:reputation-private", "label": "Reputation acquired through private benefits", "domain": "population-social", "role": "explanatory"}, {"id": "ont:partisans", "label": "Partisan followings", "domain": "political-conflict", "role": "explanatory"}, {"id": "ont:grain-distribution-control", "label": "Discretionary control over food distribution", "domain": "economic-administrative", "role": "intervention"}, {"id": "ont:land-distribution", "label": "Land ownership limits and distribution of conquered land", "domain": "economic-administrative", "role": "intervention"}, {"id": "ont:public-rich-citizens-poor", "label": "Public treasury rich / private citizens poor", "domain": "economic-administrative", "role": "condition"}, {"id": "ont:necessity-vs-ambition", "label": "Necessity vs ambition as motive regime", "domain": "population-social", "role": "explanatory"}, {"id": "ont:roba-vs-onori", "label": "Property", "domain": "political-conflict", "role": "explanatory"}, {"id": "ont:tribunate", "label": "Tribunician power", "domain": "political-institutions", "role": "explanatory"}, {"id": "ont:dictatorship", "label": "Dictatorship as lawful emergency power", "domain": "political-institutions", "role": "intervention"}, {"id": "ont:external-forces", "label": "Recourse to external/foreign forces by internal factions", "domain": "political-conflict", "role": "outcome"}, {"id": "ont:popular-unrest", "label": "Popular unrest", "domain": "political-conflict", "role": "outcome"}, {"id": "ont:institutional-survival", "label": "Institutional survival / republican liberty", "domain": "outcomes", "role": "outcome"}, {"id": "ont:tyranny-risk", "label": "Tyranny / regnum risk", "domain": "outcomes", "role": "outcome"}, {"id": "ont:faction-cascade", "label": "Faction formation cascade", "domain": "political-conflict", "role": "explanatory"}, {"id": "ont:distance-decay", "label": "Distance decay of popular demand for land", "domain": "military-territorial", "role": "condition"}, {"id": "ont:timing-of-reform", "label": "Timing/retroactivity of corrective legislation", "domain": "political-institutions", "role": "intervention"}], "edges": [{"s": "ont:accusation-channels", "t": "ont:popular-unrest", "claim": "claim:d1c7-accusation-channels", "author": "machiavelli", "type": "causal-mechanism", "statement": "Legal accusation channels (before the people or many judges) vent the humors that build up against citizens; where such ordinary outlets are absent, humors discharge through extraordinary modes that ruin the republic."}, {"s": "ont:accusation-channels", "t": "ont:institutional-survival", "claim": "claim:d1c7-accusation-channels", "author": "machiavelli", "type": "causal-mechanism", "statement": "Legal accusation channels (before the people or many judges) vent the humors that build up against citizens; where such ordinary outlets are absent, humors discharge through extraordinary modes that ruin the republic."}, {"s": "ont:umori", "t": "ont:popular-unrest", "claim": "claim:d1c7-accusation-channels", "author": "machiavelli", "type": "causal-mechanism", "statement": "Legal accusation channels (before the people or many judges) vent the humors that build up against citizens; where such ordinary outlets are absent, humors discharge through extraordinary modes that ruin the republic."}, {"s": "ont:umori", "t": "ont:institutional-survival", "claim": "claim:d1c7-accusation-channels", "author": "machiavelli", "type": "causal-mechanism", "statement": "Legal accusation channels (before the people or many judges) vent the humors that build up against citizens; where such ordinary outlets are absent, humors discharge through extraordinary modes that ruin the republic."}, {"s": "ont:ordini", "t": "ont:popular-unrest", "claim": "claim:d1c7-accusation-channels", "author": "machiavelli", "type": "causal-mechanism", "statement": "Legal accusation channels (before the people or many judges) vent the humors that build up against citizens; where such ordinary outlets are absent, humors discharge through extraordinary modes that ruin the republic."}, {"s": "ont:ordini", "t": "ont:institutional-survival", "claim": "claim:d1c7-accusation-channels", "author": "machiavelli", "type": "causal-mechanism", "statement": "Legal accusation channels (before the people or many judges) vent the humors that build up against citizens; where such ordinary outlets are absent, humors discharge through extraordinary modes that ruin the republic."}, {"s": "ont:ordinary-vs-extraordinary", "t": "ont:partisans", "claim": "claim:d1c7-faction-cascade", "author": "machiavelli", "type": "causal-mechanism", "statement": "Private repression of a citizen triggers a cascade: private offense generates fear, fear seeks defense, defense recruits partisans, partisans become parties, parties ruin the city."}, {"s": "ont:ordinary-vs-extraordinary", "t": "ont:faction-cascade", "claim": "claim:d1c7-faction-cascade", "author": "machiavelli", "type": "causal-mechanism", "statement": "Private repression of a citizen triggers a cascade: private offense generates fear, fear seeks defense, defense recruits partisans, partisans become parties, parties ruin the city."}, {"s": "ont:ordinary-vs-extraordinary", "t": "ont:institutional-survival", "claim": "claim:d1c7-faction-cascade", "author": "machiavelli", "type": "causal-mechanism", "statement": "Private repression of a citizen triggers a cascade: private offense generates fear, fear seeks defense, defense recruits partisans, partisans become parties, parties ruin the city."}, {"s": "ont:ordini", "t": "ont:external-forces", "claim": "claim:d1c7-external-forces", "author": "machiavelli", "type": "empirical-generalization", "statement": "Whenever a party within a city calls in external forces, the cause is defective civic orders: no internal channel exists to vent malignant humors ordinarily."}, {"s": "ont:accusation-channels", "t": "ont:external-forces", "claim": "claim:d1c7-external-forces", "author": "machiavelli", "type": "empirical-generalization", "statement": "Whenever a party within a city calls in external forces, the cause is defective civic orders: no internal channel exists to vent malignant humors ordinarily."}, {"s": "ont:accusation-channels", "t": "ont:institutional-survival", "claim": "claim:d1c7-few-judges", "author": "machiavelli", "type": "causal-mechanism", "statement": "Accusation before few judges is ineffective because the few act in the interest of the few; accusations must lie before many judges to be credible."}, {"s": "ont:grain-distribution-control", "t": "ont:tribunate", "claim": "claim:l2c34-livy-counterfactual", "author": "livy", "type": "counterfactual", "statement": "Livy's own counterfactual: by conceding a lower grain price, the senators could probably have rid themselves of the tribunate and all the rights imposed on them against their will; whether that would have been right is harder to say."}, {"s": "ont:reputation-private", "t": "ont:partisans", "claim": "claim:d3c28-private-benefits-tyranny", "author": "machiavelli", "type": "causal-mechanism", "statement": "Works that appear pious (like feeding the hungry) can conceal the beginning of tyranny: private benefits create partisans and embolden the benefactor to corrupt the public and force the laws."}, {"s": "ont:reputation-private", "t": "ont:tyranny-risk", "claim": "claim:d3c28-private-benefits-tyranny", "author": "machiavelli", "type": "causal-mechanism", "statement": "Works that appear pious (like feeding the hungry) can conceal the beginning of tyranny: private benefits create partisans and embolden the benefactor to corrupt the public and force the laws."}, {"s": "ont:grain-distribution-control", "t": "ont:partisans", "claim": "claim:d3c28-private-benefits-tyranny", "author": "machiavelli", "type": "causal-mechanism", "statement": "Works that appear pious (like feeding the hungry) can conceal the beginning of tyranny: private benefits create partisans and embolden the benefactor to corrupt the public and force the laws."}, {"s": "ont:grain-distribution-control", "t": "ont:tyranny-risk", "claim": "claim:d3c28-private-benefits-tyranny", "author": "machiavelli", "type": "causal-mechanism", "statement": "Works that appear pious (like feeding the hungry) can conceal the beginning of tyranny: private benefits create partisans and embolden the benefactor to corrupt the public and force the laws."}, {"s": "ont:reputation-public", "t": "ont:tyranny-risk", "claim": "claim:d3c28-public-vs-private-reputation", "author": "machiavelli", "type": "prescription", "statement": "A well-ordered republic opens public ways to reputation (counsel and deeds for the common benefit, rewarded with honors) and closes private ways (benefits to individuals creating partisans)."}, {"s": "ont:reputation-public", "t": "ont:institutional-survival", "claim": "claim:d3c28-public-vs-private-reputation", "author": "machiavelli", "type": "prescription", "statement": "A well-ordered republic opens public ways to reputation (counsel and deeds for the common benefit, rewarded with honors) and closes private ways (benefits to individuals creating partisans)."}, {"s": "ont:reputation-private", "t": "ont:tyranny-risk", "claim": "claim:d3c28-public-vs-private-reputation", "author": "machiavelli", "type": "prescription", "statement": "A well-ordered republic opens public ways to reputation (counsel and deeds for the common benefit, rewarded with honors) and closes private ways (benefits to individuals creating partisans)."}, {"s": "ont:reputation-private", "t": "ont:institutional-survival", "claim": "claim:d3c28-public-vs-private-reputation", "author": "machiavelli", "type": "prescription", "statement": "A well-ordered republic opens public ways to reputation (counsel and deeds for the common benefit, rewarded with honors) and closes private ways (benefits to individuals creating partisans)."}, {"s": "ont:ordini", "t": "ont:tyranny-risk", "claim": "claim:d3c28-public-vs-private-reputation", "author": "machiavelli", "type": "prescription", "statement": "A well-ordered republic opens public ways to reputation (counsel and deeds for the common benefit, rewarded with honors) and closes private ways (benefits to individuals creating partisans)."}, {"s": "ont:ordini", "t": "ont:institutional-survival", "claim": "claim:d3c28-public-vs-private-reputation", "author": "machiavelli", "type": "prescription", "statement": "A well-ordered republic opens public ways to reputation (counsel and deeds for the common benefit, rewarded with honors) and closes private ways (benefits to individuals creating partisans)."}, {"s": "ont:timing-of-reform", "t": "ont:institutional-survival", "claim": "claim:d3c28-punish-early", "author": "machiavelli", "type": "causal-mechanism", "statement": "Leaving one such private-reputation seeker unpunished is apt to ruin a republic, because after the precedent it is difficult to return to the true path."}, {"s": "ont:dictatorship", "t": "ont:institutional-survival", "claim": "claim:d3c28-punish-early", "author": "machiavelli", "type": "causal-mechanism", "statement": "Leaving one such private-reputation seeker unpunished is apt to ruin a republic, because after the precedent it is difficult to return to the true path."}, {"s": "ont:necessity-vs-ambition", "t": "ont:popular-unrest", "claim": "claim:d1c37-ambition-after-necessity", "author": "machiavelli", "type": "empirical-generalization", "statement": "Men fight first from necessity, then from ambition; desire always exceeds the power of acquiring, producing permanent discontent with what is possessed."}, {"s": "ont:necessity-vs-ambition", "t": "ont:umori", "claim": "claim:d1c37-ambition-after-necessity", "author": "machiavelli", "type": "empirical-generalization", "statement": "Men fight first from necessity, then from ambition; desire always exceeds the power of acquiring, producing permanent discontent with what is possessed."}, {"s": "ont:roba-vs-onori", "t": "ont:ordinary-vs-extraordinary", "claim": "claim:d1c37-roba-vs-onori", "author": "machiavelli", "type": "empirical-generalization", "statement": "Men value property more than honors: the nobility yielded honors to the plebs without extraordinary scandal, but defended property with such obstinacy that the plebs resorted to extraordinary means."}, {"s": "ont:roba-vs-onori", "t": "ont:popular-unrest", "claim": "claim:d1c37-roba-vs-onori", "author": "machiavelli", "type": "empirical-generalization", "statement": "Men value property more than honors: the nobility yielded honors to the plebs without extraordinary scandal, but defended property with such obstinacy that the plebs resorted to extraordinary means."}, {"s": "ont:timing-of-reform", "t": "ont:popular-unrest", "claim": "claim:d1c37-retroactive-law", "author": "machiavelli", "type": "prescription", "statement": "Making a law that looks far backward against an entrenched custom is extremely scandalous; temporizing is preferable, for delayed evil arrives later or extinguishes itself."}, {"s": "ont:timing-of-reform", "t": "ont:institutional-survival", "claim": "claim:d1c37-retroactive-law", "author": "machiavelli", "type": "prescription", "statement": "Making a law that looks far backward against an entrenched custom is extremely scandalous; temporizing is preferable, for delayed evil arrives later or extinguishes itself."}, {"s": "ont:land-distribution", "t": "ont:institutional-survival", "claim": "claim:d1c37-agrarian-destroyed-republic", "author": "machiavelli", "type": "empirical-generalization", "statement": "The contention over the agrarian law, reawakened by the Gracchi against adversaries whose power had doubled in the interim, destroyed Roman liberty through the Marius-Sulla and Caesar-Pompey faction wars; yet the same plebeian appetite had also checked noble ambition for three hundred years."}, {"s": "ont:land-distribution", "t": "ont:faction-cascade", "claim": "claim:d1c37-agrarian-destroyed-republic", "author": "machiavelli", "type": "empirical-generalization", "statement": "The contention over the agrarian law, reawakened by the Gracchi against adversaries whose power had doubled in the interim, destroyed Roman liberty through the Marius-Sulla and Caesar-Pompey faction wars; yet the same plebeian appetite had also checked noble ambition for three hundred years."}, {"s": "ont:roba-vs-onori", "t": "ont:institutional-survival", "claim": "claim:d1c37-agrarian-destroyed-republic", "author": "machiavelli", "type": "empirical-generalization", "statement": "The contention over the agrarian law, reawakened by the Gracchi against adversaries whose power had doubled in the interim, destroyed Roman liberty through the Marius-Sulla and Caesar-Pompey faction wars; yet the same plebeian appetite had also checked noble ambition for three hundred years."}, {"s": "ont:roba-vs-onori", "t": "ont:faction-cascade", "claim": "claim:d1c37-agrarian-destroyed-republic", "author": "machiavelli", "type": "empirical-generalization", "statement": "The contention over the agrarian law, reawakened by the Gracchi against adversaries whose power had doubled in the interim, destroyed Roman liberty through the Marius-Sulla and Caesar-Pompey faction wars; yet the same plebeian appetite had also checked noble ambition for three hundred years."}, {"s": "ont:timing-of-reform", "t": "ont:institutional-survival", "claim": "claim:d1c37-agrarian-destroyed-republic", "author": "machiavelli", "type": "empirical-generalization", "statement": "The contention over the agrarian law, reawakened by the Gracchi against adversaries whose power had doubled in the interim, destroyed Roman liberty through the Marius-Sulla and Caesar-Pompey faction wars; yet the same plebeian appetite had also checked noble ambition for three hundred years."}, {"s": "ont:timing-of-reform", "t": "ont:faction-cascade", "claim": "claim:d1c37-agrarian-destroyed-republic", "author": "machiavelli", "type": "empirical-generalization", "statement": "The contention over the agrarian law, reawakened by the Gracchi against adversaries whose power had doubled in the interim, destroyed Roman liberty through the Marius-Sulla and Caesar-Pompey faction wars; yet the same plebeian appetite had also checked noble ambition for three hundred years."}, {"s": "ont:public-rich-citizens-poor", "t": "ont:institutional-survival", "claim": "claim:d1c37-public-rich-citizens-poor", "author": "machiavelli", "type": "prescription", "statement": "Well-ordered republics must keep the public treasury rich and their citizens poor."}, {"s": "ont:public-rich-citizens-poor", "t": "ont:tyranny-risk", "claim": "claim:d1c37-public-rich-citizens-poor", "author": "machiavelli", "type": "prescription", "statement": "Well-ordered republics must keep the public treasury rich and their citizens poor."}, {"s": "ont:distance-decay", "t": "ont:land-distribution", "claim": "claim:d1c37-distance-decay", "author": "machiavelli", "type": "causal-mechanism", "statement": "When conquered fields lay far from the plebs' eyes and in places hard to cultivate, they were less desired, and the agrarian humor subsided — resurging only with the Gracchi."}, {"s": "ont:distance-decay", "t": "ont:popular-unrest", "claim": "claim:d1c37-distance-decay", "author": "machiavelli", "type": "causal-mechanism", "statement": "When conquered fields lay far from the plebs' eyes and in places hard to cultivate, they were less desired, and the agrarian humor subsided — resurging only with the Gracchi."}]}, "chapter_conf": {"named": 25, "name-only": 71, "quote": 23, "none": 23}, "events_scatter": [{"b": 1, "c": 3, "t": "regime-change", "ch": "extraordinary"}, {"b": 1, "c": 5, "t": "conspiracy", "ch": "extraordinary"}, {"b": 1, "c": 6, "t": "regime-change", "ch": "mixed"}, {"b": 1, "c": 7, "t": "political-killing", "ch": "extraordinary"}, {"b": 1, "c": 8, "t": "new-institution", "ch": "na"}, {"b": 1, "c": 8, "t": "new-institution", "ch": "na"}, {"b": 1, "c": 8, "t": "new-institution", "ch": "na"}, {"b": 1, "c": 9, "t": "riot-tumult", "ch": "extraordinary"}, {"b": 1, "c": 11, "t": "colony-founded", "ch": "na"}, {"b": 1, "c": 11, "t": "conspiracy", "ch": "extraordinary"}, {"b": 1, "c": 13, "t": "regime-change", "ch": "ordinary"}, {"b": 1, "c": 13, "t": "new-institution", "ch": "na"}, {"b": 1, "c": 14, "t": "political-killing", "ch": "extraordinary"}, {"b": 1, "c": 15, "t": "new-institution", "ch": "na"}, {"b": 1, "c": 16, "t": "political-killing", "ch": "extraordinary"}, {"b": 1, "c": 17, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 1, "c": 17, "t": "new-institution", "ch": "na"}, {"b": 1, "c": 19, "t": "new-institution", "ch": "na"}, {"b": 1, "c": 20, "t": "new-institution", "ch": "na"}, {"b": 1, "c": 26, "t": "prominent-trial", "ch": "ordinary"}, {"b": 1, "c": 28, "t": "political-killing", "ch": "extraordinary"}, {"b": 1, "c": 29, "t": "regime-change", "ch": "extraordinary"}, {"b": 1, "c": 30, "t": "new-institution", "ch": "na"}, {"b": 1, "c": 32, "t": "new-institution", "ch": "na"}, {"b": 1, "c": 33, "t": "new-institution", "ch": "na"}, {"b": 1, "c": 33, "t": "colony-founded", "ch": "na"}, {"b": 1, "c": 35, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 1, "c": 35, "t": "new-institution", "ch": "na"}, {"b": 1, "c": 36, "t": "veto-deadlock", "ch": "ordinary"}, {"b": 1, "c": 40, "t": "conspiracy", "ch": "extraordinary"}, {"b": 1, "c": 40, "t": "political-killing", "ch": "extraordinary"}, {"b": 1, "c": 41, "t": "regime-change", "ch": "mixed"}, {"b": 1, "c": 42, "t": "new-institution", "ch": "na"}, {"b": 1, "c": 46, "t": "agrarian-agitation", "ch": "ordinary"}, {"b": 1, "c": 46, "t": "conspiracy", "ch": "extraordinary"}, {"b": 1, "c": 47, "t": "regime-change", "ch": "extraordinary"}, {"b": 1, "c": 48, "t": "political-killing", "ch": "extraordinary"}, {"b": 1, "c": 49, "t": "political-killing", "ch": "extraordinary"}, {"b": 1, "c": 51, "t": "prominent-trial", "ch": "extraordinary"}, {"b": 1, "c": 54, "t": "political-killing", "ch": "extraordinary"}, {"b": 1, "c": 56, "t": "colony-founded", "ch": "na"}, {"b": 1, "c": 59, "t": "conspiracy", "ch": "extraordinary"}, {"b": 1, "c": 59, "t": "regime-change", "ch": "mixed"}, {"b": 1, "c": 60, "t": "new-institution", "ch": "na"}, {"b": 2, "c": 1, "t": "new-institution", "ch": "ordinary"}, {"b": 2, "c": 1, "t": "new-institution", "ch": "ordinary"}, {"b": 2, "c": 2, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 2, "c": 4, "t": "conspiracy", "ch": "ordinary"}, {"b": 2, "c": 5, "t": "prominent-trial", "ch": "ordinary"}, {"b": 2, "c": 7, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 2, "c": 8, "t": "new-institution", "ch": "ordinary"}, {"b": 2, "c": 9, "t": "famine-scarcity", "ch": "ordinary"}, {"b": 2, "c": 12, "t": "famine-scarcity", "ch": "na"}, {"b": 2, "c": 16, "t": "new-institution", "ch": "ordinary"}, {"b": 2, "c": 18, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 2, "c": 21, "t": "colony-founded", "ch": "ordinary"}, {"b": 2, "c": 21, "t": "new-institution", "ch": "ordinary"}, {"b": 2, "c": 23, "t": "debt-crisis", "ch": "unresolved"}, {"b": 2, "c": 24, "t": "levy-obstruction", "ch": "unresolved"}, {"b": 2, "c": 24, "t": "debt-crisis", "ch": "ordinary"}, {"b": 2, "c": 27, "t": "riot-tumult", "ch": "extraordinary"}, {"b": 2, "c": 27, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 2, "c": 28, "t": "conspiracy", "ch": "unresolved"}, {"b": 2, "c": 28, "t": "levy-obstruction", "ch": "unresolved"}, {"b": 2, "c": 29, "t": "riot-tumult", "ch": "mixed"}, {"b": 2, "c": 30, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 2, "c": 31, "t": "colony-founded", "ch": "ordinary"}, {"b": 2, "c": 31, "t": "debt-crisis", "ch": "unresolved"}, {"b": 2, "c": 32, "t": "secession", "ch": "mixed"}, {"b": 2, "c": 33, "t": "new-institution", "ch": "ordinary"}, {"b": 2, "c": 34, "t": "famine-scarcity", "ch": "ordinary"}, {"b": 2, "c": 34, "t": "colony-founded", "ch": "ordinary"}, {"b": 2, "c": 34, "t": "grain-dispute", "ch": "ordinary"}, {"b": 2, "c": 35, "t": "prominent-trial", "ch": "ordinary"}, {"b": 2, "c": 39, "t": "external-appeal", "ch": "mixed"}, {"b": 2, "c": 41, "t": "agrarian-agitation", "ch": "ordinary"}, {"b": 2, "c": 41, "t": "prominent-trial", "ch": "ordinary"}, {"b": 2, "c": 42, "t": "agrarian-agitation", "ch": "unresolved"}, {"b": 2, "c": 43, "t": "levy-obstruction", "ch": "ordinary"}, {"b": 2, "c": 43, "t": "military-mutiny", "ch": "unresolved"}, {"b": 2, "c": 44, "t": "levy-obstruction", "ch": "ordinary"}, {"b": 2, "c": 45, "t": "military-mutiny", "ch": "mixed"}, {"b": 2, "c": 48, "t": "agrarian-agitation", "ch": "unresolved"}, {"b": 2, "c": 48, "t": "new-institution", "ch": "ordinary"}, {"b": 2, "c": 52, "t": "prominent-trial", "ch": "ordinary"}, {"b": 2, "c": 52, "t": "prominent-trial", "ch": "ordinary"}, {"b": 2, "c": 54, "t": "political-killing", "ch": "extraordinary"}, {"b": 2, "c": 55, "t": "riot-tumult", "ch": "extraordinary"}, {"b": 2, "c": 56, "t": "riot-tumult", "ch": "mixed"}, {"b": 2, "c": 58, "t": "new-institution", "ch": "ordinary"}, {"b": 2, "c": 59, "t": "military-mutiny", "ch": "extraordinary"}, {"b": 2, "c": 61, "t": "prominent-trial", "ch": "unresolved"}, {"b": 2, "c": 63, "t": "agrarian-agitation", "ch": "unresolved"}, {"b": 2, "c": 64, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 3, "c": 1, "t": "agrarian-agitation", "ch": "ordinary"}, {"b": 3, "c": 1, "t": "colony-founded", "ch": "ordinary"}, {"b": 3, "c": 4, "t": "conspiracy", "ch": "ordinary"}, {"b": 3, "c": 9, "t": "veto-deadlock", "ch": "unresolved"}, {"b": 3, "c": 10, "t": "veto-deadlock", "ch": "ordinary"}, {"b": 3, "c": 11, "t": "levy-obstruction", "ch": "mixed"}, {"b": 3, "c": 11, "t": "riot-tumult", "ch": "extraordinary"}, {"b": 3, "c": 13, "t": "prominent-trial", "ch": "ordinary"}, {"b": 3, "c": 15, "t": "conspiracy", "ch": "extraordinary"}, {"b": 3, "c": 17, "t": "veto-deadlock", "ch": "unresolved"}, {"b": 3, "c": 19, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 3, "c": 20, "t": "levy-obstruction", "ch": "ordinary"}, {"b": 3, "c": 21, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 3, "c": 24, "t": "prominent-trial", "ch": "ordinary"}, {"b": 3, "c": 25, "t": "levy-obstruction", "ch": "unresolved"}, {"b": 3, "c": 26, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 3, "c": 29, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 3, "c": 30, "t": "new-institution", "ch": "ordinary"}, {"b": 3, "c": 31, "t": "prominent-trial", "ch": "ordinary"}, {"b": 3, "c": 31, "t": "agrarian-agitation", "ch": "ordinary"}, {"b": 3, "c": 32, "t": "new-institution", "ch": "ordinary"}, {"b": 3, "c": 33, "t": "prominent-trial", "ch": "ordinary"}, {"b": 3, "c": 34, "t": "new-institution", "ch": "ordinary"}, {"b": 3, "c": 35, "t": "electoral-conflict", "ch": "mixed"}, {"b": 3, "c": 36, "t": "regime-change", "ch": "extraordinary"}, {"b": 3, "c": 38, "t": "regime-change", "ch": "unresolved"}, {"b": 3, "c": 42, "t": "military-mutiny", "ch": "extraordinary"}, {"b": 3, "c": 43, "t": "political-killing", "ch": "extraordinary"}, {"b": 3, "c": 48, "t": "political-killing", "ch": "extraordinary"}, {"b": 3, "c": 49, "t": "riot-tumult", "ch": "extraordinary"}, {"b": 3, "c": 50, "t": "military-mutiny", "ch": "extraordinary"}, {"b": 3, "c": 52, "t": "secession", "ch": "ordinary"}, {"b": 3, "c": 54, "t": "regime-change", "ch": "ordinary"}, {"b": 3, "c": 55, "t": "new-institution", "ch": "ordinary"}, {"b": 3, "c": 56, "t": "prominent-trial", "ch": "ordinary"}, {"b": 3, "c": 58, "t": "prominent-trial", "ch": "mixed"}, {"b": 3, "c": 63, "t": "new-institution", "ch": "ordinary"}, {"b": 3, "c": 64, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 3, "c": 65, "t": "new-institution", "ch": "ordinary"}, {"b": 3, "c": 65, "t": "riot-tumult", "ch": "unresolved"}, {"b": 3, "c": 66, "t": "levy-obstruction", "ch": "ordinary"}, {"b": 3, "c": 72, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 4, "c": 1, "t": "levy-obstruction", "ch": "ordinary"}, {"b": 4, "c": 6, "t": "new-institution", "ch": "ordinary"}, {"b": 4, "c": 6, "t": "new-institution", "ch": "ordinary"}, {"b": 4, "c": 7, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 4, "c": 7, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 4, "c": 8, "t": "new-institution", "ch": "ordinary"}, {"b": 4, "c": 9, "t": "external-appeal", "ch": "extraordinary"}, {"b": 4, "c": 10, "t": "political-killing", "ch": "extraordinary"}, {"b": 4, "c": 11, "t": "colony-founded", "ch": "ordinary"}, {"b": 4, "c": 11, "t": "prominent-trial", "ch": "unresolved"}, {"b": 4, "c": 12, "t": "agrarian-agitation", "ch": "ordinary"}, {"b": 4, "c": 12, "t": "famine-scarcity", "ch": "mixed"}, {"b": 4, "c": 12, "t": "new-institution", "ch": "ordinary"}, {"b": 4, "c": 13, "t": "grain-dispute", "ch": "na"}, {"b": 4, "c": 13, "t": "conspiracy", "ch": "mixed"}, {"b": 4, "c": 13, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 4, "c": 14, "t": "political-killing", "ch": "mixed"}, {"b": 4, "c": 16, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 4, "c": 17, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 4, "c": 21, "t": "prominent-trial", "ch": "ordinary"}, {"b": 4, "c": 21, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 4, "c": 23, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 4, "c": 24, "t": "new-institution", "ch": "ordinary"}, {"b": 4, "c": 25, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 4, "c": 25, "t": "famine-scarcity", "ch": "ordinary"}, {"b": 4, "c": 25, "t": "new-institution", "ch": "ordinary"}, {"b": 4, "c": 26, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 4, "c": 30, "t": "new-institution", "ch": "ordinary"}, {"b": 4, "c": 30, "t": "levy-obstruction", "ch": "ordinary"}, {"b": 4, "c": 31, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 4, "c": 36, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 4, "c": 41, "t": "prominent-trial", "ch": "ordinary"}, {"b": 4, "c": 42, "t": "prominent-trial", "ch": "ordinary"}, {"b": 4, "c": 43, "t": "new-institution", "ch": "ordinary"}, {"b": 4, "c": 44, "t": "prominent-trial", "ch": "ordinary"}, {"b": 4, "c": 44, "t": "prominent-trial", "ch": "ordinary"}, {"b": 4, "c": 45, "t": "conspiracy", "ch": "ordinary"}, {"b": 4, "c": 46, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 4, "c": 47, "t": "colony-founded", "ch": "ordinary"}, {"b": 4, "c": 48, "t": "agrarian-agitation", "ch": "ordinary"}, {"b": 4, "c": 49, "t": "agrarian-agitation", "ch": "ordinary"}, {"b": 4, "c": 50, "t": "political-killing", "ch": "extraordinary"}, {"b": 4, "c": 50, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 4, "c": 51, "t": "prominent-trial", "ch": "ordinary"}, {"b": 4, "c": 53, "t": "levy-obstruction", "ch": "ordinary"}, {"b": 4, "c": 54, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 4, "c": 55, "t": "levy-obstruction", "ch": "ordinary"}, {"b": 4, "c": 56, "t": "veto-deadlock", "ch": "ordinary"}, {"b": 4, "c": 57, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 4, "c": 58, "t": "levy-obstruction", "ch": "ordinary"}, {"b": 4, "c": 59, "t": "new-institution", "ch": "ordinary"}, {"b": 4, "c": 60, "t": "veto-deadlock", "ch": "ordinary"}, {"b": 5, "c": 2, "t": "levy-obstruction", "ch": "ordinary"}, {"b": 5, "c": 7, "t": "new-institution", "ch": "ordinary"}, {"b": 5, "c": 9, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 5, "c": 10, "t": "levy-obstruction", "ch": "unresolved"}, {"b": 5, "c": 10, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 5, "c": 12, "t": "prominent-trial", "ch": "ordinary"}, {"b": 5, "c": 12, "t": "agrarian-agitation", "ch": "unresolved"}, {"b": 5, "c": 12, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 5, "c": 13, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 5, "c": 13, "t": "new-institution", "ch": "na"}, {"b": 5, "c": 14, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 5, "c": 16, "t": "levy-obstruction", "ch": "mixed"}, {"b": 5, "c": 17, "t": "veto-deadlock", "ch": "ordinary"}, {"b": 5, "c": 19, "t": "dictator-appointed", "ch": "na"}, {"b": 5, "c": 20, "t": "grain-dispute", "ch": "ordinary"}, {"b": 5, "c": 24, "t": "colony-founded", "ch": "ordinary"}, {"b": 5, "c": 24, "t": "agrarian-agitation", "ch": "unresolved"}, {"b": 5, "c": 24, "t": "riot-tumult", "ch": "ordinary"}, {"b": 5, "c": 29, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 5, "c": 29, "t": "prominent-trial", "ch": "ordinary"}, {"b": 5, "c": 30, "t": "agrarian-agitation", "ch": "ordinary"}, {"b": 5, "c": 32, "t": "prominent-trial", "ch": "ordinary"}, {"b": 5, "c": 33, "t": "external-appeal", "ch": "extraordinary"}, {"b": 5, "c": 36, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 5, "c": 46, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 5, "c": 48, "t": "famine-scarcity", "ch": "mixed"}, {"b": 5, "c": 50, "t": "new-institution", "ch": "na"}, {"b": 5, "c": 50, "t": "agrarian-agitation", "ch": "ordinary"}, {"b": 6, "c": 1, "t": "prominent-trial", "ch": "unresolved"}, {"b": 6, "c": 1, "t": "new-institution", "ch": "ordinary"}, {"b": 6, "c": 2, "t": "dictator-appointed", "ch": "na"}, {"b": 6, "c": 5, "t": "new-institution", "ch": "ordinary"}, {"b": 6, "c": 5, "t": "agrarian-agitation", "ch": "unresolved"}, {"b": 6, "c": 6, "t": "agrarian-agitation", "ch": "unresolved"}, {"b": 6, "c": 11, "t": "debt-crisis", "ch": "unresolved"}, {"b": 6, "c": 11, "t": "dictator-appointed", "ch": "na"}, {"b": 6, "c": 14, "t": "riot-tumult", "ch": "extraordinary"}, {"b": 6, "c": 16, "t": "prominent-trial", "ch": "ordinary"}, {"b": 6, "c": 16, "t": "colony-founded", "ch": "ordinary"}, {"b": 6, "c": 17, "t": "riot-tumult", "ch": "mixed"}, {"b": 6, "c": 18, "t": "conspiracy", "ch": "unresolved"}, {"b": 6, "c": 19, "t": "new-institution", "ch": "ordinary"}, {"b": 6, "c": 20, "t": "prominent-trial", "ch": "ordinary"}, {"b": 6, "c": 21, "t": "famine-scarcity", "ch": "na"}, {"b": 6, "c": 21, "t": "colony-founded", "ch": "ordinary"}, {"b": 6, "c": 27, "t": "levy-obstruction", "ch": "unresolved"}, {"b": 6, "c": 27, "t": "electoral-conflict", "ch": "unresolved"}, {"b": 6, "c": 28, "t": "dictator-appointed", "ch": "na"}, {"b": 6, "c": 30, "t": "colony-founded", "ch": "ordinary"}, {"b": 6, "c": 31, "t": "levy-obstruction", "ch": "ordinary"}, {"b": 6, "c": 32, "t": "debt-crisis", "ch": "unresolved"}, {"b": 6, "c": 34, "t": "debt-crisis", "ch": "unresolved"}, {"b": 6, "c": 35, "t": "agrarian-agitation", "ch": "unresolved"}, {"b": 6, "c": 35, "t": "veto-deadlock", "ch": "unresolved"}, {"b": 6, "c": 38, "t": "dictator-appointed", "ch": "mixed"}, {"b": 6, "c": 39, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 6, "c": 39, "t": "electoral-conflict", "ch": "unresolved"}, {"b": 6, "c": 42, "t": "new-institution", "ch": "ordinary"}, {"b": 6, "c": 42, "t": "new-institution", "ch": "mixed"}, {"b": 6, "c": 42, "t": "new-institution", "ch": "ordinary"}, {"b": 6, "c": 42, "t": "dictator-appointed", "ch": "na"}, {"b": 7, "c": 1, "t": "new-institution", "ch": "ordinary"}, {"b": 7, "c": 1, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 7, "c": 3, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 7, "c": 3, "t": "levy-obstruction", "ch": "ordinary"}, {"b": 7, "c": 4, "t": "prominent-trial", "ch": "extraordinary"}, {"b": 7, "c": 5, "t": "new-institution", "ch": "ordinary"}, {"b": 7, "c": 6, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 7, "c": 9, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 7, "c": 11, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 7, "c": 12, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 7, "c": 12, "t": "riot-tumult", "ch": "na"}, {"b": 7, "c": 12, "t": "military-mutiny", "ch": "mixed"}, {"b": 7, "c": 15, "t": "new-institution", "ch": "ordinary"}, {"b": 7, "c": 16, "t": "debt-crisis", "ch": "ordinary"}, {"b": 7, "c": 16, "t": "new-institution", "ch": "ordinary"}, {"b": 7, "c": 16, "t": "new-institution", "ch": "ordinary"}, {"b": 7, "c": 16, "t": "prominent-trial", "ch": "ordinary"}, {"b": 7, "c": 17, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 7, "c": 17, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 7, "c": 18, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 7, "c": 19, "t": "debt-crisis", "ch": "unresolved"}, {"b": 7, "c": 19, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 7, "c": 21, "t": "veto-deadlock", "ch": "ordinary"}, {"b": 7, "c": 21, "t": "new-institution", "ch": "ordinary"}, {"b": 7, "c": 21, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 7, "c": 22, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 7, "c": 22, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 7, "c": 22, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 7, "c": 24, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 7, "c": 26, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 7, "c": 27, "t": "debt-crisis", "ch": "ordinary"}, {"b": 7, "c": 28, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 7, "c": 28, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 7, "c": 28, "t": "debt-crisis", "ch": "ordinary"}, {"b": 7, "c": 38, "t": "conspiracy", "ch": "mixed"}, {"b": 7, "c": 39, "t": "military-mutiny", "ch": "mixed"}, {"b": 7, "c": 39, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 7, "c": 41, "t": "new-institution", "ch": "ordinary"}, {"b": 7, "c": 42, "t": "new-institution", "ch": "ordinary"}, {"b": 8, "c": 3, "t": "conspiracy", "ch": "unresolved"}, {"b": 8, "c": 3, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 8, "c": 5, "t": "electoral-conflict", "ch": "unresolved"}, {"b": 8, "c": 7, "t": "political-killing", "ch": "ordinary"}, {"b": 8, "c": 11, "t": "new-institution", "ch": "ordinary"}, {"b": 8, "c": 12, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 8, "c": 12, "t": "agrarian-agitation", "ch": "ordinary"}, {"b": 8, "c": 12, "t": "new-institution", "ch": "ordinary"}, {"b": 8, "c": 14, "t": "new-institution", "ch": "ordinary"}, {"b": 8, "c": 14, "t": "colony-founded", "ch": "ordinary"}, {"b": 8, "c": 15, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 8, "c": 15, "t": "prominent-trial", "ch": "ordinary"}, {"b": 8, "c": 15, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 8, "c": 16, "t": "colony-founded", "ch": "ordinary"}, {"b": 8, "c": 17, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 8, "c": 17, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 8, "c": 17, "t": "new-institution", "ch": "ordinary"}, {"b": 8, "c": 18, "t": "prominent-trial", "ch": "ordinary"}, {"b": 8, "c": 18, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 8, "c": 20, "t": "prominent-trial", "ch": "ordinary"}, {"b": 8, "c": 21, "t": "new-institution", "ch": "ordinary"}, {"b": 8, "c": 21, "t": "colony-founded", "ch": "ordinary"}, {"b": 8, "c": 22, "t": "colony-founded", "ch": "ordinary"}, {"b": 8, "c": 22, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 8, "c": 23, "t": "new-institution", "ch": "ordinary"}, {"b": 8, "c": 23, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 8, "c": 28, "t": "debt-crisis", "ch": "ordinary"}, {"b": 8, "c": 28, "t": "new-institution", "ch": "ordinary"}, {"b": 8, "c": 29, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 8, "c": 32, "t": "military-mutiny", "ch": "mixed"}, {"b": 8, "c": 35, "t": "prominent-trial", "ch": "ordinary"}, {"b": 8, "c": 36, "t": "military-mutiny", "ch": "ordinary"}, {"b": 8, "c": 37, "t": "prominent-trial", "ch": "ordinary"}, {"b": 8, "c": 37, "t": "riot-tumult", "ch": "na"}, {"b": 8, "c": 38, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 9, "c": 7, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 9, "c": 7, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 9, "c": 8, "t": "prominent-trial", "ch": "ordinary"}, {"b": 9, "c": 8, "t": "veto-deadlock", "ch": "ordinary"}, {"b": 9, "c": 10, "t": "prominent-trial", "ch": "ordinary"}, {"b": 9, "c": 16, "t": "conspiracy", "ch": "ordinary"}, {"b": 9, "c": 20, "t": "new-institution", "ch": "ordinary"}, {"b": 9, "c": 20, "t": "new-institution", "ch": "ordinary"}, {"b": 9, "c": 21, "t": "dictator-appointed", "ch": "na"}, {"b": 9, "c": 22, "t": "dictator-appointed", "ch": "na"}, {"b": 9, "c": 24, "t": "conspiracy", "ch": "ordinary"}, {"b": 9, "c": 25, "t": "external-appeal", "ch": "extraordinary"}, {"b": 9, "c": 26, "t": "colony-founded", "ch": "ordinary"}, {"b": 9, "c": 26, "t": "conspiracy", "ch": "mixed"}, {"b": 9, "c": 26, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 9, "c": 26, "t": "prominent-trial", "ch": "ordinary"}, {"b": 9, "c": 26, "t": "prominent-trial", "ch": "ordinary"}, {"b": 9, "c": 28, "t": "dictator-appointed", "ch": "na"}, {"b": 9, "c": 28, "t": "colony-founded", "ch": "ordinary"}, {"b": 9, "c": 29, "t": "dictator-appointed", "ch": "na"}, {"b": 9, "c": 29, "t": "new-institution", "ch": "ordinary"}, {"b": 9, "c": 30, "t": "veto-deadlock", "ch": "ordinary"}, {"b": 9, "c": 30, "t": "new-institution", "ch": "ordinary"}, {"b": 9, "c": 30, "t": "new-institution", "ch": "ordinary"}, {"b": 9, "c": 30, "t": "secession", "ch": "ordinary"}, {"b": 9, "c": 34, "t": "prominent-trial", "ch": "ordinary"}, {"b": 9, "c": 36, "t": "veto-deadlock", "ch": "unresolved"}, {"b": 9, "c": 38, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 9, "c": 42, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 9, "c": 43, "t": "new-institution", "ch": "ordinary"}, {"b": 9, "c": 44, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 9, "c": 46, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 9, "c": 46, "t": "new-institution", "ch": "ordinary"}, {"b": 9, "c": 46, "t": "new-institution", "ch": "ordinary"}, {"b": 10, "c": 1, "t": "colony-founded", "ch": "ordinary"}, {"b": 10, "c": 1, "t": "conspiracy", "ch": "ordinary"}, {"b": 10, "c": 1, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 10, "c": 3, "t": "dictator-appointed", "ch": "ordinary"}, {"b": 10, "c": 5, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 10, "c": 6, "t": "new-institution", "ch": "ordinary"}, {"b": 10, "c": 9, "t": "new-institution", "ch": "ordinary"}, {"b": 10, "c": 9, "t": "new-institution", "ch": "ordinary"}, {"b": 10, "c": 10, "t": "colony-founded", "ch": "ordinary"}, {"b": 10, "c": 11, "t": "famine-scarcity", "ch": "ordinary"}, {"b": 10, "c": 11, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 10, "c": 12, "t": "colony-founded", "ch": "ordinary"}, {"b": 10, "c": 13, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 10, "c": 13, "t": "agrarian-agitation", "ch": "ordinary"}, {"b": 10, "c": 15, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 10, "c": 18, "t": "riot-tumult", "ch": "extraordinary"}, {"b": 10, "c": 21, "t": "new-institution", "ch": "ordinary"}, {"b": 10, "c": 21, "t": "colony-founded", "ch": "ordinary"}, {"b": 10, "c": 23, "t": "new-institution", "ch": "ordinary"}, {"b": 10, "c": 23, "t": "debt-crisis", "ch": "ordinary"}, {"b": 10, "c": 24, "t": "electoral-conflict", "ch": "ordinary"}, {"b": 10, "c": 31, "t": "prominent-trial", "ch": "ordinary"}, {"b": 10, "c": 37, "t": "veto-deadlock", "ch": "mixed"}, {"b": 10, "c": 46, "t": "riot-tumult", "ch": "unresolved"}, {"b": 10, "c": 47, "t": "prominent-trial", "ch": "unresolved"}, {"b": 10, "c": 47, "t": "electoral-conflict", "ch": "ordinary"}]};
+const tip = document.getElementById('tip');
+function showTip(e, text){tip.textContent=text;tip.style.display='block';
+  tip.style.left=(e.clientX+12)+'px';tip.style.top=(e.clientY+12)+'px';}
+function hideTip(){tip.style.display='none';}
+function svgEl(w,h){const s=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  s.setAttribute('viewBox',`0 0 ${w} ${h}`);s.style.width='100%';return s;}
+function el(n,attrs){const e=document.createElementNS('http://www.w3.org/2000/svg',n);
+  for(const k in attrs)e.setAttribute(k,attrs[k]);return e;}
+function txt(x,y,t,size,fill,anchor){const e=el('text',{x,y,'font-size':size||12,
+  fill:fill||'#2a2118','text-anchor':anchor||'start'});e.textContent=t;return e;}
+
+// stats (DOM-built, no innerHTML)
+const S=D.stats, statDefs=[['passages','corpus passages'],['events','Livy events'],
+ ['alignments','aligned units'],['claims','causal claims'],['observations','observations'],
+ ['datasets','dataset hypotheses'],['chapters','Discorsi chapters'],['livy_chapters','Livy chapters']];
+const statRow=document.getElementById('stats');
+statDefs.forEach(([k,l])=>{
+  const d=document.createElement('div');d.className='stat';
+  const b=document.createElement('b');b.textContent=S[k];
+  const sp=document.createElement('span');sp.textContent=l;
+  d.appendChild(b);d.appendChild(sp);statRow.appendChild(d);
+});
+
+// loss gradient — horizontal bars
+(function(){
+  const entries=Object.entries(D.loss_gradient);
+  const s=svgEl(430,entries.length*34+10);
+  entries.forEach(([dim,v],i)=>{
+    const y=i*34+8, w=v*280;
+    s.appendChild(txt(4,y+14,dim.replace(/_/g,' '),12,'#5a4a33'));
+    s.appendChild(el('rect',{x:150,y:y,width:280,height:20,fill:'#eee5cf',rx:3}));
+    s.appendChild(el('rect',{x:150,y:y,width:w,height:20,rx:3,
+      fill:v>0.7?'#a03020':v>0.4?'#c7903c':'#5b8c5a'}));
+    s.appendChild(txt(150+w+6,y+14,Math.round(v*100)+'%',12,'#8a7a63'));
+  });
+  document.getElementById('loss').appendChild(s);
+})();
+
+// transformations — bars
+(function(){
+  const order=['omission','addition','preservation','abstraction','reinterpretation'];
+  const colors={omission:'#a03020',addition:'#1f4e5f',preservation:'#5b8c5a',
+    abstraction:'#c7903c',reinterpretation:'#7a4f9e'};
+  const total=Object.values(D.transformations).reduce((a,b)=>a+b,0);
+  const s=svgEl(430,180);
+  order.forEach((t,i)=>{
+    const v=D.transformations[t]||0, h=v/16*130, x=i*84+20;
+    s.appendChild(el('rect',{x,y:150-h,width:56,height:h,fill:colors[t],rx:3}));
+    s.appendChild(txt(x+28,168,t.slice(0,9),11,'#5a4a33','middle'));
+    s.appendChild(txt(x+28,144-h,v+' ('+Math.round(100*v/total)+'%)',11,'#2a2118','middle'));
+  });
+  document.getElementById('transforms').appendChild(s);
+})();
+
+// scatter strip of all events
+(function(){
+  const chColors={ordinary:'#5b8c5a',extraordinary:'#a03020',mixed:'#c7903c',
+    unresolved:'#8a7a63',na:'#cabfa8'};
+  const maxC=75, W=920, H=330, rowH=30;
+  const s=svgEl(W,H);
+  for(let b=1;b<=10;b++){
+    const y=(b-1)*rowH+22;
+    s.appendChild(txt(4,y+5,'Book '+b,12,'#5a4a33'));
+    s.appendChild(el('line',{x1:60,y1:y,x2:W-10,y2:y,stroke:'#eee5cf','stroke-width':14}));
+  }
+  D.events_scatter.forEach(e=>{
+    const y=(e.b-1)*rowH+22, x=60+(e.c/maxC)*(W-80);
+    const c=el('circle',{cx:x,cy:y,r:5,fill:chColors[e.ch]||'#999',opacity:.85});
+    c.addEventListener('mousemove',ev=>showTip(ev,
+      e.t+'\nLivy '+e.b+'.'+e.c+' — '+e.ch));
+    c.addEventListener('mouseleave',hideTip);
+    s.appendChild(c);
+  });
+  document.getElementById('scatter').appendChild(s);
+  const leg=document.getElementById('scatterleg');
+  Object.entries(chColors).forEach(([k,v])=>{
+    const sp=document.createElement('span');
+    const i=document.createElement('i');i.style.background=v;
+    sp.appendChild(i);sp.appendChild(document.createTextNode(k));
+    leg.appendChild(sp);
+  });
+})();
+
+// event types — horizontal bars
+(function(){
+  const entries=Object.entries(D.ev_by_type);
+  const max=entries[0][1];
+  const s=svgEl(430,entries.length*23+6);
+  entries.forEach(([t,v],i)=>{
+    const y=i*23+4,w=v/max*250;
+    s.appendChild(txt(4,y+12,t,11.5,'#5a4a33'));
+    s.appendChild(el('rect',{x:150,y:y,width:w,height:15,fill:'#1f4e5f',rx:2,opacity:.85}));
+    s.appendChild(txt(154+w,y+12,v,11,'#8a7a63'));
+  });
+  document.getElementById('types').appendChild(s);
+})();
+
+// trigger × channel stacked share bars
+(function(){
+  const chans=['ordinary','mixed','extraordinary','unresolved','na'];
+  const chColors={ordinary:'#5b8c5a',extraordinary:'#a03020',mixed:'#c7903c',
+    unresolved:'#8a7a63',na:'#cabfa8'};
+  const rows=Object.entries(D.trig_chan).map(([t,c])=>
+    [t,c,Object.values(c).reduce((a,b)=>a+b,0)]).sort((a,b)=>b[2]-a[2]);
+  const s=svgEl(430,rows.length*27+10);
+  rows.forEach(([t,c,n],i)=>{
+    const y=i*27+6;let x=120;
+    s.appendChild(txt(4,y+13,t+' ('+n+')',11.5,'#5a4a33'));
+    chans.forEach(ch=>{
+      const v=c[ch]||0,w=v/n*260;
+      if(v>0){const r=el('rect',{x,y:y,width:w,height:18,fill:chColors[ch]});
+        r.addEventListener('mousemove',ev=>showTip(ev,
+          t+' × '+ch+': '+v+' events ('+Math.round(100*v/n)+'%)'));
+        r.addEventListener('mouseleave',hideTip);
+        s.appendChild(r);x+=w;}
+    });
+  });
+  document.getElementById('heat').appendChild(s);
+})();
+
+// T1 grouped bars
+(function(){
+  const t=D.t1, groups=[['property',t.property_domain],
+    ['honors-office',t.honors_office_domain],['legal-rights',t.legal_rights_domain]];
+  const s=svgEl(430,190);
+  groups.forEach(([label,g],i)=>{
+    const x=i*140+30, v=g.extraordinary_share, h=v/40*130;
+    s.appendChild(el('rect',{x,y:155-h,width:70,height:h,fill:i==2?'#a03020':'#c7903c',rx:3}));
+    s.appendChild(txt(x+35,150-h,v+'%',13,'#2a2118','middle'));
+    s.appendChild(txt(x+35,172,label,11,'#5a4a33','middle'));
+    s.appendChild(txt(x+35,184,'n='+g.n,10,'#8a7a63','middle'));
+  });
+  document.getElementById('t1').appendChild(s);
+})();
+
+// T3: cited vs uncited + chapter map confidence
+(function(){
+  const s=svgEl(430,190);
+  const pairs=[['cited',D.t3.extraordinary_share_cited,'#a03020'],
+    ['uncited',D.t3.extraordinary_share_uncited,'#8a7a63']];
+  pairs.forEach(([l,v,col],i)=>{
+    const x=i*90+30,h=v/20*120;
+    s.appendChild(el('rect',{x,y:150-h,width:60,height:h,fill:col,rx:3}));
+    s.appendChild(txt(x+30,145-h,v+'%',12,'#2a2118','middle'));
+    s.appendChild(txt(x+30,168,l,11,'#5a4a33','middle'));
+  });
+  const conf=D.chapter_conf, order=['quote','named','name-only','none'];
+  const colors={quote:'#5b8c5a',named:'#1f4e5f','name-only':'#c7903c',none:'#cabfa8'};
+  let x=240;
+  order.forEach(k=>{
+    const v=conf[k]||0,w=v/142*170;
+    const r=el('rect',{x,y:60,width:w,height:30,fill:colors[k]});
+    r.addEventListener('mousemove',ev=>showTip(ev,k+': '+v+' of 142 chapters'));
+    r.addEventListener('mouseleave',hideTip);
+    s.appendChild(r);x+=w;
+  });
+  s.appendChild(txt(240,50,'chapter→Livy anchor quality',11,'#5a4a33'));
+  s.appendChild(txt(240,110,'quote · named · name-only · none',10,'#8a7a63'));
+  document.getElementById('t3').appendChild(s);
+})();
+
+// causal graph — circular layout
+(function(){
+  const W=940,H=560,cx=W/2,cy=H/2,R=220;
+  const s=svgEl(W,H);
+  const defs=el('defs',{});
+  ['#8b2500','#1f4e5f'].forEach((c,i)=>{
+    const m=el('marker',{id:'arr'+i,viewBox:'0 0 10 10',refX:9,refY:5,
+      markerWidth:7,markerHeight:7,orient:'auto-start-reverse'});
+    m.appendChild(el('path',{d:'M 0 0 L 10 5 L 0 10 z',fill:c}));
+    defs.appendChild(m);
+  });
+  s.appendChild(defs);
+  const N=D.graph.nodes,pos={};
+  N.forEach((n,i)=>{
+    const a=2*Math.PI*i/N.length - Math.PI/2;
+    pos[n.id]=[cx+R*Math.cos(a),cy+R*Math.sin(a),a];
+  });
+  D.graph.edges.forEach(e=>{
+    const p1=pos[e.s],p2=pos[e.t];if(!p1||!p2)return;
+    const mx=(p1[0]+p2[0])/2+(cx-(p1[0]+p2[0])/2)*.45,
+          my=(p1[1]+p2[1])/2+(cy-(p1[1]+p2[1])/2)*.45;
+    const col=e.author==='livy'?'#1f4e5f':'#8b2500';
+    const path=el('path',{d:`M ${p1[0]} ${p1[1]} Q ${mx} ${my} ${p2[0]} ${p2[1]}`,
+      fill:'none',stroke:col,'stroke-width':1.6,opacity:.55,
+      'marker-end':`url(#arr${e.author==='livy'?1:0})`});
+    path.addEventListener('mousemove',ev=>showTip(ev,
+      e.claim+' ('+e.author+', '+e.type+')\n'+e.statement));
+    path.addEventListener('mouseleave',hideTip);
+    path.addEventListener('mouseenter',()=>{path.setAttribute('opacity',1);path.setAttribute('stroke-width',3);});
+    path.addEventListener('mouseout',()=>{path.setAttribute('opacity',.55);path.setAttribute('stroke-width',1.6);});
+    s.appendChild(path);
+  });
+  const roleCol={explanatory:'#8b2500',outcome:'#1f4e5f',intervention:'#5b8c5a',condition:'#c7903c'};
+  N.forEach(n=>{
+    const [x,y,a]=pos[n.id];
+    s.appendChild(el('circle',{cx:x,cy:y,r:7,fill:roleCol[n.role]||'#999',
+      stroke:'#fffbf0','stroke-width':2}));
+    const right=Math.cos(a)>=0;
+    s.appendChild(txt(x+(right?11:-11),y+4,
+      n.label.length>34?n.label.slice(0,32)+'…':n.label,
+      11.5,'#2a2118',right?'start':'end'));
+  });
+  s.appendChild(txt(16,24,'explanatory (red) · outcome (blue) · intervention (green) · condition (gold)',11,'#8a7a63'));
+  document.getElementById('causal').appendChild(s);
+})();
+</script>
+</body>
+</html>
