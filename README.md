@@ -325,6 +325,21 @@ is interpolation; the discipline of the project is provenance.
 
 *Begun 2026-11-17, the session's final act: the inverse problem, scaffolded.*
 
+### All 142 books, attested
+
+![Attestation density across all 142 books](dashboard/img/attestation_142.svg)
+
+Teal: the 891 coded events of the 35 surviving books. Gold: **710
+periocha-derived skeleton events across all 105 lost books whose summaries
+survive** — every dot carries a verbatim Latin quote from its periocha,
+machine-validated, evidence class hypothetical. Red diamonds: the two books
+whose actual words survive — Book 91 (the Vatican palimpsest) and **Book 120,
+whose account of Cicero's death now sits verbatim in
+`lost_books/fragments.jsonl`**, recovered from Seneca's *Suasoriae* 6.17/6.22
+with their explicit "T. LIVI" attributions and validated against the acquired
+witness text. The two × marks are Books 136–137: doubly lost — even their
+summaries perished.
+
 The 107 lost books survive only as compressions — the Periochae, Obsequens,
 Florus, Orosius, Eutropius, and the Livian layers in Plutarch and Dio.
 Reconstructing them is the exact inverse of what this repository does to
@@ -364,21 +379,6 @@ all honesty-labeled):
 | [`reports/lost_fragments.pdf`](reports/lost_fragments.pdf) | **The red diamonds** — every verbatim survival of lost Livy: the Book 120 Cicero passages (Latin + working translation, recovered from Seneca's explicit "T. LIVI" attributions), the Book 91 palimpsest entry |
 | [`lost_books/lost_books_summary.pdf`](lost_books/lost_books_summary.pdf) | **The gold dots** — book-by-book through all 107 lost books: the 710 periocha-derived skeleton events, witness lines (Obsequens, Plutarch/Dio crosswalk), fragment markers |
 | [`lost_books/apocrypha_codex.pdf`](lost_books/apocrypha_codex.pdf) | **The rendering** — all 107 lost books as modern English compositions in Livy's manner (`apocrypha/`), content firewalled to the attested events with per-sentence citations, NONE OF THIS IS LIVY on the title page, the honest blank pages for 136–137. Enforced by `TestApocrypha`. |
-
-### All 142 books, attested
-
-![Attestation density across all 142 books](dashboard/img/attestation_142.svg)
-
-Teal: the 891 coded events of the 35 surviving books. Gold: **710
-periocha-derived skeleton events across all 105 lost books whose summaries
-survive** — every dot carries a verbatim Latin quote from its periocha,
-machine-validated, evidence class hypothetical. Red diamonds: the two books
-whose actual words survive — Book 91 (the Vatican palimpsest) and **Book 120,
-whose account of Cicero's death now sits verbatim in
-`lost_books/fragments.jsonl`**, recovered from Seneca's *Suasoriae* 6.17/6.22
-with their explicit "T. LIVI" attributions and validated against the acquired
-witness text. The two × marks are Books 136–137: doubly lost — even their
-summaries perished.
 
 ## The linguistic fingerprint — a second opinion from another model
 
