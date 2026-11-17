@@ -1,0 +1,1233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+  <key id="nk0" for="node" attr.name="label" attr.type="string"/>
+  <key id="nk1" for="node" attr.name="kind" attr.type="string"/>
+  <key id="nk2" for="node" attr.name="evidence_class" attr.type="string"/>
+  <key id="ek0" for="edge" attr.name="relation" attr.type="string"/>
+  <graph edgedefault="directed">
+    <node id="obs:d1c7-coriolanus-m">
+      <data key="nk0">Coriolanus advises withholding Sicilian grain to break tribunician power; plebs nearly lynch him; tribunes summon him to</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">machiavelli-claim</data>
+    </node>
+    <node id="disc:it:1:7">
+      <data key="nk0">disc:it:1:7</data>
+      <data key="nk1">passage</data>
+    </node>
+    <node id="actor:Coriolanus">
+      <data key="nk0">Coriolanus</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:tribunes of the plebs">
+      <data key="nk0">tribunes of the plebs</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="institution:Senate">
+      <data key="nk0">Senate</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="institution:tribunate">
+      <data key="nk0">tribunate</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="institution:accusation before the people">
+      <data key="nk0">accusation before the people</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="group:Nobilità/patricians">
+      <data key="nk0">Nobilità/patricians</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="group:Plebe">
+      <data key="nk0">Plebe</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="resource:grain (vettovaglie, frumento)">
+      <data key="nk0">grain (vettovaglie, frumento)</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="obs:d1c7-valori-m">
+      <data key="nk0">Fall of Francesco Valori, Florence 1498: absent ordinary channels, opposed sects armed and Valori and other citizens wer</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">machiavelli-claim</data>
+    </node>
+    <node id="actor:Francesco Valori">
+      <data key="nk0">Francesco Valori</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="institution:Florentine republic (post-1494)">
+      <data key="nk0">Florentine republic (post-1494)</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="group:Valori's faction">
+      <data key="nk0">Valori's faction</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="group:opposing faction">
+      <data key="nk0">opposing faction</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="obs:d1c7-soderini-m">
+      <data key="nk0">Fall of Piero Soderini (1512): lack of accusation procedures against powerful citizens led opponents to bring in the Spa</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">machiavelli-claim</data>
+    </node>
+    <node id="actor:Piero Soderini">
+      <data key="nk0">Piero Soderini</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="institution:Otto di Guardia (the 'otto giudici')">
+      <data key="nk0">Otto di Guardia (the 'otto giudici')</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="institution:Florentine republic">
+      <data key="nk0">Florentine republic</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="group:potenti cittadini">
+      <data key="nk0">potenti cittadini</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="obs:d1c7-chiusi-m">
+      <data key="nk0">Arruns of Clusium, unable to obtain redress within the city, invites the Gauls (Machiavelli citing Livy V.33)</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">machiavelli-claim</data>
+    </node>
+    <node id="actor:Arruns">
+      <data key="nk0">Arruns</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:the Lucumo">
+      <data key="nk0">the Lucumo</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:the Gauls">
+      <data key="nk0">the Gauls</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="obs:l2c34-famine">
+      <data key="nk0">Grain scarcity then famine at Rome following the first secession of the plebs (fields untilled)</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">source-reported</data>
+    </node>
+    <node id="livy:la:2:34">
+      <data key="nk0">livy:la:2:34</data>
+      <data key="nk1">passage</data>
+    </node>
+    <node id="group:plebs">
+      <data key="nk0">plebs</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="group:slaves (servitia)">
+      <data key="nk0">slaves (servitia)</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="resource:grain (annona)">
+      <data key="nk0">grain (annona)</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="obs:l2c34-procurement">
+      <data key="nk0">Consular emergency grain procurement missions along three routes (Etruria via Ostia; Volscian coast to Cumae; Sicily)</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">source-reported</data>
+    </node>
+    <node id="actor:consuls T. Geganius and P. Minucius">
+      <data key="nk0">consuls T. Geganius and P. Minucius</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:Aristodemus tyrant of Cumae">
+      <data key="nk0">Aristodemus tyrant of Cumae</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:frumentatores (purchasing agents)">
+      <data key="nk0">frumentatores (purchasing agents)</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="institution:consulship">
+      <data key="nk0">consulship</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="resource:grain">
+      <data key="nk0">grain</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="resource:ships">
+      <data key="nk0">ships</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="resource:public purchase money">
+      <data key="nk0">public purchase money</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="obs:l2c34-colonies">
+      <data key="nk0">Reinforcement of Velitrae colony and foundation of Norba as a stronghold in the Pomptine region</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">source-reported</data>
+    </node>
+    <node id="institution:colonial commission (implied)">
+      <data key="nk0">colonial commission (implied)</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="group:colonists">
+      <data key="nk0">colonists</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="resource:land">
+      <data key="nk0">land</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="obs:l2c34-price-debate">
+      <data key="nk0">Senate debates the price at which imported Sicilian grain should be sold to the plebs; many senators see leverage to rol</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">source-reported</data>
+    </node>
+    <node id="actor:Senate">
+      <data key="nk0">Senate</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:M. Minucius (consul)">
+      <data key="nk0">M. Minucius (consul)</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:A. Sempronius (consul)">
+      <data key="nk0">A. Sempronius (consul)</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="institution:Senate (price-setting authority over public grain)">
+      <data key="nk0">Senate (price-setting authority over public grain)</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="resource:large quantity of Sicilian grain">
+      <data key="nk0">large quantity of Sicilian grain</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="obs:l2c34-coriolanus-speech">
+      <data key="nk0">Coriolanus's speech: old grain price only in exchange for restoration of patrician rights (abolition of tribunate)</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">source-reported</data>
+    </node>
+    <node id="actor:Marcius Coriolanus">
+      <data key="nk0">Marcius Coriolanus</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:Sicinius (named as plebeian magistrate)">
+      <data key="nk0">Sicinius (named as plebeian magistrate)</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="group:patres">
+      <data key="nk0">patres</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="obs:l2c34-livy-judgment">
+      <data key="nk0">Livy's authorial counterfactual: the senators could probably have traded a lower grain price for the removal of the trib</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">source-reported</data>
+    </node>
+    <node id="actor:Livy (author)">
+      <data key="nk0">Livy (author)</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="obs:l2c35-trial">
+      <data key="nk0">Plebs nearly assault Coriolanus leaving the senate-house; tribunes appoint a trial day; anger subsides into judicial pro</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">source-reported</data>
+    </node>
+    <node id="livy:la:2:35">
+      <data key="nk0">livy:la:2:35</data>
+      <data key="nk1">passage</data>
+    </node>
+    <node id="actor:patricians collectively">
+      <data key="nk0">patricians collectively</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="institution:tribunician prosecution (diem dicere)">
+      <data key="nk0">tribunician prosecution (diem dicere)</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="institution:popular judgment">
+      <data key="nk0">popular judgment</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="group:clients of patricians">
+      <data key="nk0">clients of patricians</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="obs:l2c35-volsci">
+      <data key="nk0">Coriolanus and Attius Tullius assess Volscian war-readiness: manpower lost to wars and pestilence, spirits broken, old h</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">source-reported</data>
+    </node>
+    <node id="actor:Attius Tullius">
+      <data key="nk0">Attius Tullius</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="group:Volsci">
+      <data key="nk0">Volsci</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="resource:military manpower (iuventus)">
+      <data key="nk0">military manpower (iuventus)</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="obs:d3c28-maelius-m">
+      <data key="nk0">Spurius Maelius privately provisions grain during famine, wins popular following; Senate creates a dictator and has him </data>
+      <data key="nk1">observation</data>
+      <data key="nk2">machiavelli-claim</data>
+    </node>
+    <node id="disc:it:3:28">
+      <data key="nk0">disc:it:3:28</data>
+      <data key="nk1">passage</data>
+    </node>
+    <node id="actor:Spurius Maelius">
+      <data key="nk0">Spurius Maelius</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:the Dictator (unnamed by Machiavelli)">
+      <data key="nk0">the Dictator (unnamed by Machiavelli)</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="institution:dictatorship">
+      <data key="nk0">dictatorship</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="group:plebe">
+      <data key="nk0">plebe</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="resource:private wealth">
+      <data key="nk0">private wealth</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="obs:l4c12-famine-causes">
+      <data key="nk0">Famine at Rome, 440 BCE: Livy records two transmitted causes (bad harvest year OR fields deserted for the attractions of</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">source-reported</data>
+    </node>
+    <node id="livy:la:4:12">
+      <data key="nk0">livy:la:4:12</data>
+      <data key="nk1">passage</data>
+    </node>
+    <node id="resource:grain harvest">
+      <data key="nk0">grain harvest</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="obs:l4c12-minucius-annona">
+      <data key="nk0">Creation of L. Minucius as praefectus annonae (grain-supply prefect), a new emergency magistracy</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">source-reported</data>
+    </node>
+    <node id="actor:L. Minucius">
+      <data key="nk0">L. Minucius</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="institution:praefectura annonae (new office)">
+      <data key="nk0">praefectura annonae (new office)</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="institution:plebs (electing pressure)">
+      <data key="nk0">plebs (electing pressure)</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="resource:grain supply">
+      <data key="nk0">grain supply</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="obs:l4c12-rationing">
+      <data key="nk0">Minucius's scarcity administration: compulsory declaration of private grain stocks, forced sale of surplus above one mon</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">source-reported</data>
+    </node>
+    <node id="actor:L. Minucius (praefectus annonae)">
+      <data key="nk0">L. Minucius (praefectus annonae)</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:frumentarii (grain dealers)">
+      <data key="nk0">frumentarii (grain dealers)</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="institution:praefectura annonae">
+      <data key="nk0">praefectura annonae</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="group:slave households (servitia)">
+      <data key="nk0">slave households (servitia)</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="resource:private grain stocks">
+      <data key="nk0">private grain stocks</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="resource:monthly consumption quota">
+      <data key="nk0">monthly consumption quota</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="resource:daily slave rations">
+      <data key="nk0">daily slave rations</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="obs:l4c13-maelius-procurement">
+      <data key="nk0">Maelius buys up Etruscan grain with private money through guest-friendship and client networks, then institutes grain la</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">source-reported</data>
+    </node>
+    <node id="livy:la:4:13">
+      <data key="nk0">livy:la:4:13</data>
+      <data key="nk1">passage</data>
+    </node>
+    <node id="actor:Spurius Maelius (eques, praedives)">
+      <data key="nk0">Spurius Maelius (eques, praedives)</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="group:hospites and clientes of Maelius">
+      <data key="nk0">hospites and clientes of Maelius</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="resource:private money (privata pecunia)">
+      <data key="nk0">private money (privata pecunia)</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="resource:Etruscan grain">
+      <data key="nk0">Etruscan grain</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="obs:l4c13-intelligence">
+      <data key="nk0">Minucius, running publicly the same operation Maelius ran privately, learns through the shared personnel of both operati</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">source-reported</data>
+    </node>
+    <node id="institution:Senate (recipient of intelligence)">
+      <data key="nk0">Senate (recipient of intelligence)</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="group:shared workforce of both grain operations (genus idem hominum)">
+      <data key="nk0">shared workforce of both grain operations (genus idem hominum)</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="resource:weapons (tela)">
+      <data key="nk0">weapons (tela)</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="resource:bribe money (tribunos mercede emptos)">
+      <data key="nk0">bribe money (tribunos mercede emptos)</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="obs:l4c13-dictator">
+      <data key="nk0">Consul Quinctius argues the consuls are constrained by the appeal laws (leges de provocatione); Cincinnatus, past eighty</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">source-reported</data>
+    </node>
+    <node id="actor:T. Quinctius Capitolinus (consul)">
+      <data key="nk0">T. Quinctius Capitolinus (consul)</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:L. Quinctius Cincinnatus (dictator)">
+      <data key="nk0">L. Quinctius Cincinnatus (dictator)</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:C. Servilius Ahala (magister equitum)">
+      <data key="nk0">C. Servilius Ahala (magister equitum)</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="institution:provocatio (appeal) legislation">
+      <data key="nk0">provocatio (appeal) legislation</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="institution:libri lintei (linen-book magistrate records)">
+      <data key="nk0">libri lintei (linen-book magistrate records)</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="obs:l4c14-killing">
+      <data key="nk0">Maelius summoned by the master of horse, resists arrest, appeals to the plebs, and is cut down by Servilius Ahala; dicta</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">source-reported</data>
+    </node>
+    <node id="livy:la:4:14">
+      <data key="nk0">livy:la:4:14</data>
+      <data key="nk1">passage</data>
+    </node>
+    <node id="actor:C. Servilius Ahala">
+      <data key="nk0">C. Servilius Ahala</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="institution:dictatorship (summons, armed guards)">
+      <data key="nk0">dictatorship (summons, armed guards)</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="group:Maelius's crowd (caterva suorum)">
+      <data key="nk0">Maelius's crowd (caterva suorum)</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="group:patrician youth (caterva patriciorum iuvenum)">
+      <data key="nk0">patrician youth (caterva patriciorum iuvenum)</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="obs:l4c15-justification">
+      <data key="nk0">Dictator's public justification: Maelius lawfully slain even if innocent of aspiring to kingship, because he refused the</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">source-reported</data>
+    </node>
+    <node id="livy:la:4:15">
+      <data key="nk0">livy:la:4:15</data>
+      <data key="nk1">passage</data>
+    </node>
+    <node id="actor:quaestors">
+      <data key="nk0">quaestors</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="institution:contio">
+      <data key="nk0">contio</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="institution:quaestorship (confiscation and sale of goods)">
+      <data key="nk0">quaestorship (confiscation and sale of goods)</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="resource:Maelius's confiscated property (bona publicata)">
+      <data key="nk0">Maelius's confiscated property (bona publicata)</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="obs:l4c16-aftermath">
+      <data key="nk0">Aftermath: Maelius's house razed (site named Aequimelium); Minucius honored with a gilded ox statue outside the Porta Tr</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">source-reported</data>
+    </node>
+    <node id="livy:la:4:16">
+      <data key="nk0">livy:la:4:16</data>
+      <data key="nk1">passage</data>
+    </node>
+    <node id="actor:Q. Caecilius, Q. Iunius, Sex. Titinius (tribunes)">
+      <data key="nk0">Q. Caecilius, Q. Iunius, Sex. Titinius (tribunes)</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="institution:consular tribunate (military tribunes with consular power)">
+      <data key="nk0">consular tribunate (military tribunes with consular power)</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="resource:Maelian grain, priced at 1 as per modius">
+      <data key="nk0">Maelian grain, priced at 1 as per modius</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="obs:d1c37-agrarian-m">
+      <data key="nk0">Machiavelli's synthetic account of 'the' agrarian law: a holding cap in iugera and division of conquered land; elite cou</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">machiavelli-claim</data>
+    </node>
+    <node id="disc:it:1:37">
+      <data key="nk0">disc:it:1:37</data>
+      <data key="nk1">passage</data>
+    </node>
+    <node id="actor:the Gracchi">
+      <data key="nk0">the Gracchi</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:Marius">
+      <data key="nk0">Marius</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:Sulla">
+      <data key="nk0">Sulla</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:Caesar">
+      <data key="nk0">Caesar</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:Pompey">
+      <data key="nk0">Pompey</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="institution:colonial commissions">
+      <data key="nk0">colonial commissions</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="group:Nobiltà">
+      <data key="nk0">Nobiltà</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="group:possessors of public land">
+      <data key="nk0">possessors of public land</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="resource:land (iugera caps)">
+      <data key="nk0">land (iugera caps)</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="resource:conquered enemy fields">
+      <data key="nk0">conquered enemy fields</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="resource:colonies">
+      <data key="nk0">colonies</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="obs:d1c37-antium-m">
+      <data key="nk0">Machiavelli cites Livy's remark that few Romans enrolled for the Antium colony, reading it as preference for desiring go</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">machiavelli-claim</data>
+    </node>
+    <node id="institution:colonial enrollment (dare nomina)">
+      <data key="nk0">colonial enrollment (dare nomina)</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="resource:Antiate land">
+      <data key="nk0">Antiate land</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="obs:l2c41-cassius">
+      <data key="nk0">Spurius Cassius's land bill (486 BCE): Hernican land taken, Cassius proposes half to Latins, half to plebs, plus public </data>
+      <data key="nk1">observation</data>
+      <data key="nk2">source-reported</data>
+    </node>
+    <node id="livy:la:2:41">
+      <data key="nk0">livy:la:2:41</data>
+      <data key="nk1">passage</data>
+    </node>
+    <node id="actor:Sp. Cassius (consul)">
+      <data key="nk0">Sp. Cassius (consul)</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:Proculus Verginius (consul)">
+      <data key="nk0">Proculus Verginius (consul)</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:Caeso Fabius and L. Valerius (quaestors, in one tradition)">
+      <data key="nk0">Caeso Fabius and L. Valerius (quaestors, in one tradition)</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:Cassius's father (in the other tradition)">
+      <data key="nk0">Cassius's father (in the other tradition)</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="institution:quaestorian perduellio prosecution (one tradition)">
+      <data key="nk0">quaestorian perduellio prosecution (one tradition)</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="institution:domestic jurisdiction of the paterfamilias (other tradition)">
+      <data key="nk0">domestic jurisdiction of the paterfamilias (other tradition)</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="group:possessores of public land">
+      <data key="nk0">possessores of public land</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="group:Latin allies">
+      <data key="nk0">Latin allies</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="group:Hernici">
+      <data key="nk0">Hernici</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="resource:two-thirds of Hernican land">
+      <data key="nk0">two-thirds of Hernican land</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="resource:ager publicus held by private possessors">
+      <data key="nk0">ager publicus held by private possessors</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="resource:money refund for Sicilian grain (proposed)">
+      <data key="nk0">money refund for Sicilian grain (proposed)</data>
+      <data key="nk1">resource</data>
+    </node>
+    <node id="obs:l3c1-antium">
+      <data key="nk0">Antium colony (467 BCE): Fabius's compromise sends a colony to captured Antium instead of distributing land at Rome; tri</data>
+      <data key="nk1">observation</data>
+      <data key="nk2">source-reported</data>
+    </node>
+    <node id="livy:la:3:1">
+      <data key="nk0">livy:la:3:1</data>
+      <data key="nk1">passage</data>
+    </node>
+    <node id="actor:Q. Fabius (consul)">
+      <data key="nk0">Q. Fabius (consul)</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:T. Aemilius (consul)">
+      <data key="nk0">T. Aemilius (consul)</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="actor:triumvirs T. Quinctius, A. Verginius, P. Furius">
+      <data key="nk0">triumvirs T. Quinctius, A. Verginius, P. Furius</data>
+      <data key="nk1">actor</data>
+    </node>
+    <node id="institution:triumviri agro dando (land-distribution commission)">
+      <data key="nk0">triumviri agro dando (land-distribution commission)</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="institution:colonist enrollment (nomina dare)">
+      <data key="nk0">colonist enrollment (nomina dare)</data>
+      <data key="nk1">institution</data>
+    </node>
+    <node id="group:possessores">
+      <data key="nk0">possessores</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="group:Volscian colonists">
+      <data key="nk0">Volscian colonists</data>
+      <data key="nk1">group</data>
+    </node>
+    <node id="resource:captured Antiate land">
+      <data key="nk0">captured Antiate land</data>
+      <data key="nk1">resource</data>
+    </node>
+    <edge id="e0" source="obs:d1c7-coriolanus-m" target="disc:it:1:7">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e1" source="obs:d1c7-coriolanus-m" target="actor:Coriolanus">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e2" source="obs:d1c7-coriolanus-m" target="actor:tribunes of the plebs">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e3" source="obs:d1c7-coriolanus-m" target="institution:Senate">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e4" source="obs:d1c7-coriolanus-m" target="institution:tribunate">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e5" source="obs:d1c7-coriolanus-m" target="institution:accusation before the people">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e6" source="obs:d1c7-coriolanus-m" target="group:Nobilità/patricians">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e7" source="obs:d1c7-coriolanus-m" target="group:Plebe">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e8" source="obs:d1c7-coriolanus-m" target="resource:grain (vettovaglie, frumento)">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e9" source="obs:d1c7-valori-m" target="disc:it:1:7">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e10" source="obs:d1c7-valori-m" target="actor:Francesco Valori">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e11" source="obs:d1c7-valori-m" target="institution:Florentine republic (post-1494)">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e12" source="obs:d1c7-valori-m" target="group:Valori's faction">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e13" source="obs:d1c7-valori-m" target="group:opposing faction">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e14" source="obs:d1c7-soderini-m" target="disc:it:1:7">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e15" source="obs:d1c7-soderini-m" target="actor:Piero Soderini">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e16" source="obs:d1c7-soderini-m" target="institution:Otto di Guardia (the 'otto giudici')">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e17" source="obs:d1c7-soderini-m" target="institution:Florentine republic">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e18" source="obs:d1c7-soderini-m" target="group:potenti cittadini">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e19" source="obs:d1c7-chiusi-m" target="disc:it:1:7">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e20" source="obs:d1c7-chiusi-m" target="actor:Arruns">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e21" source="obs:d1c7-chiusi-m" target="actor:the Lucumo">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e22" source="obs:d1c7-chiusi-m" target="actor:the Gauls">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e23" source="obs:l2c34-famine" target="livy:la:2:34">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e24" source="obs:l2c34-famine" target="group:plebs">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e25" source="obs:l2c34-famine" target="group:slaves (servitia)">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e26" source="obs:l2c34-famine" target="resource:grain (annona)">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e27" source="obs:l2c34-procurement" target="livy:la:2:34">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e28" source="obs:l2c34-procurement" target="actor:consuls T. Geganius and P. Minucius">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e29" source="obs:l2c34-procurement" target="actor:Aristodemus tyrant of Cumae">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e30" source="obs:l2c34-procurement" target="actor:frumentatores (purchasing agents)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e31" source="obs:l2c34-procurement" target="institution:consulship">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e32" source="obs:l2c34-procurement" target="resource:grain">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e33" source="obs:l2c34-procurement" target="resource:ships">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e34" source="obs:l2c34-procurement" target="resource:public purchase money">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e35" source="obs:l2c34-colonies" target="livy:la:2:34">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e36" source="obs:l2c34-colonies" target="institution:colonial commission (implied)">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e37" source="obs:l2c34-colonies" target="group:colonists">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e38" source="obs:l2c34-colonies" target="resource:land">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e39" source="obs:l2c34-price-debate" target="livy:la:2:34">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e40" source="obs:l2c34-price-debate" target="actor:Senate">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e41" source="obs:l2c34-price-debate" target="actor:M. Minucius (consul)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e42" source="obs:l2c34-price-debate" target="actor:A. Sempronius (consul)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e43" source="obs:l2c34-price-debate" target="institution:Senate (price-setting authority over public grain)">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e44" source="obs:l2c34-price-debate" target="group:plebs">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e45" source="obs:l2c34-price-debate" target="resource:large quantity of Sicilian grain">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e46" source="obs:l2c34-coriolanus-speech" target="livy:la:2:34">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e47" source="obs:l2c34-coriolanus-speech" target="actor:Marcius Coriolanus">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e48" source="obs:l2c34-coriolanus-speech" target="actor:Sicinius (named as plebeian magistrate)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e49" source="obs:l2c34-coriolanus-speech" target="institution:Senate">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e50" source="obs:l2c34-coriolanus-speech" target="institution:tribunate">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e51" source="obs:l2c34-coriolanus-speech" target="group:plebs">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e52" source="obs:l2c34-coriolanus-speech" target="group:patres">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e53" source="obs:l2c34-coriolanus-speech" target="resource:grain">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e54" source="obs:l2c34-livy-judgment" target="livy:la:2:34">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e55" source="obs:l2c34-livy-judgment" target="actor:Livy (author)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e56" source="obs:l2c34-livy-judgment" target="institution:tribunate">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e57" source="obs:l2c34-livy-judgment" target="resource:grain">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e58" source="obs:l2c35-trial" target="livy:la:2:35">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e59" source="obs:l2c35-trial" target="actor:Coriolanus">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e60" source="obs:l2c35-trial" target="actor:tribunes of the plebs">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e61" source="obs:l2c35-trial" target="actor:patricians collectively">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e62" source="obs:l2c35-trial" target="institution:tribunician prosecution (diem dicere)">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e63" source="obs:l2c35-trial" target="institution:popular judgment">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e64" source="obs:l2c35-trial" target="group:plebs">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e65" source="obs:l2c35-trial" target="group:clients of patricians">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e66" source="obs:l2c35-volsci" target="livy:la:2:35">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e67" source="obs:l2c35-volsci" target="actor:Coriolanus">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e68" source="obs:l2c35-volsci" target="actor:Attius Tullius">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e69" source="obs:l2c35-volsci" target="group:Volsci">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e70" source="obs:l2c35-volsci" target="resource:military manpower (iuventus)">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e71" source="obs:d3c28-maelius-m" target="disc:it:3:28">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e72" source="obs:d3c28-maelius-m" target="actor:Spurius Maelius">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e73" source="obs:d3c28-maelius-m" target="actor:the Dictator (unnamed by Machiavelli)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e74" source="obs:d3c28-maelius-m" target="institution:Senate">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e75" source="obs:d3c28-maelius-m" target="institution:dictatorship">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e76" source="obs:d3c28-maelius-m" target="group:plebe">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e77" source="obs:d3c28-maelius-m" target="resource:grain">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e78" source="obs:d3c28-maelius-m" target="resource:private wealth">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e79" source="obs:l4c12-famine-causes" target="livy:la:4:12">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e80" source="obs:l4c12-famine-causes" target="group:plebs">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e81" source="obs:l4c12-famine-causes" target="resource:grain harvest">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e82" source="obs:l4c12-minucius-annona" target="livy:la:4:12">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e83" source="obs:l4c12-minucius-annona" target="actor:L. Minucius">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e84" source="obs:l4c12-minucius-annona" target="institution:praefectura annonae (new office)">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e85" source="obs:l4c12-minucius-annona" target="institution:Senate">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e86" source="obs:l4c12-minucius-annona" target="institution:plebs (electing pressure)">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e87" source="obs:l4c12-minucius-annona" target="group:plebs">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e88" source="obs:l4c12-minucius-annona" target="resource:grain supply">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e89" source="obs:l4c12-rationing" target="livy:la:4:12">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e90" source="obs:l4c12-rationing" target="actor:L. Minucius (praefectus annonae)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e91" source="obs:l4c12-rationing" target="actor:frumentarii (grain dealers)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e92" source="obs:l4c12-rationing" target="institution:praefectura annonae">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e93" source="obs:l4c12-rationing" target="group:plebs">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e94" source="obs:l4c12-rationing" target="group:slave households (servitia)">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e95" source="obs:l4c12-rationing" target="resource:private grain stocks">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e96" source="obs:l4c12-rationing" target="resource:monthly consumption quota">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e97" source="obs:l4c12-rationing" target="resource:daily slave rations">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e98" source="obs:l4c13-maelius-procurement" target="livy:la:4:13">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e99" source="obs:l4c13-maelius-procurement" target="actor:Spurius Maelius (eques, praedives)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e100" source="obs:l4c13-maelius-procurement" target="group:plebs">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e101" source="obs:l4c13-maelius-procurement" target="group:hospites and clientes of Maelius">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e102" source="obs:l4c13-maelius-procurement" target="resource:private money (privata pecunia)">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e103" source="obs:l4c13-maelius-procurement" target="resource:Etruscan grain">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e104" source="obs:l4c13-intelligence" target="livy:la:4:13">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e105" source="obs:l4c13-intelligence" target="actor:L. Minucius">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e106" source="obs:l4c13-intelligence" target="actor:Spurius Maelius">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e107" source="obs:l4c13-intelligence" target="institution:Senate (recipient of intelligence)">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e108" source="obs:l4c13-intelligence" target="institution:praefectura annonae">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e109" source="obs:l4c13-intelligence" target="group:shared workforce of both grain operations (genus idem hominum)">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e110" source="obs:l4c13-intelligence" target="resource:weapons (tela)">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e111" source="obs:l4c13-intelligence" target="resource:bribe money (tribunos mercede emptos)">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e112" source="obs:l4c13-dictator" target="livy:la:4:13">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e113" source="obs:l4c13-dictator" target="actor:T. Quinctius Capitolinus (consul)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e114" source="obs:l4c13-dictator" target="actor:L. Quinctius Cincinnatus (dictator)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e115" source="obs:l4c13-dictator" target="actor:C. Servilius Ahala (magister equitum)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e116" source="obs:l4c13-dictator" target="institution:dictatorship">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e117" source="obs:l4c13-dictator" target="institution:consulship">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e118" source="obs:l4c13-dictator" target="institution:provocatio (appeal) legislation">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e119" source="obs:l4c13-dictator" target="institution:libri lintei (linen-book magistrate records)">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e120" source="obs:l4c14-killing" target="livy:la:4:14">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e121" source="obs:l4c14-killing" target="actor:Spurius Maelius">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e122" source="obs:l4c14-killing" target="actor:C. Servilius Ahala">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e123" source="obs:l4c14-killing" target="actor:L. Quinctius Cincinnatus (dictator)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e124" source="obs:l4c14-killing" target="institution:dictatorship (summons, armed guards)">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e125" source="obs:l4c14-killing" target="group:Maelius's crowd (caterva suorum)">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e126" source="obs:l4c14-killing" target="group:patrician youth (caterva patriciorum iuvenum)">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e127" source="obs:l4c15-justification" target="livy:la:4:15">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e128" source="obs:l4c15-justification" target="actor:L. Quinctius Cincinnatus (dictator)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e129" source="obs:l4c15-justification" target="actor:quaestors">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e130" source="obs:l4c15-justification" target="institution:contio">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e131" source="obs:l4c15-justification" target="institution:quaestorship (confiscation and sale of goods)">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e132" source="obs:l4c15-justification" target="group:plebs">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e133" source="obs:l4c15-justification" target="resource:Maelius's confiscated property (bona publicata)">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e134" source="obs:l4c16-aftermath" target="livy:la:4:16">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e135" source="obs:l4c16-aftermath" target="actor:L. Minucius">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e136" source="obs:l4c16-aftermath" target="actor:Q. Caecilius, Q. Iunius, Sex. Titinius (tribunes)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e137" source="obs:l4c16-aftermath" target="institution:tribunate">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e138" source="obs:l4c16-aftermath" target="institution:consular tribunate (military tribunes with consular power)">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e139" source="obs:l4c16-aftermath" target="group:plebs">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e140" source="obs:l4c16-aftermath" target="resource:Maelian grain, priced at 1 as per modius">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e141" source="obs:d1c37-agrarian-m" target="disc:it:1:37">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e142" source="obs:d1c37-agrarian-m" target="actor:the Gracchi">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e143" source="obs:d1c37-agrarian-m" target="actor:Marius">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e144" source="obs:d1c37-agrarian-m" target="actor:Sulla">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e145" source="obs:d1c37-agrarian-m" target="actor:Caesar">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e146" source="obs:d1c37-agrarian-m" target="actor:Pompey">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e147" source="obs:d1c37-agrarian-m" target="institution:tribunate">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e148" source="obs:d1c37-agrarian-m" target="institution:Senate">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e149" source="obs:d1c37-agrarian-m" target="institution:colonial commissions">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e150" source="obs:d1c37-agrarian-m" target="group:Plebe">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e151" source="obs:d1c37-agrarian-m" target="group:Nobiltà">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e152" source="obs:d1c37-agrarian-m" target="group:possessors of public land">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e153" source="obs:d1c37-agrarian-m" target="resource:land (iugera caps)">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e154" source="obs:d1c37-agrarian-m" target="resource:conquered enemy fields">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e155" source="obs:d1c37-agrarian-m" target="resource:colonies">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e156" source="obs:d1c37-antium-m" target="disc:it:1:37">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e157" source="obs:d1c37-antium-m" target="institution:colonial enrollment (dare nomina)">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e158" source="obs:d1c37-antium-m" target="group:plebe">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e159" source="obs:d1c37-antium-m" target="resource:Antiate land">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e160" source="obs:l2c41-cassius" target="livy:la:2:41">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e161" source="obs:l2c41-cassius" target="actor:Sp. Cassius (consul)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e162" source="obs:l2c41-cassius" target="actor:Proculus Verginius (consul)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e163" source="obs:l2c41-cassius" target="actor:Caeso Fabius and L. Valerius (quaestors, in one tradition)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e164" source="obs:l2c41-cassius" target="actor:Cassius's father (in the other tradition)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e165" source="obs:l2c41-cassius" target="institution:consulship">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e166" source="obs:l2c41-cassius" target="institution:quaestorian perduellio prosecution (one tradition)">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e167" source="obs:l2c41-cassius" target="institution:domestic jurisdiction of the paterfamilias (other tradition)">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e168" source="obs:l2c41-cassius" target="group:plebs">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e169" source="obs:l2c41-cassius" target="group:patres">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e170" source="obs:l2c41-cassius" target="group:possessores of public land">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e171" source="obs:l2c41-cassius" target="group:Latin allies">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e172" source="obs:l2c41-cassius" target="group:Hernici">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e173" source="obs:l2c41-cassius" target="resource:two-thirds of Hernican land">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e174" source="obs:l2c41-cassius" target="resource:ager publicus held by private possessors">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e175" source="obs:l2c41-cassius" target="resource:money refund for Sicilian grain (proposed)">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+    <edge id="e176" source="obs:l3c1-antium" target="livy:la:3:1">
+      <data key="ek0">extracted_from</data>
+    </edge>
+    <edge id="e177" source="obs:l3c1-antium" target="actor:Q. Fabius (consul)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e178" source="obs:l3c1-antium" target="actor:T. Aemilius (consul)">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e179" source="obs:l3c1-antium" target="actor:triumvirs T. Quinctius, A. Verginius, P. Furius">
+      <data key="ek0">mentions_actor</data>
+    </edge>
+    <edge id="e180" source="obs:l3c1-antium" target="institution:triumviri agro dando (land-distribution commission)">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e181" source="obs:l3c1-antium" target="institution:colonist enrollment (nomina dare)">
+      <data key="ek0">mentions_institution</data>
+    </edge>
+    <edge id="e182" source="obs:l3c1-antium" target="group:plebs">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e183" source="obs:l3c1-antium" target="group:possessores">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e184" source="obs:l3c1-antium" target="group:Volscian colonists">
+      <data key="ek0">mentions_group</data>
+    </edge>
+    <edge id="e185" source="obs:l3c1-antium" target="resource:captured Antiate land">
+      <data key="ek0">mentions_resource</data>
+    </edge>
+  </graph>
+</graphml>

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "causal_claim.schema.json",
+  "title": "A causal/general proposition asserted by an author (historically situated claim, not a fact)",
+  "type": "object",
+  "required": ["claim_id", "author", "source_ref", "statement", "cause_variables",
+               "effect_variables", "claim_type", "supporting_observations"],
+  "properties": {
+    "claim_id": { "type": "string", "pattern": "^claim:[a-z0-9][a-z0-9-]+$" },
+    "author": { "enum": ["machiavelli", "livy"] },
+    "source_ref": { "type": "string", "pattern": "^(disc|livy):(it|en|la):[0-9]+:[0-9]+$" },
+    "statement": { "type": "string", "description": "the proposition, paraphrased in English" },
+    "source_passage": { "type": "string", "description": "verbatim anchor quotation" },
+    "cause_variables": {
+      "type": "array", "minItems": 1,
+      "items": { "type": "string", "description": "ontology variable id, e.g. ont:accusation-channels" }
+    },
+    "effect_variables": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "moderator_variables": { "type": "array", "items": { "type": "string" } },
+    "polarity": { "enum": ["positive", "negative", "conditional", "u-shaped", "unspecified"] },
+    "claim_type": {
+      "enum": ["causal-mechanism", "empirical-generalization", "counterfactual",
+               "prescription", "definition"]
+    },
+    "supporting_observations": {
+      "type": "array", "items": { "type": "string", "pattern": "^obs:" }
+    },
+    "scope_claimed": { "type": "string", "description": "universality claimed by the author ('in ogni republica', 'sempre', etc.)" },
+    "testability_notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

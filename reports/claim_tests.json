@@ -1,0 +1,96 @@
+{
+  "T1_roba_vs_onori": {
+    "property_domain": {
+      "n": 58,
+      "dist": {
+        "ordinary": 28,
+        "unresolved": 22,
+        "extraordinary": 2,
+        "mixed": 5,
+        "na": 1
+      },
+      "extraordinary_share": 7.8
+    },
+    "honors_office_domain": {
+      "n": 60,
+      "dist": {
+        "ordinary": 48,
+        "extraordinary": 2,
+        "mixed": 5,
+        "unresolved": 5
+      },
+      "extraordinary_share": 7.5
+    },
+    "legal_rights_domain": {
+      "n": 34,
+      "dist": {
+        "extraordinary": 10,
+        "ordinary": 16,
+        "mixed": 4,
+        "unresolved": 4
+      },
+      "extraordinary_share": 35.3
+    },
+    "machiavelli_prediction": "property conflicts resolve extraordinarily more often than honors conflicts (claim:d1c37-roba-vs-onori)"
+  },
+  "T2_accusation_channel": {
+    "prominent_trials": {
+      "n": 41,
+      "dist": {
+        "ordinary": 34,
+        "extraordinary": 2,
+        "unresolved": 4,
+        "mixed": 1
+      },
+      "extraordinary_share": 6.1
+    },
+    "political_killings_n": 15,
+    "trials_ending_ordinary_pct": 82.9,
+    "note": "Machiavelli's claim predicts trials (ordinary channel) substitute for violence. A real test needs counterfactual periods without tribunician prosecution; this is a descriptive proxy only."
+  },
+  "T3_selection_bias": {
+    "livy_chapters_with_candidate_citation": 114,
+    "events_in_cited_chapters": 74,
+    "events_in_uncited_chapters": 309,
+    "type_dist_cited": {
+      "new-institution": 11,
+      "prominent-trial": 10,
+      "electoral-conflict": 10,
+      "dictator-appointed": 10,
+      "political-killing": 5,
+      "agrarian-agitation": 5,
+      "conspiracy": 5,
+      "colony-founded": 5,
+      "regime-change": 4,
+      "riot-tumult": 4,
+      "levy-obstruction": 2,
+      "military-mutiny": 2,
+      "external-appeal": 1
+    },
+    "type_dist_uncited": {
+      "new-institution": 63,
+      "dictator-appointed": 40,
+      "electoral-conflict": 37,
+      "prominent-trial": 31,
+      "colony-founded": 18,
+      "levy-obstruction": 17,
+      "agrarian-agitation": 14,
+      "conspiracy": 13,
+      "veto-deadlock": 13,
+      "debt-crisis": 12,
+      "riot-tumult": 11,
+      "political-killing": 10,
+      "famine-scarcity": 8,
+      "military-mutiny": 7,
+      "regime-change": 6,
+      "secession": 3,
+      "grain-dispute": 3,
+      "external-appeal": 3
+    },
+    "extraordinary_share_cited": 16.2,
+    "extraordinary_share_uncited": 12.5,
+    "caveat": "'cited' = chapter appears as a retrieval candidate in chapter_map (name/quote heuristics), NOT verified citation. Direction of any difference is still informative about selection."
+  },
+  "n_events_total": 383,
+  "_methods_caveat": "Event coding is LLM-extracted from Spillan's 1857 translation and quote-validated; channel/trigger codings involve judgment; Livy's narrative is itself a late, moralized reconstruction. These are tests against LIVY'S REPRESENTATION, not against Roman reality."
+}

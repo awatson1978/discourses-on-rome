@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "alignment.schema.json",
+  "title": "Unit-level alignment between a Livy information unit and its fate in the Discorsi",
+  "type": "object",
+  "required": ["alignment_id", "case", "dimension", "livy_ref", "discorsi_ref",
+               "livy_content", "machiavelli_content", "transformation"],
+  "properties": {
+    "alignment_id": { "type": "string", "pattern": "^aln:[a-z0-9][a-z0-9-]+$" },
+    "case": { "type": "string", "description": "case study key, e.g. 'A-coriolanus'" },
+    "dimension": {
+      "enum": ["historical_event", "actors", "material_resources",
+               "administrative_actions", "political_outcome", "causal_explanation",
+               "institutions", "population_groups"]
+    },
+    "livy_ref": {
+      "type": ["string", "null"],
+      "pattern": "^livy:(la|en):[0-9]+:[0-9]+$",
+      "description": "null only for transformation=addition with no Livy counterpart"
+    },
+    "discorsi_ref": {
+      "type": ["string", "null"],
+      "pattern": "^disc:(it|en):[0-9]+:[0-9]+$",
+      "description": "null only for transformation=omission"
+    },
+    "livy_content": { "type": "string", "description": "the information unit as Livy gives it ('—' if addition)" },
+    "machiavelli_content": { "type": "string", "description": "the unit as Machiavelli gives it ('—' if omitted)" },
+    "transformation": {
+      "enum": ["preservation", "omission", "abstraction", "reinterpretation", "addition"]
+    },
+    "addition_subtype": {
+      "enum": ["other-source", "inference", "counterfactual", "unsupported", null],
+      "description": "required when transformation=addition"
+    },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

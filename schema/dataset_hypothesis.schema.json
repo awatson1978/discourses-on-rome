@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dataset_hypothesis.schema.json",
+  "title": "A dataset required to test a Machiavellian proposition (Phase V)",
+  "type": "object",
+  "required": ["dataset_id", "tests_claims", "name", "evidentiary_level",
+               "variables", "producing_institution", "institution_evidence"],
+  "properties": {
+    "dataset_id": { "type": "string", "pattern": "^ds:[a-z0-9][a-z0-9-]+$" },
+    "tests_claims": {
+      "type": "array", "minItems": 1,
+      "items": { "type": "string", "pattern": "^claim:" }
+    },
+    "name": { "type": "string" },
+    "evidentiary_level": {
+      "enum": ["A-attested", "B-reconstructed-structure", "C-hypothetical"],
+      "description": "A: values preserved in an identified primary source. B: structure strongly implied, values mostly lost. C: existence/contents cannot currently be established"
+    },
+    "variables": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "type"],
+        "properties": {
+          "name": { "type": "string" },
+          "type": { "enum": ["quantity", "date", "entity", "category", "event", "text"] },
+          "attested_in": { "type": "array", "items": { "type": "string" },
+            "description": "passage ids where actual values survive; empty for level C" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "producing_institution": {
+      "type": "string",
+      "description": "Historical institution that would have produced such records"
+    },
+    "institution_evidence": {
+      "type": "string",
+      "description": "Evidence that this institution kept such records (or statement that none exists). Roman vs Renaissance practice must not be conflated."
+    },
+    "period": { "type": "string" },
+    "survival_status": { "type": "string" },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

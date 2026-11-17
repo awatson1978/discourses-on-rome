@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+  <key id="nk0" for="node" attr.name="label" attr.type="string"/>
+  <key id="nk1" for="node" attr.name="domain" attr.type="string"/>
+  <key id="nk2" for="node" attr.name="role" attr.type="string"/>
+  <key id="nk3" for="node" attr.name="discovered" attr.type="string"/>
+  <key id="ek0" for="edge" attr.name="claim_id" attr.type="string"/>
+  <key id="ek1" for="edge" attr.name="author" attr.type="string"/>
+  <key id="ek2" for="edge" attr.name="statement" attr.type="string"/>
+  <key id="ek3" for="edge" attr.name="polarity" attr.type="string"/>
+  <key id="ek4" for="edge" attr.name="claim_type" attr.type="string"/>
+  <key id="ek5" for="edge" attr.name="source_ref" attr.type="string"/>
+  <key id="ek6" for="edge" attr.name="epistemic_status" attr.type="string"/>
+  <graph edgedefault="directed">
+    <node id="ont:umori">
+      <data key="nk0">Humors (umori) — standing dispositional pressures of social groups</data>
+      <data key="nk1">political-conflict</data>
+      <data key="nk2">explanatory</data>
+      <data key="nk3">True</data>
+    </node>
+    <node id="ont:ordini">
+      <data key="nk0">Orders (ordini) — institutional channels and constitutional arrangements</data>
+      <data key="nk1">political-institutions</data>
+      <data key="nk2">explanatory</data>
+      <data key="nk3">True</data>
+    </node>
+    <node id="ont:accusation-channels">
+      <data key="nk0">Legal accusation channels (accuse) before many judges</data>
+      <data key="nk1">political-institutions</data>
+      <data key="nk2">intervention</data>
+      <data key="nk3">False</data>
+    </node>
+    <node id="ont:ordinary-vs-extraordinary">
+      <data key="nk0">Ordinary vs extraordinary modes of political action</data>
+      <data key="nk1">political-conflict</data>
+      <data key="nk2">explanatory</data>
+      <data key="nk3">True</data>
+    </node>
+    <node id="ont:reputation-public">
+      <data key="nk0">Reputation acquired through public ways (counsel, service)</data>
+      <data key="nk1">population-social</data>
+      <data key="nk2">explanatory</data>
+      <data key="nk3">True</data>
+    </node>
+    <node id="ont:reputation-private">
+      <data key="nk0">Reputation acquired through private benefits (loans, dowries, protection, food)</data>
+      <data key="nk1">population-social</data>
+      <data key="nk2">explanatory</data>
+      <data key="nk3">True</data>
+    </node>
+    <node id="ont:partisans">
+      <data key="nk0">Partisan followings (partigiani, sette, parti)</data>
+      <data key="nk1">political-conflict</data>
+      <data key="nk2">explanatory</data>
+      <data key="nk3">False</data>
+    </node>
+    <node id="ont:grain-supply">
+      <data key="nk0">Grain availability (public provision, imports, private stocks)</data>
+      <data key="nk1">economic-administrative</data>
+      <data key="nk2">condition</data>
+      <data key="nk3">False</data>
+    </node>
+    <node id="ont:grain-distribution-control">
+      <data key="nk0">Discretionary control over food distribution</data>
+      <data key="nk1">economic-administrative</data>
+      <data key="nk2">intervention</data>
+      <data key="nk3">False</data>
+    </node>
+    <node id="ont:land-distribution">
+      <data key="nk0">Land ownership limits and distribution of conquered land</data>
+      <data key="nk1">economic-administrative</data>
+      <data key="nk2">intervention</data>
+      <data key="nk3">False</data>
+    </node>
+    <node id="ont:public-rich-citizens-poor">
+      <data key="nk0">Public treasury rich / private citizens poor</data>
+      <data key="nk1">economic-administrative</data>
+      <data key="nk2">condition</data>
+      <data key="nk3">True</data>
+    </node>
+    <node id="ont:necessity-vs-ambition">
+      <data key="nk0">Necessity vs ambition as motive regime</data>
+      <data key="nk1">population-social</data>
+      <data key="nk2">explanatory</data>
+      <data key="nk3">True</data>
+    </node>
+    <node id="ont:roba-vs-onori">
+      <data key="nk0">Property (roba) vs honors (onori) as contested goods</data>
+      <data key="nk1">political-conflict</data>
+      <data key="nk2">explanatory</data>
+      <data key="nk3">True</data>
+    </node>
+    <node id="ont:tribunate">
+      <data key="nk0">Tribunician power (creation, use, target of elite resentment)</data>
+      <data key="nk1">political-institutions</data>
+      <data key="nk2">explanatory</data>
+      <data key="nk3">False</data>
+    </node>
+    <node id="ont:dictatorship">
+      <data key="nk0">Dictatorship as lawful emergency power</data>
+      <data key="nk1">political-institutions</data>
+      <data key="nk2">intervention</data>
+      <data key="nk3">False</data>
+    </node>
+    <node id="ont:senate">
+      <data key="nk0">Senate as deliberative/price-setting/repressive body</data>
+      <data key="nk1">political-institutions</data>
+      <data key="nk2">explanatory</data>
+      <data key="nk3">False</data>
+    </node>
+    <node id="ont:colonies">
+      <data key="nk0">Colony foundation as safety valve and strategic instrument</data>
+      <data key="nk1">military-territorial</data>
+      <data key="nk2">intervention</data>
+      <data key="nk3">False</data>
+    </node>
+    <node id="ont:external-forces">
+      <data key="nk0">Recourse to external/foreign forces by internal factions</data>
+      <data key="nk1">political-conflict</data>
+      <data key="nk2">outcome</data>
+      <data key="nk3">False</data>
+    </node>
+    <node id="ont:elite-delay-tactics">
+      <data key="nk0">Elite temporizing repertoire (army out, tribune vs tribune, partial concession, colony)</data>
+      <data key="nk1">political-conflict</data>
+      <data key="nk2">intervention</data>
+      <data key="nk3">True</data>
+    </node>
+    <node id="ont:popular-unrest">
+      <data key="nk0">Popular unrest (tumult, near-lynching, secession threat)</data>
+      <data key="nk1">political-conflict</data>
+      <data key="nk2">outcome</data>
+      <data key="nk3">False</data>
+    </node>
+    <node id="ont:institutional-survival">
+      <data key="nk0">Institutional survival / republican liberty</data>
+      <data key="nk1">outcomes</data>
+      <data key="nk2">outcome</data>
+      <data key="nk3">False</data>
+    </node>
+    <node id="ont:tyranny-risk">
+      <data key="nk0">Tyranny / regnum risk</data>
+      <data key="nk1">outcomes</data>
+      <data key="nk2">outcome</data>
+      <data key="nk3">False</data>
+    </node>
+    <node id="ont:faction-cascade">
+      <data key="nk0">Faction formation cascade (offense→fear→defense→partisans→parties→ruin)</data>
+      <data key="nk1">political-conflict</data>
+      <data key="nk2">explanatory</data>
+      <data key="nk3">True</data>
+    </node>
+    <node id="ont:distance-decay">
+      <data key="nk0">Distance decay of popular demand for land</data>
+      <data key="nk1">military-territorial</data>
+      <data key="nk2">condition</data>
+      <data key="nk3">True</data>
+    </node>
+    <node id="ont:timing-of-reform">
+      <data key="nk0">Timing/retroactivity of corrective legislation</data>
+      <data key="nk1">political-institutions</data>
+      <data key="nk2">intervention</data>
+      <data key="nk3">True</data>
+    </node>
+    <edge id="e0" source="ont:accusation-channels" target="ont:popular-unrest">
+      <data key="ek0">claim:d1c7-accusation-channels</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Legal accusation channels (before the people or many judges) vent the humors that build up against citizens; where such ordinary outlets are absent, humors discharge through extraordinary modes that ruin the republic.</data>
+      <data key="ek3">negative</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:1:7</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e1" source="ont:accusation-channels" target="ont:institutional-survival">
+      <data key="ek0">claim:d1c7-accusation-channels</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Legal accusation channels (before the people or many judges) vent the humors that build up against citizens; where such ordinary outlets are absent, humors discharge through extraordinary modes that ruin the republic.</data>
+      <data key="ek3">negative</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:1:7</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e2" source="ont:umori" target="ont:popular-unrest">
+      <data key="ek0">claim:d1c7-accusation-channels</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Legal accusation channels (before the people or many judges) vent the humors that build up against citizens; where such ordinary outlets are absent, humors discharge through extraordinary modes that ruin the republic.</data>
+      <data key="ek3">negative</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:1:7</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e3" source="ont:umori" target="ont:institutional-survival">
+      <data key="ek0">claim:d1c7-accusation-channels</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Legal accusation channels (before the people or many judges) vent the humors that build up against citizens; where such ordinary outlets are absent, humors discharge through extraordinary modes that ruin the republic.</data>
+      <data key="ek3">negative</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:1:7</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e4" source="ont:ordini" target="ont:popular-unrest">
+      <data key="ek0">claim:d1c7-accusation-channels</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Legal accusation channels (before the people or many judges) vent the humors that build up against citizens; where such ordinary outlets are absent, humors discharge through extraordinary modes that ruin the republic.</data>
+      <data key="ek3">negative</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:1:7</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e5" source="ont:ordini" target="ont:institutional-survival">
+      <data key="ek0">claim:d1c7-accusation-channels</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Legal accusation channels (before the people or many judges) vent the humors that build up against citizens; where such ordinary outlets are absent, humors discharge through extraordinary modes that ruin the republic.</data>
+      <data key="ek3">negative</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:1:7</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e6" source="ont:ordinary-vs-extraordinary" target="ont:popular-unrest">
+      <data key="ek0">claim:d1c7-accusation-channels</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">(moderator) Legal accusation channels (before the people or many judges) vent the humors that build up against citizens; where such ordinary outlets are absent, humors discharge through extraordinary modes that ruin the republic.</data>
+      <data key="ek3">moderates</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:1:7</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e7" source="ont:ordinary-vs-extraordinary" target="ont:institutional-survival">
+      <data key="ek0">claim:d1c7-accusation-channels</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">(moderator) Legal accusation channels (before the people or many judges) vent the humors that build up against citizens; where such ordinary outlets are absent, humors discharge through extraordinary modes that ruin the republic.</data>
+      <data key="ek3">moderates</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:1:7</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e8" source="ont:ordinary-vs-extraordinary" target="ont:partisans">
+      <data key="ek0">claim:d1c7-faction-cascade</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Private repression of a citizen triggers a cascade: private offense generates fear, fear seeks defense, defense recruits partisans, partisans become parties, parties ruin the city.</data>
+      <data key="ek3">negative</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:1:7</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e9" source="ont:ordinary-vs-extraordinary" target="ont:faction-cascade">
+      <data key="ek0">claim:d1c7-faction-cascade</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Private repression of a citizen triggers a cascade: private offense generates fear, fear seeks defense, defense recruits partisans, partisans become parties, parties ruin the city.</data>
+      <data key="ek3">negative</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:1:7</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e10" source="ont:ordinary-vs-extraordinary" target="ont:institutional-survival">
+      <data key="ek0">claim:d1c7-faction-cascade</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Private repression of a citizen triggers a cascade: private offense generates fear, fear seeks defense, defense recruits partisans, partisans become parties, parties ruin the city.</data>
+      <data key="ek3">negative</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:1:7</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e11" source="ont:ordini" target="ont:external-forces">
+      <data key="ek0">claim:d1c7-external-forces</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Whenever a party within a city calls in external forces, the cause is defective civic orders: no internal channel exists to vent malignant humors ordinarily.</data>
+      <data key="ek3">negative</data>
+      <data key="ek4">empirical-generalization</data>
+      <data key="ek5">disc:it:1:7</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e12" source="ont:accusation-channels" target="ont:external-forces">
+      <data key="ek0">claim:d1c7-external-forces</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Whenever a party within a city calls in external forces, the cause is defective civic orders: no internal channel exists to vent malignant humors ordinarily.</data>
+      <data key="ek3">negative</data>
+      <data key="ek4">empirical-generalization</data>
+      <data key="ek5">disc:it:1:7</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e13" source="ont:accusation-channels" target="ont:institutional-survival">
+      <data key="ek0">claim:d1c7-few-judges</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Accusation before few judges is ineffective because the few act in the interest of the few; accusations must lie before many judges to be credible.</data>
+      <data key="ek3">conditional</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:1:7</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e14" source="ont:grain-distribution-control" target="ont:tribunate">
+      <data key="ek0">claim:l2c34-livy-counterfactual</data>
+      <data key="ek1">livy</data>
+      <data key="ek2">Livy's own counterfactual: by conceding a lower grain price, the senators could probably have rid themselves of the tribunate and all the rights imposed on them against their will; whether that would have been right is harder to say.</data>
+      <data key="ek3">positive</data>
+      <data key="ek4">counterfactual</data>
+      <data key="ek5">livy:la:2:34</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e15" source="ont:reputation-private" target="ont:partisans">
+      <data key="ek0">claim:d3c28-private-benefits-tyranny</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Works that appear pious (like feeding the hungry) can conceal the beginning of tyranny: private benefits create partisans and embolden the benefactor to corrupt the public and force the laws.</data>
+      <data key="ek3">positive</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:3:28</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e16" source="ont:reputation-private" target="ont:tyranny-risk">
+      <data key="ek0">claim:d3c28-private-benefits-tyranny</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Works that appear pious (like feeding the hungry) can conceal the beginning of tyranny: private benefits create partisans and embolden the benefactor to corrupt the public and force the laws.</data>
+      <data key="ek3">positive</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:3:28</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e17" source="ont:grain-distribution-control" target="ont:partisans">
+      <data key="ek0">claim:d3c28-private-benefits-tyranny</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Works that appear pious (like feeding the hungry) can conceal the beginning of tyranny: private benefits create partisans and embolden the benefactor to corrupt the public and force the laws.</data>
+      <data key="ek3">positive</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:3:28</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e18" source="ont:grain-distribution-control" target="ont:tyranny-risk">
+      <data key="ek0">claim:d3c28-private-benefits-tyranny</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Works that appear pious (like feeding the hungry) can conceal the beginning of tyranny: private benefits create partisans and embolden the benefactor to corrupt the public and force the laws.</data>
+      <data key="ek3">positive</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:3:28</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e19" source="ont:timing-of-reform" target="ont:partisans">
+      <data key="ek0">claim:d3c28-private-benefits-tyranny</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">(moderator) Works that appear pious (like feeding the hungry) can conceal the beginning of tyranny: private benefits create partisans and embolden the benefactor to corrupt the public and force the laws.</data>
+      <data key="ek3">moderates</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:3:28</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e20" source="ont:timing-of-reform" target="ont:tyranny-risk">
+      <data key="ek0">claim:d3c28-private-benefits-tyranny</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">(moderator) Works that appear pious (like feeding the hungry) can conceal the beginning of tyranny: private benefits create partisans and embolden the benefactor to corrupt the public and force the laws.</data>
+      <data key="ek3">moderates</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:3:28</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e21" source="ont:reputation-public" target="ont:tyranny-risk">
+      <data key="ek0">claim:d3c28-public-vs-private-reputation</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">A well-ordered republic opens public ways to reputation (counsel and deeds for the common benefit, rewarded with honors) and closes private ways (benefits to individuals creating partisans).</data>
+      <data key="ek3">conditional</data>
+      <data key="ek4">prescription</data>
+      <data key="ek5">disc:it:3:28</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e22" source="ont:reputation-public" target="ont:institutional-survival">
+      <data key="ek0">claim:d3c28-public-vs-private-reputation</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">A well-ordered republic opens public ways to reputation (counsel and deeds for the common benefit, rewarded with honors) and closes private ways (benefits to individuals creating partisans).</data>
+      <data key="ek3">conditional</data>
+      <data key="ek4">prescription</data>
+      <data key="ek5">disc:it:3:28</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e23" source="ont:reputation-private" target="ont:tyranny-risk">
+      <data key="ek0">claim:d3c28-public-vs-private-reputation</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">A well-ordered republic opens public ways to reputation (counsel and deeds for the common benefit, rewarded with honors) and closes private ways (benefits to individuals creating partisans).</data>
+      <data key="ek3">conditional</data>
+      <data key="ek4">prescription</data>
+      <data key="ek5">disc:it:3:28</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e24" source="ont:reputation-private" target="ont:institutional-survival">
+      <data key="ek0">claim:d3c28-public-vs-private-reputation</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">A well-ordered republic opens public ways to reputation (counsel and deeds for the common benefit, rewarded with honors) and closes private ways (benefits to individuals creating partisans).</data>
+      <data key="ek3">conditional</data>
+      <data key="ek4">prescription</data>
+      <data key="ek5">disc:it:3:28</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e25" source="ont:ordini" target="ont:tyranny-risk">
+      <data key="ek0">claim:d3c28-public-vs-private-reputation</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">A well-ordered republic opens public ways to reputation (counsel and deeds for the common benefit, rewarded with honors) and closes private ways (benefits to individuals creating partisans).</data>
+      <data key="ek3">conditional</data>
+      <data key="ek4">prescription</data>
+      <data key="ek5">disc:it:3:28</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e26" source="ont:ordini" target="ont:institutional-survival">
+      <data key="ek0">claim:d3c28-public-vs-private-reputation</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">A well-ordered republic opens public ways to reputation (counsel and deeds for the common benefit, rewarded with honors) and closes private ways (benefits to individuals creating partisans).</data>
+      <data key="ek3">conditional</data>
+      <data key="ek4">prescription</data>
+      <data key="ek5">disc:it:3:28</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e27" source="ont:timing-of-reform" target="ont:institutional-survival">
+      <data key="ek0">claim:d3c28-punish-early</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Leaving one such private-reputation seeker unpunished is apt to ruin a republic, because after the precedent it is difficult to return to the true path.</data>
+      <data key="ek3">negative</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:3:28</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e28" source="ont:dictatorship" target="ont:institutional-survival">
+      <data key="ek0">claim:d3c28-punish-early</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Leaving one such private-reputation seeker unpunished is apt to ruin a republic, because after the precedent it is difficult to return to the true path.</data>
+      <data key="ek3">negative</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:3:28</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e29" source="ont:necessity-vs-ambition" target="ont:popular-unrest">
+      <data key="ek0">claim:d1c37-ambition-after-necessity</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Men fight first from necessity, then from ambition; desire always exceeds the power of acquiring, producing permanent discontent with what is possessed.</data>
+      <data key="ek3">positive</data>
+      <data key="ek4">empirical-generalization</data>
+      <data key="ek5">disc:it:1:37</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e30" source="ont:necessity-vs-ambition" target="ont:umori">
+      <data key="ek0">claim:d1c37-ambition-after-necessity</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Men fight first from necessity, then from ambition; desire always exceeds the power of acquiring, producing permanent discontent with what is possessed.</data>
+      <data key="ek3">positive</data>
+      <data key="ek4">empirical-generalization</data>
+      <data key="ek5">disc:it:1:37</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e31" source="ont:roba-vs-onori" target="ont:ordinary-vs-extraordinary">
+      <data key="ek0">claim:d1c37-roba-vs-onori</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Men value property more than honors: the nobility yielded honors to the plebs without extraordinary scandal, but defended property with such obstinacy that the plebs resorted to extraordinary means.</data>
+      <data key="ek3">positive</data>
+      <data key="ek4">empirical-generalization</data>
+      <data key="ek5">disc:it:1:37</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e32" source="ont:roba-vs-onori" target="ont:popular-unrest">
+      <data key="ek0">claim:d1c37-roba-vs-onori</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Men value property more than honors: the nobility yielded honors to the plebs without extraordinary scandal, but defended property with such obstinacy that the plebs resorted to extraordinary means.</data>
+      <data key="ek3">positive</data>
+      <data key="ek4">empirical-generalization</data>
+      <data key="ek5">disc:it:1:37</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e33" source="ont:timing-of-reform" target="ont:popular-unrest">
+      <data key="ek0">claim:d1c37-retroactive-law</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Making a law that looks far backward against an entrenched custom is extremely scandalous; temporizing is preferable, for delayed evil arrives later or extinguishes itself.</data>
+      <data key="ek3">negative</data>
+      <data key="ek4">prescription</data>
+      <data key="ek5">disc:it:1:37</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e34" source="ont:timing-of-reform" target="ont:institutional-survival">
+      <data key="ek0">claim:d1c37-retroactive-law</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Making a law that looks far backward against an entrenched custom is extremely scandalous; temporizing is preferable, for delayed evil arrives later or extinguishes itself.</data>
+      <data key="ek3">negative</data>
+      <data key="ek4">prescription</data>
+      <data key="ek5">disc:it:1:37</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e35" source="ont:land-distribution" target="ont:institutional-survival">
+      <data key="ek0">claim:d1c37-agrarian-destroyed-republic</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">The contention over the agrarian law, reawakened by the Gracchi against adversaries whose power had doubled in the interim, destroyed Roman liberty through the Marius-Sulla and Caesar-Pompey faction wars; yet the same plebeian appetite had also checked noble ambition for three hundred years.</data>
+      <data key="ek3">conditional</data>
+      <data key="ek4">empirical-generalization</data>
+      <data key="ek5">disc:it:1:37</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e36" source="ont:land-distribution" target="ont:faction-cascade">
+      <data key="ek0">claim:d1c37-agrarian-destroyed-republic</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">The contention over the agrarian law, reawakened by the Gracchi against adversaries whose power had doubled in the interim, destroyed Roman liberty through the Marius-Sulla and Caesar-Pompey faction wars; yet the same plebeian appetite had also checked noble ambition for three hundred years.</data>
+      <data key="ek3">conditional</data>
+      <data key="ek4">empirical-generalization</data>
+      <data key="ek5">disc:it:1:37</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e37" source="ont:roba-vs-onori" target="ont:institutional-survival">
+      <data key="ek0">claim:d1c37-agrarian-destroyed-republic</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">The contention over the agrarian law, reawakened by the Gracchi against adversaries whose power had doubled in the interim, destroyed Roman liberty through the Marius-Sulla and Caesar-Pompey faction wars; yet the same plebeian appetite had also checked noble ambition for three hundred years.</data>
+      <data key="ek3">conditional</data>
+      <data key="ek4">empirical-generalization</data>
+      <data key="ek5">disc:it:1:37</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e38" source="ont:roba-vs-onori" target="ont:faction-cascade">
+      <data key="ek0">claim:d1c37-agrarian-destroyed-republic</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">The contention over the agrarian law, reawakened by the Gracchi against adversaries whose power had doubled in the interim, destroyed Roman liberty through the Marius-Sulla and Caesar-Pompey faction wars; yet the same plebeian appetite had also checked noble ambition for three hundred years.</data>
+      <data key="ek3">conditional</data>
+      <data key="ek4">empirical-generalization</data>
+      <data key="ek5">disc:it:1:37</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e39" source="ont:timing-of-reform" target="ont:institutional-survival">
+      <data key="ek0">claim:d1c37-agrarian-destroyed-republic</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">The contention over the agrarian law, reawakened by the Gracchi against adversaries whose power had doubled in the interim, destroyed Roman liberty through the Marius-Sulla and Caesar-Pompey faction wars; yet the same plebeian appetite had also checked noble ambition for three hundred years.</data>
+      <data key="ek3">conditional</data>
+      <data key="ek4">empirical-generalization</data>
+      <data key="ek5">disc:it:1:37</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e40" source="ont:timing-of-reform" target="ont:faction-cascade">
+      <data key="ek0">claim:d1c37-agrarian-destroyed-republic</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">The contention over the agrarian law, reawakened by the Gracchi against adversaries whose power had doubled in the interim, destroyed Roman liberty through the Marius-Sulla and Caesar-Pompey faction wars; yet the same plebeian appetite had also checked noble ambition for three hundred years.</data>
+      <data key="ek3">conditional</data>
+      <data key="ek4">empirical-generalization</data>
+      <data key="ek5">disc:it:1:37</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e41" source="ont:distance-decay" target="ont:institutional-survival">
+      <data key="ek0">claim:d1c37-agrarian-destroyed-republic</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">(moderator) The contention over the agrarian law, reawakened by the Gracchi against adversaries whose power had doubled in the interim, destroyed Roman liberty through the Marius-Sulla and Caesar-Pompey faction wars; yet the same plebeian appetite had also checked noble ambition for three hundred years.</data>
+      <data key="ek3">moderates</data>
+      <data key="ek4">empirical-generalization</data>
+      <data key="ek5">disc:it:1:37</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e42" source="ont:distance-decay" target="ont:faction-cascade">
+      <data key="ek0">claim:d1c37-agrarian-destroyed-republic</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">(moderator) The contention over the agrarian law, reawakened by the Gracchi against adversaries whose power had doubled in the interim, destroyed Roman liberty through the Marius-Sulla and Caesar-Pompey faction wars; yet the same plebeian appetite had also checked noble ambition for three hundred years.</data>
+      <data key="ek3">moderates</data>
+      <data key="ek4">empirical-generalization</data>
+      <data key="ek5">disc:it:1:37</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e43" source="ont:elite-delay-tactics" target="ont:institutional-survival">
+      <data key="ek0">claim:d1c37-agrarian-destroyed-republic</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">(moderator) The contention over the agrarian law, reawakened by the Gracchi against adversaries whose power had doubled in the interim, destroyed Roman liberty through the Marius-Sulla and Caesar-Pompey faction wars; yet the same plebeian appetite had also checked noble ambition for three hundred years.</data>
+      <data key="ek3">moderates</data>
+      <data key="ek4">empirical-generalization</data>
+      <data key="ek5">disc:it:1:37</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e44" source="ont:elite-delay-tactics" target="ont:faction-cascade">
+      <data key="ek0">claim:d1c37-agrarian-destroyed-republic</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">(moderator) The contention over the agrarian law, reawakened by the Gracchi against adversaries whose power had doubled in the interim, destroyed Roman liberty through the Marius-Sulla and Caesar-Pompey faction wars; yet the same plebeian appetite had also checked noble ambition for three hundred years.</data>
+      <data key="ek3">moderates</data>
+      <data key="ek4">empirical-generalization</data>
+      <data key="ek5">disc:it:1:37</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e45" source="ont:public-rich-citizens-poor" target="ont:institutional-survival">
+      <data key="ek0">claim:d1c37-public-rich-citizens-poor</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Well-ordered republics must keep the public treasury rich and their citizens poor.</data>
+      <data key="ek3">positive</data>
+      <data key="ek4">prescription</data>
+      <data key="ek5">disc:it:1:37</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e46" source="ont:public-rich-citizens-poor" target="ont:tyranny-risk">
+      <data key="ek0">claim:d1c37-public-rich-citizens-poor</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">Well-ordered republics must keep the public treasury rich and their citizens poor.</data>
+      <data key="ek3">positive</data>
+      <data key="ek4">prescription</data>
+      <data key="ek5">disc:it:1:37</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e47" source="ont:distance-decay" target="ont:land-distribution">
+      <data key="ek0">claim:d1c37-distance-decay</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">When conquered fields lay far from the plebs' eyes and in places hard to cultivate, they were less desired, and the agrarian humor subsided — resurging only with the Gracchi.</data>
+      <data key="ek3">negative</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:1:37</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+    <edge id="e48" source="ont:distance-decay" target="ont:popular-unrest">
+      <data key="ek0">claim:d1c37-distance-decay</data>
+      <data key="ek1">machiavelli</data>
+      <data key="ek2">When conquered fields lay far from the plebs' eyes and in places hard to cultivate, they were less desired, and the agrarian humor subsided — resurging only with the Gracchi.</data>
+      <data key="ek3">negative</data>
+      <data key="ek4">causal-mechanism</data>
+      <data key="ek5">disc:it:1:37</data>
+      <data key="ek6">historically situated claim, not established causal fact</data>
+    </edge>
+  </graph>
+</graphml>

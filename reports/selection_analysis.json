@@ -1,0 +1,86 @@
+{
+  "_caveat": "Pilot denominators only (3 cases, administratively rich, non-randomly selected). Extraction unit = clause-level item from the Livy-side reading; see RESEARCH_METHOD.md.",
+  "n_alignment_units": 44,
+  "by_transformation": {
+    "preservation": 8,
+    "omission": 14,
+    "abstraction": 8,
+    "reinterpretation": 5,
+    "addition": 9
+  },
+  "by_transformation_pct": {
+    "preservation": 18.2,
+    "omission": 31.8,
+    "abstraction": 18.2,
+    "reinterpretation": 11.4,
+    "addition": 20.5
+  },
+  "by_case": {
+    "A-coriolanus": {
+      "preservation": 3,
+      "omission": 7,
+      "abstraction": 2,
+      "reinterpretation": 2,
+      "addition": 4
+    },
+    "B-maelius": {
+      "preservation": 3,
+      "omission": 6,
+      "abstraction": 4,
+      "reinterpretation": 2,
+      "addition": 1
+    },
+    "C-agrarian": {
+      "abstraction": 2,
+      "omission": 1,
+      "preservation": 2,
+      "reinterpretation": 1,
+      "addition": 4
+    }
+  },
+  "by_dimension": {
+    "historical_event": {
+      "preservation": 3,
+      "addition": 4,
+      "abstraction": 2
+    },
+    "causal_explanation": {
+      "omission": 4,
+      "reinterpretation": 4,
+      "addition": 5
+    },
+    "administrative_actions": {
+      "abstraction": 2,
+      "omission": 3,
+      "reinterpretation": 1,
+      "preservation": 1
+    },
+    "material_resources": {
+      "omission": 3,
+      "abstraction": 1
+    },
+    "political_outcome": {
+      "preservation": 3,
+      "omission": 3,
+      "abstraction": 1
+    },
+    "actors": {
+      "abstraction": 2,
+      "preservation": 1,
+      "omission": 1
+    }
+  },
+  "addition_subtypes": {
+    "other-source": 4,
+    "counterfactual": 2,
+    "inference": 3
+  },
+  "loss_rate_by_dimension": {
+    "material_resources": 1.0,
+    "actors": 0.75,
+    "administrative_actions": 0.71,
+    "political_outcome": 0.57,
+    "causal_explanation": 0.31,
+    "historical_event": 0.22
+  }
+}
