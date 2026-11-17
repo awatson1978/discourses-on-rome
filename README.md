@@ -127,7 +127,33 @@ that model can be recovered by:
   Ionian Revolt) is underpowered and honestly inconclusive.
   (`reports/persepolis_phase8.md`)
 
-### Phase VIII, visualized
+### Phase VIII, visualized — why Persepolis?
+
+Because Machiavelli went there first, in the only way he could. His Persia
+was entirely literary: Xenophon's Cyrus is one of the Discorsi's favorite
+exempla — the fraud-filled Armenian campaign (II.13), the conquests won by
+humanity rather than force (III.20), the soldiers told that war is only
+robbery (III.39) — and our 142-chapter extraction surfaces **nine
+Persian/Cyropaedic episodes** in all, from Croesus and Tomyris to
+Themistocles at the Persian court. Most strikingly, the great conspiracies
+chapter (III.6) retells **Darius I's own coup** — Otanes exposing the Magus,
+the seven conspirators, Darius taking the kingdom. Machiavelli knew Darius
+as an *exemplum*. What he could not know is that Darius's state wrote
+everything down: the Persepolis Fortification Archive is the day-ledger of
+that same king's warehouse administration.
+
+And the chronology closes the loop with almost suspicious neatness. The
+tablets span Darius's regnal years 13–28 — **509 to 494 BCE** — precisely
+the founding years of the Roman republic in Livy's second book: the archive
+opens the year Rome expelled the Tarquins and closes two years before the
+Coriolanus grain crisis (492–491) that anchors this project's first case
+study. The same two decades produced both of our information regimes: at
+Rome, grain politics surviving only as Livy's moralized narrative five
+centuries after the fact; at Persepolis, the actual receipts. That is the
+whole point of Phase VIII — Machiavelli's model, recovered from the
+narrative regime, is tested for whether its variables exist in the
+documentary one. (They do, field-for-field; see the Persepolis closure
+bullet above.)
 
 Every parsed transfer from the CDLI-transliterated tablets, by Darius I regnal
 year (log quantity; the dashed line is the Ionian Revolt's outbreak):
