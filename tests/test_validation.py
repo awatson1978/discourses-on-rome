@@ -36,13 +36,21 @@ class TestCorpus(unittest.TestCase):
             for c in range(1, n + 1):
                 self.assertIn((b, c), chapters, f"missing Discorsi EN {b}.{c}")
 
-    def test_livy_first_decade(self):
+    def test_livy_extant_books(self):
+        extant = set(range(1, 11)) | set(range(21, 46))
         for fn in ["livy_la.jsonl", "livy_en.jsonl"]:
             recs = [json.loads(l) for l in
                     (ROOT / f"corpus/segments/{fn}").open(encoding="utf-8")]
             books = {r["book"] for r in recs}
-            self.assertEqual(books, set(range(1, 11)), fn)
-            self.assertGreater(len(recs), 500, fn)
+            self.assertEqual(books, extant, fn)
+            self.assertGreater(len(recs), 1700, fn)
+
+    def test_periochae_present(self):
+        recs = [json.loads(l) for l in
+                (ROOT / "corpus/segments/livy_periochae_la.jsonl").open(encoding="utf-8")]
+        books = {r["book"] for r in recs}
+        self.assertGreater(len(books), 90)
+        self.assertTrue(all(b > 45 for b in books))
 
     def test_no_empty_texts(self):
         for fn in ROOT.glob("corpus/segments/*.jsonl"):
@@ -122,7 +130,9 @@ class TestLivyEvents(unittest.TestCase):
 
     def test_all_books_covered(self):
         books = {json.loads(l)["book"] for l in self.path.open(encoding="utf-8")}
-        self.assertEqual(books, set(range(1, 11)))
+        extant = set(range(1, 11)) | set(range(21, 46))
+        # passes at either stage: first-decade-only or complete extant corpus
+        self.assertIn(books, (set(range(1, 11)), extant))
 
     def test_rejects_documented(self):
         # rejected records must be preserved, not silently dropped

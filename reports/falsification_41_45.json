@@ -1,0 +1,1262 @@
+{
+  "_method": "Shortlist = episodes whose named actors appear anywhere in Livy 41-45 (EN). This is a RETRIEVAL step; a shortlisted episode is NOT evidence of access — most actors (Perseus, Paullus, Eumenes) are fully covered by Plutarch's Aemilius Paullus, Polybius, and the Periochae. The test fails only if an episode's specific CONTENT is unique to 41-45.",
+  "n_episodes_total": 520,
+  "n_shortlisted": 133,
+  "shortlist": [
+    {
+      "chapter_id": "disc:it:1:2",
+      "episode": "The people rose against the insolent nobility, forcing the creation of the tribunes of the plebs, which stabilized the republic by giving all three forms their share.",
+      "actors_matched_in_41_45": [
+        "Plebe"
+      ],
+      "current_livy_ref": "livy:la:2:33",
+      "quote": "E così nacque la creazione de’ Tribuni della plebe, dopo la quale creazione venne a essere più stabilito lo stato di que"
+    },
+    {
+      "chapter_id": "disc:it:1:3",
+      "episode": "Once the Tarquins were dead and the nobles' fear gone, the nobility spat out against the plebs the venom it had held in its breast.",
+      "actors_matched_in_41_45": [
+        "Plebe"
+      ],
+      "current_livy_ref": null,
+      "quote": "come prima ei furono morti i Tarquinii, e che ai Nobili fu la paura fuggita, cominciarono a sputare contro alla Plebe qu"
+    },
+    {
+      "chapter_id": "disc:it:1:3",
+      "episode": "After confusions, uproars, and dangers of scandal between plebs and nobility, the tribunes were created for the security of the plebs.",
+      "actors_matched_in_41_45": [
+        "Plebe"
+      ],
+      "current_livy_ref": "livy:la:2:33",
+      "quote": "si venne, per sicurtà della Plebe, alla creazione de’ Tribuni; e quelli ordinarono con tante preminenzie e tanta riputaz"
+    },
+    {
+      "chapter_id": "disc:it:1:4",
+      "episode": "From the Tarquins to the Gracchi, more than three hundred years, Rome's tumults rarely produced exile and most rarely blood.",
+      "actors_matched_in_41_45": [
+        "Plebe"
+      ],
+      "current_livy_ref": null,
+      "quote": "da’ Tarquinii ai Gracchi, che furano più di trecento anni, i tumulti di Roma rade volte partorivano esilio e radissime s"
+    },
+    {
+      "chapter_id": "disc:it:1:7",
+      "episode": "Coriolanus, enemy of the popular faction, advised starving the plebs to strip the tribunes' authority, and only the tribunes' formal citation saved him from being killed by the mob.",
+      "actors_matched_in_41_45": [
+        "Plebe"
+      ],
+      "current_livy_ref": "livy:la:2:34",
+      "quote": "Coriolano, inimico alla fazione popolare, consigliò come egli era venuto il tempo da potere gastigare la Plebe"
+    },
+    {
+      "chapter_id": "disc:it:1:8",
+      "episode": "Manlius Capitolinus, envious of Camillus' glory, calumniated the nobles over the Gallic treasure before the plebs, and the dictator, when Manlius could produce no particulars, had him imprisoned.",
+      "actors_matched_in_41_45": [
+        "Plebe"
+      ],
+      "current_livy_ref": "livy:la:6:16",
+      "quote": "Manlio Capitolino non poteva sopportare che gli fusse attribuito tanto onore e tanta gloria"
+    },
+    {
+      "chapter_id": "disc:it:1:10",
+      "episode": "Caesar, founder of Rome's tyranny, is celebrated only because writers were corrupted by his fortune; free writers blame him through Catiline and praise his enemy Brutus.",
+      "actors_matched_in_41_45": [
+        "Bruto"
+      ],
+      "current_livy_ref": null,
+      "quote": "Né sia alcuno che s’inganni, per la gloria di Cesare, sentendolo, massime, celebrare dagli scrittori"
+    },
+    {
+      "chapter_id": "disc:it:1:10",
+      "episode": "Of the twenty-six emperors from Caesar to Maximinus sixteen were killed; the good adoptive emperors from Nerva to Marcus lived secure while Caligula, Nero, and Vitellius could not be saved by their armies.",
+      "actors_matched_in_41_45": [
+        "Nerva",
+        "Galba"
+      ],
+      "current_livy_ref": null,
+      "quote": "di ventisei imperadori che furono da Cesare a Massimino, sedici ne furono ammazzati, dieci morirono ordinariamente"
+    },
+    {
+      "chapter_id": "disc:it:1:13",
+      "episode": "After plague, famine, and prodigies, the nobles claimed the gods were angry at the plebeian tribunes with consular power, and the frightened plebs elected tribunes who were all nobles.",
+      "actors_matched_in_41_45": [
+        "Nobili",
+        "Plebe"
+      ],
+      "current_livy_ref": "livy:la:5:14",
+      "quote": "la plebe, sbigottita da questa religione, creò i Tribuni tutti nobili"
+    },
+    {
+      "chapter_id": "disc:it:1:13",
+      "episode": "During the long siege of Veii, oracles tied victory to draining the swollen Alban lake, which kept the weary soldiers at the siege until Camillus as dictator took the city.",
+      "actors_matched_in_41_45": [
+        "Apollo"
+      ],
+      "current_livy_ref": "livy:la:5:15",
+      "quote": "essendo il lago Albano, quello anno, cresciuto mirabilmente, ed essendo i soldati romani infastiditi per la lunga ossidi"
+    },
+    {
+      "chapter_id": "disc:it:1:13",
+      "episode": "Against the Terentillan law the nobility had the Sibylline books consulted, which warned that civil sedition threatened the city's liberty that year, cooling the plebs.",
+      "actors_matched_in_41_45": [
+        "Plebe"
+      ],
+      "current_livy_ref": "livy:la:3:10",
+      "quote": "fecero vedere i libri Sibillini, e rispondere come alla città, mediante la civile sedizione, soprastavano quello anno pe"
+    },
+    {
+      "chapter_id": "disc:it:1:13",
+      "episode": "Appius Herdonius with four thousand exiles and slaves seized the Capitol by night, and Publius Ruberius induced the plebs to swear obedience to the consul and retake it.",
+      "actors_matched_in_41_45": [
+        "Plebe"
+      ],
+      "current_livy_ref": "livy:la:3:15",
+      "quote": "avendo un Appio Erdonio, con una moltitudine di sbanditi e di servi, in numero di quattromila uomini, occupato di notte "
+    },
+    {
+      "chapter_id": "disc:it:1:13",
+      "episode": "The new consul Titus Quinctius held the plebs to its oath to the dead consul, and out of fear of religion the plebs obeyed the consul rather than believe the tribunes.",
+      "actors_matched_in_41_45": [
+        "Plebe"
+      ],
+      "current_livy_ref": "livy:la:3:20",
+      "quote": "Tito Livio mostra come la Plebe, per paura della religione, volle più tosto ubbidire al consolo, che credere a’ tribuni"
+    },
+    {
+      "chapter_id": "disc:it:1:15",
+      "episode": "Papirius, encouraging his soldiers against the Samnite linen legion drawn up near Aquilonia, said crests make no wounds and the Roman pilum passes through painted and gilded shields, and the Samnites were defeated.",
+      "actors_matched_in_41_45": [
+        "Papirio"
+      ],
+      "current_livy_ref": "livy:la:10:39",
+      "quote": "Contro a costoro venne Papirio; il quale, nel confortare i suoi soldati, disse: «non enim cristas vulnera facere, et pic"
+    },
+    {
+      "chapter_id": "disc:it:1:16",
+      "episode": "The sons of Brutus, with other Roman youths, conspired against the fatherland because under the consuls they could no longer profit extraordinarily as under the kings, and were executed.",
+      "actors_matched_in_41_45": [
+        "Brutus",
+        "Roman youths"
+      ],
+      "current_livy_ref": "livy:la:2:4",
+      "quote": "non furono indotti, insieme con altri giovani romani, a congiurare contro alla patria per altro, se non perché non si po"
+    },
+    {
+      "chapter_id": "disc:it:1:17",
+      "episode": "Rome, having expelled the Tarquins while still uncorrupted, could immediately take and maintain its liberty, an oath against kings sufficing to keep the people firm.",
+      "actors_matched_in_41_45": [
+        "Brutus"
+      ],
+      "current_livy_ref": "livy:la:2:1",
+      "quote": "la quale, cacciati i Tarquinii, poté subito prendere e mantenere quella libertà"
+    },
+    {
+      "chapter_id": "disc:it:1:17",
+      "episode": "After the deaths of Caesar, Caligula, and Nero and the extinction of the whole Caesarean line, corrupted Rome could not even begin to recover liberty.",
+      "actors_matched_in_41_45": [
+        "Julius Caesar"
+      ],
+      "current_livy_ref": null,
+      "quote": "morto Cesare, morto Caio Caligola, morto Nerone, spenta tutta la stirpe cesarea, non poté mai, non solamente mantenere, "
+    },
+    {
+      "chapter_id": "disc:it:1:17",
+      "episode": "The corruption that the Marian factions, headed by Caesar, had introduced into the Roman people so blinded the multitude that it did not see the yoke it was placing on its own neck.",
+      "actors_matched_in_41_45": [
+        "Julius Caesar"
+      ],
+      "current_livy_ref": null,
+      "quote": "quella corruzione che le parti mariane avevano messa nel popolo; delle quali sendo capo Cesare, potette accecare quella "
+    },
+    {
+      "chapter_id": "disc:it:1:23",
+      "episode": "Despite the difficulty of Hannibal's Alpine and Apennine crossings, the Romans chose to await him first at the Ticinus and then on the plain of Arezzo rather than destroy their army in harsh mountain positions.",
+      "actors_matched_in_41_45": [
+        "Hannibal"
+      ],
+      "current_livy_ref": null,
+      "quote": "i Romani l’aspettarono prima in sul Tesino, e dipoi nel piano d’Arezzo"
+    },
+    {
+      "chapter_id": "disc:it:1:24",
+      "episode": "Mucius Scaevola burned the hand that had erred in trying to kill Porsenna, king of the Tuscans, and received the same public reward of land.",
+      "actors_matched_in_41_45": [
+        "Mucius Scaevola"
+      ],
+      "current_livy_ref": "livy:la:2:12",
+      "quote": "l’altro si arse la mano, che aveva errato, volendo ammazzare Porsenna, re degli Toscani"
+    },
+    {
+      "chapter_id": "disc:it:1:24",
+      "episode": "Manlius Capitolinus, rewarded with a small measure of flour for saving the Capitol from the besieging Gauls, was later thrown headlong from that same Capitol when he stirred sedition in Rome, without regard for his merits.",
+      "actors_matched_in_41_45": [
+        "Gauls"
+      ],
+      "current_livy_ref": "livy:la:5:47",
+      "quote": "per avere salvato il Campidoglio da’ Franciosi che vi erano a campo"
+    },
+    {
+      "chapter_id": "disc:it:1:29",
+      "episode": "Rome's ingratitude toward Scipio arose from a suspicion born of the greatness of his victory over Carthage and his extraordinary reputation, with Cato Priscus the first to move against him.",
+      "actors_matched_in_41_45": [
+        "Roman magistrates"
+      ],
+      "current_livy_ref": null,
+      "quote": "la ingratitudine usata a Scipione nacque da uno sospetto che i cittadini cominciarono avere di lui"
+    },
+    {
+      "chapter_id": "disc:it:1:29",
+      "episode": "Coriolanus and Camillus were exiled for injuries each had done to the plebs; Coriolanus was never pardoned, while Camillus was recalled and adored like a prince for the rest of his life.",
+      "actors_matched_in_41_45": [
+        "Camillus"
+      ],
+      "current_livy_ref": "livy:la:2:35",
+      "quote": "Coriolano e Cammillo furono fatti esuli per ingiuria che l’uno e l’altro avea fatto alla plebe"
+    },
+    {
+      "chapter_id": "disc:it:1:31",
+      "episode": "Sergius and Verginius, each commanding part of the army besieging Veii, refused out of rivalry to aid one another and were punished only with fines rather than death.",
+      "actors_matched_in_41_45": [
+        "Sergio",
+        "Falisci"
+      ],
+      "current_livy_ref": "livy:la:5:8",
+      "quote": "Erano Sergio e Virginio a campo a Veio, ciascuno preposto a una parte dello esercito"
+    },
+    {
+      "chapter_id": "disc:it:1:31",
+      "episode": "When the dictator Papirius Cursor wanted to execute Fabius for fighting the Samnites against his orders, Fabius' father argued that the Roman people had never so treated even defeated commanders.",
+      "actors_matched_in_41_45": [
+        "Fabio"
+      ],
+      "current_livy_ref": "livy:la:8:33",
+      "quote": "Quando Papirio Cursore voleva fare morire Fabio, per avere, contro al suo comandamento, combattuto co’ Sanniti"
+    },
+    {
+      "chapter_id": "disc:it:1:33",
+      "episode": "Caesar's virtue, first favored by Pompey and others, turned into a source of fear too late, and the remedies attempted against him accelerated the ruin of the Roman republic.",
+      "actors_matched_in_41_45": [
+        "Pompeio"
+      ],
+      "current_livy_ref": null,
+      "quote": "Pompeio aveva tardi cominciato a temere Cesare"
+    },
+    {
+      "chapter_id": "disc:it:1:37",
+      "episode": "The agrarian law lay dormant until the Gracchi reawakened it, finding its opponents' power doubled, kindling such hatred between plebs and Senate that it came to arms and blood.",
+      "actors_matched_in_41_45": [
+        "plebe"
+      ],
+      "current_livy_ref": null,
+      "quote": "questa legge stette come addormentata infino ai Gracchi; da’ quali essendo poi svegliata, rovinò al tutto la libertà rom"
+    },
+    {
+      "chapter_id": "disc:it:1:37",
+      "episode": "The plebs made Marius consul four times and the nobility, lacking other remedy, raised up Sulla as head of its party, leading to civil wars won by the nobility.",
+      "actors_matched_in_41_45": [
+        "plebe"
+      ],
+      "current_livy_ref": null,
+      "quote": "e volse la sua riputazione a Mario tanto che la lo fece quattro volte consule"
+    },
+    {
+      "chapter_id": "disc:it:1:37",
+      "episode": "The same humors revived with Caesar heading Marius' party and Pompey Sulla's; Caesar prevailed and became Rome's first tyrant, so the city was never free again.",
+      "actors_matched_in_41_45": [
+        "Pompeio"
+      ],
+      "current_livy_ref": null,
+      "quote": "fattosi Cesare capo della parte di Mario, e Pompeio di quella di Silla, venendo alle mani, rimase superiore Cesare"
+    },
+    {
+      "chapter_id": "disc:it:1:38",
+      "episode": "During a grave pestilence in Rome, the Volsci and Aequi attacked the Latins and Hernici, and the Senate, unable to defend them, authorized them to arm and defend themselves.",
+      "actors_matched_in_41_45": [
+        "Ernici"
+      ],
+      "current_livy_ref": "livy:la:3:6",
+      "quote": "risposero che pigliassero partito di difendersi da loro medesimi e con le loro armi"
+    },
+    {
+      "chapter_id": "disc:it:1:40",
+      "episode": "The second Decemvirate showed its pride, beating plebs and Senate alike, and to terrify them increased the lictors from twelve to one hundred twenty.",
+      "actors_matched_in_41_45": [
+        "plebe"
+      ],
+      "current_livy_ref": "livy:la:3:36",
+      "quote": "in cambio di dodici littori, ne feciono cento venti"
+    },
+    {
+      "chapter_id": "disc:it:1:40",
+      "episode": "War moved by the Sabines and Volsci forced the Ten to convene the Senate, where Valerius and Horatius spoke against their pride.",
+      "actors_matched_in_41_45": [
+        "Valerio"
+      ],
+      "current_livy_ref": "livy:la:3:38",
+      "quote": "i Sabini ed i Volsci mossero guerra a’ Romani"
+    },
+    {
+      "chapter_id": "disc:it:1:41",
+      "episode": "Appius, having skillfully simulated popularity to win the plebs and secure his reappointment, suddenly changed nature, showing himself the plebs' enemy, proud instead of humane, so that everyone saw his deceit.",
+      "actors_matched_in_41_45": [
+        "plebe"
+      ],
+      "current_livy_ref": "livy:la:3:36",
+      "quote": "mutare, in uno subito, natura; e, di amico, mostrarsi inimico alla plebe; di umano, superbo"
+    },
+    {
+      "chapter_id": "disc:it:1:44",
+      "episode": "The plebs demanded of Valerius and Horatius the restoration of tribunes and appeal, but also that the Ten be handed over to be burned alive, which the envoys condemned as impious.",
+      "actors_matched_in_41_45": [
+        "Valerio"
+      ],
+      "current_livy_ref": "livy:la:3:53",
+      "quote": "che si dessono loro tutti i Dieci che gli volevono ardere vivi"
+    },
+    {
+      "chapter_id": "disc:it:1:47",
+      "episode": "After Cannae, Pacuvius Calavius in Capua reconciled the plebs with the Senate by locking up the senators and inviting the people to replace each one, whereupon the people found every proposed substitute unworthy.",
+      "actors_matched_in_41_45": [
+        "Hannibal"
+      ],
+      "current_livy_ref": null,
+      "quote": "trovandosi in quel tempo nel supremo magistrato Pacuvio Calano, e conoscendo il pericolo che portava quella città di tum"
+    },
+    {
+      "chapter_id": "disc:it:1:49",
+      "episode": "Rome created the censors to guard its morals, first for five-year terms; the dictator Mamercus by a new law reduced the office to eighteen months, and the offended censors expelled him from the Senate without remedy.",
+      "actors_matched_in_41_45": [
+        "censors"
+      ],
+      "current_livy_ref": "livy:la:4:24",
+      "quote": "fu corretto dalla prudenza di Mamerco dittatore, il quale per nuova legge ridusse detto magistrato a diciotto mesi"
+    },
+    {
+      "chapter_id": "disc:it:1:53",
+      "episode": "Fabius Maximus could not persuade the Roman people that proceeding slowly against Hannibal was useful, since the people judged that course cowardly, and his master of horse was given authority to fight.",
+      "actors_matched_in_41_45": [
+        "Fabius Maximus",
+        "Hannibal"
+      ],
+      "current_livy_ref": null,
+      "quote": "non poteva persuadere al Popolo romano, che fusse utile a quella Republica procedere lentamente in quella guerra, e sost"
+    },
+    {
+      "chapter_id": "disc:it:1:53",
+      "episode": "Varro was made consul only for having promised in all the public places of Rome to crush Hannibal, from which followed the battle and rout of Cannae and almost the ruin of Rome.",
+      "actors_matched_in_41_45": [
+        "Terentius Varro",
+        "Hannibal"
+      ],
+      "current_livy_ref": null,
+      "quote": "fece di poi consule Varrone, non per altri suoi meriti che per avere, per tutte le piazze e tutti i luoghi publici di Ro"
+    },
+    {
+      "chapter_id": "disc:it:1:53",
+      "episode": "Marcus Centenius Penula, a most vile man, obtained from the wary Senate authority to raise volunteers against Hannibal and was routed and killed with all his followers.",
+      "actors_matched_in_41_45": [
+        "Hannibal"
+      ],
+      "current_livy_ref": null,
+      "quote": "venne in Senato Marco Centenio Penula, uomo vilissimo (nondimanco aveva avuto qualche grado nella milizia)"
+    },
+    {
+      "chapter_id": "disc:it:1:53",
+      "episode": "Scipio, made consul and desiring the province of Africa while promising Carthage's ruin, threatened to take the proposal to the people when the Senate balked on Fabius Maximus' advice.",
+      "actors_matched_in_41_45": [
+        "Fabius Maximus"
+      ],
+      "current_livy_ref": null,
+      "quote": "Scipione, quando fu fatto consolo, e che desiderava la provincia di Africa, promettendo al tutto la rovina di Cartagine"
+    },
+    {
+      "chapter_id": "disc:it:1:55",
+      "episode": "To satisfy Camillus' vow of a tenth of the Veientine spoils to Apollo, the Senate issued an edict that each man present publicly a tenth of his plunder, trusting wholly in the plebs' goodness.",
+      "actors_matched_in_41_45": [
+        "Camillus"
+      ],
+      "current_livy_ref": "livy:la:5:23",
+      "quote": "fece il Senato uno editto, che ciascuno dovessi rappresentare in publico la decima parte di quello ch’egli aveva predato"
+    },
+    {
+      "chapter_id": "disc:it:1:56",
+      "episode": "Before the Gauls came to Rome, the plebeian Marcus Caedicius reported to the Senate that at midnight on the Via Nuova he had heard a more-than-human voice warning that the Gauls were coming.",
+      "actors_matched_in_41_45": [
+        "Gauls"
+      ],
+      "current_livy_ref": "livy:la:5:32",
+      "quote": "uno Marco Cedicio plebeio riferì al Senato avere udito di mezza notte, passando per la Via nuova, una voce, maggiore che"
+    },
+    {
+      "chapter_id": "disc:it:1:58",
+      "episode": "Cities where peoples rule make excessive gains in a very short time, as Rome did after the expulsion of the kings and Athens after freeing itself from Pisistratus.",
+      "actors_matched_in_41_45": [
+        "Athens"
+      ],
+      "current_livy_ref": null,
+      "quote": "come fece Roma dopo la cacciata de’ re, ed Atene da poi che la si liberò da Pisistrato"
+    },
+    {
+      "chapter_id": "disc:it:1:59",
+      "episode": "Pompey, routed by Caesar in Thessaly, fled to Egypt to Ptolemy, whom he had previously restored to his kingdom, and was killed by him.",
+      "actors_matched_in_41_45": [
+        "Caesar",
+        "Ptolemy"
+      ],
+      "current_livy_ref": null,
+      "quote": "Pompeio, rotto che fu da Cesare in Tessaglia, si rifuggì in Egitto a Tolomeo, il quale era per lo adietro da lui stato r"
+    },
+    {
+      "chapter_id": "disc:it:1:60",
+      "episode": "Valerius Corvinus was made consul at twenty-three, and told his soldiers that the consulate was the reward of virtue, not of blood.",
+      "actors_matched_in_41_45": [
+        "Roman soldiers"
+      ],
+      "current_livy_ref": "livy:la:7:32",
+      "quote": "si vede per il testimone di Valerio Corvino, che fu fatto Consolo in ventitré anni"
+    },
+    {
+      "chapter_id": "disc:it:1:60",
+      "episode": "Rome availed itself of Valerius Corvinus, Scipio, Pompey, and many others who triumphed very young.",
+      "actors_matched_in_41_45": [
+        "Scipio"
+      ],
+      "current_livy_ref": null,
+      "quote": "come si valse Roma di Valerio Corvino, di Scipione e di Pompeio, e di molti altri, che trionfarono giovanissimi"
+    },
+    {
+      "chapter_id": "disc:it:2:1",
+      "episode": "The sequence of Rome's wars: first the Aequi and Volsci, then the Samnites, the Latin revolt (with Samnite help for Rome), the Tuscans, Pyrrhus, and finally Carthage, never two great wars at once.",
+      "actors_matched_in_41_45": [
+        "Samnites",
+        "Latins"
+      ],
+      "current_livy_ref": null,
+      "quote": "mentre che combatterno con gli Equi e con i Volsci, mai, mentre che questi popoli furono potenti, non scesero contro di "
+    },
+    {
+      "chapter_id": "disc:it:2:1",
+      "episode": "After the First Punic War all the Gauls on both sides of the Alps conspired against Rome and were slaughtered between Populonia and Pisa.",
+      "actors_matched_in_41_45": [
+        "Gauls"
+      ],
+      "current_livy_ref": null,
+      "quote": "intra Populonia e Pisa, dove è oggi la torre a San Vincenti, furono con massima strage superati"
+    },
+    {
+      "chapter_id": "disc:it:2:1",
+      "episode": "The Carthaginians, powerful but distant, never thought of attacking Rome or aiding the Samnites and Tuscans, even seeking Roman friendship until it was too late.",
+      "actors_matched_in_41_45": [
+        "Carthaginians",
+        "Samnites"
+      ],
+      "current_livy_ref": null,
+      "quote": "fece che non pensarono mai di assaltare quello, né di soccorrere i Sanniti ed i Toscani"
+    },
+    {
+      "chapter_id": "disc:it:2:1",
+      "episode": "Rome entered provinces through local friends: the Capuans into Samnium, Camertines in Tuscany, Mamertines in Sicily, Saguntines in Spain, Masinissa in Africa, Aetolians in Greece.",
+      "actors_matched_in_41_45": [
+        "Masinissa",
+        "Aetolians"
+      ],
+      "current_livy_ref": null,
+      "quote": "per il mezzo de’ Capuani entrarono in Sannio, de’ Camertini in Toscana, de’ Mamertini in Sicilia, de’ Saguntini in Spagn"
+    },
+    {
+      "chapter_id": "disc:it:2:2",
+      "episode": "The Samnites, while free, resisted Rome for forty-six years until the consulship of Papirius Cursor the younger despite repeated defeats.",
+      "actors_matched_in_41_45": [
+        "Samnites"
+      ],
+      "current_livy_ref": null,
+      "quote": "potessono infino al tempo di Papirio Cursore consolo, figliuolo del primo Papirio, resistere a’ Romani"
+    },
+    {
+      "chapter_id": "disc:it:2:2",
+      "episode": "Reduced to servitude, the Samnites sent envoys begging Hannibal for help because they could barely defend themselves against one Roman legion at Nola.",
+      "actors_matched_in_41_45": [
+        "Samnites",
+        "Hannibal"
+      ],
+      "current_livy_ref": null,
+      "quote": "sendo i Sanniti oppressi da una legione di uomini che era in Nola, mandarono oratori ad Annibale, a pregarlo che gli soc"
+    },
+    {
+      "chapter_id": "disc:it:2:6",
+      "episode": "All Roman wars from the city's beginning to the siege of Veii — against Latins, Samnites and Tuscans — were dispatched in six, ten or twenty days by immediate pitched battle.",
+      "actors_matched_in_41_45": [
+        "Latins",
+        "Samnites"
+      ],
+      "current_livy_ref": null,
+      "quote": "tutte si vedranno ispedite, quale in sei, quale in dieci, quale in venti dì"
+    },
+    {
+      "chapter_id": "disc:it:2:8",
+      "episode": "The first of Rome's three migration wars: the capture of Rome by the Gauls who had earlier seized Lombardy.",
+      "actors_matched_in_41_45": [
+        "Gauls"
+      ],
+      "current_livy_ref": "livy:la:5:41",
+      "quote": "La prima fu quella quando Roma fu presa, la quale fu occupata da quei Franciosi che avevano tolto, come di sopra si diss"
+    },
+    {
+      "chapter_id": "disc:it:2:8",
+      "episode": "The second: after the First Punic War the Romans killed more than two hundred thousand Gauls between Piombino and Pisa.",
+      "actors_matched_in_41_45": [
+        "Gauls"
+      ],
+      "current_livy_ref": null,
+      "quote": "quella che fecero dopo la prima guerra cartaginese, quando intra Piombino e Pisa ammazzarono più che dugentomila Francio"
+    },
+    {
+      "chapter_id": "disc:it:2:9",
+      "episode": "The Samnite war arose by chance when the oppressed Campanians gave themselves to Rome, forcing the Romans to defend them as subjects against their Samnite allies.",
+      "actors_matched_in_41_45": [
+        "Samnites"
+      ],
+      "current_livy_ref": "livy:la:7:31",
+      "quote": "sendo i Campani oppressati, e ricorrendo a Roma fuora della opinione de’ Romani e de’ Sanniti, furono forzati, dandosi i"
+    },
+    {
+      "chapter_id": "disc:it:2:9",
+      "episode": "The First Punic War likewise began by chance from Rome's defense of the Messinesi in Sicily.",
+      "actors_matched_in_41_45": [
+        "Carthaginians"
+      ],
+      "current_livy_ref": null,
+      "quote": "Questa medesima cagione dette principio alla prima guerra contro ai Cartaginesi, per la defensione che i Romani presono "
+    },
+    {
+      "chapter_id": "disc:it:2:9",
+      "episode": "Hannibal attacked Rome's Saguntine friends in Spain not to harm them but to provoke Roman arms and gain occasion to pass into Italy.",
+      "actors_matched_in_41_45": [
+        "Hannibal",
+        "Carthaginians"
+      ],
+      "current_livy_ref": null,
+      "quote": "Annibale capitano cartaginese assaltò i Saguntini amici de’ Romani in Ispagna, non per offendere quelli, ma per muovere "
+    },
+    {
+      "chapter_id": "disc:it:2:10",
+      "episode": "Livy, debating whether Alexander would have beaten Rome, names three necessities of war — many good soldiers, prudent captains and good fortune — never mentioning money.",
+      "actors_matched_in_41_45": [
+        "Alexander the Great"
+      ],
+      "current_livy_ref": "livy:la:9:17",
+      "quote": "mostra essere tre cose necessarie nella guerra; assai soldati e buoni, capitani prudenti, e buona fortuna"
+    },
+    {
+      "chapter_id": "disc:it:2:10",
+      "episode": "The Capuans, measuring their power by money rather than soldiers, aided the Sidicini and after two defeats had to make themselves tributaries of Rome.",
+      "actors_matched_in_41_45": [
+        "Samnites"
+      ],
+      "current_livy_ref": "livy:la:7:29",
+      "quote": "preso ch’egli ebbero partito di aiutargli, dopo due rotte furono constretti farsi tributari de’ Romani, se si vollono sa"
+    },
+    {
+      "chapter_id": "disc:it:2:10",
+      "episode": "Hasdrubal, caught in the Marches by Claudius Nero and the other consul, had to choose between flight and battle, and chose battle.",
+      "actors_matched_in_41_45": [
+        "Claudius Nero"
+      ],
+      "current_livy_ref": null,
+      "quote": "come intervenne a Asdrubale, quando nella Marca fu assaltato da Claudio Nerone, insieme con l’altro console romano"
+    },
+    {
+      "chapter_id": "disc:it:2:11",
+      "episode": "The Tarentine ambassadors demanded peace between Rome and the Samnites; the Roman consul, laughing, had battle sounded in their presence.",
+      "actors_matched_in_41_45": [
+        "Roman consul",
+        "Samnites"
+      ],
+      "current_livy_ref": "livy:la:9:14",
+      "quote": "il Console, ridendosi di questa proposta, alla presenza di detti ambasciadori fece sonare a battaglia"
+    },
+    {
+      "chapter_id": "disc:it:2:12",
+      "episode": "Scipio attacked Africa to lift the war from Italy.",
+      "actors_matched_in_41_45": [
+        "Scipio",
+        "Carthaginians"
+      ],
+      "current_livy_ref": null,
+      "quote": "Allega Scipione che, per levare la guerra di Italia, assaltò la Africa"
+    },
+    {
+      "chapter_id": "disc:it:2:13",
+      "episode": "Rome's greatest early fraud was making 'companions' of the Latins and neighbors, who under that name made themselves slaves with their own arms and blood.",
+      "actors_matched_in_41_45": [
+        "Latins"
+      ],
+      "current_livy_ref": null,
+      "quote": "Né poté usare, nel principio, il maggiore inganno, che pigliare il modo, discorso di sopra da noi, di farsi compagni; pe"
+    },
+    {
+      "chapter_id": "disc:it:2:13",
+      "episode": "The Latins recognized the deception only after Rome's double defeat of the Samnites, as the Latin praetor Annius Setinus declared in their council.",
+      "actors_matched_in_41_45": [
+        "Latins",
+        "Samnites"
+      ],
+      "current_livy_ref": "livy:la:8:4",
+      "quote": "«Nam si etiam nunc sub umbra foederis aequi servitutem pati possumus etc.»"
+    },
+    {
+      "chapter_id": "disc:it:2:14",
+      "episode": "When the Samnites complained of Latin attacks, Rome, not wishing to irritate the Latins, declined to forbid the war — which emboldened the Latins and made them open enemies sooner, as Annius's speech on Roman patience shows.",
+      "actors_matched_in_41_45": [
+        "Latins",
+        "Samnites"
+      ],
+      "current_livy_ref": "livy:la:8:4",
+      "quote": "i Romani non vollono proibire ai Latini tale guerra, disiderando non gli irritare: il che non solamente non gli irritò m"
+    },
+    {
+      "chapter_id": "disc:it:2:15",
+      "episode": "In the Latin council the praetor Annius urged deciding what to do rather than what to say, since words are easily fitted once plans are unfolded.",
+      "actors_matched_in_41_45": [
+        "Latins"
+      ],
+      "current_livy_ref": "livy:la:8:4",
+      "quote": "Ad summam rerum nostrarum pertinere arbitror, ut cogitetis magis, quid agendum nobis, quam quid loquendum sit"
+    },
+    {
+      "chapter_id": "disc:it:2:15",
+      "episode": "The Lavinians delayed aiding the Latins so long that as they marched out the gate news came of the Latin defeat, prompting the praetor Milionius's remark that the short march would cost them dear with Rome.",
+      "actors_matched_in_41_45": [
+        "Latins"
+      ],
+      "current_livy_ref": "livy:la:8:11",
+      "quote": "Questo poco della via ci costerà assai col Popolo romano"
+    },
+    {
+      "chapter_id": "disc:it:2:16",
+      "episode": "Rome's most important battle ever, against the Latins in the consulship of Torquatus and Decius, with armies equal in order, virtue, obstinacy and number, Livy giving the edge only to the Roman commanders; Livy's account also sets out the hastati-principes-triarii order.",
+      "actors_matched_in_41_45": [
+        "Latins",
+        "Torquatus",
+        "Decius"
+      ],
+      "current_livy_ref": "livy:la:8:8",
+      "quote": "fu questa che ei fece con i popoli latini, nel consolato di Torquato e di Decio"
+    },
+    {
+      "chapter_id": "disc:it:2:16",
+      "episode": "To hold their soldiers firm and resolved, one consul killed himself (Decius's devotio) and the other his own son (Torquatus).",
+      "actors_matched_in_41_45": [
+        "Decius",
+        "Torquatus"
+      ],
+      "current_livy_ref": "livy:la:8:9",
+      "quote": "di due Consoli, per tenere fermi gli animi de’ soldati, ed ubbidienti a’ comandamenti loro, e diliberati al combattere l"
+    },
+    {
+      "chapter_id": "disc:it:2:18",
+      "episode": "At Lake Regillus the Romans, their army wavering against the Latins, dismounted their cavalry to fight on foot, renewed the battle and won.",
+      "actors_matched_in_41_45": [
+        "Latins"
+      ],
+      "current_livy_ref": "livy:la:2:20",
+      "quote": "quando si azzuffarono con i Latini appresso al lago Regillo; dove essendo già inclinato lo esercito romano"
+    },
+    {
+      "chapter_id": "disc:it:2:18",
+      "episode": "At Cannae Hannibal mocked the Roman consuls for making their cavalry dismount, saying he would rather have them delivered to him bound.",
+      "actors_matched_in_41_45": [
+        "Hannibal"
+      ],
+      "current_livy_ref": null,
+      "quote": "veggendo in la giornata di Canne che i Consoli avevano fatto discendere a piè li loro cavalieri"
+    },
+    {
+      "chapter_id": "disc:it:2:18",
+      "episode": "Crassus and Mark Antony marched for days through Parthian territory with much infantry and few horse against innumerable Parthian cavalry; Antony saved himself, Crassus was deceived rather than overpowered.",
+      "actors_matched_in_41_45": [
+        "Crassus"
+      ],
+      "current_livy_ref": null,
+      "quote": "Crasso e Marc’Antonio romani corsono per il dominio de’ Parti molte giornate con pochissimi cavagli ed assai fanteria"
+    },
+    {
+      "chapter_id": "disc:it:2:18",
+      "episode": "Marcus Atilius Regulus presumed to withstand not only cavalry but elephants with his infantry, trusting in its virtue even though the design failed.",
+      "actors_matched_in_41_45": [
+        "Carthaginians"
+      ],
+      "current_livy_ref": null,
+      "quote": "Presunse Marco Regolo Attilio, non solo con la fanteria sua sostenere i cavagli, ma gli elefanti"
+    },
+    {
+      "chapter_id": "disc:it:2:19",
+      "episode": "The acquisition of Capua, a city of delights, corrupted first Rome's soldiers and later Hannibal's army, as Livy attests.",
+      "actors_matched_in_41_45": [
+        "Hannibal"
+      ],
+      "current_livy_ref": "livy:la:7:38",
+      "quote": "come intervenne a Roma, prima, nello acquisto di Capova, e dipoi, a Annibale"
+    },
+    {
+      "chapter_id": "disc:it:2:20",
+      "episode": "Two Roman legions left to protect Capua grew corrupt in idleness and plotted to seize the country they had defended, a conspiracy Rome suppressed.",
+      "actors_matched_in_41_45": [
+        "Roman legions"
+      ],
+      "current_livy_ref": "livy:la:7:38",
+      "quote": "lasciarono due legioni nel paese di Capova, che gli difendesse. Le quali legioni marcendo nell’ozio, cominciarono a dile"
+    },
+    {
+      "chapter_id": "disc:it:2:20",
+      "episode": "The people of Rhegium were deprived of life and city by the legion the Romans had placed there as a garrison.",
+      "actors_matched_in_41_45": [
+        "Roman legion"
+      ],
+      "current_livy_ref": null,
+      "quote": "quello de’ Regini, a’ quali fu tolto la vita e la terra da una legione che i Romani vi avevano messa in guardia"
+    },
+    {
+      "chapter_id": "disc:it:2:22",
+      "episode": "After the Romans defeated the Latins, the praetor Numicius proclaimed through Latium that the weakened Romans could now be attacked; the peoples who believed him raised a new army and were promptly routed.",
+      "actors_matched_in_41_45": [
+        "Latins"
+      ],
+      "current_livy_ref": "livy:la:8:11",
+      "quote": "il quale, vinto che i Romani ebbero i Latini, gridava per tutto il paese di Lazio, che allora era tempo assaltare i Roma"
+    },
+    {
+      "chapter_id": "disc:it:2:23",
+      "episode": "On Camillus's proposal the Senate judged the defeated Latins town by town, either benefiting each with citizenship and privileges or destroying it, never taking the neutral course.",
+      "actors_matched_in_41_45": [
+        "Camillus",
+        "Latins"
+      ],
+      "current_livy_ref": "livy:la:8:13",
+      "quote": "recatosi innanzi, terra per terra, tutti quegli ch’erano di momento, o e’ gli benificarono o e’ gli spensono"
+    },
+    {
+      "chapter_id": "disc:it:2:23",
+      "episode": "The Latins were conquered and utterly crushed, first by Manlius Torquatus and then by Camillus, who garrisoned all Latium and took hostages.",
+      "actors_matched_in_41_45": [
+        "Manlius Torquatus",
+        "Camillus",
+        "Latins"
+      ],
+      "current_livy_ref": "livy:la:8:13",
+      "quote": "Erano, dunque, vinti i Latini ed al tutto afflitti, prima da Manlio Torquato, e dipoi da Cammillo"
+    },
+    {
+      "chapter_id": "disc:it:2:23",
+      "episode": "The Samnites at the Caudine Forks rejected the old man's advice to free the Romans honorably or kill them all, and by the middle way—disarming and humiliating them—earned their own ruin.",
+      "actors_matched_in_41_45": [
+        "Samnites"
+      ],
+      "current_livy_ref": "livy:la:9:3",
+      "quote": "come la fu ai Sanniti quando avevano rinchiusi i Romani alle Forche Gaudine"
+    },
+    {
+      "chapter_id": "disc:it:2:24",
+      "episode": "Tarentum was recovered only when Fabius Maximus was sent a year later with a whole army—which could have retaken it even without the citadel.",
+      "actors_matched_in_41_45": [
+        "Fabius Maximus"
+      ],
+      "current_livy_ref": null,
+      "quote": "alla ricuperazione di Taranto, in capo di uno anno, fu mandato Fabio Massimo con tutto lo esercito"
+    },
+    {
+      "chapter_id": "disc:it:2:26",
+      "episode": "After Valerius Corvinus quieted the sedition born of the Capua legions' conspiracy, the settlement imposed the gravest penalties on anyone who reproached the soldiers with that sedition.",
+      "actors_matched_in_41_45": [
+        "Roman soldiers"
+      ],
+      "current_livy_ref": "livy:la:7:41",
+      "quote": "essendone di questa congiura nata una sedizione, la quale fu poi da Valerio Corvino quietata"
+    },
+    {
+      "chapter_id": "disc:it:2:26",
+      "episode": "Tiberius Gracchus, commanding slaves armed in the war against Hannibal, made it a capital offense for anyone to reproach any of them with their servitude.",
+      "actors_matched_in_41_45": [
+        "Tiberius Gracchus"
+      ],
+      "current_livy_ref": null,
+      "quote": "Tiberio Gracco, fatto, nella guerra di Annibale, capitano sopra certo numero di servi che i Romani, per carestia d’uomin"
+    },
+    {
+      "chapter_id": "disc:it:2:27",
+      "episode": "After Cannae, Hanno counseled Carthage to use the victory wisely by making peace with Rome on honorable terms; the advice was rejected and later recognized as wise when the occasion was lost.",
+      "actors_matched_in_41_45": [
+        "Hanno",
+        "Hannibal"
+      ],
+      "current_livy_ref": null,
+      "quote": "Consigliava Annone, uno vecchio e prudente cittadino cartaginese, che si usasse questa vittoria saviamente in fare pace "
+    },
+    {
+      "chapter_id": "disc:it:2:27",
+      "episode": "Hannibal, recalled to save Carthage, did not blush to ask for peace before risking his country's last stake in battle, and only fought when peace was denied.",
+      "actors_matched_in_41_45": [
+        "Hannibal",
+        "Carthaginians"
+      ],
+      "current_livy_ref": null,
+      "quote": "non si vergognò di domandare la pace, giudicando, se alcuno rimedio aveva la sua patria, era in quella e non nella guerr"
+    },
+    {
+      "chapter_id": "disc:it:2:28",
+      "episode": "The three Fabii, sent as envoys to the Gauls attacking Chiusi, fought against them contrary to the law of nations; instead of being surrendered or punished they were made tribunes, and the enraged Gauls took Rome except the Capitol.",
+      "actors_matched_in_41_45": [
+        "Gauls"
+      ],
+      "current_livy_ref": "livy:la:5:36",
+      "quote": "ei mandarono i tre Fabii oratori a’ Franciosi, che erano venuti a assaltare la Toscana, ed in particulare Chiusi"
+    },
+    {
+      "chapter_id": "disc:it:2:29",
+      "episode": "Heaven made the Fabii envoys err and provoke the Gauls to war, had Camillus exiled to Ardea, prevented the naming of a dictator, and let Rome prepare feebly against the Gallic assault.",
+      "actors_matched_in_41_45": [
+        "Gauls",
+        "Camillus"
+      ],
+      "current_livy_ref": "livy:la:5:37",
+      "quote": "fece prima errare quegli Fabii che andarono oratori a’ Franciosi, e, mediante l’opera loro, gli concitò a fare guerra a "
+    },
+    {
+      "chapter_id": "disc:it:2:29",
+      "episode": "The Romans, slow to arms, met the Gauls on the river Allia ten miles from Rome with a carelessly placed camp and thin ranks, and fled almost without bloodshed.",
+      "actors_matched_in_41_45": [
+        "Gauls"
+      ],
+      "current_livy_ref": "livy:la:5:38",
+      "quote": "furono tanto pigri al pigliare l’arme, che a fatica furono a tempo a scontrare i Franciosi sopra il fiume di Allia, disc"
+    },
+    {
+      "chapter_id": "disc:it:2:29",
+      "episode": "Fortune, wishing to beat Rome but not destroy it, preserved the Capitol and prepared the recovery, keeping an intact Roman army at Veii and Camillus untainted at Ardea.",
+      "actors_matched_in_41_45": [
+        "Camillus",
+        "Roman army",
+        "Gauls"
+      ],
+      "current_livy_ref": "livy:la:5:43",
+      "quote": "avendo condotto uno esercito romano intero a Veio, e Cammillo a Ardea, da potere fare grossa testa"
+    },
+    {
+      "chapter_id": "disc:it:2:30",
+      "episode": "The Romans besieged on the Capitol were about to ransom themselves with gold from the Gauls when Camillus arrived with his army as the gold was being weighed, so that Rome was not redeemed by gold.",
+      "actors_matched_in_41_45": [
+        "Gauls",
+        "Camillus"
+      ],
+      "current_livy_ref": "livy:la:5:49",
+      "quote": "sopra tale convenzione pesandosi di già l’oro, sopravvenne Cammillo con lo esercito suo"
+    },
+    {
+      "chapter_id": "disc:it:2:30",
+      "episode": "The Massilians, Aedui, Rhodians, Hiero of Syracuse, kings Eumenes and Masinissa, all neighbors of Roman empire, contributed expenses and tribute for Rome's friendship, asking only protection.",
+      "actors_matched_in_41_45": [
+        "Rhodians",
+        "Eumenes",
+        "Masinissa"
+      ],
+      "current_livy_ref": null,
+      "quote": "i Massiliensi, gli Edui, i Rodiani, Ierone siracusano, Eumene e Massinissa regi, i quali tutti erano vicini ai confini d"
+    },
+    {
+      "chapter_id": "disc:it:2:30",
+      "episode": "After Hannibal's coming into Italy and three defeats, Rome, its heart well armed, could still sustain the enemy and win the war through the people of Rome, the Latin name, allied towns and colonies.",
+      "actors_matched_in_41_45": [
+        "Hannibal",
+        "Latin allies"
+      ],
+      "current_livy_ref": null,
+      "quote": "si vide nella venuta d’Annibale in Italia, che, dopo tre rotte e dopo tante morti di capitani e di soldati, ei poterono,"
+    },
+    {
+      "chapter_id": "disc:it:2:30",
+      "episode": "Hanno asked Hannibal's envoys after Cannae whether any Roman had sued for peace or any town of the Latin name or colonies had rebelled; when they denied both, he judged the war as whole as before.",
+      "actors_matched_in_41_45": [
+        "Hanno"
+      ],
+      "current_livy_ref": null,
+      "quote": "furono domandati da Annone, se del popolo romano alcuno era venuto a domandare pace, e se del nome latino e delle coloni"
+    },
+    {
+      "chapter_id": "disc:it:2:32",
+      "episode": "Scipio took New Carthage in Spain in a single all-round assault ('aggredi urbem corona').",
+      "actors_matched_in_41_45": [
+        "Scipio",
+        "Carthaginians"
+      ],
+      "current_livy_ref": null,
+      "quote": "come quando Scipione prese Cartagine Nuova in Ispagna"
+    },
+    {
+      "chapter_id": "disc:it:2:32",
+      "episode": "Scipio, having assaulted Utica in Africa without success, raised the siege and turned instead to breaking the Carthaginian armies.",
+      "actors_matched_in_41_45": [
+        "Scipio",
+        "Carthaginians"
+      ],
+      "current_livy_ref": null,
+      "quote": "come fe’ Scipione, quando, entrato in Africa, avendo assaltato Utica e non gli riuscendo pigliarla, si levò da campo"
+    },
+    {
+      "chapter_id": "disc:it:2:32",
+      "episode": "The geese of the Capitol exemplify how a fortuitous noise can ruin a stealthy night enterprise.",
+      "actors_matched_in_41_45": [
+        "Gauls"
+      ],
+      "current_livy_ref": "livy:la:5:47",
+      "quote": "se si lieva uno romore fortuito, come l’oche del Campidoglio"
+    },
+    {
+      "chapter_id": "disc:it:2:33",
+      "episode": "The consul Fabius, after defeating the Etruscans near Sutrium, crossed the Ciminian forest into Tuscany without informing the Senate; the legates sent to forbid the crossing arrived to find him already victorious.",
+      "actors_matched_in_41_45": [
+        "Fabius",
+        "legates"
+      ],
+      "current_livy_ref": "livy:la:9:36",
+      "quote": "avendo Fabio consolo vinto quelli presso a Sutri, e disegnando con lo esercito dipoi passare la selva Cimina ed andare i"
+    },
+    {
+      "chapter_id": "disc:it:3:1",
+      "episode": "The capture of Rome by the Gauls forced the city to be reborn, retake religion and justice (neglected when the Fabii who fought contra ius gentium went unpunished and were made tribunes), and restore Camillus to authority.",
+      "actors_matched_in_41_45": [
+        "Camillus"
+      ],
+      "current_livy_ref": "livy:la:5:36",
+      "quote": "egli era necessario che Roma fussi presa dai Franciosi, a volere che la rinascesse"
+    },
+    {
+      "chapter_id": "disc:it:3:1",
+      "episode": "A series of notable executions pulled Rome back toward its principles: the death of Brutus's sons, of the Decemvirs, of Maelius the grain-dealer, of Manlius Capitolinus, of Manlius Torquatus's son, Papirius Cursor's proceeding against his master of horse Fabius, and the accusation of the Scipios.",
+      "actors_matched_in_41_45": [
+        "Decemvirs",
+        "Fabius"
+      ],
+      "current_livy_ref": null,
+      "quote": "la morte de’ figliuoli di Bruto, la morte de’ dieci cittadini, quella di Melio frumentario"
+    },
+    {
+      "chapter_id": "disc:it:3:1",
+      "episode": "Rare virtuous individuals such as Horatius Cocles, Scaevola, Fabricius, the two Decii and Regulus Attilius produced in Rome almost the same effect as laws and orders through their examples.",
+      "actors_matched_in_41_45": [
+        "Mucius Scaevola"
+      ],
+      "current_livy_ref": null,
+      "quote": "furono Orazio Cocle, Scevola, Fabrizio, i dua Deci, Regolo Attilio, ed alcuni altri"
+    },
+    {
+      "chapter_id": "disc:it:3:3",
+      "episode": "Brutus sat in judgment and not only condemned his own sons to death for conspiring against the new liberty but was present at their execution.",
+      "actors_matched_in_41_45": [
+        "Junius Brutus"
+      ],
+      "current_livy_ref": "livy:la:2:5",
+      "quote": "vedere il padre sedere pro tribunali, e non solamente condennare i suoi figliuoli a morte ma essere presente alla morte "
+    },
+    {
+      "chapter_id": "disc:it:3:6",
+      "episode": "The desire to free the fatherland moved Brutus and Cassius against Caesar; on the morning of the deed a long talk between Caesar and the conspirator Popilius Laenas nearly made them strike prematurely, and because the people loved Caesar they later avenged him, hunting down all the conspirators.",
+      "actors_matched_in_41_45": [
+        "Cassius",
+        "Julius Caesar"
+      ],
+      "current_livy_ref": null,
+      "quote": "Questa cagione mosse Bruto e Cassio contro a Cesare"
+    },
+    {
+      "chapter_id": "disc:it:3:6",
+      "episode": "Perennius against Commodus, Plautianus against Severus and Sejanus against Tiberius all conspired out of excess of benefits, raised so high that only the empire seemed lacking, and all ended as their ingratitude deserved.",
+      "actors_matched_in_41_45": [
+        "Tiberius"
+      ],
+      "current_livy_ref": null,
+      "quote": "come fu Perennio contro a Commodo, Plauziano contro a Severo, Seiano contro a Tiberio"
+    },
+    {
+      "chapter_id": "disc:it:3:6",
+      "episode": "Plautianus charged the tribune Saturninus with killing the emperor Severus and his son Antoninus; Saturninus demanded a written warrant, which Plautianus, blinded by ambition, gave him, and by that note Plautianus was accused and convicted.",
+      "actors_matched_in_41_45": [
+        "Saturninus"
+      ],
+      "current_livy_ref": null,
+      "quote": "Plauziano, volendo fare ammazzare Severo imperadore ed Antonino suo figliuolo, commisse la cosa a Saturnino tribuno"
+    },
+    {
+      "chapter_id": "disc:it:3:6",
+      "episode": "Commodus listed Marcia, Laetus and Eclectus for death; a favorite boy carried the list out of the bedroom, Marcia read it, and the three, knowing the necessity, killed Commodus that very night — strangling him when the poison was thrown up.",
+      "actors_matched_in_41_45": [
+        "Marcia"
+      ],
+      "current_livy_ref": null,
+      "quote": "conosciuto tutti a tre il pericolo in quale erano, deliberorono prevenire; e, sanza mettere tempo in mezzo, la notte seq"
+    },
+    {
+      "chapter_id": "disc:it:3:6",
+      "episode": "Catiline, his conspiracy against the fatherland discovered, not only remained in Rome but came to the Senate and insulted it and the consul; Lentulus and the others were seized only because letters in their own hand manifestly accused them.",
+      "actors_matched_in_41_45": [
+        "Lentulus"
+      ],
+      "current_livy_ref": null,
+      "quote": "Ciascuno ha letto la congiura di Catilina scritta da Sallustio"
+    },
+    {
+      "chapter_id": "disc:it:3:7",
+      "episode": "In the change Rome made from kings to consuls, no one was driven out or harmed except the Tarquins, because the royal state had rested on common consent.",
+      "actors_matched_in_41_45": [
+        "Consuls"
+      ],
+      "current_livy_ref": "livy:la:1:60",
+      "quote": "come intervenne nella mutazione che fe’ Roma dai Re a’ Consoli, dove non furono cacciati altri che i Tarquinii"
+    },
+    {
+      "chapter_id": "disc:it:3:8",
+      "episode": "Manlius Capitolinus, out of envy of Camillus's honors, stirred tumults against the Senate and the laws; neither nobility, kin nor tribunes defended him, and the people, made judge of his cause, condemned him to death without regard to his past merits.",
+      "actors_matched_in_41_45": [
+        "Camillus"
+      ],
+      "current_livy_ref": "livy:la:6:20",
+      "quote": "si misse a fare tumulti in Roma contro al Senato e contro alle leggi patrie"
+    },
+    {
+      "chapter_id": "disc:it:3:9",
+      "episode": "Fabius Maximus's natural caution and delay matched the times when Hannibal, young and in fresh fortune, had twice beaten Rome; but Fabius later opposed Scipio's crossing to Africa because he could not depart from his ways, while the republic could turn to Scipio when the times suited winning the war.",
+      "actors_matched_in_41_45": [
+        "Fabius Maximus",
+        "Hannibal",
+        "Scipio"
+      ],
+      "current_livy_ref": null,
+      "quote": "Ciascuno sa come Fabio Massimo procedeva con lo esercito suo rispettivamente e cautamente, discosto da ogni impeto e da "
+    },
+    {
+      "chapter_id": "disc:it:3:10",
+      "episode": "The dictator Gnaeus Sulpicius drew out the war against the Gauls, unwilling to commit himself to fortune against an enemy whom time and an alien position made worse by the day.",
+      "actors_matched_in_41_45": [
+        "Gauls"
+      ],
+      "current_livy_ref": "livy:la:7:12",
+      "quote": "«Cneus Sulpitius dictator adversus Gallos bellum trahebat, nolens se fortunae committere adversus hostem, quem tempus de"
+    },
+    {
+      "chapter_id": "disc:it:3:10",
+      "episode": "Fabius Maximus stood in strong places with so good an army that Hannibal never dared seek him out there: the battle was avoided as much by Hannibal as by Fabius, not refused by Fabius.",
+      "actors_matched_in_41_45": [
+        "Fabius Maximus",
+        "Hannibal"
+      ],
+      "current_livy_ref": null,
+      "quote": "Il modo che tenne Fabio Massimo, di stare ne’ luoghi forti, è buono quando tu hai sì virtuoso esercito"
+    },
+    {
+      "chapter_id": "disc:it:3:10",
+      "episode": "Hannibal facing Scipio in Africa accepted battle; being a master of war he would have delayed had he seen advantage in it, so some weighty necessity must have moved him, while Scipio, having beaten Syphax and taken many towns, could stay in Africa in safety.",
+      "actors_matched_in_41_45": [
+        "Hannibal",
+        "Scipio",
+        "Syphax"
+      ],
+      "current_livy_ref": null,
+      "quote": "ed essendo allo incontro di Scipione in Affrica, s’egli avessi veduto vantaggio in allungare la guerra, ei lo arebbe fat"
+    },
+    {
+      "chapter_id": "disc:it:3:11",
+      "episode": "Appius Claudius showed the nobility how to defend itself against the ambition of the tribunes: always find among them one who is fearful, corruptible or a lover of the common good, and dispose him to oppose the will of the others — a tempering that long benefited Rome.",
+      "actors_matched_in_41_45": [
+        "Appius Claudius",
+        "Nobility"
+      ],
+      "current_livy_ref": "livy:la:4:48",
+      "quote": "da Appio Claudio non fosse stato mostro il modo con il quale si avevano a difendere contro all’ambizione de’ Tribuni"
+    },
+    {
+      "chapter_id": "disc:it:3:12",
+      "episode": "Crassus's army, blinded by the Parthians' offers of peace made to remove his soldiers' necessity of defending themselves, could not be kept obstinate even though Crassus saw through the vain promises.",
+      "actors_matched_in_41_45": [
+        "Crassus"
+      ],
+      "current_livy_ref": null,
+      "quote": "come intervenne a Crasso ed allo esercito suo: il quale, come che conoscesse le vane promesse de’ Parti"
+    },
+    {
+      "chapter_id": "disc:it:3:12",
+      "episode": "The Samnites, their peace embassy rebuffed by Rome, were shown by their captain Claudius Pontius that war was now necessary — 'war is just for those to whom it is necessary' — and on that necessity he founded his soldiers' hope of victory.",
+      "actors_matched_in_41_45": [
+        "Samnites"
+      ],
+      "current_livy_ref": "livy:la:9:1",
+      "quote": "«Iustum est bellum quibus necessarium, et pia arma quibus nisi in armis spes est»"
+    },
+    {
+      "chapter_id": "disc:it:3:12",
+      "episode": "Camillus, already inside Veii with his army, ordered in the hearing of the Veientes that no one should harm the disarmed, whereupon they threw down their arms and the city was taken almost without blood — a method followed by many captains since.",
+      "actors_matched_in_41_45": [
+        "Camillus"
+      ],
+      "current_livy_ref": "livy:la:5:21",
+      "quote": "comandò, in modo che i Veienti udirono, che nessuno offendessi quegli che fussono disarmati"
+    },
+    {
+      "chapter_id": "disc:it:3:13",
+      "episode": "Caesar said of Afranius and Petreius in Spain that he went against an army without a leader, and of Pompey in Thessaly that he went against a leader without an army — holding either alone of little account.",
+      "actors_matched_in_41_45": [
+        "Julius Caesar",
+        "Afranius"
+      ],
+      "current_livy_ref": null,
+      "quote": "disse che gli stimava poco, «quia ibat ad exercitum sine duce», mostrando la debolezza de’ capitani"
+    },
+    {
+      "chapter_id": "disc:it:3:13",
+      "episode": "The Romans, for lack of men, armed many slaves and gave them to Sempronius Gracchus to train, who in a short time made a good army of them.",
+      "actors_matched_in_41_45": [
+        "Sempronius Gracchus"
+      ],
+      "current_livy_ref": null,
+      "quote": "Armorono i Romani, per difetto di uomini, assai servi, e gli dieno ad esercitare a Sempronio Gracco"
+    },
+    {
+      "chapter_id": "disc:it:3:14",
+      "episode": "Quinctius, seeing one wing of his army giving way against the Volsci, shouted loudly to stand firm because the other wing was victorious, heartening his men, dismaying the enemy, and winning.",
+      "actors_matched_in_41_45": [
+        "Quinctius"
+      ],
+      "current_livy_ref": null,
+      "quote": "Quinzio, veggendo inclinare uno de’ corni del suo esercito, cominciò a gridare forte, che gli stessono saldi perché l’al"
+    },
+    {
+      "chapter_id": "disc:it:3:14",
+      "episode": "The Roman dictator Gaius Sulpicius, giving battle to the Gauls, armed the sutlers and camp rabble, mounted them on mules to look like cavalry behind a hill, and their appearance at a signal at the height of the fight so terrified the Gauls that they lost the battle.",
+      "actors_matched_in_41_45": [
+        "Gauls"
+      ],
+      "current_livy_ref": "livy:la:7:14",
+      "quote": "il quale venendo a giornata con i Franciosi, armò tutti i saccomanni e gente vile del campo"
+    },
+    {
+      "chapter_id": "disc:it:3:15",
+      "episode": "When Quinctius and his colleague Agrippa were sent against the Aequi, Agrippa insisted that the whole administration of the war rest with Quinctius — the occasion of Livy's maxim on sole command.",
+      "actors_matched_in_41_45": [
+        "Quinctius"
+      ],
+      "current_livy_ref": "livy:la:3:70",
+      "quote": "essendo mandato da’ Romani contro agli Equi Quinzio ed Agrippa suo collega, Agrippa volle che tutta l’amministrazione de"
+    },
+    {
+      "chapter_id": "disc:it:3:17",
+      "episode": "Claudius Nero, dishonored at Rome after Hasdrubal slipped out of his grasp in Spain, as consul left his army facing Hannibal and marched to the Marches to crush Hasdrubal, later admitting he took the gamble that staked Rome's liberty partly to regain his glory and partly to avenge himself on the city that had offended him.",
+      "actors_matched_in_41_45": [
+        "Claudius Nero",
+        "Hannibal",
+        "the other consul"
+      ],
+      "current_livy_ref": null,
+      "quote": "si partì dallo esercito che lui aveva a fronte ad Annibale, e con parte d’esso ne andò nella Marca, a trovare l’altro Co"
+    },
+    {
+      "chapter_id": "disc:it:3:18",
+      "episode": "Cassius, not knowing Brutus had won on his wing, believed the whole army routed and killed himself, losing the war.",
+      "actors_matched_in_41_45": [
+        "Bruto",
+        "Cassio"
+      ],
+      "current_livy_ref": null,
+      "quote": "avendo vinto Bruto dal corno suo, credette Cassio, che aveva perduto, che tutto lo esercito fusse rotto"
+    },
+    {
+      "chapter_id": "disc:it:3:18",
+      "episode": "After an indecisive day-long battle between the consul Sempronius and the Aequi, both armies withdrew believing the enemy victorious; the centurion Tempanius, learning from wounded enemies that the Aequi had fled, saved the Roman camp, sacked the enemy's, and returned victorious.",
+      "actors_matched_in_41_45": [
+        "Sempronio"
+      ],
+      "current_livy_ref": "livy:la:4:39",
+      "quote": "sendo Sempronio consolo con lo esercito allo incontro degl’inimici, ed appiccandosi la zuffa, si travagliò quella giorna"
+    },
+    {
+      "chapter_id": "disc:it:3:20",
+      "episode": "A Faliscan schoolmaster delivered the city's noble boys to Camillus, who had him stripped, bound, and beaten back into the town by the boys; the citizens, moved by his integrity, surrendered the city.",
+      "actors_matched_in_41_45": [
+        "Falisci"
+      ],
+      "current_livy_ref": "livy:la:5:27",
+      "quote": "Essendo Cammillo con lo esercito intorno alla città de’ Falisci, e quella assediando"
+    },
+    {
+      "chapter_id": "disc:it:3:24",
+      "episode": "Lucius Quinctius refused the Senate's offer to prolong his consulate, saying bad examples should be extinguished, not augmented by a worse one, and demanded new consuls be made.",
+      "actors_matched_in_41_45": [
+        "Plebe"
+      ],
+      "current_livy_ref": "livy:la:3:21",
+      "quote": "volle il Senato, per gara della Plebe e per non parere da meno di lei, prolungare il consolato a Lucio Quinzio: il quale"
+    },
+    {
+      "chapter_id": "disc:it:3:28",
+      "episode": "During a famine, the rich Spurius Maelius privately provisioned grain to feed the plebs and won such a following that the Senate, fearing his liberality, created a dictator against him and put him to death.",
+      "actors_matched_in_41_45": [
+        "plebe"
+      ],
+      "current_livy_ref": "livy:la:4:13",
+      "quote": "prese animo uno Spurio Melio, essendo assai ricco, secondo quegli tempi, di fare provisione privatamente di frumento"
+    },
+    {
+      "chapter_id": "disc:it:3:30",
+      "episode": "Facing war with all Tuscany, the Latins, Hernici, and Volsci, Camillus' fellow consular tribunes voluntarily ceded him supreme command, and he enrolled three armies and assigned his colleagues to supply, the Senate, and the city's guard.",
+      "actors_matched_in_41_45": [
+        "Cornelio"
+      ],
+      "current_livy_ref": "livy:la:6:6",
+      "quote": "trovandosi Cammillo tribuno di potestà consolare, pensò che si potesse fare sanza creare il Dittatore, quando gli altri "
+    },
+    {
+      "chapter_id": "disc:it:3:33",
+      "episode": "Fabius, newly entered into Tuscany with his army, told his soldiers before battle that he could tell them further grounds of certain victory were it not dangerous to reveal them, a device to make the army confident in a new country against new enemies.",
+      "actors_matched_in_41_45": [
+        "Fabio"
+      ],
+      "current_livy_ref": null,
+      "quote": "uno termine usato da Fabio, sendo entrato di nuovo con lo esercito in Toscana, per farlo confidente"
+    },
+    {
+      "chapter_id": "disc:it:3:45",
+      "episode": "Consul Decius attacked with all impetus, exhausted his troops, and in imitation of his father sacrificed himself for the legions, while Fabius, sustaining the attack and committing his reserved forces late, won a most happy victory.",
+      "actors_matched_in_41_45": [
+        "Decio",
+        "Fabio"
+      ],
+      "current_livy_ref": "livy:la:10:28",
+      "quote": "ad imitazione del padre sacrificò sé stesso per le romane legioni"
+    },
+    {
+      "chapter_id": "disc:it:3:47",
+      "episode": "With consul Marcius wounded fighting the Samnites, the Senate sent envoys to beg Fabius, consul in Tuscany, to set aside private hatred and name his enemy Papirius Cursor dictator, which he did.",
+      "actors_matched_in_41_45": [
+        "Fabio"
+      ],
+      "current_livy_ref": "livy:la:9:38",
+      "quote": "Era Marzio consolo con lo esercito contro ai Sanniti, ed essendo stato in una zuffa ferito"
+    },
+    {
+      "chapter_id": "disc:it:3:49",
+      "episode": "The conspiracy of the Roman matrons, so many of whom had poisoned or prepared poison for their husbands, was discovered and punished.",
+      "actors_matched_in_41_45": [
+        "mariti"
+      ],
+      "current_livy_ref": "livy:la:8:18",
+      "quote": "e’ parve che tutte le donne romane avessono congiurato contro ai loro mariti di ammazzargli"
+    }
+  ],
+  "verdict": "NO HIT: zero episodes with content uniquely attested in Livy 41-45",
+  "expert_assessment": {
+    "method": "manual review of all 133 shortlisted episodes against the question: does the episode's specific content require Livy 41-45, or is it derivable from books Machiavelli had (1-10, 21-40), the Periochae, or non-Livian sources?",
+    "findings": [
+      "The overwhelming majority of shortlisted episodes anchor to books 1-10 and 21-30 (actor-name retrieval over-matches: 'Plebe', 'Gauls', 'Camillus', 'Hannibal' appear throughout Livy).",
+      "Era-of-41-45 candidates examined: (a) disc:it:2:30 Rhodians/Eumenes/Masinissa as gift-bound friends — generic diplomatic knowledge, fully present in Polybian tradition and the Periochae; no narrative detail specific to 41-45. (b) The Perseus-stinginess material in the money-is-not-the-sinews-of-war discussion (disc II.10) — the refused Gallic mercenaries episode is in Livy 44 BUT is equally and more vividly in Plutarch, Aemilius Paullus 12-13, a source Machiavelli demonstrably used; no 41-45-specific detail (names, figures, sequence) appears. (c) Imperial-era actors (Tiberius, Commodus, Severus in III.6) are from Tacitus/Herodian/Dio tradition, irrelevant to Livy access.",
+      "No episode reproduces content (names, numbers, episode structure) attested ONLY in 41-45."
+    ],
+    "conclusion": "Consistent with the documented recovery history: Machiavelli wrote without Books 41-45. The access story stands. Assessment is expert-judgment over a machine shortlist; records: this file."
+  }
+}

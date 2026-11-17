@@ -134,7 +134,7 @@ def _disc_en_rec(book, chap, heading, text):
     }
 
 
-def segment_livy(xml_name, lang, edition, out_name, max_book=10):
+def segment_livy(xml_name, lang, edition, out_name, max_book=45):
     tree = ET.parse(RAW / xml_name)
     out = []
     for bdiv in tree.iter(f"{TEI}div"):
@@ -144,8 +144,8 @@ def segment_livy(xml_name, lang, edition, out_name, max_book=10):
             book = int(bdiv.get("n"))
         except (TypeError, ValueError):
             continue
-        if book > max_book:
-            continue
+        if book > max_book or 10 < book < 21:
+            continue  # 11-20 are lost (periochae only)
         for cdiv in bdiv.iter(f"{TEI}div"):
             if cdiv.get("subtype") != "chapter":
                 continue
@@ -177,6 +177,38 @@ def _clean(s):
     return re.sub(r"\s+", " ", s).strip()
 
 
+def segment_periochae(xml_name, lang, edition, out_name):
+    """Chapterless book divs in the Perseus file = Periochae of lost books."""
+    tree = ET.parse(RAW / xml_name)
+    out = []
+    for bdiv in tree.iter(f"{TEI}div"):
+        if bdiv.get("subtype") != "book":
+            continue
+        try:
+            book = int(bdiv.get("n"))
+        except (TypeError, ValueError):
+            continue
+        has_chapters = any(c.get("subtype") == "chapter" for c in bdiv.iter(f"{TEI}div"))
+        if has_chapters:
+            continue
+        text = _clean("".join(bdiv.itertext()))
+        if len(text) < 50:
+            continue
+        out.append({
+            "passage_id": f"livy:per{':' + lang if lang != 'la' else ''}:{book}:0".replace("per:la", "per"),
+            "work": "Ab Urbe Condita (Periochae)",
+            "lang": lang,
+            "edition": edition,
+            "book": book, "chapter": 0,
+            "heading": f"Periocha of lost Book {book}",
+            "text": text,
+            "sections": {},
+            "source_file": f"corpus/raw/{xml_name}",
+        })
+    out.sort(key=lambda r: r["book"])
+    write_jsonl(SEG / out_name, out)
+
+
 if __name__ == "__main__":
     segment_discorsi_it()
     segment_discorsi_en()
@@ -186,3 +218,6 @@ if __name__ == "__main__":
     segment_livy("livy_eng2.xml", "en",
                  "Perseus phi0914.phi001.perseus-eng2 (D. Spillan et al., 1857)",
                  "livy_en.jsonl")
+    segment_periochae("livy_lat2.xml", "la",
+                      "Perseus phi0914.phi001.perseus-lat2 (Periochae)",
+                      "livy_periochae_la.jsonl")

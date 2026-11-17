@@ -1,96 +1,101 @@
 {
   "T1_roba_vs_onori": {
     "property_domain": {
-      "n": 58,
+      "n": 81,
       "dist": {
-        "ordinary": 28,
-        "unresolved": 22,
-        "extraordinary": 2,
-        "mixed": 5,
+        "ordinary": 43,
+        "unresolved": 24,
+        "extraordinary": 5,
+        "mixed": 8,
         "na": 1
       },
-      "extraordinary_share": 7.8
+      "extraordinary_share": 11.1
     },
     "honors_office_domain": {
-      "n": 60,
+      "n": 150,
       "dist": {
-        "ordinary": 48,
-        "extraordinary": 2,
-        "mixed": 5,
-        "unresolved": 5
+        "ordinary": 99,
+        "extraordinary": 16,
+        "mixed": 18,
+        "unresolved": 17
       },
-      "extraordinary_share": 7.5
+      "extraordinary_share": 16.7
     },
     "legal_rights_domain": {
-      "n": 34,
+      "n": 67,
       "dist": {
-        "extraordinary": 10,
-        "ordinary": 16,
-        "mixed": 4,
-        "unresolved": 4
+        "extraordinary": 19,
+        "ordinary": 26,
+        "mixed": 12,
+        "unresolved": 10
       },
-      "extraordinary_share": 35.3
+      "extraordinary_share": 37.3
     },
     "machiavelli_prediction": "property conflicts resolve extraordinarily more often than honors conflicts (claim:d1c37-roba-vs-onori)"
   },
   "T2_accusation_channel": {
     "prominent_trials": {
-      "n": 41,
+      "n": 108,
       "dist": {
-        "ordinary": 34,
-        "extraordinary": 2,
-        "unresolved": 4,
-        "mixed": 1
+        "ordinary": 70,
+        "extraordinary": 15,
+        "unresolved": 14,
+        "mixed": 9
       },
-      "extraordinary_share": 6.1
+      "extraordinary_share": 18.1
     },
-    "political_killings_n": 15,
-    "trials_ending_ordinary_pct": 82.9,
+    "political_killings_n": 39,
+    "trials_ending_ordinary_pct": 64.8,
     "note": "Machiavelli's claim predicts trials (ordinary channel) substitute for violence. A real test needs counterfactual periods without tribunician prosecution; this is a descriptive proxy only."
   },
   "T3_selection_bias": {
-    "livy_chapters_with_candidate_citation": 114,
-    "events_in_cited_chapters": 74,
-    "events_in_uncited_chapters": 309,
+    "livy_chapters_with_candidate_citation": 172,
+    "events_in_cited_chapters": 115,
+    "events_in_uncited_chapters": 776,
     "type_dist_cited": {
-      "new-institution": 11,
-      "prominent-trial": 10,
-      "electoral-conflict": 10,
-      "dictator-appointed": 10,
-      "political-killing": 5,
-      "agrarian-agitation": 5,
-      "conspiracy": 5,
+      "prominent-trial": 19,
+      "new-institution": 18,
+      "electoral-conflict": 14,
+      "dictator-appointed": 12,
+      "political-killing": 9,
+      "regime-change": 7,
+      "agrarian-agitation": 6,
+      "conspiracy": 6,
+      "external-appeal": 6,
       "colony-founded": 5,
-      "regime-change": 4,
-      "riot-tumult": 4,
+      "riot-tumult": 3,
+      "military-mutiny": 3,
       "levy-obstruction": 2,
-      "military-mutiny": 2,
-      "external-appeal": 1
+      "secession": 1,
+      "debt-crisis": 1,
+      "grain-dispute": 1,
+      "famine-scarcity": 1,
+      "veto-deadlock": 1
     },
     "type_dist_uncited": {
-      "new-institution": 63,
-      "dictator-appointed": 40,
-      "electoral-conflict": 37,
-      "prominent-trial": 31,
-      "colony-founded": 18,
-      "levy-obstruction": 17,
-      "agrarian-agitation": 14,
-      "conspiracy": 13,
-      "veto-deadlock": 13,
-      "debt-crisis": 12,
-      "riot-tumult": 11,
-      "political-killing": 10,
-      "famine-scarcity": 8,
-      "military-mutiny": 7,
-      "regime-change": 6,
-      "secession": 3,
-      "grain-dispute": 3,
-      "external-appeal": 3
+      "new-institution": 138,
+      "electoral-conflict": 92,
+      "prominent-trial": 89,
+      "external-appeal": 66,
+      "conspiracy": 53,
+      "dictator-appointed": 49,
+      "colony-founded": 40,
+      "veto-deadlock": 39,
+      "riot-tumult": 33,
+      "levy-obstruction": 32,
+      "political-killing": 30,
+      "military-mutiny": 28,
+      "regime-change": 21,
+      "agrarian-agitation": 19,
+      "debt-crisis": 18,
+      "famine-scarcity": 14,
+      "secession": 10,
+      "grain-dispute": 5
     },
-    "extraordinary_share_cited": 16.2,
-    "extraordinary_share_uncited": 12.5,
+    "extraordinary_share_cited": 20.9,
+    "extraordinary_share_uncited": 23.5,
     "caveat": "'cited' = chapter appears as a retrieval candidate in chapter_map (name/quote heuristics), NOT verified citation. Direction of any difference is still informative about selection."
   },
-  "n_events_total": 383,
+  "n_events_total": 891,
   "_methods_caveat": "Event coding is LLM-extracted from Spillan's 1857 translation and quote-validated; channel/trigger codings involve judgment; Livy's narrative is itself a late, moralized reconstruction. These are tests against LIVY'S REPRESENTATION, not against Roman reality."
 }

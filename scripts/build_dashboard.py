@@ -81,7 +81,7 @@ def build_data():
     return {
         "persepolis": pf,
         "stats": {
-            "passages": 1349, "chapters": 142, "livy_chapters": 530,
+            "passages": 3912, "chapters": 142, "livy_chapters": 1764,
             "events": len(ev), "alignments": len(alns), "claims": len(claims),
             "observations": 26, "datasets": 12,
         },
@@ -156,11 +156,10 @@ footer{margin-top:28px;color:var(--muted);font-size:12px;font-style:italic}
     <div id="transforms"></div>
     <p class="note">Fate of each Livy information unit in the Discorsi.
     One unit in five is an <b>addition</b> — Florentine experience, inference, counterfactual.</p></div>
-  <div class="panel wide"><h2>Livy I–X Domestic-Political Event Series — 383 events, every chapter coded</h2>
+  <div class="panel wide"><h2>Livy Complete Extant Corpus — Domestic-Political Event Series, every chapter of all 35 surviving books coded</h2>
     <div id="scatter"></div>
     <div class="legend" id="scatterleg"></div>
-    <p class="note">Every domestic-political event in Livy's first decade, coded independently of
-    Machiavelli's citations. x = chapter position within book, row = book. Color = resolution channel.</p></div>
+    <p class="note">Every domestic-political event in the complete extant Livy (books 1–10, 21–45; the gap rows are the lost books 11–20), coded independently of Machiavelli's citations. x = chapter position within book, row = book. Color = resolution channel.</p></div>
   <div class="panel"><h2>Event Types</h2><div id="types"></div></div>
   <div class="panel"><h2>Trigger Domain × Resolution Channel</h2>
     <div id="heat"></div>
@@ -170,7 +169,8 @@ footer{margin-top:28px;color:var(--muted);font-size:12px;font-style:italic}
   <div class="panel"><h2>Claim Test: roba vs onori (T1)</h2>
     <div id="t1"></div>
     <p class="note">Machiavelli (Disc I.37): property conflicts turn violent, honors conflicts don't.
-    Within Livy I–X both run ~8%. His asymmetry lives entirely in the post-Livian (Gracchan) material.</p></div>
+    Across the complete extant Livy the asymmetry REVERSES: honors-office conflicts run slightly
+    more violent than property (Roman-only: 11.9% vs 7.2%) — and legal-rights remains ~3× both.</p></div>
   <div class="panel"><h2>Selection Bias (T3) &amp; Chapter Anchors</h2>
     <div id="t3"></div>
     <p class="note">Left: extraordinary-resolution share of events in Livy chapters Machiavelli
@@ -264,16 +264,18 @@ statDefs.forEach(([k,l])=>{
 (function(){
   const chColors={ordinary:'#5b8c5a',extraordinary:'#a03020',mixed:'#c7903c',
     unresolved:'#8a7a63',na:'#cabfa8'};
-  const maxC=75, W=920, H=330, rowH=30;
+  const books=[...new Set(D.events_scatter.map(e=>e.b))].sort((a,b)=>a-b);
+  const rowOf={}; books.forEach((b,i)=>rowOf[b]=i);
+  const maxC=75, W=920, rowH=books.length>12?16:30, H=books.length*rowH+40;
   const s=svgEl(W,H);
-  for(let b=1;b<=10;b++){
-    const y=(b-1)*rowH+22;
-    s.appendChild(txt(4,y+5,'Book '+b,12,'#5a4a33'));
-    s.appendChild(el('line',{x1:60,y1:y,x2:W-10,y2:y,stroke:'#f2efe9','stroke-width':14}));
-  }
+  books.forEach(b=>{
+    const y=rowOf[b]*rowH+22;
+    s.appendChild(txt(4,y+4,'Bk '+b,10.5,'#5a4a33'));
+    s.appendChild(el('line',{x1:60,y1:y,x2:W-10,y2:y,stroke:'#f2efe9','stroke-width':rowH>20?14:9}));
+  });
   D.events_scatter.forEach(e=>{
-    const y=(e.b-1)*rowH+22, x=60+(e.c/maxC)*(W-80);
-    const c=el('circle',{cx:x,cy:y,r:5,fill:chColors[e.ch]||'#999',opacity:.85});
+    const y=rowOf[e.b]*rowH+22, x=60+(e.c/maxC)*(W-80);
+    const c=el('circle',{cx:x,cy:y,r:rowH>20?5:4,fill:chColors[e.ch]||'#999',opacity:.85});
     c.addEventListener('mousemove',ev=>showTip(ev,
       e.t+'\nLivy '+e.b+'.'+e.c+' — '+e.ch));
     c.addEventListener('mouseleave',hideTip);

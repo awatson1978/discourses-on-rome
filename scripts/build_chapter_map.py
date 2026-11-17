@@ -46,6 +46,17 @@ NAME_MAP = {
     "Decemviri": "decemvir", "decemviri": "decemvir", "Tribuni": "tribun",
     "Dittatore": "dictator", "Ciminia": "Cimini", "Sentino": "Sentin",
     "Soderini": None, "Savonarola": None, "Medici": None,  # non-Roman: excluded
+    # third/fourth decade (books 21-45)
+    "Annibale": "Hannibal", "Scipione": "Scipio", "Asdrubale": "Hasdrubal",
+    "Marcello": "Marcell", "Fabio Massimo": "Fabi", "Varrone": "Varro",
+    "Paolo Emilio": "Paul", "Emilio": "Aemili", "Catone": "Cato",
+    "Antioco": "Antioch", "Filippo": "Philipp", "Perseo": "Perse",
+    "Nabide": "Nabid", "Siracusa": "Syracus", "Sagunto": "Sagunt",
+    "Cartagine": "Carthag", "Cartaginesi": "Poen", "Canne": "Cann",
+    "Capua": "Capu", "Locri": "Locr", "Baccanali": "Bacchanal",
+    "Masinissa": "Masiniss", "Siface": "Syphac", "Flaminio": "Flamini",
+    "Minucio": "Minuci", "Gracco": "Gracch", "Livio Salinatore": "Livi",
+    "Nerone": "Neron", "Magone": "Mago",
 }
 
 

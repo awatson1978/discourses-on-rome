@@ -194,10 +194,19 @@ is stable, wording is not guaranteed.
       transliterations — the coverage limit), parsed to structured transfers,
       five hypotheses formalized, crude H5 check run and honestly inconclusive
       (`reports/persepolis_phase8.md`)
-- [ ] Next frontier: Livy Books 21–45 ingestion (Hannibal is the Discorsi's
-      most-cited individual — the third decade is the biggest unanchored mass),
-      unit-level alignment at scale via the 186 verified anchors, PFA Online
-      bulk data for the real H1–H5 tests
+- [x] **The complete extant Livy.** Books 21–45 segmented (3,528 full-text
+      chapters LA+EN) plus the Periochae of lost books 46–142; event series
+      extended to **891 events across all 35 surviving books, 0 rejects**
+      (`reports/livy_complete_report.md`). At full scale the claim tests move:
+      the roba-vs-onori asymmetry **reverses** (Roman-only: honors 11.9% vs
+      property 7.2% extraordinary), the trials' ordinary-share falls to 64.8%,
+      and the pilot's selection-bias direction flips — itself a lesson about
+      truncated denominators. The 41–45 falsification scan (Machiavelli died
+      the year those books were found) came back clean: zero Discorsi episodes
+      require them (`reports/falsification_41_45.json`).
+- [ ] Next frontier: unit-level alignment at scale via the 186 verified
+      anchors; Periochae-based skeleton reconstruction of lost-book content;
+      PFA Online bulk data for the real H1–H5 tests; taxonomy v2 recoding
 
 ## Discussion: the state of Livy, a sanity check, and a question put to the Oracle
 

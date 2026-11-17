@@ -35,8 +35,16 @@ the retrieval date; the PGLAF master mirror was used instead (identical files).
 
 ## 3. Livy — Latin
 
-- **Work:** Titus Livius, *Ab Urbe Condita*. This project primarily uses
-  Books I–X (the "first decade" Machiavelli discusses).
+- **Work:** Titus Livius, *Ab Urbe Condita*. The corpus now covers **all 35
+  extant books** (I–X and XXI–XLV) plus the **Periochae** of lost books 46–142
+  (95 summaries; this Perseus file lacks periochae for books 11–20, which do
+  survive elsewhere — recorded as a gap). Books XXXIII and XLI–XLV carry
+  ancient lacunae.
+- **Access asymmetry (recorded for method):** Machiavelli could not have read
+  Books XLI–XLV — recovered at Lorsch in 1527 (the year he died), first
+  printed 1531. His Livy was I–X and XXI–XL (most of XXXIII missing until
+  1616), plus the Periochae. Analyses using 41–45 are about LIVY, never about
+  Machiavelli's source base; see reports/falsification_41_45.json.
 - **Digital edition:** Perseus Digital Library CTS text
   `urn:cts:latinLit:phi0914.phi001.perseus-lat2`, ed. W. Weissenborn &
   H. J. Müller (Teubner), via PerseusDL/canonical-latinLit (GitHub, master).

@@ -56,6 +56,13 @@ Rules:
 - **Edition effects.** The Wikisource Italian text and Perseus Latin text are
   19th-century editions, not modern critical editions (Inglese, Ogilvie). Chapter
   numbering is stable across editions; wording may differ in places.
+- **The 41–45 asymmetry.** The corpus includes Livy Books XLI–XLV, which
+  Machiavelli never saw (recovered 1527, printed 1531). Event-series analyses
+  over all 35 books characterize *Livy's* world; any claim about Machiavelli's
+  source handling must restrict to Books I–X and XXI–XL plus the Periochae.
+  The standing falsification check (`scripts/falsification_41_45.py`) scans
+  for Discorsi content uniquely attested in 41–45 — a hit would overturn the
+  access story.
 - **Machiavelli's memory and secondary channels.** Machiavelli sometimes cites
   Livy loosely or from memory, and knew intermediary traditions (Polybius via
   friends' translations — he probably could not read Greek; Flavio Biondo;
