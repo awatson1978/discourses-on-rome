@@ -24,6 +24,16 @@ causal edge is marked as a *historically situated claim*, never a fact. All
 known gaps, biases, and shortcuts are documented rather than smoothed over
 (`RESEARCH_METHOD.md`, "Known limitations"; methods notes in each report).
 
+## The dashboard
+
+A self-contained visualization of the whole dataset — the loss gradient, all
+383 Livy events, the claim tests, and Machiavelli's causal model — lives at
+[`dashboard/index.html`](dashboard/index.html) (open locally in any browser;
+no server, no CDN; regenerate with `python3 scripts/build_dashboard.py`;
+panel documentation in [`dashboard/README.md`](dashboard/README.md)).
+
+![Dashboard overview](dashboard/dashboard.png)
+
 ## The idea
 
 Machiavelli read Livy with the eyes of a Florentine chancery secretary —

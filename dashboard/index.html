@@ -6,8 +6,8 @@
 <title>Discourses on Rome — Dashboard</title>
 <style>
 :root{
-  --bg:#f5efe0; --panel:#fffbf0; --ink:#2a2118; --accent:#8b2500;
-  --accent2:#1f4e5f; --muted:#8a7a63; --line:#d8cdb4;
+  --bg:#ffffff; --panel:#ffffff; --ink:#1f1a14; --accent:#8b2500;
+  --accent2:#1f4e5f; --muted:#7a7265; --line:#e3ddd0;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--ink);
@@ -18,7 +18,7 @@ h2{font-size:17px;font-variant:small-caps;letter-spacing:.5px;color:var(--accent
 .sub{color:var(--muted);font-style:italic;margin:6px 0 18px}
 .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(430px,1fr))}
 .panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;
-  padding:18px;box-shadow:0 1px 4px rgba(90,70,40,.12)}
+  padding:18px;box-shadow:0 1px 5px rgba(40,30,20,.08)}
 .panel.wide{grid-column:1/-1}
 .statrow{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:20px}
 .stat{background:var(--panel);border:1px solid var(--line);border-radius:6px;
@@ -116,7 +116,7 @@ statDefs.forEach(([k,l])=>{
   entries.forEach(([dim,v],i)=>{
     const y=i*34+8, w=v*280;
     s.appendChild(txt(4,y+14,dim.replace(/_/g,' '),12,'#5a4a33'));
-    s.appendChild(el('rect',{x:150,y:y,width:280,height:20,fill:'#eee5cf',rx:3}));
+    s.appendChild(el('rect',{x:150,y:y,width:280,height:20,fill:'#f2efe9',rx:3}));
     s.appendChild(el('rect',{x:150,y:y,width:w,height:20,rx:3,
       fill:v>0.7?'#a03020':v>0.4?'#c7903c':'#5b8c5a'}));
     s.appendChild(txt(150+w+6,y+14,Math.round(v*100)+'%',12,'#8a7a63'));
@@ -149,7 +149,7 @@ statDefs.forEach(([k,l])=>{
   for(let b=1;b<=10;b++){
     const y=(b-1)*rowH+22;
     s.appendChild(txt(4,y+5,'Book '+b,12,'#5a4a33'));
-    s.appendChild(el('line',{x1:60,y1:y,x2:W-10,y2:y,stroke:'#eee5cf','stroke-width':14}));
+    s.appendChild(el('line',{x1:60,y1:y,x2:W-10,y2:y,stroke:'#f2efe9','stroke-width':14}));
   }
   D.events_scatter.forEach(e=>{
     const y=(e.b-1)*rowH+22, x=60+(e.c/maxC)*(W-80);
@@ -283,7 +283,7 @@ statDefs.forEach(([k,l])=>{
   N.forEach(n=>{
     const [x,y,a]=pos[n.id];
     s.appendChild(el('circle',{cx:x,cy:y,r:7,fill:roleCol[n.role]||'#999',
-      stroke:'#fffbf0','stroke-width':2}));
+      stroke:'#ffffff','stroke-width':2}));
     const right=Math.cos(a)>=0;
     s.appendChild(txt(x+(right?11:-11),y+4,
       n.label.length>34?n.label.slice(0,32)+'…':n.label,
