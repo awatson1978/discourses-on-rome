@@ -1,0 +1,507 @@
+{
+  "_method": "Our tokens: regex word extraction over corpus/segments/livy_la.jsonl (Periochae already excluded by segmentation). Known definitional differences: praefatio handling, corrected-reading markup, tokenizer details.",
+  "per_book": [
+    {
+      "book": 1,
+      "ours_words": 17133,
+      "atlas_words": 17454,
+      "delta_pct": -1.84,
+      "ours_chapters": 60,
+      "atlas_chapters": 61
+    },
+    {
+      "book": 2,
+      "ours_words": 17927,
+      "atlas_words": 17826,
+      "delta_pct": 0.57,
+      "ours_chapters": 65,
+      "atlas_chapters": 65
+    },
+    {
+      "book": 3,
+      "ours_words": 20337,
+      "atlas_words": 20207,
+      "delta_pct": 0.64,
+      "ours_chapters": 72,
+      "atlas_chapters": 72
+    },
+    {
+      "book": 4,
+      "ours_words": 16910,
+      "atlas_words": 16759,
+      "delta_pct": 0.9,
+      "ours_chapters": 61,
+      "atlas_chapters": 61
+    },
+    {
+      "book": 5,
+      "ours_words": 16202,
+      "atlas_words": 16076,
+      "delta_pct": 0.78,
+      "ours_chapters": 55,
+      "atlas_chapters": 55
+    },
+    {
+      "book": 6,
+      "ours_words": 13575,
+      "atlas_words": 13459,
+      "delta_pct": 0.86,
+      "ours_chapters": 42,
+      "atlas_chapters": 42
+    },
+    {
+      "book": 7,
+      "ours_words": 13329,
+      "atlas_words": 13202,
+      "delta_pct": 0.96,
+      "ours_chapters": 42,
+      "atlas_chapters": 42
+    },
+    {
+      "book": 8,
+      "ours_words": 13056,
+      "atlas_words": 12924,
+      "delta_pct": 1.02,
+      "ours_chapters": 40,
+      "atlas_chapters": 40
+    },
+    {
+      "book": 9,
+      "ours_words": 16172,
+      "atlas_words": 16018,
+      "delta_pct": 0.96,
+      "ours_chapters": 46,
+      "atlas_chapters": 46
+    },
+    {
+      "book": 10,
+      "ours_words": 15277,
+      "atlas_words": 15146,
+      "delta_pct": 0.86,
+      "ours_chapters": 47,
+      "atlas_chapters": 47
+    },
+    {
+      "book": 21,
+      "ours_words": 15639,
+      "atlas_words": 15531,
+      "delta_pct": 0.7,
+      "ours_chapters": 63,
+      "atlas_chapters": 63
+    },
+    {
+      "book": 22,
+      "ours_words": 17369,
+      "atlas_words": 17133,
+      "delta_pct": 1.38,
+      "ours_chapters": 61,
+      "atlas_chapters": 61
+    },
+    {
+      "book": 23,
+      "ours_words": 14777,
+      "atlas_words": 14693,
+      "delta_pct": 0.57,
+      "ours_chapters": 49,
+      "atlas_chapters": 49
+    },
+    {
+      "book": 24,
+      "ours_words": 14293,
+      "atlas_words": 14144,
+      "delta_pct": 1.05,
+      "ours_chapters": 49,
+      "atlas_chapters": 49
+    },
+    {
+      "book": 25,
+      "ours_words": 14687,
+      "atlas_words": 14516,
+      "delta_pct": 1.18,
+      "ours_chapters": 41,
+      "atlas_chapters": 41
+    },
+    {
+      "book": 26,
+      "ours_words": 17050,
+      "atlas_words": 16869,
+      "delta_pct": 1.07,
+      "ours_chapters": 51,
+      "atlas_chapters": 51
+    },
+    {
+      "book": 27,
+      "ours_words": 17482,
+      "atlas_words": 17346,
+      "delta_pct": 0.78,
+      "ours_chapters": 51,
+      "atlas_chapters": 51
+    },
+    {
+      "book": 28,
+      "ours_words": 16859,
+      "atlas_words": 16739,
+      "delta_pct": 0.72,
+      "ours_chapters": 46,
+      "atlas_chapters": 46
+    },
+    {
+      "book": 29,
+      "ours_words": 12354,
+      "atlas_words": 12276,
+      "delta_pct": 0.64,
+      "ours_chapters": 38,
+      "atlas_chapters": 38
+    },
+    {
+      "book": 30,
+      "ours_words": 13613,
+      "atlas_words": 13549,
+      "delta_pct": 0.47,
+      "ours_chapters": 45,
+      "atlas_chapters": 45
+    },
+    {
+      "book": 31,
+      "ours_words": 12803,
+      "atlas_words": 12652,
+      "delta_pct": 1.19,
+      "ours_chapters": 50,
+      "atlas_chapters": 50
+    },
+    {
+      "book": 32,
+      "ours_words": 10834,
+      "atlas_words": 10665,
+      "delta_pct": 1.58,
+      "ours_chapters": 40,
+      "atlas_chapters": 40
+    },
+    {
+      "book": 33,
+      "ours_words": 11720,
+      "atlas_words": 11526,
+      "delta_pct": 1.68,
+      "ours_chapters": 49,
+      "atlas_chapters": 49
+    },
+    {
+      "book": 34,
+      "ours_words": 15191,
+      "atlas_words": 14971,
+      "delta_pct": 1.47,
+      "ours_chapters": 62,
+      "atlas_chapters": 62
+    },
+    {
+      "book": 35,
+      "ours_words": 12756,
+      "atlas_words": 12635,
+      "delta_pct": 0.96,
+      "ours_chapters": 51,
+      "atlas_chapters": 51
+    },
+    {
+      "book": 36,
+      "ours_words": 11505,
+      "atlas_words": 11369,
+      "delta_pct": 1.2,
+      "ours_chapters": 45,
+      "atlas_chapters": 45
+    },
+    {
+      "book": 37,
+      "ours_words": 16495,
+      "atlas_words": 16370,
+      "delta_pct": 0.76,
+      "ours_chapters": 60,
+      "atlas_chapters": 60
+    },
+    {
+      "book": 38,
+      "ours_words": 17109,
+      "atlas_words": 16955,
+      "delta_pct": 0.91,
+      "ours_chapters": 60,
+      "atlas_chapters": 60
+    },
+    {
+      "book": 39,
+      "ours_words": 14913,
+      "atlas_words": 14741,
+      "delta_pct": 1.17,
+      "ours_chapters": 56,
+      "atlas_chapters": 56
+    },
+    {
+      "book": 40,
+      "ours_words": 14903,
+      "atlas_words": 14735,
+      "delta_pct": 1.14,
+      "ours_chapters": 59,
+      "atlas_chapters": 59
+    },
+    {
+      "book": 41,
+      "ours_words": 7606,
+      "atlas_words": 7591,
+      "delta_pct": 0.2,
+      "ours_chapters": 28,
+      "atlas_chapters": 28
+    },
+    {
+      "book": 42,
+      "ours_words": 16854,
+      "atlas_words": 16839,
+      "delta_pct": 0.09,
+      "ours_chapters": 67,
+      "atlas_chapters": 67
+    },
+    {
+      "book": 43,
+      "ours_words": 5736,
+      "atlas_words": 5733,
+      "delta_pct": 0.05,
+      "ours_chapters": 23,
+      "atlas_chapters": 23
+    },
+    {
+      "book": 44,
+      "ours_words": 12724,
+      "atlas_words": 12715,
+      "delta_pct": 0.07,
+      "ours_chapters": 46,
+      "atlas_chapters": 46
+    },
+    {
+      "book": 45,
+      "ours_words": 13225,
+      "atlas_words": 13214,
+      "delta_pct": 0.08,
+      "ours_chapters": 44,
+      "atlas_chapters": 44
+    }
+  ],
+  "summary": {
+    "max_abs_word_delta_pct": 1.84,
+    "mean_abs_word_delta_pct": 0.87,
+    "our_total_words_35_books": 508415,
+    "atlas_total_words": 504578,
+    "chapter_mismatches": [
+      1
+    ]
+  },
+  "word_form_check": [
+    {
+      "form": "et",
+      "atlas": 12398,
+      "ours": 12434,
+      "delta_pct": 0.29
+    },
+    {
+      "form": "in",
+      "atlas": 12101,
+      "ours": 12151,
+      "delta_pct": 0.41
+    },
+    {
+      "form": "ad",
+      "atlas": 6989,
+      "ours": 6999,
+      "delta_pct": 0.14
+    },
+    {
+      "form": "cum",
+      "atlas": 6264,
+      "ours": 6274,
+      "delta_pct": 0.16
+    },
+    {
+      "form": "ut",
+      "atlas": 4421,
+      "ours": 4422,
+      "delta_pct": 0.02
+    },
+    {
+      "form": "est",
+      "atlas": 3395,
+      "ours": 3396,
+      "delta_pct": 0.03
+    },
+    {
+      "form": "non",
+      "atlas": 3369,
+      "ours": 3372,
+      "delta_pct": 0.09
+    },
+    {
+      "form": "ab",
+      "atlas": 3313,
+      "ours": 3318,
+      "delta_pct": 0.15
+    },
+    {
+      "form": "quam",
+      "atlas": 2950,
+      "ours": 2954,
+      "delta_pct": 0.14
+    },
+    {
+      "form": "se",
+      "atlas": 2825,
+      "ours": 2825,
+      "delta_pct": 0.0
+    },
+    {
+      "form": "ex",
+      "atlas": 2822,
+      "ours": 2829,
+      "delta_pct": 0.25
+    },
+    {
+      "form": "qui",
+      "atlas": 2743,
+      "ours": 2743,
+      "delta_pct": 0.0
+    },
+    {
+      "form": "esse",
+      "atlas": 2346,
+      "ours": 2348,
+      "delta_pct": 0.09
+    },
+    {
+      "form": "quod",
+      "atlas": 2283,
+      "ours": 2291,
+      "delta_pct": 0.35
+    },
+    {
+      "form": "erat",
+      "atlas": 2015,
+      "ours": 2015,
+      "delta_pct": 0.0
+    },
+    {
+      "form": "nec",
+      "atlas": 2009,
+      "ours": 2006,
+      "delta_pct": -0.15
+    },
+    {
+      "form": "si",
+      "atlas": 1946,
+      "ours": 1947,
+      "delta_pct": 0.05
+    },
+    {
+      "form": "a",
+      "atlas": 1940,
+      "ours": 1944,
+      "delta_pct": 0.21
+    },
+    {
+      "form": "ac",
+      "atlas": 1902,
+      "ours": 1902,
+      "delta_pct": 0.0
+    },
+    {
+      "form": "quae",
+      "atlas": 1902,
+      "ours": 1901,
+      "delta_pct": -0.05
+    },
+    {
+      "form": "per",
+      "atlas": 1871,
+      "ours": 1872,
+      "delta_pct": 0.05
+    },
+    {
+      "form": "esset",
+      "atlas": 1705,
+      "ours": 1705,
+      "delta_pct": 0.0
+    },
+    {
+      "form": "sed",
+      "atlas": 1700,
+      "ours": 1699,
+      "delta_pct": -0.06
+    },
+    {
+      "form": "ne",
+      "atlas": 1542,
+      "ours": 1541,
+      "delta_pct": -0.06
+    },
+    {
+      "form": "aut",
+      "atlas": 1537,
+      "ours": 1532,
+      "delta_pct": -0.33
+    },
+    {
+      "form": "de",
+      "atlas": 1520,
+      "ours": 1523,
+      "delta_pct": 0.2
+    },
+    {
+      "form": "iam",
+      "atlas": 1465,
+      "ours": 1468,
+      "delta_pct": 0.2
+    },
+    {
+      "form": "eo",
+      "atlas": 1419,
+      "ours": 1419,
+      "delta_pct": 0.0
+    },
+    {
+      "form": "inde",
+      "atlas": 1385,
+      "ours": 1386,
+      "delta_pct": 0.07
+    },
+    {
+      "form": "atque",
+      "atlas": 1245,
+      "ours": 1244,
+      "delta_pct": -0.08
+    },
+    {
+      "form": "sunt",
+      "atlas": 1235,
+      "ours": 1236,
+      "delta_pct": 0.08
+    },
+    {
+      "form": "id",
+      "atlas": 1192,
+      "ours": 1197,
+      "delta_pct": 0.42
+    },
+    {
+      "form": "ea",
+      "atlas": 1168,
+      "ours": 1170,
+      "delta_pct": 0.17
+    },
+    {
+      "form": "ita",
+      "atlas": 1125,
+      "ours": 1127,
+      "delta_pct": 0.18
+    },
+    {
+      "form": "castra",
+      "atlas": 1107,
+      "ours": 1107,
+      "delta_pct": 0.0
+    }
+  ],
+  "verdict": "CONFIRMED within tokenizer tolerance"
+}

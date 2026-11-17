@@ -33,7 +33,7 @@ A self-contained visualization of the whole dataset — the loss gradient, all
 no server, no CDN; regenerate with `python3 scripts/build_dashboard.py`;
 panel documentation in [`dashboard/README.md`](dashboard/README.md)).
 
-![Dashboard overview](dashboard/dashboard.png)
+![Dashboard overview — complete extant Livy, 891 events](dashboard/img/dashboard_full_v2.png)
 
 ## The idea
 
@@ -65,15 +65,40 @@ that model can be recovered by:
   Renaissance Florence *did* produce them — his private-favors typology
   (loans, dowries, protection from magistrates) is a Florentine
   record-producing inventory wearing a toga.
-- **The missing variable.** A 383-event coding of ALL domestic politics in
-  Livy I–X (independent of Machiavelli's case selection) shows his
-  property-vs-honors dichotomy fails in-period: both run ~8% violent. The
-  actually violent domain is **legal-rights conflict** (35% — Decemvirate,
-  Verginia, provocatio) — a category his ontology simply lacks.
-- **Selection bias, measured.** Livy chapters Machiavelli plausibly cites run
-  16.2% extraordinary-resolution vs 12.5% for chapters he ignores. He samples
-  the dramatic; the 74 routine institutional creations in the uncited mass are
-  the dark matter of his method.
+- **The missing variable.** Coding ALL domestic politics in Livy — first 383
+  events in Books I–X, now **891 events across all 35 surviving books**,
+  independent of Machiavelli's case selection — shows the most violent
+  conflict domain in his cited source is one his ontology simply lacks:
+  **legal-rights conflict** (~35% extraordinary resolution — Decemvirate,
+  Verginia, provocatio crises — roughly 3× either of his own categories).
+- **The reversal.** At first-decade scale, Machiavelli's roba-vs-onori
+  asymmetry (nobles yield honors peacefully, fight for property) merely
+  failed — both domains ran ~8% violent. At complete-corpus scale it
+  **reverses**: honors-office conflicts resolve violently MORE often than
+  property conflicts (Roman-only: 11.9% vs 7.2%), driven by the middle
+  republic's triumph wars, censorial feuds, and the Trials of the Scipios.
+  His signature asymmetry is backwards relative to his own cited source;
+  it lives entirely in the post-Livian (Gracchan) material.
+  (`reports/livy_complete_report.md`)
+- **The pressure valve degrades.** Machiavelli's I.7 model of accusations as
+  a clean ordinary channel fits Livy's first decade (83% of prominent trials
+  resolve ordinarily) far better than Livy whole (**64.8%** across 108
+  trials): the middle-republican record is full of obstructed, evaded, and
+  broken proceedings — Scipio tearing up the account books before the senate
+  chief among them.
+- **A finding about ourselves, preserved.** The pilot's "he samples toward
+  drama" selection-bias result (16.2% vs 12.5%) **flipped sign** when the
+  full corpus arrived (20.9% vs 23.5%) — it was an artifact of the truncated
+  denominator. Kept in the reports as a standing lesson: the error mode this
+  project studies in Machiavelli is one it has to guard against in itself.
+- **The source-access boundary, machine-checked.** Livy Books 41–45 were
+  recovered at Lorsch in 1527 — the year Machiavelli died — and printed in
+  1531 alongside the Discorsi itself. With all 35 books ingested, a
+  falsification scan over all 520 extracted episodes confirmed **zero
+  Discorsi content requires the books he couldn't have read**
+  (`reports/falsification_41_45.json`). The corpus now encodes a Renaissance
+  author's source-access boundary as a machine-checkable constraint —
+  as far as we know, a first.
 - **The diluted decade.** Extracting all 142 chapters (407 propositions, 520
   historical episodes, every quotation machine-verified, zero rejects) shows
   the "commentary on Livy's first decade" draws only **51%** of its evidence
@@ -295,5 +320,61 @@ fabricated). What is forbidden is the seductive third thing: generating
 sentence a confabulation wearing a toga. That failure mode is precisely what
 this repository's validation gates exist to prevent. The dream of the oracle
 is interpolation; the discipline of the project is provenance.
+
+## The linguistic fingerprint — a second opinion from another model
+
+*Added 2026-11-17. The researcher took the lost-books question to ChatGPT,
+which ran an independent linguistic analysis of the same Perseus
+Weissenborn–Müller text. Its artifacts are preserved as-is in
+`external/linguistic_atlas/` (HTML atlas + two CSVs) — and, in this
+repository's spirit, were not taken on faith: `scripts/verify_linguistic_atlas.py`
+recomputed every per-book count from our own segmentation.
+**Verdict: CONFIRMED — mean per-book delta 0.87%, top word forms within 0.4%.**
+Two models, two tokenizers, one text, same numbers. The only mismatch is
+Book 1's praefatio counting convention
+(`reports/linguistic_atlas_verification.json`).*
+
+What the fingerprint says, structurally:
+
+- **A book of Livy is ~15,000 Latin words** (Books 1–40 mean: 14,950,
+  Periochae excluded; middle 80% ≈ 12,200–17,400; σ ≈ 2,234). Book 3 is the
+  longest surviving (20,207), Book 32 the shortest intact (10,665). Book
+  length correlates with chapter count at r ≈ 0.73 — a usable prior for the
+  lost books, with honest variance.
+- **The decades drift**: mean book length falls from ~15,900 (1–10) through
+  ~15,300 (21–30) to ~13,700 (31–40); lexical diversity declines in step
+  (680 → 653 distinct forms per 1,000 words). Chronology, subject matter, and
+  composition are confounded — the early-republican epic, the Hannibalic war,
+  and the diplomatic books are different narrative regimes, and any
+  reconstruction must model the regime, not just "Livy".
+- **The long tail**: ~51,300 distinct word forms, **49% of them hapax
+  legomena** — names, places, and Latin's inflectional space. Sentence
+  lengths (punctuation-heuristic, editorial) center on 10–19 words with a
+  heavy tail; ~72% under 30 words.
+
+![Surviving words per book](dashboard/img/atlas_words_per_book.png)
+
+| Most frequent word forms | Sentence-length distribution |
+|---|---|
+| ![Most frequent Latin word forms](dashboard/img/atlas_word_forms.png) | ![Sentence-length histogram](dashboard/img/atlas_sentence_lengths.png) |
+
+**On tunnel vision** — the question that prompted the analysis. The consensus
+across both models, now part of this project's method: the fingerprint enters
+the lost-books program as **weak structural priors** (rejecting wildly
+implausible reconstructions), never as a template the lost text must obey.
+The risk is not learning too much about Livy's structure; it is mistaking an
+observed pattern for a historical necessity — especially for the late-republic
+books, whose political world the surviving corpus barely resembles. The
+protocol that guards against it: (1) keep the **evidence model** (what the
+derivative tradition attests) strictly senior to the **linguistic model**
+(how Livy might have arranged it); (2) add a **narrative-density** variable —
+how much text Livy spends per year, campaign, or dispute — which our 891-event
+series can now estimate directly; and (3) run **blinded reconstruction
+experiments**: hide a surviving book (say 22 or 31), reconstruct it from its
+Periochae and parallel witnesses alone, and score event recall and chronology
+against the real text. Reward recovered history, not Livian-sounding prose.
+If a model can learn to predict which events Livy *expands* and which he
+*compresses*, we recover something better than the lost books' contents —
+his editorial intelligence.
 
 *Built with enthusiasm, validated with paranoia, shipped AS IS.*
