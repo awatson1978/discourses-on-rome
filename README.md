@@ -183,6 +183,24 @@ that we treat as unverified) is **inconclusive at this sample size, by
 design honesty**. The formal hypotheses and acquisition plan for the full
 archive are in `reports/persepolis_phase8.md`.
 
+## References & related work
+
+[`REFERENCES.md`](REFERENCES.md) positions this project in the literature,
+under the repository's honesty convention: **every entry is status-flagged**
+`consulted` or `cited-not-yet-read`, and nothing supports a finding unless
+consulted. Current entries (all contributed by the researcher, citation
+details verified against publisher metadata, none yet read against our
+claims): DeCanio (2020) on topic-modeling classical political theory
+including the *Discourses*; Dexter et al. (2017, *PNAS*) on quantitative
+stylometry with a Livy case study — the tradition our linguistic-fingerprint
+work extends; the Internet Encyclopedia of Philosophy's Machiavelli entry,
+which names the extent of his transformation of Livy as an open question
+(the question this repository operationalizes); and a 2025 *Holocene* study
+coding 319 environmental events from Livy, Obsequens, Dionysius, and Dio —
+direct methodological kin to our 891-event series, and a natural future
+cross-walk against our Obsequens witness corpus. Primary-source editions
+used directly are documented in [`SOURCES.md`](SOURCES.md).
+
 ## Repository layout
 
 ```
