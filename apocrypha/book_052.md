@@ -1,0 +1,21 @@
+---
+book: 052
+status: modern-apocryphon
+language: english
+content_source: lost_books/periocha_events.jsonl (events 52.1-52.11)
+---
+
+# Book 052 — a modern apocryphon
+
+> **THIS IS NOT LIVY.** This is a modern English composition in Livy's
+> manner, generated 2026-11-17 by an AI as part of the Lost Books Program.
+> Its content is restricted to the attested skeleton events cited in
+> brackets; its style is imitation; nothing here is evidence, and no Latin
+> is composed. The real Book 052 remains lost.
+
+*Era: 167–91 BCE — post-Pydna Mediterranean hegemony, Carthage and Corinth destroyed, the Gracchi, Jugurtha, Cimbri, the road to the Social War.*
+
+Q. Caecilius Metellus fought at Thermopylae with the Achaeans, who had the Boeotians and the Chalcidians for allies; upon their defeat their leader Critolaus took his own life by poison [52.1]. Diaeus, the first instigator of the Achaean rising, chosen leader in the place of Critolaus, was defeated at the Isthmus by the consul L. Mummius [52.2]. Mummius, having received all Achaea in surrender, destroyed Corinth by decree of the senate, because the envoys of Rome had been outraged there [52.3]. Thebes also, and Chalcis, which had given aid, were destroyed [52.4]. Mummius himself bore himself with the greatest integrity; and of the works and ornaments of wealthy Corinth, nothing came into his house [52.5]. Q. Caecilius Metellus triumphed over Andriscus, P. Cornelius Scipio Aemilianus over Carthage and Hasdrubal [52.6]. In Spain Viriathus—first a shepherd turned hunter, then a brigand, soon the leader of a regular army—occupied all Lusitania, and routed and captured the praetor M. Vetilius; nor did the praetor C. Plautius fare any better, so that against him a consular commander and a consular army were required [52.7]. Demetrius the son of Demetrius, scorning the sloth of Alexander, who then ruled Syria, killed him in war, with the help of Ptolemy, king of Egypt, whose daughter Cleopatra he had taken in marriage [52.8]. Ptolemy, gravely wounded in the head, died during the treatment, while the doctors sought to trepan the bone; and his younger brother Ptolemy, who reigned at Cyrene, succeeded him [52.9]. Demetrius, for the cruelty which through torture he inflicted upon his own people, was defeated in war by a certain Diodotus, who claimed the kingdom for the two-year-old son of Alexander, and fled to Seleucia [52.10]. L. Mummius triumphed over the Achaeans, carrying in his triumph statues of bronze and of marble, and painted pictures [52.11].
+
+---
+*Events: 52.1 Q. Caecilius Metellus fought at Thermopylae with the Achaeans, who had the Boeotians and Chalcidians as allies; on their defeat their leader Critolaus took his own life by poison. · 52.2 Diaeus, first instigator of the Achaean rising, chosen leader in Critolaus's place, was defeated at the Isthmus by consul L. Mummius. · 52.3 Mummius, having received all Achaea in surrender, destroyed Corinth by decree of the senate because the Roman envoys had been outraged there. · 52.4 Thebes and Chalcis, which had given aid, were also destroyed. · 52.5 L. Mummius conducted himself with the greatest integrity, and nothing from the works and ornaments of wealthy Corinth came into his house. · 52.6 Q. Caecilius Metellus triumphed over Andriscus, and P. Cornelius Scipio Aemilianus over Carthage and Hasdrubal. · 52.7 Viriathus in Spain, first a shepherd turned hunter, then brigand, soon leader of a regular army, occupied all Lusitania, routed and captured the praetor M. Vetilius, and the praetor C. Plautius fared no better, so that a consular commander and army were needed against him. · 52.8 Demetrius son of Demetrius, scorning the sloth of Alexander who was ruling Syria, killed him in war with the help of Ptolemy, king of Egypt, whose daughter Cleopatra he had married. · 52.9 Ptolemy, gravely wounded in the head, died during treatment while the doctors were trying to trepan the bone, and his younger brother Ptolemy, who ruled at Cyrene, succeeded him. · 52.10 Demetrius, because of the cruelty he inflicted on his subjects through torture, was defeated in war by a certain Diodotus, who claimed the kingdom for Alexander's two-year-old son, and fled to Seleucia. · 52.11 L. Mummius triumphed over the Achaeans, carrying bronze and marble statues and painted pictures in his triumph.*

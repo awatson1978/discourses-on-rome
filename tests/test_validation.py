@@ -248,6 +248,42 @@ class TestLostBooks(unittest.TestCase):
             self.assertTrue((ROOT / f"lost_books/books/book_{r['book']:03d}.md").exists())
 
 
+class TestApocrypha(unittest.TestCase):
+    """The modern apocrypha must stay inside the firewall. Skipped until present."""
+
+    def setUp(self):
+        self.files = sorted((ROOT / "apocrypha").glob("book_*.md"))
+        if not self.files:
+            self.skipTest("no apocrypha yet")
+        import collections
+        self.events = collections.Counter()
+        for l in (ROOT / "lost_books/periocha_events.jsonl").open(encoding="utf-8"):
+            self.events[json.loads(l)["book"]] += 1
+
+    def test_all_107_present_with_disclaimer(self):
+        self.assertEqual(len(self.files), 107)
+        for fn in self.files:
+            self.assertIn("THIS IS NOT LIVY", fn.read_text(encoding="utf-8"), fn.name)
+
+    def test_citation_discipline(self):
+        for fn in self.files:
+            book = int(fn.stem.split("_")[1])
+            t = fn.read_text(encoding="utf-8")
+            if book in (136, 137):
+                self.assertIn("nothing can be said", t, fn.name)
+                continue
+            n = self.events[book]
+            cited = set()
+            for m in re.finditer(r"\[(\d+)\.(\d+)(?:[-–](\d+))?\]", t):
+                self.assertEqual(int(m.group(1)), book, fn.name)
+                hi = int(m.group(3)) if m.group(3) else int(m.group(2))
+                for i in range(int(m.group(2)), hi + 1):
+                    self.assertTrue(1 <= i <= n, f"{fn.name}: ref {i} out of 1..{n}")
+                    cited.add(i)
+            self.assertEqual(cited, set(range(1, n + 1)),
+                             f"{fn.name}: not all events cited exactly")
+
+
 class TestDatabase(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

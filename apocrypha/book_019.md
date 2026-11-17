@@ -1,0 +1,21 @@
+---
+book: 019
+status: modern-apocryphon
+language: english
+content_source: lost_books/periocha_events.jsonl (events 19.1-19.14)
+---
+
+# Book 019 — a modern apocryphon
+
+> **THIS IS NOT LIVY.** This is a modern English composition in Livy's
+> manner, generated 2026-11-17 by an AI as part of the Lost Books Program.
+> Its content is restricted to the attested skeleton events cited in
+> brackets; its style is imitation; nothing here is evidence, and no Latin
+> is composed. The real Book 019 remains lost.
+
+*Era: 292–219 BCE — Third Samnite aftermath, Pyrrhic War, First Punic War, interwar years.*
+
+Caecilius Metellus, after successful operations against the Carthaginians, celebrated a splendid triumph, in which thirteen leaders of the enemy and one hundred and twenty elephants were led [19.1]. The consul Claudius Pulcher, setting out against the auspices—for he had ordered the chickens which would not feed to be drowned—fought at sea against the Carthaginians without success [19.2]. Recalled by the senate and ordered to name a dictator, he named Claudius Glicia, a man of the lowest rank; who, though compelled to abdicate, afterward watched the games in his magistrate's toga [19.3]. A. Atilius Calatinus was the first dictator to lead an army outside Italy [19.4]. An exchange of captives was made with the Carthaginians [19.5]. Colonies were founded at Fregenae, and at Brundisium in the Sallentine land [19.6]. The lustrum was closed by the censors; the heads of citizens counted were two hundred and forty-one thousand two hundred and twelve [19.7]. Claudia, the sister of P. Claudius, pressed by the crowd as she returned from the games, said she wished her brother were alive to lose another fleet; and for that saying a fine was laid upon her [19.8]. Then for the first time two praetors were created [19.9]. Caecilius Metellus, the pontifex maximus, kept the consul A. Postumius, who was also flamen of Mars, in the city when he wished to set out to war, and did not suffer him to forsake the sacred rites [19.10]. After successful operations by several commanders against the Carthaginians, the consul C. Lutatius completed the victory, defeating the Punic fleet off the Aegates islands [19.11]. Peace was granted to the Carthaginians at their asking [19.12]. When the temple of Vesta burned, the pontifex maximus Caecilius Metellus snatched the sacred objects from the fire [19.13]. Two tribes were added, the Velina and the Quirina [19.14].
+
+---
+*Events: 19.1 Caecilius Metellus, after successful operations against the Carthaginians, celebrated a splendid triumph in which 13 enemy leaders and 120 elephants were led. · 19.2 Consul Claudius Pulcher, setting out against the auspices and ordering the chickens that would not feed to be drowned, fought unsuccessfully at sea against the Carthaginians. · 19.3 Recalled by the senate and ordered to name a dictator, Claudius Pulcher named Claudius Glicia, a man of the lowest rank, who, though forced to abdicate, afterwards watched the games in his magistrate's toga. · 19.4 A. Atilius Calatinus was the first dictator to lead an army outside Italy. · 19.5 An exchange of captives was made with the Carthaginians. · 19.6 Colonies were founded at Fregenae and at Brundisium in the Sallentine territory. · 19.7 The lustrum was closed by the censors: 241,212 citizen heads were counted. · 19.8 Claudia, sister of P. Claudius, pressed by the crowd when returning from the games, wished her brother alive to lose another fleet, and a fine was imposed on her for this remark. · 19.9 Two praetors were then created for the first time. · 19.10 Caecilius Metellus, pontifex maximus, kept the consul A. Postumius, who was also flamen Martialis, in the city when he wished to set out for war, not allowing him to leave the sacred rites. · 19.11 After successful operations by several commanders against the Carthaginians, consul C. Lutatius completed the victory by defeating the Punic fleet at the Aegates islands. · 19.12 Peace was granted to the Carthaginians at their request. · 19.13 When the temple of Vesta burned, the pontifex maximus Caecilius Metellus snatched the sacred objects from the fire. · 19.14 Two tribes were added, the Velina and the Quirina.*
