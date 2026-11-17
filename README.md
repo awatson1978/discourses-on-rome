@@ -28,7 +28,7 @@ known gaps, biases, and shortcuts are documented rather than smoothed over
 ## The dashboard
 
 A self-contained visualization of the whole dataset — the loss gradient, all
-383 Livy events, the claim tests, and Machiavelli's causal model — lives at
+891 Livy events, the claim tests, and Machiavelli's causal model — lives at
 [`dashboard/index.html`](dashboard/index.html) (open locally in any browser;
 no server, no CDN; regenerate with `python3 scripts/build_dashboard.py`;
 panel documentation in [`dashboard/README.md`](dashboard/README.md)).
@@ -71,15 +71,18 @@ that model can be recovered by:
   conflict domain in his cited source is one his ontology simply lacks:
   **legal-rights conflict** (~35% extraordinary resolution — Decemvirate,
   Verginia, provocatio crises — roughly 3× either of his own categories).
-- **The reversal.** At first-decade scale, Machiavelli's roba-vs-onori
-  asymmetry (nobles yield honors peacefully, fight for property) merely
-  failed — both domains ran ~8% violent. At complete-corpus scale it
-  **reverses**: honors-office conflicts resolve violently MORE often than
-  property conflicts (Roman-only: 11.9% vs 7.2%), driven by the middle
-  republic's triumph wars, censorial feuds, and the Trials of the Scipios.
-  His signature asymmetry is backwards relative to his own cited source;
-  it lives entirely in the post-Livian (Gracchan) material.
-  (`reports/livy_complete_report.md`)
+- **The direction of the roba-vs-onori asymmetry.** In the coded surviving
+  Livian corpus, honors-office disputes show a HIGHER extraordinary-resolution
+  share than property disputes (Roman-only: 11.9%, n=135, vs 7.2%, n=76) —
+  contrary to the direction anticipated by our reading of Discorsi I.37,
+  with the middle republic's triumph wars, censorial feuds, and the Trials
+  of the Scipios supplying the difference. This is a descriptive result over
+  coded events: it includes books outside Machiavelli's documented access,
+  and remains subject to coding and denominator sensitivity. The Roman-only
+  figures have a reproducible calculation path in `scripts/test_claims.py`
+  (documented text filter; taxonomy v2 will add a structured polity field).
+  Machiavelli's asymmetry, as he states it, rests on the post-Livian
+  (Gracchan) material. (`reports/livy_complete_report.md`)
 - **The pressure valve degrades.** Machiavelli's I.7 model of accusations as
   a clean ordinary channel fits Livy's first decade (83% of prominent trials
   resolve ordinarily) far better than Livy whole (**64.8%** across 108
@@ -94,11 +97,12 @@ that model can be recovered by:
 - **The source-access boundary, machine-checked.** Livy Books 41–45 were
   recovered at Lorsch in 1527 — the year Machiavelli died — and printed in
   1531 alongside the Discorsi itself. With all 35 books ingested, a
-  falsification scan over all 520 extracted episodes confirmed **zero
-  Discorsi content requires the books he couldn't have read**
-  (`reports/falsification_41_45.json`). The corpus now encodes a Renaissance
-  author's source-access boundary as a machine-checkable constraint —
-  as far as we know, a first.
+  source-access screening over all 520 extracted episodes found **no
+  identified dependencies on Books 41–45** — a negative result within the
+  coverage and matching rules of the current extraction, consistent with
+  the documented recovery chronology (`reports/falsification_41_45.json`).
+  The corpus encodes the author's source-access boundary as a
+  machine-checkable constraint.
 - **The diluted decade.** Extracting all 142 chapters (407 propositions, 520
   historical episodes, every quotation machine-verified, zero rejects) shows
   the "commentary on Livy's first decade" draws only **51%** of its evidence
@@ -108,21 +112,24 @@ that model can be recovered by:
   propositions are empirical in form (causal mechanisms 35%, generalizations
   33%), supporting the premise that the Discorsi encode a testable model, not
   just counsel. (`reports/scale_up_report.md`)
-- **It replicates.** Blind re-coding of Livy Books 2 and 6 by independent
-  coders reproduces the analysis variables at κ = 0.87–0.89 (trigger domain)
-  and κ = 0.75–0.78 (resolution channel), with event-detection F1 0.75–0.83 —
-  so the claim-test results rest on codings two coders largely agree on, with
-  quantified error bars. (`reports/reliability.json`)
-- **The Persepolis closure.** The recipient-roll dataset Machiavelli's
-  largesse→partisans mechanism requires — classified **C-hypothetical** for
-  Rome because the early Republic could not have produced it — **actually
-  exists at Persepolis**. We pulled all 2,087 of Hallock's Fortification
-  tablets from CDLI; the transliterated subset (68 texts, the honest coverage
-  limit) parses field-for-field into his implied schema: commodity, quantity,
-  regnal year, allocating official, receiving official, destination
-  (*"30 bar of grain to Anshan, 17th year; Makuš received it, Umanna is to
-  apportion it"*). A state Machiavelli knew only through Xenophon kept exactly
-  the books his model calls for. Five formalized hypotheses await the full
+- **Pilot inter-coder reliability.** Blind re-coding of Livy Books 2 and 6
+  reproduces the analysis variables at κ = 0.87–0.89 (trigger domain) and
+  κ = 0.75–0.78 (resolution channel) on matched events, with event-detection
+  F1 0.75–0.83. This is reliability evidence from a two-book pilot — not
+  full-corpus replication, and not quantified uncertainty for every claim
+  test. (`reports/reliability.json`)
+- **The Persepolis comparison.** Several of the administrative variables
+  Machiavelli's mechanisms presuppose — classified **C-hypothetical** for
+  Rome because the early Republic could not have produced such records —
+  are historically attested in the Persepolis Fortification Archive. We
+  pulled all 2,087 of Hallock's tablets from CDLI; the transliterated subset
+  (68 texts, the honest coverage limit) records commodity, quantity, regnal
+  year, allocating official, receiving official, destination (*"30 bar of
+  grain to Anshan, 17th year; Makuš received it, Umanna is to apportion
+  it"*). These are administrative transfer records, not the social-benefaction
+  ledgers his largesse→partisans mechanism would strictly require — an
+  attested comparison, not an equivalence. Five formalized hypotheses await
+  the full
   archive; the one crude check we could run (ration dispersion around the
   Ionian Revolt) is underpowered and honestly inconclusive.
   (`reports/persepolis_phase8.md`)
@@ -204,20 +211,38 @@ used directly are documented in [`SOURCES.md`](SOURCES.md).
 ## Repository layout
 
 ```
-corpus/raw/        source texts (it.wikisource, Gutenberg/PGLAF, Perseus)
-corpus/segments/   stable-ID passages (disc:it:1:7, livy:la:2:34, ...)
-schema/            JSON Schemas + the recovered 25-variable ontology
+corpus/raw/        source texts: Discorsi (it.wikisource), Thomson 1883
+                   (Gutenberg/PGLAF), Perseus Livy LA+EN, Latin Library
+                   witnesses (Periochae, Obsequens, Florus, Orosius,
+                   Eutropius, Seneca Suasoriae), CDLI Persepolis tablets
+corpus/segments/   stable-ID passages (disc:it:1:7, livy:la:2:34, livy:per:46:0,
+                   wit:obsequens, ...) — 35 extant Livy books + Periochae
+schema/            JSON Schemas + the recovered 25-variable ontology +
+                   event taxonomy v2 spec
 extractions/       observations, alignments, claims, dataset hypotheses,
                    chapter_map + chapter_observations (all 142 chapters),
-                   livy_events (383 events) + reliability re-codings,
-                   persepolis_transfers (parsed PF tablets)
+                   livy_events (891 events, all 35 surviving books) +
+                   reliability re-codings, persepolis_transfers
+lost_books/        THE LOST BOOKS PROGRAM: skeleton (107 books), 710
+                   periocha events, fragments registry, witness maps and
+                   parallels, genealogy, simulated-loss experiments, the
+                   gold-dots dossier + apocrypha codex (see lost_books/README.md)
+apocrypha/         107 modern English renderings in Livy's manner —
+                   style invented, content firewalled to attested events,
+                   NOT LIVY by label and by test
+external/          externally contributed artifacts (ChatGPT linguistic
+                   atlas), independently verified before use
 data/              SQLite database (regenerable: scripts/build_db.py)
 graphs/            GraphML: causal-claim graph, entity graph
-reports/           case studies, initial report, full-corpus analysis,
-                   scale-up report, reliability, claim tests, Persepolis Phase VIII
-scripts/           the whole pipeline, acquisition → analysis
-tests/             22 automated checks (citation fidelity, integrity, schemas,
-                   chapter observations, Persepolis parse)
+dashboard/         self-contained HTML dashboard + chart images
+reports/           case studies, full-corpus analyses, claim tests,
+                   reliability, Persepolis, fragments dossier
+scripts/           the whole pipeline, acquisition → analysis → volumes
+tests/             29 automated checks (citation fidelity, integrity,
+                   schemas, Persepolis parse, lost-books scaffold,
+                   apocrypha firewall)
+REFERENCES.md      related work, status-flagged (consulted vs
+                   cited-not-yet-read)
 ```
 
 ## Reproducing
@@ -236,6 +261,14 @@ python3 scripts/analyze_selection.py
 python3 scripts/test_claims.py
 python3 scripts/acquire_persepolis.py    # CDLI, 2,087 tablets, resumable
 python3 scripts/parse_persepolis.py && python3 scripts/analyze_persepolis.py
+# the Lost Books Program (see lost_books/README.md for the rules):
+python3 scripts/acquire_witnesses.py     # Periochae 11-45, Obsequens, Florus,
+                                         #   Orosius, Eutropius, Seneca
+python3 scripts/build_lost_books_skeleton.py
+python3 scripts/merge_periocha_events.py # 710 skeleton events, quote-gated
+python3 scripts/build_attestation_chart.py
+python3 scripts/build_lost_books_summary.py   # + Chrome --print-to-pdf
+python3 scripts/build_apocrypha_codex.py      # + Chrome --print-to-pdf
 python3 scripts/validate.py && python3 -m pytest tests/ -q
 ```
 
@@ -270,7 +303,7 @@ is stable, wording is not guaranteed.
 - [x] Phases II–III — pilot extraction + alignment, 3 case studies
 - [x] Phase IV — 25-variable ontology + causal-claim graph
 - [x] Phase V — 12 dataset hypotheses (A/B/C graded)
-- [x] Phase VI — selection statistics (pilot + 383-event denominator)
+- [x] Phase VI — selection statistics (pilot; denominator now the 891-event series)
 - [x] Phase VII — Cases A/B/C; chapter map for all 142; Livy I–X event series
 - [x] Per-chapter observation extraction, all 142 chapters — 407 propositions,
       520 episodes, 0 validation rejects (`extractions/chapter_observations.jsonl`;
@@ -292,8 +325,16 @@ is stable, wording is not guaranteed.
       truncated denominators. The 41–45 falsification scan (Machiavelli died
       the year those books were found) came back clean: zero Discorsi episodes
       require them (`reports/falsification_41_45.json`).
-- [ ] Next frontier: unit-level alignment at scale via the 186 verified
-      anchors; Periochae-based skeleton reconstruction of lost-book content;
+- [x] **The Lost Books Program** — 107-book scaffold; witness corpora
+      acquired; 710 periocha skeleton events (quote-gated, 0 rejects);
+      Obsequens year-map; 419 epitome parallels; Plutarch/Dio crosswalk
+      (DRAFT); evidence genealogy with the lineage counting rule; Book 120
+      fragments acquired verbatim; simulated-loss calibration (recall
+      20–47%, zero hallucinations); three volumes; 107 firewalled apocrypha
+      (`lost_books/`, `apocrypha/`)
+- [ ] Next frontier: unit-level Discorsi↔Livy alignment at scale via the
+      186 verified anchors; grammarian-corpus quotation mining (Seneca done);
+      Book 91 palimpsest text acquisition; the external witness-review pass;
       PFA Online bulk data for the real H1–H5 tests; taxonomy v2 recoding
 
 ## Discussion: the state of Livy, a sanity check, and a question put to the Oracle
@@ -418,12 +459,20 @@ scaffold now exists:
   excerpts (190–11 BCE), Florus, Orosius 1–7, Eutropius 1–10
   (`scripts/acquire_witnesses.py`). Plutarch and Dio are mapped at era level
   (flagged APPROXIMATE) pending ingestion.
-- **A fragments registry** (`lost_books/fragments.jsonl`) seeded with the
-  attested verbatim survivals — the Book 91 Vatican palimpsest and Seneca's
-  quotation of Book 120 on Cicero's death — with `text_la: null` until the
-  words are acquired from cited editions. A test enforces it: fragment text,
-  once present, must verify against an acquired witness; event tables must
-  stay empty until every row cites a witness. **No prose is ever fabricated.**
+- **A fragments registry** (`lost_books/fragments.jsonl`) of the attested
+  verbatim survivals. **Book 120's texts are acquired and verified**: Livy's
+  narrative of Cicero's death and his verdict on Cicero, extracted from the
+  Seneca Suasoriae witness text under its explicit "T. LIVI" attributions
+  and machine-validated as verbatim substrings. The Book 91 Vatican
+  palimpsest is registered with `text_la: null` pending acquisition from a
+  cited edition — the standing rule: fragment text enters only from an
+  acquired witness, and the validator enforces it.
+- **No historical content is ever fabricated — and the one place style IS
+  invented is quarantined and labeled.** The `apocrypha/` renderings invent
+  Livian *manner* in English, never substance: their content is restricted
+  to attested skeleton events with per-sentence citations, enforced by
+  `TestApocrypha`, with THIS IS NOT LIVY on every page. Evidence files and
+  apocrypha never mix.
 - **An open review queue** (`lost_books/witnesses.json`): sources flagged for
   the planned external (ChatGPT) hunting pass — Valerius Maximus, Frontinus,
   Granius Licinianus, Zonaras, the Oxyrhynchus epitome, Augustine's Livian

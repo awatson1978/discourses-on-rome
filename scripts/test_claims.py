@@ -54,11 +54,38 @@ def main():
         n = sum(c.values())
         extra = c["extraordinary"] + c["mixed"] * 0.5
         return {"n": n, "dist": dict(c), "extraordinary_share": pct(extra, n)}
+
+    # Roman-only sensitivity: non-Roman polities (Syracuse, Macedon, Capua,
+    # Carthage, Greek cities...) were coded with the polity noted in
+    # groups/actors/notes; this text filter is the documented, reproducible
+    # basis for the Roman-only figures quoted in README/reports. Taxonomy v2
+    # plans a structured polity field to replace it.
+    import re as _re
+    NONROMAN = _re.compile(
+        r"Syracus|Macedon|Carthag|Capuan?\b|Sparta|Nabis|Aetol|Boeot|Chalcis"
+        r"|Perseus|Demetrius|Philip|Hieronymus|Hiero|Messene|Locri", _re.I)
+    def is_roman(e):
+        blob = " ".join(e.get("groups", []) + e.get("actors", [])) + " " + e.get("notes", "")
+        if not NONROMAN.search(blob):
+            return True
+        return bool(_re.search(r"senate of Rome|Roman senate|at Rome", e.get("notes", ""), _re.I))
+    conf_rom = [e for e in conf if is_roman(e)]
+
     t1 = {
         "property_domain": channel_dist([e for e in conf if e["trigger_domain"] in PROPERTY]),
         "honors_office_domain": channel_dist([e for e in conf if e["trigger_domain"] in HONORS]),
         "legal_rights_domain": channel_dist([e for e in conf if e["trigger_domain"] == "legal-rights"]),
+        "roman_only": {
+            "property_domain": channel_dist([e for e in conf_rom if e["trigger_domain"] in PROPERTY]),
+            "honors_office_domain": channel_dist([e for e in conf_rom if e["trigger_domain"] in HONORS]),
+            "legal_rights_domain": channel_dist([e for e in conf_rom if e["trigger_domain"] == "legal-rights"]),
+            "filter_basis": "text filter over groups/actors/notes (see code); interim until taxonomy v2 adds a polity field",
+        },
         "machiavelli_prediction": "property conflicts resolve extraordinarily more often than honors conflicts (claim:d1c37-roba-vs-onori)",
+        "caveats": ("Descriptive shares over coded events in the surviving Livian corpus, "
+                    "including books outside Machiavelli's documented access (41-45); "
+                    "sensitive to coding and denominator choices; tests Livy's "
+                    "representation, not Roman reality."),
     }
 
     # T2 — trials vs killings

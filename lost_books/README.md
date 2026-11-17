@@ -1,7 +1,10 @@
 # The Lost Books Program
 
 *Reconstructing what can be reconstructed of Ab Urbe Condita's 107 lost books
-— as structured data under provenance discipline, never as prose.*
+— as structured data under provenance discipline. Reconstruction is never
+presented as prose; the one prose artifact (the apocrypha codex) is a
+labeled modern imitation whose CONTENT is firewalled to attested events —
+style invented, substance never (see `apocrypha/`, enforced by TestApocrypha).*
 
 ## The inverse problem
 

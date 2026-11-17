@@ -31,7 +31,42 @@
       },
       "extraordinary_share": 37.3
     },
-    "machiavelli_prediction": "property conflicts resolve extraordinarily more often than honors conflicts (claim:d1c37-roba-vs-onori)"
+    "roman_only": {
+      "property_domain": {
+        "n": 76,
+        "dist": {
+          "ordinary": 42,
+          "unresolved": 24,
+          "extraordinary": 2,
+          "mixed": 7,
+          "na": 1
+        },
+        "extraordinary_share": 7.2
+      },
+      "honors_office_domain": {
+        "n": 135,
+        "dist": {
+          "ordinary": 94,
+          "extraordinary": 8,
+          "mixed": 16,
+          "unresolved": 17
+        },
+        "extraordinary_share": 11.9
+      },
+      "legal_rights_domain": {
+        "n": 58,
+        "dist": {
+          "extraordinary": 14,
+          "ordinary": 23,
+          "mixed": 12,
+          "unresolved": 9
+        },
+        "extraordinary_share": 34.5
+      },
+      "filter_basis": "text filter over groups/actors/notes (see code); interim until taxonomy v2 adds a polity field"
+    },
+    "machiavelli_prediction": "property conflicts resolve extraordinarily more often than honors conflicts (claim:d1c37-roba-vs-onori)",
+    "caveats": "Descriptive shares over coded events in the surviving Livian corpus, including books outside Machiavelli's documented access (41-45); sensitive to coding and denominator choices; tests Livy's representation, not Roman reality."
   },
   "T2_accusation_channel": {
     "prominent_trials": {

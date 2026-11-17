@@ -3,9 +3,10 @@
 *2026-11-17. The corpus now holds every surviving full-text book of Ab Urbe
 Condita (I–X, XXI–XLV, Latin + English, 3,528 chapters) plus the Periochae of
 lost books 46–142. The political event series covers all of it: **891 events,
-every quotation machine-validated verbatim, zero rejections.** To our
-knowledge no machine-readable, validated political-event dataset over the
-complete extant Livy existed before this.*
+every quotation machine-validated verbatim, zero rejections.** We have not
+located a prior machine-readable, quote-validated political-event dataset
+over the complete extant Livy; no systematic literature review has been
+performed, so no priority claim is made.*
 
 ## 1. What the corpus expansion is
 
@@ -19,31 +20,34 @@ complete extant Livy existed before this.*
 - **The access asymmetry is now structural:** Machiavelli never saw Books
   41–45 (Lorsch 1527 / printed 1531). Event-series analyses describe *Livy's
   world*; Machiavelli-source analyses must restrict to I–X + XXI–XL. The
-  falsification scan (`reports/falsification_41_45.json`) confirmed zero
-  Discorsi episodes depend on 41–45-unique content — the recovery chronology
-  and the text agree.
+  source-access screening (`reports/falsification_41_45.json`) found no
+  identified dependencies on 41–45-unique content — a negative result within
+  the extraction's coverage and matching rules, consistent with the recovery
+  chronology.
 
 ## 2. The claim tests at full scale (`reports/claim_tests.json` regenerated)
 
-### T1 — roba vs onori: the asymmetry now REVERSES
+### T1 — roba vs onori: the observed direction is opposite to the claim
 
 | conflict domain | all polities (n / ≈extraordinary) | Roman-only (n / ≈extraordinary) |
 |---|---|---|
 | property (land+debt+food) | 81 / 11.1% | 76 / **7.2%** |
-| honors-office | 150 / 16.7% | 134 / **11.9%** |
+| honors-office | 150 / 16.7% | 135 / **11.9%** |
 | legal-rights | 67 / 37.3% | 58 / **34.5%** |
 | dynastic | 36 / 62.5% | 16 / 68.8% (regal-period successions) |
 
-Across the complete extant Livy, **honors-office conflicts resolve violently
-somewhat MORE often than property conflicts** — the opposite of Disc I.37's
-claim that nobles yield honors peacefully and fight for roba. The middle
-republic supplies the reversal: triumph disputes, the Trials of the Scipios,
+Across the coded corpus, **honors-office conflicts show a higher
+extraordinary-resolution share than property conflicts** — contrary to the
+direction anticipated by our reading of Disc I.37 (nobles yield honors
+peacefully, fight for roba). The middle republic supplies the difference: triumph disputes, the Trials of the Scipios,
 censorial wars, command-assignment battles. And the earlier finding deepens:
 **legal-rights conflict remains the most violent domain by a factor of ~3**,
-and it still has no variable in Machiavelli's ontology. (Sensitivity: the
-reversal survives exclusion of non-Roman polities; the non-Roman events —
-Syracuse, Macedon, Capua, Carthage — were coded with polity notes and can be
-filtered, as above.)
+and it still has no variable in Machiavelli's ontology. (Sensitivity: the directional result survives exclusion of non-Roman
+polities; the Roman-only figures are reproducible via the documented text
+filter in `scripts/test_claims.py` — output key `T1_roba_vs_onori.roman_only`
+in `reports/claim_tests.json`. All shares are descriptive, over coded events
+in a corpus that includes books outside Machiavelli's documented access, and
+are subject to coding and denominator choices.)
 
 ### T2 — trials: the ordinary-channel share FALLS with scale
 
@@ -84,10 +88,9 @@ informer-reward instruments (32, 39).
 2. **The Hannibal anchor-mass.** The Discorsi's most-cited individual now has
    his decade in the corpus; the chapter map's full-corpus rebuild lifted
    quote-anchored chapters to 24 and cut anchorless chapters from 23 to 12.
-3. **A dated upper bound on his sources.** With 41–45 ingested AND the
-   falsification scan clean, the corpus itself now encodes what Machiavelli
-   could and could not have read — the first dataset we know of where a
-   Renaissance author's source-access boundary is machine-checkable.
+3. **A dated upper bound on his sources.** With 41–45 ingested and the
+   screening negative, the corpus encodes what Machiavelli could and could
+   not have read as a machine-checkable constraint on downstream analyses.
 
 ## 5. Caveats (standing)
 
