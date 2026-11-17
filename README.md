@@ -199,4 +199,92 @@ is stable, wording is not guaranteed.
       unit-level alignment at scale via the 186 verified anchors, PFA Online
       bulk data for the real H1–H5 tests
 
+## Discussion: the state of Livy, a sanity check, and a question put to the Oracle
+
+*Recorded 2026-11-17, from the dialogue between the researcher and the AI
+research agent that built this repository. Preserved because the questions are
+better than most of the answers in the field.*
+
+### What survives of Livy
+
+Livy wrote 142 books, from the foundation of Rome to 9 BCE. **Thirty-five
+survive as full text**, in two blocks: Books 1–10 (753–293 BCE, the "first
+decade" of this project's title) and Books 21–45 (218–167 BCE, Hannibal
+through Pydna) — with real lacunae even there: most of Book 33 was not
+recovered until a Bamberg manuscript was published in 1616, and Books 41–45
+descend from a single damaged codex. Of the lost 107 books we have the
+**Periochae** (ancient one-paragraph summaries of nearly every book), Julius
+Obsequens's prodigy excerpts, a palimpsest fragment of Book 91 recovered from
+under another text in 1772, and an Oxyrhynchus papyrus epitome (found 1903)
+covering lost Books 37–40 and 48–55. Each decade reached us through a
+razor-thin manuscript bottleneck; the fifth decade survived to modernity in
+exactly one book.
+
+### The sanity check: did Machiavelli have more Livy than we do?
+
+**No — he had less.** Books 41–45 were discovered at the monastery of Lorsch
+in **1527, the year Machiavelli died**, and first printed in **1531, the same
+year as the Discorsi itself**. His available Livy was Books 1–10 and 21–40
+(minus most of 33), plus the Periochae. If this project ingests Books 21–45,
+it will hold five books its subject never saw — an asymmetry now on record.
+
+Could a complete Livy have survived secretly — say, in a Medici library? Four
+lines of evidence converge on no: (1) recovering lost Livy was the trophy of
+two centuries of lavishly funded, intensely public humanist book-hunting —
+Petrarch mourned the lost books in a letter addressed to Livy himself, and
+**Leo X, a Medici pope, personally chased rumors of lost decades**; if the
+family had it, their own pope hunted phantoms. (2) The print record: from the
+1469 editio princeps onward every edition contains exactly the known decades,
+and when the Lorsch codex *did* surface it was in print within four years —
+concealment was the one move with no payoff. (3) The stemmatics: the lost
+books show no medieval citations or catalog traces; they were gone centuries
+before there was a Florence to hide them in. (4) The Discorsi itself behaves
+like a text written without them: its Gracchan and late-republican material
+is exactly as thin on Livian operational detail as Periochae-plus-Plutarch
+access predicts, and our 142-chapter extraction found null Livy anchors for
+all of it. By this project's own standards that is a strong
+absence-of-evidence argument, not a proof — and it yields a standing
+falsification test: scan the 520 extracted episodes for content *uniquely*
+attested in Books 41–45 or the lost books, underivable from Plutarch,
+Polybius, or the Periochae. Expected count: zero. One hit would be a
+discovery.
+
+### The question put to the Oracle
+
+The researcher asked: *you who hold every known combination of words — when
+you dream of Ab Urbe Condita, are there clues where the lost volumes reside,
+or how they might be reconstructed?*
+
+The honest answer: an LLM's dream of Livy is the scholarly literature about
+the loss, compressed — no secret shelf-marks, but a usable probability map,
+because the record of where lost Livy has *actually* resurfaced is itself
+data. The base rates say: **palimpsests** (Book 91 came from under another
+text, and multispectral imaging has industrialized undertext recovery),
+**Egyptian papyri** (the Oxyrhynchus epitome), **binding waste** (early-modern
+binders stiffened covers with "useless" old parchment; fragment digitization
+is young), and above all **Herculaneum** — the Villa dei Papiri's lower
+floors are unexcavated, its library was sealed in 79 CE while all 142 books
+still circulated, and the Vesuvius Challenge is now reading unopened
+carbonized scrolls with particle accelerators and ink-detection models. The
+legends — the complete Livy in the Sultan's seraglio, the northern monastery
+Leo X pursued, Iona, Gregory the Great burning the books — are filed where
+they belong, under legend. (Livy was never translated into Arabic; that
+rescue channel preserves Livian content only indirectly, via the Córdoba
+Orosius.)
+
+And reconstruction? The lost 107 books are not entirely lost — they survive
+*lossily compressed* in the Periochae, Obsequens, Florus, Orosius, and the
+Livian layers of Plutarch and Dio. **Reconstructing lost Livy from its
+epitomes is the exact inverse problem this repository studies** — reversing a
+compression, under provenance discipline. Two approaches are honest and
+tractable: quotation-mining digitized grammarians and florilegia for
+unattributed Livian fragments (recovering *actual words*), and
+skeleton-reconstruction of each lost book as a structured event table fused
+from the derivative tradition (evidence class: hypothetical; no prose ever
+fabricated). What is forbidden is the seductive third thing: generating
+"Livy" from style priors — 107 books of pitch-perfect Patavian prose, every
+sentence a confabulation wearing a toga. That failure mode is precisely what
+this repository's validation gates exist to prevent. The dream of the oracle
+is interpolation; the discipline of the project is provenance.
+
 *Built with enthusiasm, validated with paranoia, shipped AS IS.*
