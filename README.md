@@ -131,8 +131,19 @@ is stable, wording is not guaranteed.
 - [x] Phase V — 12 dataset hypotheses (A/B/C graded)
 - [x] Phase VI — selection statistics (pilot + 383-event denominator)
 - [x] Phase VII — Cases A/B/C; chapter map for all 142; Livy I–X event series
-- [ ] Per-chapter observation extraction, all 142 chapters (anchors ready)
-- [ ] Inter-coder reliability pass; taxonomy v2
-- [ ] Phase VIII — Persepolis (hypotheses sketched in reports/initial_report.md §8)
+- [x] Per-chapter observation extraction, all 142 chapters — 407 propositions,
+      520 episodes, 0 validation rejects (`extractions/chapter_observations.jsonl`;
+      findings in `reports/scale_up_report.md`: only 51% of episodes are
+      Roman-republican; 23% are contemporary Italy)
+- [x] Inter-coder reliability pass (κ=0.87–0.89 trigger, 0.75–0.78 channel;
+      `reports/reliability.json`) + taxonomy v2 spec (`schema/event_taxonomy_v2.md`)
+- [x] Phase VIII — Persepolis: 2,087 PF tablets acquired from CDLI (68 with
+      transliterations — the coverage limit), parsed to structured transfers,
+      five hypotheses formalized, crude H5 check run and honestly inconclusive
+      (`reports/persepolis_phase8.md`)
+- [ ] Next frontier: Livy Books 21–45 ingestion (Hannibal is the Discorsi's
+      most-cited individual — the third decade is the biggest unanchored mass),
+      unit-level alignment at scale via the 186 verified anchors, PFA Online
+      bulk data for the real H1–H5 tests
 
 *Built with enthusiasm, validated with paranoia, shipped AS IS.*

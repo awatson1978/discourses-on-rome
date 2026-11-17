@@ -129,6 +129,73 @@ class TestLivyEvents(unittest.TestCase):
         self.assertTrue((ROOT / "extractions/livy_events_rejected.jsonl").exists())
 
 
+class TestChapterObservations(unittest.TestCase):
+    """Full 142-chapter observation extraction. Skipped until merged file exists."""
+
+    def setUp(self):
+        self.path = ROOT / "extractions/chapter_observations.jsonl"
+        if not self.path.exists():
+            self.skipTest("chapter_observations.jsonl not yet built")
+        self.recs = [json.loads(l) for l in self.path.open(encoding="utf-8")]
+
+    def test_all_142_chapters(self):
+        ids = {r["chapter_id"] for r in self.recs}
+        for b, n in [(1, 60), (2, 33), (3, 49)]:
+            for c in range(1, n + 1):
+                self.assertIn(f"disc:it:{b}:{c}", ids)
+
+    def test_quotes_verbatim(self):
+        segs = {}
+        for l in (ROOT / "corpus/segments/discorsi_it.jsonl").open(encoding="utf-8"):
+            r = json.loads(l)
+            segs[r["passage_id"]] = re.sub(r"\s+", " ", r["text"]).strip()
+        def norm(s):
+            return re.sub(r"\s+", " ", s).strip()
+        for r in self.recs:
+            text = segs[r["chapter_id"]]
+            self.assertIn(norm(r["thesis_quote"]), text, r["chapter_id"])
+            for p in r["propositions"]:
+                self.assertIn(norm(p["quote"]), text, r["chapter_id"])
+            for e in r["episodes"]:
+                self.assertIn(norm(e["quote"]), text, r["chapter_id"])
+
+    def test_livy_refs_resolve_in_decade(self):
+        livy = {json.loads(l)["passage_id"] for l in
+                (ROOT / "corpus/segments/livy_la.jsonl").open(encoding="utf-8")}
+        for r in self.recs:
+            for e in r["episodes"]:
+                if e.get("livy_ref_candidate"):
+                    self.assertIn(e["livy_ref_candidate"], livy, r["chapter_id"])
+
+
+class TestPersepolis(unittest.TestCase):
+    """PF transfer parsing. Skipped until parsed file exists."""
+
+    def setUp(self):
+        self.path = ROOT / "extractions/persepolis_transfers.jsonl"
+        if not self.path.exists():
+            self.skipTest("persepolis_transfers.jsonl not yet built")
+        self.recs = [json.loads(l) for l in self.path.open(encoding="utf-8")]
+
+    def test_no_invented_values(self):
+        # every quantity/year must be recoverable from the stored translation
+        for r in self.recs:
+            if r["parse_confidence"] == "none":
+                continue
+            t = r["translation"].lower()
+            for q in r["quantities"]:
+                v = q["value"]
+                sv = str(int(v)) if v == int(v) else str(v)
+                self.assertIn(sv, t.replace(",", "."), r["designation"])
+            if r["regnal_year"] is not None:
+                self.assertIn(str(r["regnal_year"]), t, r["designation"])
+
+    def test_translation_only_records_flagged(self):
+        for r in self.recs:
+            if not r["has_translation"]:
+                self.assertEqual(r["parse_confidence"], "none", r["designation"])
+
+
 class TestDatabase(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

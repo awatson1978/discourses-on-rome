@@ -1,0 +1,236 @@
+{
+  "_caveats": [
+    "CDLI has transliterated only a small, NON-RANDOM subset of OIP 92; coverage statistics below quantify the selection.",
+    "Quantities mix text types (transport, deposit, rations) — CV is not a within-category ration dispersion; Hallock category codes would be needed for the real test.",
+    "Sample sizes are far too small for inference. No significance claims. The brief's reported 499-BCE dispersion finding remains UNVERIFIED.",
+    "Regnal years are Darius I: year 13 ~ 509 BCE ... year 28 ~ 494 BCE; years 22-23 ~ 500-499 BCE (Ionian Revolt outbreak)."
+  ],
+  "coverage": {
+    "tablets_total": 2087,
+    "tablets_with_atf_translation": 68,
+    "atf_share_pct": 3.3,
+    "commodity_dist": {
+      "grain": 36,
+      "wine": 15,
+      "flour": 9,
+      "goat": 2,
+      "barley": 1,
+      "figs": 1,
+      "sesame": 1,
+      "sheep": 1
+    },
+    "year_dist": {
+      "17": 2,
+      "18": 2,
+      "19": 3,
+      "20": 3,
+      "21": 4,
+      "22": 12,
+      "23": 9,
+      "24": 4,
+      "25": 2,
+      "27": 1,
+      "28": 1
+    }
+  },
+  "grain_BAR_by_year": {
+    "17": {
+      "n": 3,
+      "mean": 66.67,
+      "sd": 55.08,
+      "cv": 0.826
+    },
+    "19": {
+      "n": 1,
+      "mean": 1.0,
+      "sd": null,
+      "cv": null
+    },
+    "20": {
+      "n": 3,
+      "mean": 357.0,
+      "sd": 345.12,
+      "cv": 0.967
+    },
+    "21": {
+      "n": 1,
+      "mean": 30.0,
+      "sd": null,
+      "cv": null
+    },
+    "22": {
+      "n": 7,
+      "mean": 277.14,
+      "sd": 245.21,
+      "cv": 0.885
+    },
+    "23": {
+      "n": 5,
+      "mean": 103.8,
+      "sd": 77.86,
+      "cv": 0.75
+    },
+    "24": {
+      "n": 2,
+      "mean": 10.5,
+      "sd": 0.71,
+      "cv": 0.067
+    },
+    "25": {
+      "n": 2,
+      "mean": 39.59,
+      "sd": 54.32,
+      "cv": 1.372
+    },
+    "27": {
+      "n": 1,
+      "mean": 24.0,
+      "sd": null,
+      "cv": null
+    },
+    "28": {
+      "n": 1,
+      "mean": 40.0,
+      "sd": null,
+      "cv": null
+    }
+  },
+  "ionian_revolt_window": {
+    "years_22_23": {
+      "n": 12,
+      "mean": 204.92,
+      "sd": 207.29,
+      "cv": 1.012
+    },
+    "other_years": {
+      "n": 14,
+      "mean": 104.73,
+      "sd": 195.29,
+      "cv": 1.865
+    }
+  },
+  "top_officials": [
+    [
+      "kar-ki-isz",
+      4
+    ],
+    [
+      "ba-ka4-du-isz-da",
+      3
+    ],
+    [
+      "eszszana",
+      3
+    ],
+    [
+      "u2-sza2-ia-na",
+      3
+    ],
+    [
+      "sza2-a-ka4-da",
+      3
+    ],
+    [
+      "ba-gi-rab2-ba",
+      3
+    ],
+    [
+      "u-man-na",
+      2
+    ],
+    [
+      "mu-isz-ka4-na",
+      2
+    ],
+    [
+      "man-nu-un-da",
+      2
+    ],
+    [
+      "man-ma-ak-ka4",
+      2
+    ],
+    [
+      "ha-tur-ka4",
+      2
+    ],
+    [
+      "par2-me-uk-ka4-na",
+      2
+    ],
+    [
+      "ir-sze-na",
+      2
+    ],
+    [
+      "ir-ti-ma",
+      2
+    ],
+    [
+      "hu-isz-da-na-na",
+      2
+    ]
+  ],
+  "top_places": [
+    [
+      "ba-ir-sza2-an",
+      9
+    ],
+    [
+      "ka4-ap-nu-isz-ki-ma",
+      5
+    ],
+    [
+      "ti-ra-zi2-isz",
+      3
+    ],
+    [
+      "ma-tur-ba",
+      3
+    ],
+    [
+      "ba-ir-sza2-isz",
+      2
+    ],
+    [
+      "ba-ir-sza2",
+      2
+    ],
+    [
+      "li-du-ma",
+      2
+    ],
+    [
+      "zap-pi",
+      2
+    ],
+    [
+      "zi2-la-pan",
+      2
+    ],
+    [
+      "ba",
+      2
+    ],
+    [
+      "kur-du-szu-um",
+      2
+    ],
+    [
+      "za-ak-za-ku-mar",
+      2
+    ],
+    [
+      "par2-na-ma-ti-isz",
+      2
+    ],
+    [
+      "u2-zi2-ik-rasz2",
+      2
+    ],
+    [
+      "ku-ra-ka4-rasz2",
+      2
+    ]
+  ]
+}

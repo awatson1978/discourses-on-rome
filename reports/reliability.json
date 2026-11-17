@@ -1,0 +1,263 @@
+{
+  "_method": "Unit = event; 1:1 greedy match on (chapter, event_type); kappa on matched pairs only, so field-agreement stats are conditional on detection agreement. A-as-reference is a convention: neither coder is ground truth.",
+  "books": [
+    {
+      "book": 2,
+      "n_A": 50,
+      "n_B": 54,
+      "n_matched": 43,
+      "event_detection": {
+        "precision_B_vs_A": 0.796,
+        "recall_B_vs_A": 0.86,
+        "f1": 0.827
+      },
+      "chapter_level": {
+        "chapters_A": 38,
+        "chapters_B": 38,
+        "chapters_both": 35,
+        "jaccard": 0.854
+      },
+      "trigger_domain": {
+        "pct_agreement": 90.7,
+        "cohens_kappa": 0.889
+      },
+      "resolution_channel": {
+        "pct_agreement": 88.4,
+        "cohens_kappa": 0.777
+      },
+      "disagreement_examples": [
+        {
+          "chapter": "livy:en:2:2",
+          "event_type": "electoral-conflict",
+          "A": {
+            "trigger": "dynastic",
+            "channel": "ordinary"
+          },
+          "B": {
+            "trigger": "honors-office",
+            "channel": "ordinary"
+          }
+        },
+        {
+          "chapter": "livy:en:2:16",
+          "event_type": "new-institution",
+          "A": {
+            "trigger": "land",
+            "channel": "ordinary"
+          },
+          "B": {
+            "trigger": "external",
+            "channel": "ordinary"
+          }
+        },
+        {
+          "chapter": "livy:en:2:24",
+          "event_type": "levy-obstruction",
+          "A": {
+            "trigger": "debt",
+            "channel": "unresolved"
+          },
+          "B": {
+            "trigger": "debt",
+            "channel": "ordinary"
+          }
+        },
+        {
+          "chapter": "livy:en:2:30",
+          "event_type": "dictator-appointed",
+          "A": {
+            "trigger": "military",
+            "channel": "ordinary"
+          },
+          "B": {
+            "trigger": "debt",
+            "channel": "ordinary"
+          }
+        },
+        {
+          "chapter": "livy:en:2:42",
+          "event_type": "agrarian-agitation",
+          "A": {
+            "trigger": "land",
+            "channel": "unresolved"
+          },
+          "B": {
+            "trigger": "land",
+            "channel": "ordinary"
+          }
+        },
+        {
+          "chapter": "livy:en:2:45",
+          "event_type": "military-mutiny",
+          "A": {
+            "trigger": "military",
+            "channel": "mixed"
+          },
+          "B": {
+            "trigger": "military",
+            "channel": "ordinary"
+          }
+        },
+        {
+          "chapter": "livy:en:2:48",
+          "event_type": "agrarian-agitation",
+          "A": {
+            "trigger": "land",
+            "channel": "unresolved"
+          },
+          "B": {
+            "trigger": "land",
+            "channel": "ordinary"
+          }
+        },
+        {
+          "chapter": "livy:en:2:54",
+          "event_type": "political-killing",
+          "A": {
+            "trigger": "legal-rights",
+            "channel": "extraordinary"
+          },
+          "B": {
+            "trigger": "land",
+            "channel": "extraordinary"
+          }
+        },
+        {
+          "chapter": "livy:en:2:59",
+          "event_type": "military-mutiny",
+          "A": {
+            "trigger": "military",
+            "channel": "extraordinary"
+          },
+          "B": {
+            "trigger": "military",
+            "channel": "ordinary"
+          }
+        }
+      ]
+    },
+    {
+      "book": 6,
+      "n_A": 33,
+      "n_B": 44,
+      "n_matched": 29,
+      "event_detection": {
+        "precision_B_vs_A": 0.659,
+        "recall_B_vs_A": 0.879,
+        "f1": 0.753
+      },
+      "chapter_level": {
+        "chapters_A": 22,
+        "chapters_B": 23,
+        "chapters_both": 22,
+        "jaccard": 0.957
+      },
+      "trigger_domain": {
+        "pct_agreement": 89.7,
+        "cohens_kappa": 0.871
+      },
+      "resolution_channel": {
+        "pct_agreement": 82.8,
+        "cohens_kappa": 0.75
+      },
+      "disagreement_examples": [
+        {
+          "chapter": "livy:en:6:1",
+          "event_type": "prominent-trial",
+          "A": {
+            "trigger": "legal-rights",
+            "channel": "unresolved"
+          },
+          "B": {
+            "trigger": "other",
+            "channel": "unresolved"
+          }
+        },
+        {
+          "chapter": "livy:en:6:2",
+          "event_type": "dictator-appointed",
+          "A": {
+            "trigger": "military",
+            "channel": "na"
+          },
+          "B": {
+            "trigger": "military",
+            "channel": "ordinary"
+          }
+        },
+        {
+          "chapter": "livy:en:6:11",
+          "event_type": "dictator-appointed",
+          "A": {
+            "trigger": "debt",
+            "channel": "na"
+          },
+          "B": {
+            "trigger": "debt",
+            "channel": "ordinary"
+          }
+        },
+        {
+          "chapter": "livy:en:6:18",
+          "event_type": "conspiracy",
+          "A": {
+            "trigger": "debt",
+            "channel": "unresolved"
+          },
+          "B": {
+            "trigger": "honors-office",
+            "channel": "unresolved"
+          }
+        },
+        {
+          "chapter": "livy:en:6:20",
+          "event_type": "prominent-trial",
+          "A": {
+            "trigger": "legal-rights",
+            "channel": "ordinary"
+          },
+          "B": {
+            "trigger": "honors-office",
+            "channel": "ordinary"
+          }
+        },
+        {
+          "chapter": "livy:en:6:28",
+          "event_type": "dictator-appointed",
+          "A": {
+            "trigger": "military",
+            "channel": "na"
+          },
+          "B": {
+            "trigger": "military",
+            "channel": "ordinary"
+          }
+        },
+        {
+          "chapter": "livy:en:6:38",
+          "event_type": "dictator-appointed",
+          "A": {
+            "trigger": "honors-office",
+            "channel": "mixed"
+          },
+          "B": {
+            "trigger": "honors-office",
+            "channel": "ordinary"
+          }
+        },
+        {
+          "chapter": "livy:en:6:42",
+          "event_type": "dictator-appointed",
+          "A": {
+            "trigger": "military",
+            "channel": "na"
+          },
+          "B": {
+            "trigger": "military",
+            "channel": "ordinary"
+          }
+        }
+      ]
+    }
+  ]
+}
