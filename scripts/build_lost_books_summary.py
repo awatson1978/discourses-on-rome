@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""The gold-dots dossier: reports/lost_books_summary.html (print to PDF via Chrome).
+"""The gold-dots dossier: lost_books/lost_books_summary.html (print to PDF via Chrome).
 
 Book-by-book through all 107 lost books: era, the periocha-derived skeleton
 events (the gold dots of the attestation chart), witness pointers (Obsequens
@@ -12,7 +12,7 @@ import json
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-OUT = ROOT / "reports" / "lost_books_summary.html"
+OUT = ROOT / "lost_books" / "lost_books_summary.html"
 
 CAT_BADGE = {"war": "#7a4f2a", "domestic-politics": "#8b2500", "institution": "#1f4e5f",
              "prominent-death": "#55503f", "trial": "#6b3fa0", "prodigy-religion": "#9a7b2f",

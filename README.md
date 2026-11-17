@@ -362,8 +362,8 @@ all honesty-labeled):
 | Volume | What it holds |
 |---|---|
 | [`reports/lost_fragments.pdf`](reports/lost_fragments.pdf) | **The red diamonds** — every verbatim survival of lost Livy: the Book 120 Cicero passages (Latin + working translation, recovered from Seneca's explicit "T. LIVI" attributions), the Book 91 palimpsest entry |
-| [`reports/lost_books_summary.pdf`](reports/lost_books_summary.pdf) | **The gold dots** — book-by-book through all 107 lost books: the 710 periocha-derived skeleton events, witness lines (Obsequens, Plutarch/Dio crosswalk), fragment markers |
-| [`reports/apocrypha_codex.pdf`](reports/apocrypha_codex.pdf) | **The rendering** — all 107 lost books as modern English compositions in Livy's manner (`apocrypha/`), content firewalled to the attested events with per-sentence citations, NONE OF THIS IS LIVY on the title page, the honest blank pages for 136–137. Enforced by `TestApocrypha`. |
+| [`lost_books/lost_books_summary.pdf`](lost_books/lost_books_summary.pdf) | **The gold dots** — book-by-book through all 107 lost books: the 710 periocha-derived skeleton events, witness lines (Obsequens, Plutarch/Dio crosswalk), fragment markers |
+| [`lost_books/apocrypha_codex.pdf`](lost_books/apocrypha_codex.pdf) | **The rendering** — all 107 lost books as modern English compositions in Livy's manner (`apocrypha/`), content firewalled to the attested events with per-sentence citations, NONE OF THIS IS LIVY on the title page, the honest blank pages for 136–137. Enforced by `TestApocrypha`. |
 
 ### All 142 books, attested
 

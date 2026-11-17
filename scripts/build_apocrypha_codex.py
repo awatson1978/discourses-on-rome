@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """Bind the 107 apocrypha into one print-ready codex:
-reports/apocrypha_codex.html (→ PDF via Chrome headless).
+lost_books/apocrypha_codex.html (→ PDF via Chrome headless).
 Pure assembly — no content composed here."""
 import html as H
 import pathlib
 import re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-OUT = ROOT / "reports" / "apocrypha_codex.html"
+OUT = ROOT / "lost_books" / "apocrypha_codex.html"
 
 ERAS = [(11, "292–219 BCE"), (46, "167–91 BCE"), (71, "91–78 BCE"),
         (91, "78–49 BCE"), (109, "49–44 BCE"), (117, "44–30 BCE"),

@@ -36,7 +36,33 @@ fragments.jsonl     registry of attested verbatim fragments (seeded: the Book 91
                     Vatican palimpsest; Seneca's quotation of Book 120 on
                     Cicero's death; the grammarian-mining category)
 witnesses.json      registry of the derivative-tradition sources and status
+genealogy.json      witness dependence graph + the lineage counting rule
+periocha_events.jsonl   710 skeleton events (the gold dots), verbatim-anchored
+obsequens_map.jsonl     82 year-entries mapped by consular pair
+parallels_florus_eutropius.jsonl / parallels_orosius.jsonl   419 parallels
+narrative_witness_map.json   Plutarch/Dio crosswalk (DRAFT, non-evidentiary)
+experiments/        simulated-loss reconstructions + scores (books 22, 39)
+lost_books_summary.{html,pdf}   THE GOLD-DOTS DOSSIER — book-by-book summary
+apocrypha_codex.{html,pdf}      THE APOCRYPHA CODEX — all 107 books rendered
 ```
+
+## The two volumes kept here
+
+- **`lost_books_summary.pdf` — the gold-dots dossier.** One section per lost
+  book: its periocha-derived skeleton events with category badges, witness
+  lines (Obsequens entry counts, epitome-parallel counts, the Plutarch/Dio
+  crosswalk), fragment markers, and the honest blanks for 136–137. The
+  simulated-loss calibration (20–47% recall, spectacular-biased) is stated in
+  the header. Regenerate: `python3 scripts/build_lost_books_summary.py`, then
+  Chrome headless `--print-to-pdf`.
+- **`apocrypha_codex.pdf` — the rendering.** The 107 apocrypha of
+  `apocrypha/` bound into one era-sectioned volume. English-only by design;
+  content firewalled to the attested events with per-sentence citations;
+  "None of this is Livy" on the title page; enforced mechanically by
+  `TestApocrypha`. Regenerate: `python3 scripts/build_apocrypha_codex.py` +
+  Chrome. (The third volume, the verbatim-fragments dossier, stays in
+  `reports/lost_fragments.pdf` with the project's other analytical reports —
+  fragments are *evidence*, and evidence reporting lives in `reports/`.)
 
 Witness texts live in the main corpus: `corpus/raw/witnesses/` and
 `corpus/segments/witnesses_la.jsonl` (Periochae 11–20, Obsequens, Florus 1–2,
