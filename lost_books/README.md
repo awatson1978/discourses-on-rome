@@ -54,7 +54,12 @@ marked in the skeleton.
       pending acquisition from cited editions
 - [x] Obsequens entries mapped to books (82 year-entries by consular pair;
       `obsequens_map.jsonl`; gaps 174-168, 82-78, 72-64, 41-18 BCE flagged)
-- [ ] Florus/Orosius/Eutropius parallel passages located per book (agents in flight)
+- [x] Florus/Orosius/Eutropius parallel passages located per book: 419
+      verbatim-anchored parallels (`parallels_florus_eutropius.jsonl` 201,
+      covering 102/107; `parallels_orosius.jsonl` 218, covering 100/107);
+      uncovered books (46-48, 70, 84, 121) are themselves attestation data;
+      intra-lineage divergences flagged (e.g. Orosius vs periocha on who
+      defeated Crixus)
 - [x] Plutarch/Dio mapping upgraded to book level with verbatim periocha
       anchors (`narrative_witness_map.json`, DRAFT non-evidentiary; 81/107
       books have Plutarch coverage)

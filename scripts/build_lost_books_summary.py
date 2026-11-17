@@ -37,6 +37,10 @@ def main():
     for o in jl("lost_books/obsequens_map.jsonl"):
         if o.get("livy_book_estimate"):
             obs_by_book[o["livy_book_estimate"]] += 1
+    para = collections.Counter()
+    for f in ["lost_books/parallels_florus_eutropius.jsonl", "lost_books/parallels_orosius.jsonl"]:
+        for r in jl(f):
+            para[r["livy_book"]] += 1
     nwm_path = ROOT / "lost_books/narrative_witness_map.json"
     nwm = json.loads(nwm_path.read_text(encoding="utf-8"))["by_book"] if nwm_path.exists() else {}
 
@@ -89,6 +93,8 @@ spectacular and against institutional process.</div>"""]
         wit_bits = []
         if obs_by_book.get(book):
             wit_bits.append(f"Obsequens: {obs_by_book[book]} year-entries")
+        if para.get(book):
+            wit_bits.append(f"epitome parallels: {para[book]} (Florus/Eutropius/Orosius)")
         m = nwm.get(str(book), {})
         if m.get("plutarch"):
             wit_bits.append("Plutarch: " + ", ".join(m["plutarch"][:3]))
